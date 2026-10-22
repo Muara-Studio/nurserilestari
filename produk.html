@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produk — Toko Lestari</title>
+<meta name="description" content="160 produk berkebun dengan harga Tokopedia: tanaman hias, benih, media tanam, pupuk, obat tanaman, pot, dan alat. Beli online atau tanya via WhatsApp.">
+
+<link rel="canonical" href="https://tokolestari.id/produk.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Toko Lestari">
+<meta property="og:title" content="Produk — Toko Lestari">
+<meta property="og:description" content="160 produk berkebun dengan harga Tokopedia: tanaman hias, benih, media tanam, pupuk, obat tanaman, pot, dan alat. Beli online atau tanya via WhatsApp.">
+<meta property="og:url" content="https://tokolestari.id/produk.html">
+<meta property="og:image" content="https://tokolestari.id/assets/img/og.jpg">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/catalog.css">
+<script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
+<script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
+</head>
+<body>
+<div data-layout="header"></div>
+<main id="main">
+  <section class="catalog-head container">
+    <div class="catalog-head__text">
+      <h1 class="display" data-split>Produk</h1>
+      <p class="lead">Harga dan stoknya ngikut etalase Tokopedia kami, Jakarta dan Tangerang BSD. Tanaman hidup kami kirim ke Jabodetabek saja biar sampai dalam sehari dua hari; benih, media, pupuk, dan alat bisa ke mana saja.</p>
+    </div>
+    <div class="catalog-head__shelf" aria-hidden="true">
+      <img class="catalog-head__pothos sway" src="assets/illus/pothos.svg" alt="" width="220" height="300" onerror="this.hidden=true">
+      <img class="catalog-head__can sway sway-2" src="assets/illus/watering-can.svg" alt="" width="150" height="120" onerror="this.hidden=true">
+      <img class="catalog-head__packet" src="assets/illus/seed-packet.svg" alt="" width="90" height="120" onerror="this.hidden=true">
+    </div>
+  </section>
+
+  <section class="catalog container">
+    <form class="catalog-filters" role="search" aria-label="Cari dan saring produk" data-filters>
+      <div class="catalog-search">
+        <label for="q" class="visually-hidden">Cari produk</label>
+        <svg class="icon catalog-search__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-search"/></svg>
+        <input id="q" name="q" type="search" class="input" placeholder="Cari monstera, aroid mix, pupuk NPK…" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="catalog-cats">
+        <div class="catalog-tags" role="group" aria-label="Kategori" data-cats></div>
+      </div>
+      <div class="catalog-bar">
+        <p class="catalog-count" aria-live="polite" data-count>160 produk di rak ini</p>
+        <button type="button" class="catalog-clear link-u" data-reset data-clear hidden>Hapus filter</button>
+        <label class="catalog-sort">
+          <span class="catalog-sort__label">Urutkan</span>
+          <span class="catalog-sort__field">
+            <select id="urut" name="urut" class="select">
+              <option value="unggulan">Unggulan</option>
+              <option value="terlaris">Terlaris</option>
+              <option value="murah">Harga terendah</option>
+              <option value="mahal">Harga tertinggi</option>
+              <option value="nama">Nama A-Z</option>
+            </select>
+            <svg class="icon catalog-sort__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron-down"/></svg>
+          </span>
+        </label>
+      </div>
+    </form>
+
+    <h2 class="visually-hidden">Daftar produk</h2>
+    <ul class="rak catalog-rak" data-grid></ul>
+
+    <div class="catalog-empty" data-empty hidden>
+      <img class="catalog-empty__illus" src="assets/illus/pot-terracotta.svg" alt="" width="160" height="140" onerror="this.hidden=true">
+      <p class="catalog-empty__title h2">Di rak ini belum ada yang cocok.</p>
+      <div class="cluster catalog-empty__actions">
+        <button type="button" class="btn" data-reset>Hapus filter</button>
+        <a class="btn btn-fill" data-empty-wa href="#" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg>Tanya via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+<div data-layout="footer"></div>
+<script src="data/site.js"></script>
+<script src="data/products.js"></script>
+<script src="data/tips.js"></script>
+<script src="js/layout.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/catalog.js"></script>
+</body>
+</html>

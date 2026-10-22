@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Toko Lestari — css/base.css  (lead-owned: tokens, fonts, reset, type, layout, sticker primitives)
+   Agents: use the tokens, never redefine them. Add component styles in your own file.
+   ========================================================================== */
+/* Bricolage Grotesque (SIL OFL, Google Fonts v9 subsets, self-hosted; client's pick 22 Oct) for display, labels, buttons, prices; DM Sans for text. Nothing on the site is italic, so no italic faces are declared. */
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin-ext.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'DM Sans'; src: url('../assets/fonts/DMSans-Variable.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+
+:root {
+  /* ---- palette: a drawn shop. cream paper, olive shelves, leaf greens, terracotta pots, pine for dark ---- */
+  --paper:      #F7F3EA;   /* page ground */
+  --paper-2:    #FFFDF7;   /* cards, tags, inputs */
+  --paper-3:    #EFE9DC;   /* tiles, alternate bands */
+  --ink:        #1F2A22;   /* text, outlines */
+  --ink-2:      #4D5A50;   /* secondary text */
+  --mute:       #5E6B63;   /* meta (5.5:1 on paper-2, 4.6:1 on paper-3) */
+  --line:       rgba(31, 42, 34, 0.16);
+  --paper-rgb: 247 243 234; --paper-2-rgb: 255 253 247; --paper-3-rgb: 239 233 220; --ink-rgb: 31 42 34; --ink-2-rgb: 77 90 80; --olive-rgb: 166 164 58; --olive-2-rgb: 216 214 138; --leaf-rgb: 62 125 75; --leaf-2-rgb: 127 176 105; --pine-rgb: 15 76 70; --pine-2-rgb: 23 107 98; --terracotta-rgb: 212 103 74; --sun-rgb: 242 193 78; --sky-rgb: 207 232 230; --red-rgb: 166 60 39;   /* for rgb(var(--x-rgb) / a): no raw colour values outside this file */
+  --olive:      #A6A43A;   /* shelves, squiggles, line art */
+  --olive-2:    #D8D68A;   /* light olive fills */
+  --leaf:       #3E7D4B;   /* leaves, success */
+  --leaf-ink:   #2F6A3C;   /* leaf as text: eyebrows, links (5.35:1 on paper-3) */
+  --leaf-2:     #7FB069;   /* light leaves */
+  --leaf-3:     #CFE3C3;   /* leaf tint */
+  --pine:       #0F4C46;   /* footer, dark bands, forest sky in the game */
+  --pine-2:     #176B62;   /* pine hover / mid forest */
+  --terracotta: #D4674A;   /* THE accent: pots and illustration */
+  --terracotta-ink: #B84E31; /* the same accent for text and button fills: 4.95:1 under paper-2 text (jury contrast fix) */
+  --terracotta-2: #F2C4B4; /* accent tint */
+  --sun:        #F2C14E;   /* stickers, stars, one sun per page at most */
+  --sky:        #CFE8E6;   /* game sky, cool tint */
+  --wood:       #8A5A20;  --wood-2: #A8702F;  --board: #0B3D38;   /* game: stall timber (5.3:1 under paper text) and the chalkboard */
+  --amber:      #8F5C10;  --amber-bg: #FBEFD6;   /* pre-order */
+  --red:        #A63C27;  --red-bg:   #F9E2DC;   /* stok habis, errors */
+  --ready:      #2B5E36; --ready-bg: var(--leaf-3);   /* 5.6:1 */
+
+  /* ---- type ---- */
+  --font-display: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+  --font-text:    'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-shelf: clamp(4.5rem, 2rem + 11vw, 12.5rem);     /* shelf letters in the hero */
+  --fs-display: clamp(2.75rem, 1.6rem + 4.2vw, 5.5rem);
+  --fs-h1: clamp(2.25rem, 1.5rem + 2.6vw, 4rem);
+  --fs-h2: clamp(1.75rem, 1.25rem + 1.8vw, 2.75rem);
+  --fs-h3: clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem);
+  --fs-h4: 1.25rem;
+  --fs-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --fs-body: 1.0625rem;
+  --fs-sm: 0.9375rem;
+  --fs-xs: 0.8125rem;
+  --lh-tight: 0.98; --lh-snug: 1.15; --lh-text: 1.6;
+  --track-display: -0.03em; --track-wide: 0.08em;   /* grotesk: display tighter than Fraunces needed, wordmark looser than its 0 but not the old serif .14em */
+
+  /* ---- space, size, shape ---- */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.25rem; --s-6: 1.5rem; --s-8: 2rem;
+  --s-10: 2.5rem; --s-12: 3rem; --s-16: 4rem; --s-20: 5rem; --s-24: 6rem; --s-32: 8rem;
+  --section-y: clamp(4rem, 3rem + 5vw, 8rem);
+  --container: 80rem; --container-narrow: 44rem; --gutter: clamp(1rem, 4vw, 2.5rem);
+  --header-h: 4.25rem; --banner-h: 2.25rem;
+  --radius: 6px; --radius-lg: 14px; --radius-pill: 999px;
+  --stroke: 1.5px;
+  --shadow-hard: 4px 4px 0 var(--ink);           /* sticker / button */
+  --shadow-hard-lg: 8px 8px 0 var(--ink);        /* cards at rest */
+  --shadow-hard-olive: 6px 6px 0 var(--olive);   /* illustration frames */
+  --shadow-soft: 0 18px 40px -18px rgba(31, 42, 34, .35);
+
+  /* ---- motion: "settle like a pot set down on a shelf" ---- */
+  --ease-settle: cubic-bezier(.34, 1.4, .64, 1);  /* small overshoot, then rest */
+  --ease-out: cubic-bezier(.22, .9, .3, 1);
+  --ease-io: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: 160ms; --dur-2: 320ms; --dur-3: 640ms; --dur-4: 1100ms;
+}
+
+/* ---- reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + var(--banner-h) + 1rem); }
+html:not(.lenis) { scroll-behavior: smooth; }
+body { font-family: var(--font-text); font-size: var(--fs-body); line-height: var(--lh-text); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; min-height: 100dvh; display: flex; flex-direction: column; overflow-x: clip; }
+main { flex: 1 0 auto; }
+img, picture, svg, video, canvas { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+p, li, dd { text-wrap: pretty; }
+h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
+::selection { background: var(--olive-2); color: var(--ink); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: 220ms var(--ease-io) both vt-out; }
+::view-transition-new(root) { animation: 360ms var(--ease-out) both vt-in; }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-8px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(12px); } }
+
+/* ---- type scale ---- */
+/* headings: Bricolage 700; the optical size is set by hand (opsz 96 = display drawing at display sizes, 32 at h2/h3) so it never drifts with the fluid scale */
+h1, h2, h3, h4, .display, .shelf-letters { font-family: var(--font-display); font-weight: 700; line-height: var(--lh-snug); letter-spacing: -0.02em; color: var(--ink); font-variation-settings: "opsz" 32; }
+.display { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 700; font-variation-settings: "opsz" 96; }
+h1, .h1 { font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.025em; font-variation-settings: "opsz" 96; }
+h2, .h2 { font-size: var(--fs-h2); line-height: 1.1; }
+h3, .h3 { font-size: var(--fs-h3); letter-spacing: -0.015em; }
+h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
+.lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--ink-2); max-width: 36rem; }
+.muted { color: var(--ink-2); } .meta { color: var(--mute); font-size: var(--fs-sm); }
+.text-sm { font-size: var(--fs-sm); } .text-xs { font-size: var(--fs-xs); }
+/* eyebrow: a small roman label in the display face (the reference's typewriter charm; nothing italic since the client's 22 Oct note) */
+.eyebrow { font-family: var(--font-display); font-weight: 600; font-size: .9375rem; color: var(--leaf-ink); letter-spacing: .02em; display: inline-flex; align-items: center; gap: .5rem; }
+.eyebrow::before { content: ""; width: 1.5rem; height: 2px; background: var(--olive); border-radius: 2px; }
+.eyebrow.no-rule::before { display: none; }
+.wordmark { font-family: var(--font-display); font-weight: 800; letter-spacing: var(--track-wide); text-transform: uppercase; }
+.num, .price { font-variant-numeric: tabular-nums; }
+.price { font-family: var(--font-display); font-weight: 700; color: var(--terracotta-ink); letter-spacing: -0.01em; }
+.price-before { font-family: var(--font-text); font-weight: 400; color: var(--mute); text-decoration: line-through; margin-left: .5rem; font-size: .85em; }
+.on-dark, .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4, .on-dark .display { color: var(--paper); }
+.on-dark .lead, .on-dark .muted, .on-dark p { color: rgba(247, 243, 234, .78); }
+.on-dark .eyebrow { color: var(--olive-2); }
+.prose { max-width: var(--container-narrow); font-size: 1.125rem; }
+.prose > * + * { margin-top: 1.1em; }
+.prose h2 { margin-top: 1.8em; font-size: var(--fs-h3); } .prose h3 { margin-top: 1.5em; font-size: var(--fs-h4); }
+.prose ul { list-style: disc; padding-left: 1.25rem; } .prose ol { list-style: decimal; padding-left: 1.25rem; } .prose li + li { margin-top: .4em; }
+.prose a:not(.btn) { color: var(--leaf-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--olive); }
+.prose strong { font-weight: 600; } .prose p { color: var(--ink-2); }
+.prose blockquote { border-left: 3px solid var(--olive); padding-left: 1rem; font-family: var(--font-display); font-weight: 500; font-size: 1.25em; line-height: 1.35; color: var(--ink); }
+
+/* ---- layout ---- */
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.container-narrow { width: 100%; max-width: var(--container-narrow); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section-y); }
+.section-tight { padding-block: calc(var(--section-y) * .55); }
+.band-pine { background: var(--pine); color: var(--paper); }
+.band-paper-3 { background: var(--paper-3); }
+.grid { display: grid; gap: var(--s-6); }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1023px) { .grid-4, .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 639px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: minmax(0, 1fr); } .grid-4.keep-2, .grid-3.keep-2, .grid-2.keep-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); } }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+@media (max-width: 899px) { .split { grid-template-columns: minmax(0, 1fr); } .split.reverse-mobile > :first-child { order: 2; } }
+.cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
+.stack > * + * { margin-top: var(--s-4); } .stack-lg > * + * { margin-top: var(--s-6); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+@media (max-width: 767px) { .hide-mobile { display: none !important; } } @media (min-width: 768px) { .show-mobile { display: none !important; } }
+.icon { width: 1.25em; height: 1.25em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.icon-lg { width: 1.5rem; height: 1.5rem; } .icon-xl { width: 2rem; height: 2rem; }
+
+/* ---- sticker primitives (shared; A refines, nobody renames) ---- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8125rem 1.375rem; border: var(--stroke) solid var(--ink); border-radius: var(--radius); background: var(--paper-2); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; line-height: 1; letter-spacing: 0; white-space: nowrap; box-shadow: var(--shadow-hard); transition: transform var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle), background var(--dur-1), color var(--dur-1); }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn .icon { width: 1.125rem; height: 1.125rem; }
+.btn-fill { background: var(--terracotta-ink); color: var(--paper-2); }
+.btn-pine { background: var(--pine); color: var(--paper); }
+.btn-lime { background: var(--olive-2); }
+.btn-sm { padding: .5625rem .9375rem; font-size: .9375rem; box-shadow: 3px 3px 0 var(--ink); }
+.btn-sm:hover { box-shadow: 4px 4px 0 var(--ink); }
+.btn-lg { padding: 1rem 1.75rem; font-size: 1.25rem; }
+.btn-icon { width: 2.75rem; height: 2.75rem; padding: 0; }
+.btn[aria-disabled="true"], .btn:disabled { opacity: .5; pointer-events: none; }
+.on-dark .btn { border-color: var(--paper); box-shadow: 4px 4px 0 rgba(247, 243, 234, .9); }
+.on-dark .btn:hover { box-shadow: 6px 6px 0 rgba(247, 243, 234, .9); }
+.link-u { text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 2px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }
+.link-u:hover { text-decoration-color: var(--terracotta); }
+.card { background: var(--paper-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius-lg); padding: var(--s-6); box-shadow: var(--shadow-hard-lg); }
+.card-flat { background: var(--paper-2); border: var(--stroke) solid var(--line); border-radius: var(--radius-lg); padding: var(--s-6); }
+.tag { display: inline-flex; align-items: center; gap: .375rem; padding: .3125rem .75rem; border: var(--stroke) solid var(--ink); border-radius: var(--radius); background: var(--paper-2); font-family: var(--font-display); font-weight: 600; font-size: .9375rem; line-height: 1.2; }
+.tag-sun { background: var(--sun); } .tag-leaf { background: var(--leaf-3); } .tag-terra { background: var(--terracotta-2); }
+.badge { display: inline-flex; align-items: center; gap: .375rem; padding: .25rem .625rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: 600; background: var(--paper-3); color: var(--ink-2); }
+.badge::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: currentColor; }
+.badge-ready { color: var(--ready); background: var(--ready-bg); } .badge-preorder { color: var(--amber); background: var(--amber-bg); } .badge-habis { color: var(--red); background: var(--red-bg); }
+.badge-plain::before { display: none; }
+.squiggle { position: relative; display: inline-block; }
+.squiggle::after { content: ""; position: absolute; left: -2%; right: -2%; bottom: -.15em; height: .35em; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M0 8 Q 12 0 25 8 T 50 8 T 75 8 T 100 8' fill='none' stroke='%23A6A43A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%; z-index: -1; }
+.squiggle-terra::after { filter: hue-rotate(-40deg) saturate(1.6); }
+.frame-olive { border: var(--stroke) solid var(--olive); box-shadow: var(--shadow-hard-olive); border-radius: var(--radius); }
+.input, .select, .textarea { width: 100%; padding: .75rem .9375rem; border: var(--stroke) solid var(--ink); border-radius: var(--radius); background: var(--paper-2); font-size: 1rem; transition: box-shadow var(--dur-1); }
+.input:focus-visible, .select:focus-visible, .textarea:focus-visible { outline: none; box-shadow: 3px 3px 0 var(--terracotta); }
+.input::placeholder, .textarea::placeholder { color: var(--mute); }
+.textarea { min-height: 7rem; resize: vertical; }
+.field { display: grid; gap: .375rem; } .field label { font-family: var(--font-display); font-weight: 600; }
+.error-msg { font-size: var(--fs-xs); color: var(--red); }
+
+/* ---- motion hooks (A implements in js/main.js; markup authors just add the attributes) ---- */
+[data-reveal] { opacity: 0; transform: translateY(18px); }
+[data-reveal].is-in { opacity: 1; transform: none; transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-settle); }
+[data-reveal][data-delay="1"].is-in { transition-delay: 80ms; } [data-reveal][data-delay="2"].is-in { transition-delay: 160ms; } [data-reveal][data-delay="3"].is-in { transition-delay: 240ms; }
+html.no-js [data-reveal], html.reduced [data-reveal] { opacity: 1; transform: none; }
+.sway { transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite alternate; }
+.sway-2 { animation-duration: 7.5s; animation-delay: -2s; } .sway-3 { animation-duration: 5.2s; animation-delay: -4s; }
+@keyframes sway { from { transform: rotate(-1.6deg); } to { transform: rotate(1.6deg); } }
+.wiggle:hover { animation: wiggle .6s var(--ease-settle) 1; }
+@keyframes wiggle { 0% { transform: rotate(0); } 30% { transform: rotate(-3deg); } 60% { transform: rotate(2.5deg); } 100% { transform: rotate(0); } }
+
+/* ---- shell placeholders: reserve the banner + header height until js/layout.js injects them (no layout shift) ---- */
+[data-layout="header"]:empty { min-height: 6.6rem; }
+@media (max-width: 767px) { [data-layout="header"]:empty { min-height: 7.25rem; } }
+[data-layout="footer"]:empty { min-height: 20rem; }

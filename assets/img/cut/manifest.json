@@ -1,0 +1,202 @@
+{
+ "aglaonema": {
+  "file": "assets/img/cut/aglaonema.webp",
+  "w": 376,
+  "h": 640,
+  "kb": 36,
+  "kind": "plant",
+  "source": "File:Aglaonema commutatum var maculatum CBM.png",
+  "license": "Public domain",
+  "date": "1865"
+ },
+ "alocasia": {
+  "file": "assets/img/cut/alocasia.webp",
+  "w": 529,
+  "h": 640,
+  "kb": 47,
+  "kind": "plant",
+  "source": "File:L'Illustration horticole (Plate 395).jpg",
+  "license": "Public domain",
+  "date": "1880"
+ },
+ "aloe": {
+  "file": "assets/img/cut/aloe.webp",
+  "w": 491,
+  "h": 640,
+  "kb": 52,
+  "kind": "plant",
+  "source": "File:Curtis's botanical magazine (Plate 1460) (8248007238).jpg",
+  "license": "Public domain",
+  "date": "1812"
+ },
+ "anthurium": {
+  "file": "assets/img/cut/anthurium.webp",
+  "w": 429,
+  "h": 640,
+  "kb": 36,
+  "kind": "plant",
+  "source": "File:The Floral magazine (Plate 349) BHL5931433.jpg",
+  "license": "Public domain",
+  "date": "1867"
+ },
+ "anthurium-b": {
+  "file": "assets/img/cut/anthurium-b.webp",
+  "w": 355,
+  "h": 640,
+  "kb": 45,
+  "kind": "plant",
+  "source": "File:Curtis's botanical magazine (8294318494).jpg",
+  "license": "Public domain",
+  "date": "1830"
+ },
+ "begonia": {
+  "file": "assets/img/cut/begonia.webp",
+  "w": 406,
+  "h": 640,
+  "kb": 47,
+  "kind": "plant",
+  "source": "File:Curtis's Botanical Magazine, Plate 4281 (Volume 73, 1847).png",
+  "license": "Public domain",
+  "date": "1847"
+ },
+ "calathea": {
+  "file": "assets/img/cut/calathea.webp",
+  "w": 342,
+  "h": 640,
+  "kb": 36,
+  "kind": "plant",
+  "source": "File:Curtis's botanical magazine (8293276117).jpg",
+  "license": "Public domain",
+  "date": "1830"
+ },
+ "croton": {
+  "file": "assets/img/cut/croton.webp",
+  "w": 357,
+  "h": 640,
+  "kb": 47,
+  "kind": "plant",
+  "source": "File:Curtis's Botanical Magazine, Plate 3051 (Volume 58, 1831).png",
+  "license": "Public domain",
+  "date": "1831"
+ },
+ "dendrobium": {
+  "file": "assets/img/cut/dendrobium.webp",
+  "w": 392,
+  "h": 640,
+  "kb": 35,
+  "kind": "plant",
+  "source": "File:Dendrobium bigibbum.jpg",
+  "license": "Public domain",
+  "date": "1856"
+ },
+ "fern": {
+  "file": "assets/img/cut/fern.webp",
+  "w": 546,
+  "h": 640,
+  "kb": 74,
+  "kind": "plant",
+  "source": "File:Album of Indian ferns (Plate 14) (6025785252).jpg",
+  "license": "Public domain",
+  "date": "1887"
+ },
+ "hibiscus": {
+  "file": "assets/img/cut/hibiscus.webp",
+  "w": 356,
+  "h": 640,
+  "kb": 36,
+  "kind": "plant",
+  "source": "File:Curtis's botanical magazine (10594232435).jpg",
+  "license": "Public domain",
+  "date": "1806"
+ },
+ "medinilla": {
+  "file": "assets/img/cut/medinilla.webp",
+  "w": 552,
+  "h": 640,
+  "kb": 69,
+  "kind": "plant",
+  "source": "File:Curtis's Botanical Magazine, Plate 4321 (Volume 73, 1847).png",
+  "license": "Public domain",
+  "date": "1847"
+ },
+ "melati": {
+  "file": "assets/img/cut/melati.webp",
+  "w": 501,
+  "h": 640,
+  "kb": 60,
+  "kind": "plant",
+  "source": "File:Jasminum officinale 1787.jpg",
+  "license": "Public domain",
+  "date": "1787"
+ },
+ "nepenthes": {
+  "file": "assets/img/cut/nepenthes.webp",
+  "w": 552,
+  "h": 640,
+  "kb": 76,
+  "kind": "plant",
+  "source": "File:Curtis's Botanical Magazine, Plate 4285 (Volume 73, 1847).png",
+  "license": "Public domain",
+  "date": "1847"
+ },
+ "philodendron": {
+  "file": "assets/img/cut/philodendron.webp",
+  "w": 394,
+  "h": 640,
+  "kb": 36,
+  "kind": "plant",
+  "source": "File:Curtis's botanical magazine (Plate 3314) (8203250428).jpg",
+  "license": "Public domain",
+  "date": "1834"
+ },
+ "print-begonia-rex": {
+  "file": "assets/img/cut/print-begonia-rex.webp",
+  "w": 616,
+  "h": 900,
+  "kb": 79,
+  "kind": "print",
+  "source": "File:Flore des serres v13 049a.jpg",
+  "license": "Public domain",
+  "date": ""
+ },
+ "print-dracaena": {
+  "file": "assets/img/cut/print-dracaena.webp",
+  "w": 615,
+  "h": 900,
+  "kb": 97,
+  "kind": "print",
+  "source": "File:L'Illustration horticole (Plate 190).jpg",
+  "license": "Public domain",
+  "date": "1874"
+ },
+ "print-dracaena-b": {
+  "file": "assets/img/cut/print-dracaena-b.webp",
+  "w": 703,
+  "h": 900,
+  "kb": 84,
+  "kind": "print",
+  "source": "File:L'Illustration horticole (Plate 384).jpg",
+  "license": "Public domain",
+  "date": "1880"
+ },
+ "print-monstera": {
+  "file": "assets/img/cut/print-monstera.webp",
+  "w": 1297,
+  "h": 900,
+  "kb": 327,
+  "kind": "print",
+  "source": "File:Monstera deliciosa libostrom zprorážený Vesmír 1875.jpg",
+  "license": "Public domain",
+  "date": "1875"
+ },
+ "print-monstera-b": {
+  "file": "assets/img/cut/print-monstera-b.webp",
+  "w": 701,
+  "h": 900,
+  "kb": 38,
+  "kind": "print",
+  "source": "File:Berliner allgemeine Gartenzeitung (19755855571).jpg",
+  "license": "Public domain",
+  "date": "1857"
+ }
+}

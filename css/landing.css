@@ -1,0 +1,133 @@
+/* Hallmark · macrostructure: Marquee Hero (the drawn shop shelves) · genre: playful · theme: custom (Rak Toko: cream paper · terracotta accent · Bricolage Grotesque + DM Sans) · nav: N6 masthead, centred wordmark · footer: Ft4 colophon with one leaf · enrichment: E5 public-domain botanical cut-outs · design-system: DESIGN.md */
+/* Toko Lestari — css/landing.css (B): the hero shelves, facts strip, feature blocks, price-tag rail, Instagram grid.
+   Tokens from base.css; sticker states from components.css. Hero props are positioned in % of their bay (--x/--w),
+   phones get --mx/--mw overrides and the three shelves split into five bays (TO / KO / LES / TA / RI). */
+
+/* ---- hero: three shelves with the wordmark among the stock (packed edge to edge, nothing clipped) ---- */
+.hero { --shelf-h: clamp(150px, 14.5vw, 212px); --shelf-gap: clamp(2.5rem, 4.5vw, 4rem); --plank: 7px; --tilt: 0deg; overflow-x: clip; padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.shelves { display: grid; gap: var(--shelf-gap); padding-top: clamp(3.5rem, 6vw, 5.5rem); margin-block: 0; font-size: clamp(2.6rem, 0.6rem + 10.2vw, 9.75rem); font-weight: 800; letter-spacing: -0.035em; text-wrap: initial; }   /* TY (Bricolage 800, opsz 96): 156px at 1440 (NURSERI ~572px, caps 103px, the height the Fraunces letters had), 114px at 1024 (~418px), 88px at 768 (~323px); the budget beside the end props is ~605px at 1440 and ~505px at 1024 */   /* the h1: its words are the shelf letters, everything else on the shelves is decoration */   /* air above shelf 1 for the tall plant */
+.shelf { position: relative; display: flex; align-items: flex-end; height: var(--shelf-h); padding-bottom: var(--plank); container-type: inline-size; }
+.shelf-1 { z-index: 3; } .shelf-2 { z-index: 2; } .shelf-3 { z-index: 1; }
+.shelf-box { position: absolute; inset: 0; background: var(--paper-2); border: 2px solid var(--olive); border-bottom-width: var(--plank); pointer-events: none; z-index: 0; }
+.shelf-box::before { content: ""; position: absolute; left: 0; right: 0; top: 72%; height: 2px; background: var(--olive); }   /* the back rail, drawn through everything like the reference */
+/* a bay is one tidy row: everything stands on the plank, evenly spaced, nothing overlaps */
+.bay { position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; flex: 1 1 0; gap: 1cqw; padding-inline: 2.5cqw; min-width: 0; }
+.bay-wide { flex: 2 1 0; }
+.shelf-letters { position: relative; z-index: 2; font-family: var(--font-display); font-weight: 800; font-size: 1em; line-height: .8; letter-spacing: -0.035em; font-variation-settings: "opsz" 96; color: var(--ink); white-space: nowrap; pointer-events: none; user-select: none; margin-bottom: -.08em; }   /* Bricolage ascent .93 / descent .27: at line-height .8 the baseline sits .07em above the line box, so -.08em seats the caps on the plank with 1 px of overlap, as the Fraunces -.05em did */
+.prop { position: relative; z-index: 3; flex: 0 0 auto; width: var(--w, 8cqw); }
+.prop-in { transform-origin: 50% 100%; rotate: var(--r, 0deg); }
+.prop img { width: 100%; height: auto; }
+.plant { display: flex; flex-direction: column; align-items: center; width: auto; }
+.plant .prop-in { display: flex; flex-direction: column; align-items: center; }
+.plant .potted { display: block; height: var(--lh); width: auto; margin-bottom: calc(var(--lh) * -1 * var(--sink, 0)); transform-origin: 50% 92%; rotate: calc(var(--tilt) * var(--k, 1)); }   /* ready-made potted plants (client art), cropped to their bounding box: the pot base is the image's bottom edge, so the plant stands on the plank. --sink (inline, per image) lowers the two whose plantlets or a drooping leaf reach below the saucer, so those hang over the plank instead of lifting the pot. The scroll tilt uses `rotate`, the idle .sway animates `transform`: the two compose */
+.plant.h-l { --lh: calc(var(--shelf-h) * 1.15); } .plant.h-m { --lh: calc(var(--shelf-h) * .88); } .plant.h-s { --lh: calc(var(--shelf-h) * .66); }   /* taller than the shelf, like the reference: leaves poke above the frame */
+@container (max-width: 799px) { .plant.h-m { display: none; } }   /* a shelf narrower than ~920px (viewports under ~980px) has room for one plant beside the letters, not two: measured at 768 (shelf 706px) NURSERI 435 + alocasia 137 + pilea 109 + print 46 + gaps ran 90px past the frame, so the second plant goes before anything is clipped; lower this threshold if the letters get smaller. TY (22 Oct, Bricolage): the letters are narrower, so 799px: at a 799px shelf NURSERI is ~361px and both plants + print + vase + gaps + padding add up to ~779px */
+/* flat olive silhouettes, like the reference's jugs and vases: the kit SVG is only a mask */
+.prop.sil { flex: 0 1 auto; min-width: 0; }   /* silhouettes give way first, never past the frame */
+.sil .prop-in { width: 100%; aspect-ratio: var(--ar, 1); background: var(--olive); -webkit-mask-position: center bottom; -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-position: center bottom; mask-size: contain; mask-repeat: no-repeat; }
+.sil[data-m="trowel"] .prop-in { -webkit-mask-image: url("../assets/illus/trowel.svg"); mask-image: url("../assets/illus/trowel.svg"); }
+.sil[data-m="vase-flowers"] .prop-in { -webkit-mask-image: url("../assets/illus/vase-flowers.svg"); mask-image: url("../assets/illus/vase-flowers.svg"); }
+.sil[data-m="watering-can"] .prop-in { -webkit-mask-image: url("../assets/illus/watering-can.svg"); mask-image: url("../assets/illus/watering-can.svg"); }
+.sil[data-m="basket"] .prop-in { -webkit-mask-image: url("../assets/illus/basket.svg"); mask-image: url("../assets/illus/basket.svg"); }
+.sil[data-m="sprayer"] .prop-in { -webkit-mask-image: url("../assets/illus/sprayer.svg"); mask-image: url("../assets/illus/sprayer.svg"); }
+.sil[data-m="media-bag"] .prop-in { -webkit-mask-image: url("../assets/illus/media-bag.svg"); mask-image: url("../assets/illus/media-bag.svg"); }
+/* quiet fillers: the same kit shapes in light olive, standing on the plank behind the letters and plants so the panels read as packed shelves, not white boxes.
+   Absolute inside the shelf (--x/--w in cqw of the shelf), so the row layout never moves; z 1 = above the panel, below the bay. */
+.fill { position: absolute; left: var(--x); bottom: var(--plank); z-index: 1; width: var(--w); aspect-ratio: var(--ar, 1); background: var(--olive-2); pointer-events: none; -webkit-mask-position: center bottom; -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-position: center bottom; mask-size: contain; mask-repeat: no-repeat; }
+.fill[data-m="books-upright"] { -webkit-mask-image: url("../assets/illus/books-upright.svg"); mask-image: url("../assets/illus/books-upright.svg"); }
+.fill[data-m="book-stack"] { -webkit-mask-image: url("../assets/illus/book-stack.svg"); mask-image: url("../assets/illus/book-stack.svg"); }
+.fill[data-m="media-bag"] { -webkit-mask-image: url("../assets/illus/media-bag.svg"); mask-image: url("../assets/illus/media-bag.svg"); }
+.fill[data-m="seed-packet"] { -webkit-mask-image: url("../assets/illus/seed-packet.svg"); mask-image: url("../assets/illus/seed-packet.svg"); }
+.fill[data-m="pot-dots"] { -webkit-mask-image: url("../assets/illus/pot-dots.svg"); mask-image: url("../assets/illus/pot-dots.svg"); }
+.fill[data-m="candle"] { -webkit-mask-image: url("../assets/illus/candle.svg"); mask-image: url("../assets/illus/candle.svg"); }
+.prop.print img { filter: drop-shadow(2px 3px 0 rgb(var(--ink-rgb) / .16)); }
+.poster .prop-in { position: relative; container-type: inline-size; }
+.poster-title { position: absolute; left: 12%; right: 12%; top: 11%; font-family: var(--font-display); font-weight: 700; font-size: 13cqw; line-height: 1.02; text-transform: uppercase; letter-spacing: .02em; color: var(--ink); text-align: center; }
+.hero-lead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4) var(--s-8); margin-top: clamp(2rem, 4vw, 3rem); }
+.hero-copy { max-width: 34rem; }
+.hero-title { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h3); line-height: 1.15; letter-spacing: -0.015em; font-variation-settings: "opsz" 32; margin-bottom: .75rem; color: var(--ink); }
+.hero-lead p { max-width: 34rem; color: var(--ink-2); font-size: var(--fs-lead); line-height: 1.45; text-wrap: balance; }
+.hero-lead .cluster { gap: var(--s-3); }
+
+/* ---- facts strip: edge to edge, four real numbers ---- */
+.facts { background: var(--paper-3); }
+.facts-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.facts-list li { display: flex; align-items: center; gap: .75rem; padding: 1.125rem var(--s-4); font-size: var(--fs-sm); color: var(--ink-2); line-height: 1.35; }
+.facts-list .icon { width: 1.5rem; height: 1.5rem; color: var(--leaf); }
+.facts-list b { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+
+/* ---- feature blocks: illustration | sticker card, alternating ---- */
+.features { padding-block: var(--section-y) calc(var(--section-y) * .6); }
+.feature + .feature { margin-top: clamp(3rem, 8vw, 7rem); }
+.feature .split { align-items: center; }
+.feature:nth-child(even) .split > .fig { order: 2; }
+.fig { position: relative; margin-inline: auto; width: min(100%, 38rem); overflow: visible; }
+.fig-collage { width: min(100%, 30rem); }
+.fig-hands { width: min(100%, 34rem); }
+.fig-room { width: min(100%, 32rem); }
+.fig > img { width: 100%; height: auto; }
+.fig .fig-plant { position: absolute; left: var(--px); bottom: var(--py); width: var(--pw); height: auto; translate: -50% 0; z-index: 1; filter: drop-shadow(1px 2px 0 rgb(var(--olive-rgb) / .35)); }
+.fig-card { background: var(--paper-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius-lg); padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: var(--shadow-hard-lg); max-width: 32rem; }
+.fig-card h2 { margin-top: 0; font-size: var(--fs-h2); }
+.fig-card p { margin-top: 1rem; color: var(--ink-2); }
+.fig-card .btn { margin-top: 1.5rem; }
+/* annotation stickers hang off the leader lines drawn inside plant-annotated.svg */
+.note { position: absolute; z-index: 2; max-width: 11rem; padding: .375rem .625rem; border: var(--stroke) solid var(--ink); border-radius: var(--radius); background: var(--sun); box-shadow: 3px 3px 0 var(--ink); font-family: var(--font-display); font-weight: 600; font-size: .9375rem; line-height: 1.25; rotate: var(--r, 0deg); text-wrap: balance; }
+.note-1 { left: 0; top: 10%; --r: -3deg; } .note-2 { right: -2%; top: 22%; --r: 2deg; background: var(--leaf-3); } .note-3 { right: 0; top: 68%; --r: -2deg; background: var(--paper-2); }
+/* Tunas (240x300, boots at y=294) stands on the frame's front grass: at 36% width he is ~243 frame units tall (the tupai cutout was ~225), boots ~12 units below the grass ridge (556 at centre), a soft contact shadow under them */
+.fig-forest .cil { position: absolute; left: 50%; bottom: 7.5%; width: 36%; height: auto; z-index: 1; translate: -50% 0; transform-origin: 50% 100%; animation: cil-bob 3.2s ease-in-out infinite alternate; }
+.fig-forest::after { content: ""; position: absolute; left: 50%; bottom: 7.1%; width: 19%; height: 2.6%; z-index: 0; translate: -50% 0; border-radius: 50%; background: rgb(var(--pine-rgb) / .28); animation: cil-shadow 3.2s ease-in-out infinite alternate; }
+@keyframes cil-bob { from { translate: -50% 0; } to { translate: -50% -4px; } }
+@keyframes cil-shadow { from { scale: 1 1; opacity: 1; } to { scale: .9 .85; opacity: .75; } }
+
+/* ---- featured (P1, 22 Oct): eight tiles standing on olive shelves. The tile itself (.rak, .rak-item, .rak-card, .rak-mat, .rak-name,
+   .rak-cat, .rak-foot, hover/active/focus, the reveal rise and the 4 / 3 / 2 columns) is the shared shelf-tile component in
+   css/components.css since C2 (22 Oct); markup from tileHTML() in js/catalog.js. Only the landing's composition lives here. ---- */
+.featured { background: var(--paper-3); padding-block: var(--section-y); }
+.sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--s-4) var(--s-8); margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+.sec-head h2 { margin-top: .5rem; }
+.rak-lead { margin-top: .625rem; max-width: 30rem; color: var(--ink-2); }
+.rak:empty { min-height: 54rem; }   /* reserve the two shelves until landing.js renders them (CLS); measured 865 px at 1440 */
+
+/* ---- Instagram grid ---- */
+.ig { padding-block: var(--section-y); }
+.ig-grid { gap: var(--s-4); }
+.ig-post { position: relative; display: block; aspect-ratio: 1; overflow: hidden; border: var(--stroke) solid var(--olive); border-radius: var(--radius); background: var(--paper-3); box-shadow: 4px 4px 0 var(--olive);   /* olive, not ink: the photos carry the colour here */ transition: translate var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out); }
+.ig-post img { width: 100%; height: 100%; object-fit: cover; transition: scale var(--dur-4) var(--ease-out); }
+.ig-post .icon { position: absolute; right: .75rem; bottom: .75rem; width: 2rem; height: 2rem; padding: .375rem; border-radius: 50%; background: var(--paper-2); color: var(--ink); border: var(--stroke) solid var(--olive); opacity: 0; translate: 0 6px; transition: opacity var(--dur-2), translate var(--dur-2) var(--ease-out); }
+@media (hover: hover) { .ig-post:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--olive); } .ig-post:hover img { scale: 1.04; } .ig-post:hover .icon { opacity: 1; translate: 0 0; } }
+.ig-post:focus-visible .icon { opacity: 1; translate: 0 0; }
+.ig-post:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--olive); }
+
+/* ---- tablet ---- */
+@media (max-width: 1023px) {
+  .facts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rak-item:nth-child(n + 7) { display: none; }   /* three columns (components.css): six tiles, two full shelves, no short row */
+  .rak:empty { min-height: 48rem; }   /* measured 774 px at 855 */
+}
+
+/* ---- phones: five bays, each its own shelf; props use their --mx/--mw, nothing taller than the bay + gap ---- */
+@media (max-width: 639px) {
+  .hero { --bay-h: 150px; --plank: 6px; }
+  .shelves { gap: 2.75rem; padding-top: 3.5rem; }
+  .shelf { display: grid; grid-template-columns: 1fr; gap: 2.75rem; height: auto; padding-bottom: 0; }
+  .shelf::after, .shelf-box { display: none; }
+  .bay { height: var(--bay-h); padding-bottom: var(--plank); padding-inline: 4cqw; justify-content: space-between; container-type: inline-size; }
+  .bay::before { content: ""; position: absolute; inset: 0; background: var(--paper-2); border: 2px solid var(--olive); border-bottom-width: var(--plank); z-index: 0; }
+  .bay::after { content: ""; position: absolute; left: 0; right: 0; top: 72%; height: 2px; background: var(--olive); z-index: 0; }
+  .shelves { font-size: clamp(2.4rem, 12.2vw, 3.6rem); }   /* TY: 47.6px at 390 (NURSERI ~175px) — the bay there holds a 149px plant, 29px of padding and the word, 13vw ran 10px into the padding */
+  .plant.h-l { --lh: calc(var(--bay-h) * 1.25); } .plant.h-m { --lh: calc(var(--bay-h) * .9); } .plant.h-s { --lh: calc(var(--bay-h) * .6); }
+  .m-hide { display: none; }
+  .fill { display: none; }   /* phones: at most one small filler per shelf, placed with --mx/--mw */
+  .fill.fill-m { display: block; left: var(--mx, var(--x)); width: var(--mw, var(--w)); }
+  .bay { z-index: auto; }   /* the bay draws its own panel here; no stacking context, so the filler sits between that panel and the letters/plants */
+  .hero-lead { margin-top: 2.5rem; }
+  .feature + .feature { margin-top: 4rem; }
+  .fig-card { max-width: none; }
+  .note { max-width: 8.5rem; font-size: .8125rem; }
+  .note-1 { top: 4%; } .note-2 { top: 20%; } .note-3 { top: 74%; }
+  .rak:empty { min-height: 57rem; }   /* two columns (components.css): six tiles on three shelves, nothing scrolls sideways; measured 918 px at 375 */
+  .ig-grid { gap: var(--s-3); }
+}
+@media (max-width: 420px) { .facts-list { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .fig-forest .cil, .fig-forest::after { animation: none; } }

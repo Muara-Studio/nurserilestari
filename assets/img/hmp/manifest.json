@@ -1,0 +1,302 @@
+{
+ "pot-lavender": {
+  "file": "assets/img/hmp/pot-lavender.webp",
+  "kind": "pot",
+  "w": 554,
+  "h": 640,
+  "kb": 7,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.312,
+   0.687,
+   0.688,
+   0.938
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "alocasia-polly": {
+  "file": "assets/img/hmp/alocasia-polly.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 32,
+  "canvas": [
+   800,
+   925
+  ],
+  "bbox_frac": [
+   0.179,
+   0.133,
+   0.826,
+   0.808
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "pot-stripes": {
+  "file": "assets/img/hmp/pot-stripes.webp",
+  "kind": "pot",
+  "w": 554,
+  "h": 640,
+  "kb": 12,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.24,
+   0.652,
+   0.744,
+   0.936
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "pot-terrazzo": {
+  "file": "assets/img/hmp/pot-terrazzo.webp",
+  "kind": "pot",
+  "w": 554,
+  "h": 640,
+  "kb": 10,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.27,
+   0.683,
+   0.736,
+   0.934
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "fishbone-cactus": {
+  "file": "assets/img/hmp/fishbone-cactus.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 72,
+  "canvas": [
+   800,
+   925
+  ],
+  "bbox_frac": [
+   0.136,
+   0.072,
+   0.841,
+   0.876
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "spotted-begonia": {
+  "file": "assets/img/hmp/spotted-begonia.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 45,
+  "canvas": [
+   800,
+   925
+  ],
+  "bbox_frac": [
+   0.205,
+   0.064,
+   0.825,
+   0.827
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "monstera-adansonii": {
+  "file": "assets/img/hmp/monstera-adansonii.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 80,
+  "canvas": [
+   1080,
+   1248
+  ],
+  "bbox_frac": [
+   0.155,
+   0.071,
+   0.841,
+   0.958
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "pilea": {
+  "file": "assets/img/hmp/pilea.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 28,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.162,
+   0.235,
+   0.83,
+   0.768
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "string-of-hearts": {
+  "file": "assets/img/hmp/string-of-hearts.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 87,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.168,
+   0.147,
+   0.804,
+   0.978
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "prayer-plant": {
+  "file": "assets/img/hmp/prayer-plant.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 51,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.162,
+   0.057,
+   0.864,
+   0.965
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "golden-pothos": {
+  "file": "assets/img/hmp/golden-pothos.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 57,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.088,
+   0.123,
+   0.888,
+   0.945
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "spider-plant": {
+  "file": "assets/img/hmp/spider-plant.webp",
+  "kind": "plant",
+  "w": 554,
+  "h": 640,
+  "kb": 132,
+  "canvas": [
+   500,
+   578
+  ],
+  "bbox_frac": [
+   0.078,
+   0.048,
+   0.882,
+   0.851
+  ],
+  "source": "How Many Plants (howmanyplants.com) illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "collage-pots": {
+  "file": "assets/img/hmp/collage-pots.webp",
+  "kind": "illustration",
+  "w": 920,
+  "h": 1178,
+  "kb": 122,
+  "canvas": [
+   920,
+   1178
+  ],
+  "source": "How Many Plants (howmanyplants.com) home-page illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "hands-repotting": {
+  "file": "assets/img/hmp/hands-repotting.webp",
+  "kind": "illustration",
+  "w": 1000,
+  "h": 903,
+  "kb": 281,
+  "canvas": [
+   1150,
+   1038
+  ],
+  "source": "How Many Plants (howmanyplants.com) home-page illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "room-plants": {
+  "file": "assets/img/hmp/room-plants.webp",
+  "kind": "illustration",
+  "w": 900,
+  "h": 867,
+  "kb": 124,
+  "canvas": [
+   1246,
+   1200
+  ],
+  "source": "How Many Plants (howmanyplants.com) home-page illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "potted-pilea": {
+  "file": "assets/img/hmp/potted-pilea.webp",
+  "kind": "potted plant",
+  "w": 627,
+  "h": 760,
+  "kb": 81,
+  "canvas": [
+   1000,
+   1156
+  ],
+  "source": "How Many Plants (howmanyplants.com) potted-plant illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "potted-calathea": {
+  "file": "assets/img/hmp/potted-calathea.webp",
+  "kind": "potted plant",
+  "w": 522,
+  "h": 760,
+  "kb": 94,
+  "canvas": [
+   1000,
+   1156
+  ],
+  "source": "How Many Plants (howmanyplants.com) potted-plant illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "potted-alocasia": {
+  "file": "assets/img/hmp/potted-alocasia.webp",
+  "kind": "potted plant",
+  "w": 605,
+  "h": 760,
+  "kb": 77,
+  "canvas": [
+   1000,
+   1156
+  ],
+  "source": "How Many Plants (howmanyplants.com) potted-plant illustration, supplied by the client as a placeholder; not licensed for launch"
+ },
+ "potted-spider": {
+  "file": "assets/img/hmp/potted-spider.webp",
+  "kind": "potted plant",
+  "w": 705,
+  "h": 760,
+  "kb": 228,
+  "canvas": [
+   1000,
+   1156
+  ],
+  "source": "How Many Plants (howmanyplants.com) potted-plant illustration, supplied by the client as a placeholder; not licensed for launch"
+ }
+}

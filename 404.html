@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaman tidak ditemukan — Toko Lestari</title>
+<meta name="description" content="Halaman ini belum tumbuh. Kembali ke rak depan Toko Lestari.">
+<meta name="robots" content="noindex">
+
+<link rel="canonical" href="https://tokolestari.id/404.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Toko Lestari">
+<meta property="og:title" content="Halaman tidak ditemukan — Toko Lestari">
+<meta property="og:description" content="Halaman ini belum tumbuh. Kembali ke rak depan Toko Lestari.">
+<meta property="og:url" content="https://tokolestari.id/404.html">
+<meta property="og:image" content="https://tokolestari.id/assets/img/og.jpg">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/shell.css">
+<style>
+/* 404: Cil fell off the shelf; the page has not grown yet, but a sprout starts. */
+.e404 { display: grid; gap: var(--s-10); align-items: center; padding-block: clamp(2rem, 5vw, 4rem) var(--section-y); min-height: calc(100dvh - var(--header-h) - var(--banner-h)); }
+.e404-text { display: grid; gap: var(--s-5); justify-items: start; }
+.e404-text h1 { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 700; font-variation-settings: "opsz" 96; max-width: 12ch; }
+.e404-text .cluster { gap: var(--s-4); margin-top: var(--s-2); }
+.e404-stage { position: relative; overflow: clip; padding: clamp(6rem, 18vh, 12rem) var(--s-4) 2.5rem; }
+.e404-shelf { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: clamp(.5rem, 2.5vw, 1.75rem); }
+.e404-shelf::after { content: ""; position: absolute; left: -6%; right: -6%; bottom: -12px; height: 10px; border-radius: 3px; background: var(--olive); }
+.e404-shelf::before { content: ""; position: absolute; left: 2%; right: 2%; bottom: -24px; height: 12px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 12'%3E%3Cpath d='M0 0h20L10 12z' fill='%23A6A43A'/%3E%3C/svg%3E") no-repeat 0 0 / 20px 12px, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 12'%3E%3Cpath d='M0 0h20L10 12z' fill='%23A6A43A'/%3E%3C/svg%3E") no-repeat 100% 0 / 20px 12px; }
+.e404-num { font-family: var(--font-display); font-weight: 800; font-variation-settings: "opsz" 96; font-size: clamp(5rem, 13vw, 11rem); line-height: .78; letter-spacing: -0.035em; color: var(--ink); translate: 0 calc(.06em + 2px); /* Bricolage ascent .93 / descent .27: at line-height .78 the baseline sits (.78 - .66) / 2 = .06em above the line box; the shelf bar starts 2px below it */ }
+.e404-pot { width: clamp(4.5rem, 9vw, 7rem); transform-origin: 50% 100%; translate: 0 calc(6.67% + 2px); /* pot base at 112/120 of the viewBox */ animation: wiggle .6s var(--ease-settle) 1.35s 1; }
+.e404-sprout { transform-origin: 60px 50px; scale: 0; animation: sprout var(--dur-3) var(--ease-settle) 2.1s both; }
+@keyframes sprout { from { scale: 0; rotate: -20deg; } to { scale: 1; rotate: 0deg; } }
+.e404-cil { position: relative; width: clamp(5.5rem, 11vw, 8rem); aspect-ratio: 240 / 300; translate: 0 calc(2% + 2.5px); /* boots at 294/300 of the sprite land on the shelf bar */ }
+.e404-cil img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.e404-cil-fall { transform-origin: 50% 100%; animation: cil-drop 1.1s .3s both; }
+@keyframes cil-drop { 0% { translate: 0 -70vh; rotate: -28deg; animation-timing-function: cubic-bezier(.5, 0, .9, .6); } 72% { translate: 0 0; rotate: -4deg; scale: 1 1; animation-timing-function: ease-out; } 84% { translate: 0 2px; scale: 1.06 .92; } 100% { translate: 0 0; rotate: 0deg; scale: 1 1; } }
+@media (min-width: 1024px) { .e404 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } .e404-stage { padding-top: clamp(6rem, 20vh, 14rem); } }
+@media (max-width: 1023px) { .e404-stage { order: -1; padding-top: 5rem; padding-bottom: 2rem; } .e404-text h1 { max-width: 14ch; } }
+</style>
+<script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
+<script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
+</head>
+<body>
+<div data-layout="header"></div>
+<main id="main">
+  <section class="e404 container">
+    <div class="e404-text">
+      <p class="eyebrow" data-reveal>Rak kosong · 404</p>
+      <h1 data-split>Halaman ini belum tumbuh.</h1>
+      <p class="lead" data-reveal data-delay="1">Kayaknya salah alamat. Balik ke rak depan, atau tanya kami lewat WhatsApp saja.</p>
+      <div class="cluster" data-reveal data-delay="2">
+        <a class="btn btn-fill" href="index.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-home"/></svg>Ke beranda</a>
+        <a class="btn" href="#" data-wa><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg>Chat WhatsApp</a>
+      </div>
+    </div>
+    <div class="e404-stage" aria-hidden="true">
+      <div class="e404-shelf">
+        <span class="e404-num">404</span>
+        <svg class="e404-pot" viewBox="0 0 120 120" aria-hidden="true">
+          <g class="e404-sprout"><path d="M60 50V27" stroke="#3E7D4B" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M60 36C48 36 41 26 43 18c10 0 17 9 17 18Z" fill="#7FB069"/><path d="M60 31c12 0 19-10 17-18-10 0-17 9-17 18Z" fill="#3E7D4B"/></g>
+          <path d="M24 50h72l-7 62H31Z" fill="#D4674A" stroke="#1F2A22" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M30 51h60v6H30Z" fill="#4D5A50"/>
+          <rect x="17" y="38" width="86" height="14" rx="3" fill="#D4674A" stroke="#1F2A22" stroke-width="1.5"/>
+          <path d="M35 60l-3 44" stroke="#F7F3EA" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+        </svg>
+        <div class="e404-cil">
+          <img class="e404-cil-fall" src="assets/illus/tunas-fall.svg" alt="" width="240" height="300" decoding="async" onerror="this.hidden=true">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div data-layout="footer"></div>
+<script src="data/site.js"></script>
+<script src="data/products.js"></script>
+<script src="data/tips.js"></script>
+<script src="js/layout.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

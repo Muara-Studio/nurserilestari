@@ -1,0 +1,74 @@
+/* Toko Lestari — css/components.css (A): refinements of the sticker primitives from base.css (hover/focus/touch
+   states), reveal variants for [data-reveal], and the masks for [data-split]. Nobody renames these classes. */
+
+/* ---- stickers: hover lifts, press settles, touch never sticks ---- */
+.btn { position: relative; }
+.btn > .icon { transition: translate var(--dur-2) var(--ease-out), rotate var(--dur-3) var(--ease-out); }
+@media (hover: hover) {
+  .btn:hover > .icon:last-child:not(:only-child) { translate: 3px 0; }  /* trailing arrows travel */
+  .btn:hover > .icon:first-child:not(:only-child) { rotate: -10deg; }    /* leading glyphs tip like a pot being picked up */
+}
+@media (hover: none) { .btn:hover { transform: none; box-shadow: var(--shadow-hard); } .btn-sm:hover { box-shadow: 3px 3px 0 var(--ink); } }
+.btn:focus-visible { outline-offset: 4px; }
+.btn:active > .icon { translate: 0 0; rotate: 0deg; }
+
+a.card, button.card { transition: translate var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out); }
+@media (hover: hover) { a.card:hover, button.card:hover { translate: -2px -2px; box-shadow: 10px 10px 0 var(--ink); } }
+a.card:active, button.card:active { translate: 2px 2px; box-shadow: 4px 4px 0 var(--ink); }
+
+a.tag, button.tag { cursor: pointer; transition: translate var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), background var(--dur-1), color var(--dur-1); }
+@media (hover: hover) { a.tag:hover, button.tag:hover { translate: -1px -1px; box-shadow: 2px 2px 0 var(--ink); } }
+a.tag:active, button.tag:active { translate: 1px 1px; box-shadow: none; }
+.tag[aria-pressed="true"] { background: var(--ink); color: var(--paper-2); }
+
+.link-u { transition: text-decoration-color var(--dur-1), text-decoration-thickness var(--dur-1); }
+@media (hover: hover) { .link-u:hover { text-decoration-thickness: 3px; } }
+
+/* ---- reveal variants (main.js adds .is-in once the element enters the viewport) ----
+   data-reveal (default) rises 18px · "clip" wipes up · "scale" opens · "left"/"right" slide in · "settle" is a pot set down */
+[data-reveal="clip"] { opacity: 1; transform: none; clip-path: inset(0 0 100% 0); }
+[data-reveal="clip"].is-in { clip-path: inset(0 0 0 0); transition: clip-path var(--dur-4) var(--ease-out); }
+[data-reveal="scale"] { transform: scale(.94); }
+[data-reveal="left"] { transform: translateX(-28px); }
+[data-reveal="right"] { transform: translateX(28px); }
+[data-reveal="settle"] { transform: translateY(28px) scale(.96) rotate(-1.5deg); }
+[data-reveal="settle"].is-in { transition-duration: var(--dur-4); }
+html.no-js [data-reveal="clip"], html.reduced [data-reveal="clip"] { clip-path: none; }
+
+/* ---- split headlines: lines rise from a clip; hidden until main.js splits them (html.motion is set before paint by layout.js) ---- */
+html.motion [data-split] { visibility: hidden; }
+html.motion.no-js [data-split] { visibility: visible; }
+.split-line-mask, .line-mask { padding-bottom: .2em; margin-bottom: -.2em; } /* descender room inside the clip */
+
+/* ---- shelf tiles (shared: the landing's "Yang sering dicari", the catalog, the detail page's "Biasanya dibeli bareng").
+   Moved verbatim from css/landing.css by C2 (22 Oct); the markup is tileHTML() in js/catalog.js. The only photos are the shop's
+   Tokopedia card graphics, so every tile gets the same paper-3 mat, the same crop (only the repeated shop header on top is cut,
+   never the sides: titles would break mid-word), a matte filter and multiply blending: the card's white ground sinks into the mat
+   and the graphic reads as printed on paper. Tiles stand on olive planks: each li draws its own segment, half a gap wide on each
+   side, so neighbours join into one shelf per row at any column count (4 / 3 / 2). ---- */
+.rak { --rak-gap: var(--s-6); --plank: 7px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 4.5rem) var(--rak-gap); margin-bottom: var(--plank); }
+.rak-item { position: relative; display: grid; }
+.rak-item::after { content: ""; position: absolute; z-index: 0; left: calc(var(--rak-gap) / -2 - 1px); right: calc(var(--rak-gap) / -2 - 1px); bottom: calc(-1 * var(--plank)); height: var(--plank); border-radius: 2px; background: var(--olive); }
+.rak-card { position: relative; z-index: 1; display: flex; flex-direction: column; gap: .375rem; padding: .625rem .625rem .875rem; background: var(--paper-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-hard); transition: transform var(--dur-3) var(--ease-settle), translate var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle); }
+.rak-mat { position: relative; display: grid; place-items: center; aspect-ratio: 1 / .94; margin-bottom: .5rem; padding: 9%; border-radius: 4px; background: var(--mat, var(--paper-3)); overflow: clip; }
+.rak-mat img { width: 100%; height: auto; aspect-ratio: 1 / .88; object-fit: cover; object-position: 50% 100%; border-radius: 3px; mix-blend-mode: multiply; filter: saturate(.8) contrast(.95); transition: scale var(--dur-3) var(--ease-settle); }
+.rak-name { padding-inline: .25rem; min-height: 2.4em; font-family: var(--font-display); font-weight: 600; font-size: 1.125rem; line-height: 1.2; color: var(--ink); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }   /* two lines reserved: prices line up across the shelf */
+.rak-cat { padding-inline: .25rem; font-size: var(--fs-xs); color: var(--mute); }
+.rak-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem .5rem; padding: .25rem .25rem 0; }
+.rak-foot .price { font-size: 1.25rem; }
+@media (hover: hover) { .rak-card:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); } .rak-card:hover img { scale: 1.04; } }
+.rak-card:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--ink); }
+.rak-card:focus-visible { outline-offset: 4px; }
+/* reveal: the li fades (base.css) but stays put so the plank never moves; the card rises and settles on it, columns staggered (the delay applies to the rise only, never to hover) */
+.rak-item[data-reveal] { transform: none; }
+.rak-item[data-reveal] .rak-card { transform: translateY(22px); }
+.rak-item[data-reveal].is-in .rak-card { transform: none; }
+.rak-item[data-reveal][data-delay="1"].is-in .rak-card { transition-delay: 80ms, 0s, 0s; } .rak-item[data-reveal][data-delay="2"].is-in .rak-card { transition-delay: 160ms, 0s, 0s; } .rak-item[data-reveal][data-delay="3"].is-in .rak-card { transition-delay: 240ms, 0s, 0s; }
+html.no-js .rak-item[data-reveal] .rak-card, html.reduced .rak-item[data-reveal] .rak-card { transform: none; }
+@media (max-width: 1023px) { .rak { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 639px) {
+  .rak { --rak-gap: var(--s-4); grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 2.75rem; }
+  .rak-card { padding: .5rem .5rem .75rem; }
+  .rak-name { font-size: 1rem; }
+  .rak-foot .price { font-size: 1.125rem; }
+}

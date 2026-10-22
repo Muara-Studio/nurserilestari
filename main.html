@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Tunas &amp; Hutan Lestari — Toko Lestari</title>
+<meta name="description" content="Si Tunas mantul ke atas Hutan Lestari, metik benih, dan tanam pohon. Rekor tertinggimu tersimpan di peramban ini.">
+<meta name="theme-color" content="#0F4C46">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/game.css">
+<script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
+</head>
+<!-- the game owns the whole viewport (like the reference): no banner, header or footer on this page; "Kembali ke toko" lives in the menu -->
+<body class="game-page">
+<main id="main" class="game-main">
+  <div class="stage" id="stage">
+    <canvas id="game" width="480" height="900" aria-label="Panggung permainan Tunas &amp; Hutan Lestari" role="img"></canvas>
+
+    <!-- preloader: counter in a dark pill, paper sprigs rising, then the veil wipes up -->
+    <section class="scr scr-pre" data-screen="preloader" aria-label="Memuat">
+      <div class="pre-leaves" aria-hidden="true"><i style="--x:4%;--d:-1s"></i><i style="--x:20%;--d:-4s"></i><i style="--x:38%;--d:-2.5s"></i><i style="--x:56%;--d:-6s"></i><i style="--x:72%;--d:-.5s"></i><i style="--x:88%;--d:-3.5s"></i></div>
+      <div class="pre-mid">
+        <span class="wordmark">Toko Lestari</span>
+        <p class="display pre-title">Tunas &amp; Hutan Lestari</p>
+        <span class="pill-dark pre-count" id="preCount" role="status" aria-live="polite">0%</span>
+      </div>
+    </section>
+
+    <!-- home: wordmark, seed counter and menu in the corners; the lockup in the upper third; tagline and start in the lower third -->
+    <section class="scr scr-home" data-screen="home" hidden>
+      <div class="hud-top">
+        <a class="brand" href="index.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><span class="wordmark">Toko Lestari</span></a>
+        <span class="pill seedbox" aria-label="Benih terkumpul"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="homeSeeds">0</b></span>
+        <button class="btn btn-menu" id="btnMenu" type="button" aria-label="Menu" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-menu-2"/></svg></button>
+      </div>
+      <div class="lockup">
+        <h1 class="display title-lockup"><span class="t1">Tunas &amp;</span> <span class="t2">Hutan Lestari</span>
+          <svg class="deco deco-a sway" viewBox="0 0 80 50" aria-hidden="true"><path d="M2 42C10 14 40 4 76 10 60 34 32 46 2 42Z" fill="#3E7D4B"/><path d="M8 40C20 22 42 14 66 14" fill="none" stroke="#CFE3C3" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <svg class="deco deco-b sway-2" viewBox="0 0 80 50" aria-hidden="true"><path d="M78 42C70 14 40 4 4 10 20 34 48 46 78 42Z" fill="#7FB069"/><path d="M72 40C60 22 38 14 14 14" fill="none" stroke="#CFE3C3" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <svg class="deco deco-c sway-3" viewBox="0 0 60 60" aria-hidden="true"><path d="M20 8C12 18 6 26 6 32c0 9 6 14 14 14s14-5 14-14c0-6-6-14-14-24Z" fill="#F2C14E"/><path d="M44 20c-6 8-10 14-10 18 0 6 4 10 10 10s10-4 10-10c0-4-4-10-10-18Z" fill="#F2C14E"/><path d="M20 8l-2-6M44 20l-2-5" stroke="#1F2A22" stroke-width="2" stroke-linecap="round"/><path d="M14 24c3-4 4-8 2-12" stroke="#FFFDF7" stroke-width="2" stroke-linecap="round" opacity=".9"/></svg>
+        </h1>
+      </div>
+      <div class="home-bottom">
+        <div class="signpost"><p class="sign plaque" id="recordSign">Rekor kamu 0 m</p></div>
+        <p class="tagline">Metik benih, tanam pohon.</p>
+        <button class="btn btn-fill btn-lg pill-btn" id="btnStart" type="button">AYO MULAI!</button>
+        <div class="cluster home-extra">
+          <button class="btn pill-btn" id="btnForest" type="button" hidden><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-tree"/></svg>Hutanku</button>
+          <button class="btn pill-btn" id="btnShop" type="button" hidden><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sparkles"/></svg>Bonus</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- play: plaque with pause + height top-left, seeds top-centre, menu top-right; keycap cross bottom-centre on pointer devices -->
+    <section class="scr scr-play" data-screen="play" hidden>
+      <div class="hud-top">
+        <div class="plaque hud-plaque">
+          <button class="plaque-ctl" id="btnPause" type="button" aria-label="Jeda"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-player-pause"/></svg></button>
+          <span class="hudm num" id="hudM" aria-label="Ketinggian">0 m</span>
+        </div>
+        <span class="pill seedbox" aria-label="Benih"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="hudSeeds">0</b></span>
+        <button class="btn btn-menu" id="btnMenuPlay" type="button" aria-label="Menu"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-menu-2"/></svg></button>
+      </div>
+      <div class="hud-bottom">
+        <div class="card tutorial" id="tutorial" hidden>
+          <p class="tutorial-title">Si Tunas mantul sendiri. Kamu tinggal arahkan kiri-kanan.</p>
+          <p class="tutorial-hint">Pakai tombol panah ← → atau geser di layar</p>
+        </div>
+        <div class="hint" aria-hidden="true">
+          <div class="keycaps"><kbd class="keycap">↑</kbd><div><kbd class="keycap">←</kbd><kbd class="keycap">↓</kbd><kbd class="keycap">→</kbd></div></div>
+          <p class="hint-pill">Pakai tombol panah ← →</p>
+        </div>
+        <button class="btn btn-lime pill-btn use" id="btnUse" type="button" aria-label="Pakai bonus" hidden></button>
+      </div>
+    </section>
+
+    <!-- fall: the scene goes soft, the tupai tumbles (DOM, so it stays sharp), the result card settles in the middle -->
+    <section class="scr scr-fall" data-screen="fall" hidden>
+      <img class="fall-hero" src="assets/illus/tunas-fall.svg" alt="" width="240" height="300" decoding="async">
+      <div class="card result" id="resultCard" role="group" aria-label="Hasil pendakian">
+        <p id="resRecord"><svg class="flag" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 2v30" stroke="#1F2A22" stroke-width="2.5" stroke-linecap="round"/><path d="M5 3h16l-4 7 4 7H5Z" fill="#D4674A"/></svg><span class="eyebrow no-rule">Rekor kamu</span> <span class="tag tag-sun">Rekor baru!</span></p>
+        <p class="eyebrow no-rule eyebrow-alt">Pendakian ini</p>
+        <p class="display result-m" id="resM">0 m</p>
+        <p class="meta" id="resRecordOld" hidden>Rekor kamu 0 m</p>
+        <p class="result-seeds"><span>Benih terkumpul</span><b class="num" id="resSeeds">0</b></p>
+        <div class="field" id="resName" hidden><label for="resNameInput">Nama di papan rekor</label><input class="input" id="resNameInput" type="text" maxlength="24" autocomplete="nickname" enterkeyhint="done"></div>
+        <button class="btn btn-fill pill-btn" id="btnContinue" type="button">Lanjut</button>
+      </div>
+    </section>
+
+    <div class="veil" id="veil" aria-hidden="true"></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <div class="rotate" role="status"><div><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-refresh"/></svg><p>Putar HP-nya ya, biar bisa main.</p></div></div>
+  </div>
+
+  <!-- menu (top-right on the home screen): audio, records, badges, bonus, forest, back to the shop -->
+  <dialog class="gdlg gdlg-menu" id="dlgMenu" aria-labelledby="menuTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Tunas &amp; Hutan Lestari</p><h2 id="menuTitle">Menu</h2></header>
+      <div class="menu-list">
+        <button class="btn pill-btn" id="btnAudio" type="button" aria-pressed="true"><span id="btnAudioIcon"></span>Suara</button>
+        <button class="btn pill-btn" id="btnBoard" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-trophy"/></svg>Papan Rekor</button>
+        <button class="btn pill-btn" id="btnBadges" type="button"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-shield-check"/></svg>Lencana</button>
+        <button class="btn pill-btn" id="btnShop2" type="button" hidden><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-sparkles"/></svg>Bonus</button>
+        <button class="btn pill-btn" id="btnForest2" type="button" hidden><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-tree"/></svg>Hutanku</button>
+        <a class="btn pill-btn" href="index.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-building-store"/></svg>Kembali ke toko</a>
+      </div>
+      <button class="btn btn-icon gdlg-close" type="button" data-close aria-label="Tutup"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- Rumah Kaca: the bonus shop, a chalkboard with dashed-circle slots -->
+  <dialog class="gdlg gdlg-board" id="dlgShop" aria-labelledby="shopTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Bonus</p><h2 id="shopTitle">Rumah Kaca</h2></header>
+      <p class="gdlg-lead">Bonus dipakai sekali di pendakian berikutnya. Semuanya dibeli dengan benih yang sudah kamu petik: <span class="pill seedbox"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="shopSeeds">0</b></span></p>
+      <ul class="bonus-list" id="shopList"></ul>
+      <button class="btn btn-icon gdlg-close" type="button" data-close aria-label="Tutup"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- Hutanku: tree cards; planted trees grow on the home hill -->
+  <dialog class="gdlg" id="dlgForest" aria-labelledby="forestTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Hutanku</p><h2 id="forestTitle">Tanam pohon di bukit depan toko</h2></header>
+      <p class="gdlg-lead"><span id="forestNote">0 dari 8 pohon tertanam di bukit depan toko.</span> Pohon <span class="tag tag-sun">berisiko</span> lebih murah, tapi layu kalau kamu tidak main dalam 3 hari. Benihmu: <span class="pill seedbox"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="forestSeeds">0</b></span></p>
+      <ul class="tree-list" id="forestList"></ul>
+      <button class="btn btn-icon gdlg-close" type="button" data-close aria-label="Tutup"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- Papan Rekor: local, this browser only -->
+  <dialog class="gdlg" id="dlgBoard" aria-labelledby="boardTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Sepuluh pendakian tertinggi</p><h2 id="boardTitle">Papan Rekor</h2></header>
+      <ol class="board" id="boardList"></ol>
+      <p class="gdlg-lead">Tersimpan di peramban ini saja.</p>
+      <button class="btn btn-icon gdlg-close" type="button" data-close aria-label="Tutup"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- Lencana -->
+  <dialog class="gdlg" id="dlgBadges" aria-labelledby="badgeTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Pencapaian</p><h2 id="badgeTitle">Lencana</h2></header>
+      <ul class="lencana-list" id="badgeList"></ul>
+      <button class="btn btn-icon gdlg-close" type="button" data-close aria-label="Tutup"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-x"/></svg></button>
+    </div>
+  </dialog>
+
+  <!-- pause menu (the top-right button during play) -->
+  <dialog class="gdlg gdlg-pause" id="dlgPause" aria-labelledby="pauseTitle">
+    <div class="gdlg-in">
+      <header class="gdlg-head"><p class="eyebrow">Jeda</p><h2 id="pauseTitle">Tunas istirahat di dahan</h2></header>
+      <div class="pause-actions">
+        <button class="btn btn-fill btn-lg pill-btn" id="btnResume" type="button" autofocus><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-player-play"/></svg>Lanjutkan</button>
+        <button class="btn pill-btn" id="btnAudio2" type="button" aria-pressed="true"><span id="btnAudio2Icon"></span>Suara</button>
+        <a class="btn pill-btn" href="index.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-building-store"/></svg>Kembali ke toko</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- bonus icons for Rumah Kaca, cut-paper flat (ui.js references #b-<id>) -->
+  <svg hidden aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="b-parasut" viewBox="0 0 48 48"><path d="M4 22C8 8 40 8 44 22 32 26 16 26 4 22Z" fill="#3E7D4B"/><path d="M4 22C10 11 24 8 30 10 22 14 12 18 4 22Z" fill="#7FB069"/><path d="M8 21Q24 12 40 21" fill="none" stroke="#CFE3C3" stroke-width="1.5"/><path d="M10 23 20 36M38 23 28 36" stroke="#F7F3EA" stroke-width="1.5"/><path d="M18 36h12l-2 8H20Z" fill="#D4674A"/></symbol>
+    <symbol id="b-roket" viewBox="0 0 48 48"><path d="M14 6h20l-3 22H17Z" fill="#D4674A"/><path d="M12 4h24v5H12Z" fill="#B84E31"/><ellipse cx="24" cy="36" rx="6" ry="9" fill="#D8D68A"/><ellipse cx="24" cy="34" rx="3" ry="5" fill="#F2C14E"/><path d="M8 30v10M40 30v10" stroke="#FFFDF7" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="b-magnet" viewBox="0 0 48 48"><path d="M10 8v16a14 14 0 0 0 28 0V8h-9v16a5 5 0 0 1-10 0V8Z" fill="#D4674A"/><path d="M10 8h9v7h-9ZM29 8h9v7h-9Z" fill="#F7F3EA"/><path d="M24 30c-4 5-5 8-3.5 11a3.8 3.8 0 0 0 7 0C29 38 28 35 24 30Z" fill="#F2C14E"/></symbol>
+    <symbol id="b-nyawa" viewBox="0 0 48 48"><path d="M24 42S6 30 6 17a9 9 0 0 1 18-2 9 9 0 0 1 18 2c0 13-18 25-18 25Z" fill="#D4674A"/><path d="M26 22c4-8 12-8 16-6-3 7-9 10-16 6Z" fill="#7FB069"/><path d="M27 21c3-3 7-5 12-5" fill="none" stroke="#CFE3C3" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="b-ganda" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#F2C14E"/><text x="24" y="31" text-anchor="middle" font-family="Bricolage Grotesque, DM Sans, sans-serif" font-weight="800" font-size="20" fill="#1F2A22">×2</text></symbol>
+  </svg>
+</main>
+<script type="module" src="js/game/main.js"></script>
+</body>
+</html>
