@@ -1,6 +1,6 @@
 /* Toko Lestari — css/shell.css (A): Lenis, skip link, banner, header, drawer, footer with the big leaf,
    WhatsApp FAB, search overlay. Tokens come from base.css; shared sticker refinements live in components.css. */
-@import url("components.css"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=4804384"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
