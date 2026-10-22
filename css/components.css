@@ -8,16 +8,16 @@
   .btn:hover > .icon:last-child:not(:only-child) { translate: 3px 0; }  /* trailing arrows travel */
   .btn:hover > .icon:first-child:not(:only-child) { rotate: -10deg; }    /* leading glyphs tip like a pot being picked up */
 }
-@media (hover: none) { .btn:hover { transform: none; box-shadow: var(--shadow-hard); } .btn-sm:hover { box-shadow: 3px 3px 0 var(--ink); } }
+@media (hover: none) { .btn:hover { transform: none; box-shadow: var(--shadow-hard); } .btn-sm:hover { box-shadow: 3px 3px 0 var(--frame); } }
 .btn:focus-visible { outline-offset: 4px; }
 .btn:active > .icon { translate: 0 0; rotate: 0deg; }
 
 a.card, button.card { transition: translate var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out); }
-@media (hover: hover) { a.card:hover, button.card:hover { translate: -2px -2px; box-shadow: 10px 10px 0 var(--ink); } }
-a.card:active, button.card:active { translate: 2px 2px; box-shadow: 4px 4px 0 var(--ink); }
+@media (hover: hover) { a.card:hover, button.card:hover { translate: -2px -2px; box-shadow: 10px 10px 0 var(--frame); } }
+a.card:active, button.card:active { translate: 2px 2px; box-shadow: 4px 4px 0 var(--frame); }
 
 a.tag, button.tag { cursor: pointer; transition: translate var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), background var(--dur-1), color var(--dur-1); }
-@media (hover: hover) { a.tag:hover, button.tag:hover { translate: -1px -1px; box-shadow: 2px 2px 0 var(--ink); } }
+@media (hover: hover) { a.tag:hover, button.tag:hover { translate: -1px -1px; box-shadow: 2px 2px 0 var(--frame); } }
 a.tag:active, button.tag:active { translate: 1px 1px; box-shadow: none; }
 .tag[aria-pressed="true"] { background: var(--ink); color: var(--paper-2); }
 
@@ -49,15 +49,15 @@ html.motion.no-js [data-split] { visibility: visible; }
 .rak { --rak-gap: var(--s-6); --plank: 7px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 4.5rem) var(--rak-gap); margin-bottom: var(--plank); }
 .rak-item { position: relative; display: grid; }
 .rak-item::after { content: ""; position: absolute; z-index: 0; left: calc(var(--rak-gap) / -2 - 1px); right: calc(var(--rak-gap) / -2 - 1px); bottom: calc(-1 * var(--plank)); height: var(--plank); border-radius: 2px; background: var(--olive); }
-.rak-card { position: relative; z-index: 1; display: flex; flex-direction: column; gap: .375rem; padding: .625rem .625rem .875rem; background: var(--paper-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-hard); transition: transform var(--dur-3) var(--ease-settle), translate var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle); }
+.rak-card { position: relative; z-index: 1; display: flex; flex-direction: column; gap: .375rem; padding: .625rem .625rem .875rem; background: var(--paper-2); border: var(--stroke) solid var(--frame); border-radius: var(--radius); box-shadow: var(--shadow-hard); transition: transform var(--dur-3) var(--ease-settle), translate var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle); }
 .rak-mat { position: relative; display: grid; place-items: center; aspect-ratio: 1 / .94; margin-bottom: .5rem; padding: 9%; border-radius: 4px; background: var(--mat, var(--paper-3)); overflow: clip; }
 .rak-mat img { width: 100%; height: auto; aspect-ratio: 1 / .88; object-fit: cover; object-position: 50% 100%; border-radius: 3px; mix-blend-mode: multiply; filter: saturate(.8) contrast(.95); transition: scale var(--dur-3) var(--ease-settle); }
 .rak-name { padding-inline: .25rem; min-height: 2.4em; font-family: var(--font-display); font-weight: 600; font-size: 1.125rem; line-height: 1.2; color: var(--ink); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }   /* two lines reserved: prices line up across the shelf */
 .rak-cat { padding-inline: .25rem; font-size: var(--fs-xs); color: var(--mute); }
 .rak-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem .5rem; padding: .25rem .25rem 0; }
 .rak-foot .price { font-size: 1.25rem; }
-@media (hover: hover) { .rak-card:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--ink); } .rak-card:hover img { scale: 1.04; } }
-.rak-card:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--ink); }
+@media (hover: hover) { .rak-card:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--frame); } .rak-card:hover img { scale: 1.04; } }
+.rak-card:active { translate: 2px 2px; box-shadow: 1px 1px 0 var(--frame); }
 .rak-card:focus-visible { outline-offset: 4px; }
 /* reveal: the li fades (base.css) but stays put so the plank never moves; the card rises and settles on it, columns staggered (the delay applies to the rise only, never to hover) */
 .rak-item[data-reveal] { transform: none; }

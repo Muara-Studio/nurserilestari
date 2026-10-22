@@ -67,12 +67,12 @@
 .fig-room { width: min(100%, 32rem); }
 .fig > img { width: 100%; height: auto; }
 .fig .fig-plant { position: absolute; left: var(--px); bottom: var(--py); width: var(--pw); height: auto; translate: -50% 0; z-index: 1; filter: drop-shadow(1px 2px 0 rgb(var(--olive-rgb) / .35)); }
-.fig-card { background: var(--paper-2); border: var(--stroke) solid var(--ink); border-radius: var(--radius-lg); padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: var(--shadow-hard-lg); max-width: 32rem; }
+.fig-card { background: var(--paper-2); border: var(--stroke) solid var(--frame); border-radius: var(--radius-lg); padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: var(--shadow-hard-lg); max-width: 32rem; }
 .fig-card h2 { margin-top: 0; font-size: var(--fs-h2); }
 .fig-card p { margin-top: 1rem; color: var(--ink-2); }
 .fig-card .btn { margin-top: 1.5rem; }
 /* annotation stickers hang off the leader lines drawn inside plant-annotated.svg */
-.note { position: absolute; z-index: 2; max-width: 11rem; padding: .375rem .625rem; border: var(--stroke) solid var(--ink); border-radius: var(--radius); background: var(--sun); box-shadow: 3px 3px 0 var(--ink); font-family: var(--font-display); font-weight: 600; font-size: .9375rem; line-height: 1.25; rotate: var(--r, 0deg); text-wrap: balance; }
+.note { position: absolute; z-index: 2; max-width: 11rem; padding: .375rem .625rem; border: var(--stroke) solid var(--frame); border-radius: var(--radius); background: var(--sun); box-shadow: 3px 3px 0 var(--frame); font-family: var(--font-display); font-weight: 600; font-size: .9375rem; line-height: 1.25; rotate: var(--r, 0deg); text-wrap: balance; }
 .note-1 { left: 0; top: 10%; --r: -3deg; } .note-2 { right: -2%; top: 22%; --r: 2deg; background: var(--leaf-3); } .note-3 { right: 0; top: 68%; --r: -2deg; background: var(--paper-2); }
 /* Tunas (240x300, boots at y=294) stands on the frame's front grass: at 36% width he is ~243 frame units tall (the tupai cutout was ~225), boots ~12 units below the grass ridge (556 at centre), a soft contact shadow under them */
 .fig-forest .cil { position: absolute; left: 50%; bottom: 7.5%; width: 36%; height: auto; z-index: 1; translate: -50% 0; transform-origin: 50% 100%; animation: cil-bob 3.2s ease-in-out infinite alternate; }
