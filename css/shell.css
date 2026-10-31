@@ -1,6 +1,6 @@
 /* Toko Lestari — css/shell.css (A2, v2 "Rumah kaca malam"): Lenis classes, skip link, the floating glass header, the drawer
    sheet, the Moss-like footer, the WhatsApp FAB and the search overlay. Every colour is a token from base.css. */
-@import url("components.css?v=21d0d35"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=9e150cf"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
@@ -90,7 +90,7 @@ html.reduced .nav-drawer { transition: none; } html.reduced .drawer-nav a, html.
 .footer-static { color: var(--sage-2); }
 .footer-legal { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem var(--s-6); margin-top: var(--s-16); padding-top: var(--s-6); border-top: var(--stroke) solid var(--line-dark); font-size: var(--fs-xs); }
 .footer-legal p { color: var(--sage-2); }
-.footer-legal a { color: var(--sage); }
+.footer-legal a { color: var(--sage); display: inline-flex; align-items: center; min-height: 2.75rem; padding-inline: .25rem; margin-inline: -.25rem; }   /* 44 px tap target for the credit link */
 @media (pointer: coarse) { .footer-col a { padding-block: .55rem; } }
 @media (max-width: 899px) { .footer-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-10); } .footer-title { max-width: 24ch; } }
 @media (max-width: 479px) { .footer-cols { grid-template-columns: minmax(0, 1fr); } .site-footer { padding-top: var(--s-16); } }
