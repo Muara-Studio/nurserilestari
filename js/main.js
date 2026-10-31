@@ -25,7 +25,7 @@ export const refresh = () => { refreshCall?.kill(); refreshCall = gsap.delayedCa
 
 function initScroll() {
   if (RM) { addEventListener('scroll', () => feed(scrollY), { passive: true }); return; }
-  lenis = new Lenis({ lerp: 0.1, autoRaf: false, anchors: { offset: -88 } });
+  lenis = new Lenis({ lerp: 0.1, autoRaf: false, anchors: { offset: -112 } });
   lenis.on('scroll', (l) => { ScrollTrigger.update(); feed(l.scroll, l.velocity); });
   gsap.ticker.add((t) => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);

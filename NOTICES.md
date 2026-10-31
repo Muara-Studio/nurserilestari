@@ -1,6 +1,6 @@
 # Notices
 - Product photos (`assets/img/products/`) and Instagram posts (`assets/img/ig/`): Toko & Nursery Lestari. Used with the client's content.
-- Placeholder photos (`assets/img/photos/`): Unsplash licence, ids 1785964165816, 1683994841256, 1683994851774, 1658464901165, 1658464902122, 1584378619513, 1614169143954, 1653842647611. Replace with the shop's own photography.
+- Photographs (`assets/img/photos/`, the v2 hero circle, section photos and glass panels; the footer's "Kredit foto" link points here): Unsplash licence, ids 1785964165816, 1683994841256, 1683994851774, 1658464901165, 1658464902122, 1584378619513, 1614169143954, 1653842647611. Captions say what a photo shows; none is presented as the shop's own interior. Replace with the shop's own photography when available.
 - Fonts: Bricolage Grotesque (Mathieu Triay / Atelier Triay, SIL OFL 1.1; variable, opsz 12–96 and wght 200–800; the latin and latin-ext woff2 subsets of Google Fonts v9, fetched 22 Oct 2026 from fonts.googleapis.com, self-hosted in `assets/fonts/BricolageGrotesque-Variable-*.woff2`, source CSS kept in `assets/fonts/BricolageGrotesque.css`) and DM Sans (Colophon Foundry, SIL OFL 1.1), via Google Fonts, self-hosted. Retired 22 Oct 2026 (client chose a sans display face, nothing italic): Fraunces (Undercase Type, SIL OFL 1.1) and the DM Sans italic face; their files live in `research/retired/fonts/` and are no longer served.
 - Icons: Tabler Icons 3.31 (MIT). Libraries: GSAP 3.15 (free licence), Lenis (MIT).
 - References studied, nothing copied: howmanyplants.com (landing structure), play.garance.com / Garance "Gary et la forêt infinie" (game flow), Awwwards skill by juliobsz (MIT, in tools/skills).
@@ -31,6 +31,8 @@ Cut out and resized by us from 19th-century botanical and zoological plates on W
 
 
 ## Client-supplied placeholder illustrations (`assets/img/hmp/`)
+
+**Retired from every page on 31 Oct 2026 (design v2):** no page references these files or the drawn shelf kit any more; they stay on disk for the record only.
 
 On 20 Oct 2026 the client supplied PNG exports of the plant and pot illustrations from howmanyplants.com (How Many Plants) and asked for them on the landing. They are **placeholders for the pitch only**: the illustrations are How Many Plants' copyright and are not licensed for Toko Lestari's launch. Before go-live, replace them with commissioned or licensed artwork (the public-domain plates in `assets/img/cut/` are the licensed fallback: the hero used them until this change). Files:
 - `assets/img/hmp/pot-lavender.webp` (pot)

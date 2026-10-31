@@ -10,8 +10,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=4804384">
-<link rel="stylesheet" href="css/game.css?v=4804384">
+<link rel="stylesheet" href="css/base.css?v=21d0d35">
+<link rel="stylesheet" href="css/game.css?v=21d0d35">
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
 <!-- the game owns the whole viewport (like the reference): no banner, header or footer on this page; "Kembali ke toko" lives in the menu -->
@@ -98,7 +98,7 @@
   </div>
 
   <!-- menu (top-right on the home screen): audio, records, badges, bonus, forest, back to the shop -->
-  <dialog class="gdlg gdlg-menu" id="dlgMenu" aria-labelledby="menuTitle">
+  <dialog class="gdlg glass-dark on-dark gdlg-menu" id="dlgMenu" aria-labelledby="menuTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Tunas &amp; Hutan Lestari</p><h2 id="menuTitle">Menu</h2></header>
       <div class="menu-list">
@@ -114,7 +114,7 @@
   </dialog>
 
   <!-- Rumah Kaca: the bonus shop, a chalkboard with dashed-circle slots -->
-  <dialog class="gdlg gdlg-board" id="dlgShop" aria-labelledby="shopTitle">
+  <dialog class="gdlg glass-dark on-dark gdlg-board" id="dlgShop" aria-labelledby="shopTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Bonus</p><h2 id="shopTitle">Rumah Kaca</h2></header>
       <p class="gdlg-lead">Bonus dipakai sekali di pendakian berikutnya. Semuanya dibeli dengan benih yang sudah kamu petik: <span class="pill seedbox"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="shopSeeds">0</b></span></p>
@@ -124,7 +124,7 @@
   </dialog>
 
   <!-- Hutanku: tree cards; planted trees grow on the home hill -->
-  <dialog class="gdlg" id="dlgForest" aria-labelledby="forestTitle">
+  <dialog class="gdlg glass-dark on-dark" id="dlgForest" aria-labelledby="forestTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Hutanku</p><h2 id="forestTitle">Tanam pohon di bukit depan toko</h2></header>
       <p class="gdlg-lead"><span id="forestNote">0 dari 8 pohon tertanam di bukit depan toko.</span> Pohon <span class="tag tag-sun">berisiko</span> lebih murah, tapi layu kalau kamu tidak main dalam 3 hari. Benihmu: <span class="pill seedbox"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="forestSeeds">0</b></span></p>
@@ -134,7 +134,7 @@
   </dialog>
 
   <!-- Papan Rekor: local, this browser only -->
-  <dialog class="gdlg" id="dlgBoard" aria-labelledby="boardTitle">
+  <dialog class="gdlg glass-dark on-dark" id="dlgBoard" aria-labelledby="boardTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Sepuluh pendakian tertinggi</p><h2 id="boardTitle">Papan Rekor</h2></header>
       <ol class="board" id="boardList"></ol>
@@ -144,7 +144,7 @@
   </dialog>
 
   <!-- Lencana -->
-  <dialog class="gdlg" id="dlgBadges" aria-labelledby="badgeTitle">
+  <dialog class="gdlg glass-dark on-dark" id="dlgBadges" aria-labelledby="badgeTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Pencapaian</p><h2 id="badgeTitle">Lencana</h2></header>
       <ul class="lencana-list" id="badgeList"></ul>
@@ -153,7 +153,7 @@
   </dialog>
 
   <!-- pause menu (the top-right button during play) -->
-  <dialog class="gdlg gdlg-pause" id="dlgPause" aria-labelledby="pauseTitle">
+  <dialog class="gdlg glass-dark on-dark gdlg-pause" id="dlgPause" aria-labelledby="pauseTitle">
     <div class="gdlg-in">
       <header class="gdlg-head"><p class="eyebrow">Jeda</p><h2 id="pauseTitle">Tunas istirahat di dahan</h2></header>
       <div class="pause-actions">
@@ -173,6 +173,6 @@
     <symbol id="b-ganda" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#F2C14E"/><text x="24" y="31" text-anchor="middle" font-family="Bricolage Grotesque, DM Sans, sans-serif" font-weight="800" font-size="20" fill="#1F2A22">×2</text></symbol>
   </svg>
 </main>
-<script type="module" src="js/game/main.js?v=4804384"></script>
+<script type="module" src="js/game/main.js?v=21d0d35"></script>
 </body>
 </html>

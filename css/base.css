@@ -1,81 +1,79 @@
 /* ==========================================================================
-   Toko Lestari — css/base.css  (lead-owned: tokens, fonts, reset, type, layout, sticker primitives)
+   Toko Lestari — css/base.css v2 (lead-owned: tokens, fonts, reset, type, layout, primitives)
+   v2 direction (31 Oct 2026): "Rumah kaca malam" — dark moss ground with sage type after Moss Index, glass panels over
+   nursery photographs after Plantio, Bricolage Grotesque sentence-case headlines, pill buttons, quiet arrow links.
    Agents: use the tokens, never redefine them. Add component styles in your own file.
    ========================================================================== */
-/* Bricolage Grotesque (SIL OFL, Google Fonts v9 subsets, self-hosted; client's pick 22 Oct) for display, labels, buttons, prices; DM Sans for text. Nothing on the site is italic, so no italic faces are declared. */
 @font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin-ext.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin-ext.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: 'DM Sans'; src: url('../assets/fonts/DMSans-Variable.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
 
 :root {
-  /* ---- palette: a drawn shop. cream paper, olive shelves, leaf greens, terracotta pots, pine for dark ---- */
-  --paper:      #F7F3EA;   /* page ground */
-  --paper-2:    #FFFDF7;   /* cards, tags, inputs */
-  --paper-3:    #EFE9DC;   /* tiles, alternate bands */
-  --ink:        #1F2A22;   /* text, outlines */
-  --ink-2:      #4D5A50;   /* secondary text */
-  --mute:       #5E6B63;   /* meta (5.5:1 on paper-2, 4.6:1 on paper-3) */
-  --line:       rgba(31, 42, 34, 0.16);
-  --paper-rgb: 247 243 234; --paper-2-rgb: 255 253 247; --paper-3-rgb: 239 233 220; --ink-rgb: 31 42 34; --ink-2-rgb: 77 90 80; --olive-rgb: 166 164 58; --olive-2-rgb: 216 214 138; --leaf-rgb: 62 125 75; --leaf-2-rgb: 127 176 105; --pine-rgb: 15 76 70; --pine-2-rgb: 23 107 98; --terracotta-rgb: 212 103 74; --sun-rgb: 242 193 78; --sky-rgb: 207 232 230; --red-rgb: 166 60 39;   /* for rgb(var(--x-rgb) / a): no raw colour values outside this file */
-  --olive:      #A6A43A;   /* shelves, squiggles, line art */
-  --olive-2:    #D8D68A;   /* light olive fills */
-  --leaf:       #3E7D4B;   /* leaves, success */
-  --leaf-ink:   #2F6A3C;   /* leaf as text: eyebrows, links (5.35:1 on paper-3) */
-  --leaf-2:     #7FB069;   /* light leaves */
-  --leaf-3:     #CFE3C3;   /* leaf tint */
-  --pine:       #0F4C46;   /* footer, dark bands, forest sky in the game */
-  --pine-2:     #176B62;   /* pine hover / mid forest */
-  --terracotta: #D4674A;   /* THE accent: pots and illustration */
-  --terracotta-ink: #B84E31; /* the same accent for text and button fills: 4.95:1 under paper-2 text (jury contrast fix) */
-  --terracotta-2: #F2C4B4; /* accent tint */
-  --sun:        #F2C14E;   /* stickers, stars, one sun per page at most */
-  --sky:        #CFE8E6;   /* game sky, cool tint */
-  --wood:       #8A5A20;  --wood-2: #A8702F;  --board: #0B3D38;   /* game: stall timber (5.3:1 under paper text) and the chalkboard */
-  --amber:      #8F5C10;  --amber-bg: #FBEFD6;   /* pre-order */
-  --red:        #A63C27;  --red-bg:   #F9E2DC;   /* stok habis, errors */
-  --ready:      #2B5E36; --ready-bg: var(--leaf-3);   /* 5.6:1 */
+  /* ---- palette v2: moss ground, sage type, warm paper for light sections, olive as the one small accent ---- */
+  --moss:       #14271F;   /* dark ground (hero, footer, dark bands) */
+  --moss-2:     #1B3027;   /* raised surfaces on dark */
+  --moss-3:     #24392C;   /* hover / lines on dark */
+  --sage:       #E5E8D8;   /* text on dark; 13.2:1 on moss */
+  --sage-2:     #BBC6AF;   /* muted text on dark, the second headline line; 8.4:1 on moss */
+  --sage-3:     #CBD2C0;
+  --paper:      #F2F1E7;   /* light section ground */
+  --paper-2:    #FAF9F3;   /* cards on light */
+  --paper-3:    #E9E8DB;   /* mats, alternate light bands */
+  --ink:        #14271F;   /* text on light */
+  --ink-2:      #3F5247;   /* secondary text on light; 7.4:1 on paper */
+  --mute:       #5E6E65;   /* meta on light; 5.0:1 on paper-2 */
+  --line:       rgba(20, 39, 31, .14);
+  --line-dark:  rgba(229, 232, 216, .14);
+  --olive:      #A6A43A;   /* the one accent: marks, focus, small rules */
+  --olive-2:    #D8D68A;
+  --leaf:       #3E7D4B;  --leaf-ink: #2F6A3C;  --leaf-2: #7FB069;  --leaf-3: #CFE3C3;
+  --moss-rgb: 20 39 31; --sage-rgb: 229 232 216; --paper-rgb: 242 241 231; --paper-2-rgb: 250 249 243; --paper-3-rgb: 233 232 219; --ink-rgb: 20 39 31; --ink-2-rgb: 63 82 71; --olive-rgb: 166 164 58; --olive-2-rgb: 216 214 138; --leaf-rgb: 62 125 75; --leaf-2-rgb: 127 176 105; --pine-rgb: 15 76 70; --pine-2-rgb: 23 107 98; --terracotta-rgb: 212 103 74; --sun-rgb: 242 193 78; --sky-rgb: 207 232 230; --red-rgb: 166 60 39;
+  /* game + illustration colours (not for page UI) */
+  --pine: #0F4C46; --pine-2: #176B62; --terracotta: #D4674A; --terracotta-ink: #B84E31; --terracotta-2: #F2C4B4; --sun: #F2C14E; --sky: #CFE8E6;
+  --wood: #8A5A20; --wood-2: #A8702F; --board: #0B3D38;
+  --amber: #8F5C10; --amber-bg: #FBEFD6; --red: #A63C27; --red-bg: #F9E2DC; --ready: #2B5E36; --ready-bg: var(--leaf-3);
+
+  /* ---- glass (Plantio): light glass over photos, dark glass over dark grounds ---- */
+  --glass-bg: rgba(255, 255, 255, .18);  --glass-border: rgba(255, 255, 255, .34);  --glass-blur: 18px;
+  --glass-dark-bg: rgba(20, 39, 31, .38);  --glass-dark-border: rgba(255, 255, 255, .14);
+  --glass-shadow: 0 24px 60px -24px rgba(0, 0, 0, .45);
 
   /* ---- type ---- */
   --font-display: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
   --font-text:    'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --fs-shelf: clamp(4.5rem, 2rem + 11vw, 12.5rem);     /* shelf letters in the hero */
-  --fs-display: clamp(2.75rem, 1.6rem + 4.2vw, 5.5rem);
-  --fs-h1: clamp(2.25rem, 1.5rem + 2.6vw, 4rem);
-  --fs-h2: clamp(1.75rem, 1.25rem + 1.8vw, 2.75rem);
-  --fs-h3: clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem);
+  --fs-display: clamp(3rem, 1.6rem + 6.2vw, 7.75rem);     /* the hero sentence, two lines */
+  --fs-h1: clamp(2.5rem, 1.5rem + 3.6vw, 5rem);
+  --fs-h2: clamp(1.9rem, 1.25rem + 2.1vw, 3.1rem);
+  --fs-h3: clamp(1.375rem, 1.15rem + .8vw, 1.75rem);
   --fs-h4: 1.25rem;
-  --fs-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
-  --fs-body: 1.0625rem;
-  --fs-sm: 0.9375rem;
-  --fs-xs: 0.8125rem;
-  --lh-tight: 0.98; --lh-snug: 1.15; --lh-text: 1.6;
-  --track-display: -0.03em; --track-wide: 0.08em;   /* grotesk: display tighter than Fraunces needed, wordmark looser than its 0 but not the old serif .14em */
+  --fs-lead: clamp(1.125rem, 1rem + .5vw, 1.375rem);
+  --fs-body: 1.0625rem;  --fs-sm: .9375rem;  --fs-xs: .8125rem;
+  --lh-tight: .94; --lh-snug: 1.1; --lh-text: 1.6;
+  --track-display: -0.035em; --track-wide: .02em;
 
   /* ---- space, size, shape ---- */
   --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.25rem; --s-6: 1.5rem; --s-8: 2rem;
   --s-10: 2.5rem; --s-12: 3rem; --s-16: 4rem; --s-20: 5rem; --s-24: 6rem; --s-32: 8rem;
-  --section-y: clamp(4rem, 3rem + 5vw, 8rem);
-  --container: 80rem; --container-narrow: 44rem; --gutter: clamp(1rem, 4vw, 2.5rem);
-  --header-h: 4.25rem; --banner-h: 2.25rem;
-  --radius: 6px; --radius-lg: 14px; --radius-pill: 999px;
-  --stroke: 1.5px;
-  --frame: var(--olive);                         /* every box edge and hard shadow: olive, never ink (client, 22 Oct) */
-  --shadow-hard: 4px 4px 0 var(--frame);         /* sticker / button */
-  --shadow-hard-lg: 8px 8px 0 var(--frame);      /* cards at rest */
-  --shadow-hard-olive: 6px 6px 0 var(--olive);   /* illustration frames */
-  --shadow-soft: 0 18px 40px -18px rgba(31, 42, 34, .35);
+  --section-y: clamp(5rem, 3.5rem + 6vw, 10rem);
+  --container: 84rem; --container-narrow: 44rem; --gutter: clamp(1.25rem, 4.4vw, 4rem);
+  --header-h: 4.5rem; --banner-h: 0rem;
+  --radius: 12px; --radius-lg: 24px; --radius-xl: 40px; --radius-pill: 999px;
+  --stroke: 1px;
+  --frame: var(--line);
+  --shadow-hard: none; --shadow-hard-lg: none; --shadow-hard-olive: none;   /* v1 sticker shadows retired; names kept so stray rules degrade to flat */
+  --shadow-soft: 0 18px 40px -20px rgba(20, 39, 31, .35);
 
-  /* ---- motion: "settle like a pot set down on a shelf" ---- */
-  --ease-settle: cubic-bezier(.34, 1.4, .64, 1);  /* small overshoot, then rest */
+  /* ---- motion: Framer-like appear, no overshoot on UI ---- */
+  --ease-settle: cubic-bezier(.22, 1, .36, 1);
   --ease-out: cubic-bezier(.22, .9, .3, 1);
   --ease-io: cubic-bezier(.65, 0, .35, 1);
-  --dur-1: 160ms; --dur-2: 320ms; --dur-3: 640ms; --dur-4: 1100ms;
+  --dur-1: 160ms; --dur-2: 320ms; --dur-3: 700ms; --dur-4: 1100ms;
 }
 
 /* ---- reset ---- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + var(--banner-h) + 1rem); }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 2.5rem); }
 html:not(.lenis) { scroll-behavior: smooth; }
 body { font-family: var(--font-text); font-size: var(--fs-body); line-height: var(--lh-text); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; min-height: 100dvh; display: flex; flex-direction: column; overflow-x: clip; }
 main { flex: 1 0 auto; }
@@ -87,8 +85,8 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; padding: 0; }
 p, li, dd { text-wrap: pretty; }
 h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: anywhere; }
-:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
-::selection { background: var(--olive-2); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--sage-2); color: var(--moss); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -101,9 +99,12 @@ h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: anywhere; }
 
 /* ---- type scale ---- */
 /* headings: Bricolage 700; the optical size is set by hand (opsz 96 = display drawing at display sizes, 32 at h2/h3) so it never drifts with the fluid scale */
-h1, h2, h3, h4, .display, .shelf-letters { font-family: var(--font-display); font-weight: 700; line-height: var(--lh-snug); letter-spacing: -0.02em; color: var(--ink); font-variation-settings: "opsz" 32; }
-.display { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 700; font-variation-settings: "opsz" 96; }
-h1, .h1 { font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.025em; font-variation-settings: "opsz" 96; }
+h1, h2, h3, h4, .display { font-family: var(--font-display); font-weight: 600; line-height: var(--lh-snug); letter-spacing: -0.025em; color: var(--ink); font-variation-settings: "opsz" 32; }
+.display { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 600; font-variation-settings: "opsz" 96; }
+/* the Moss move: a two-line sentence, the second line set in the muted sage and pushed right */
+.display .alt { display: block; color: var(--sage-2); padding-left: clamp(0px, 12vw, 11rem); }
+.band-paper .display .alt, .on-light .display .alt { color: var(--ink-2); }
+h1, .h1 { font-size: var(--fs-h1); line-height: 1.02; letter-spacing: -0.03em; font-variation-settings: "opsz" 96; }
 h2, .h2 { font-size: var(--fs-h2); line-height: 1.1; }
 h3, .h3 { font-size: var(--fs-h3); letter-spacing: -0.015em; }
 h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
@@ -111,30 +112,32 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .muted { color: var(--ink-2); } .meta { color: var(--mute); font-size: var(--fs-sm); }
 .text-sm { font-size: var(--fs-sm); } .text-xs { font-size: var(--fs-xs); }
 /* eyebrow: a small roman label in the display face (the reference's typewriter charm; nothing italic since the client's 22 Oct note) */
-.eyebrow { font-family: var(--font-display); font-weight: 600; font-size: .9375rem; color: var(--leaf-ink); letter-spacing: .02em; display: inline-flex; align-items: center; gap: .5rem; }
-.eyebrow::before { content: ""; width: 1.5rem; height: 2px; background: var(--olive); border-radius: 2px; }
-.eyebrow.no-rule::before { display: none; }
-.wordmark { font-family: var(--font-display); font-weight: 800; letter-spacing: var(--track-wide); text-transform: uppercase; }
+/* meta line (Moss): a small sentence-case line of DM Sans, never a shouting label; two of them frame the hero */
+.eyebrow, .meta-line { font-family: var(--font-text); font-weight: 500; font-size: var(--fs-sm); color: var(--mute); letter-spacing: 0; display: inline-flex; align-items: center; gap: .5rem; max-width: 22rem; line-height: 1.4; }
+.wordmark { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; font-variation-settings: "opsz" 32; }
 .num, .price { font-variant-numeric: tabular-nums; }
-.price { font-family: var(--font-display); font-weight: 700; color: var(--terracotta-ink); letter-spacing: -0.01em; }
+.price { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
 .price-before { font-family: var(--font-text); font-weight: 400; color: var(--mute); text-decoration: line-through; margin-left: .5rem; font-size: .85em; }
-.on-dark, .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4, .on-dark .display { color: var(--paper); }
-.on-dark .lead, .on-dark .muted, .on-dark p { color: rgba(247, 243, 234, .78); }
-.on-dark .eyebrow { color: var(--olive-2); }
+.on-dark, .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4, .on-dark .display, .on-dark .price { color: var(--sage); }
+.on-dark .lead, .on-dark .muted, .on-dark p { color: var(--sage-2); }
+.on-dark .eyebrow, .on-dark .meta-line, .on-dark .meta { color: var(--sage-2); }
+.on-dark .prose a:not(.btn) { color: var(--sage); text-decoration-color: var(--olive); }
 .prose { max-width: var(--container-narrow); font-size: 1.125rem; }
 .prose > * + * { margin-top: 1.1em; }
 .prose h2 { margin-top: 1.8em; font-size: var(--fs-h3); } .prose h3 { margin-top: 1.5em; font-size: var(--fs-h4); }
 .prose ul { list-style: disc; padding-left: 1.25rem; } .prose ol { list-style: decimal; padding-left: 1.25rem; } .prose li + li { margin-top: .4em; }
-.prose a:not(.btn) { color: var(--leaf-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--olive); }
+.prose a:not(.btn) { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--olive); }
 .prose strong { font-weight: 600; } .prose p { color: var(--ink-2); }
-.prose blockquote { border-left: 3px solid var(--olive); padding-left: 1rem; font-family: var(--font-display); font-weight: 500; font-size: 1.25em; line-height: 1.35; color: var(--ink); }
+.prose blockquote { padding-left: 1.25rem; border-left: 2px solid var(--olive); font-family: var(--font-display); font-weight: 500; font-size: 1.25em; line-height: 1.35; color: var(--ink); }
 
 /* ---- layout ---- */
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .container-narrow { width: 100%; max-width: var(--container-narrow); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--section-y); }
 .section-tight { padding-block: calc(var(--section-y) * .55); }
-.band-pine { background: var(--pine); color: var(--paper); }
+.band-moss { background: var(--moss); color: var(--sage); }
+.band-pine { background: var(--moss); color: var(--sage); }   /* v1 name kept */
+.band-paper { background: var(--paper); color: var(--ink); }
 .band-paper-3 { background: var(--paper-3); }
 .grid { display: grid; gap: var(--s-6); }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -151,45 +154,75 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .icon { width: 1.25em; height: 1.25em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
 .icon-lg { width: 1.5rem; height: 1.5rem; } .icon-xl { width: 2rem; height: 2rem; }
 
-/* ---- sticker primitives (shared; A refines, nobody renames) ---- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8125rem 1.375rem; border: var(--stroke) solid var(--frame); border-radius: var(--radius); background: var(--paper-2); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 1.0625rem; line-height: 1; letter-spacing: 0; white-space: nowrap; box-shadow: var(--shadow-hard); transition: transform var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle), background var(--dur-1), color var(--dur-1); }
-.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--frame); }
-.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--frame); }
-.btn .icon { width: 1.125rem; height: 1.125rem; }
-.btn-fill { background: var(--terracotta-ink); color: var(--paper-2); }
-.btn-pine { background: var(--pine); color: var(--paper); }
-.btn-lime { background: var(--olive-2); }
-.btn-sm { padding: .5625rem .9375rem; font-size: .9375rem; box-shadow: 3px 3px 0 var(--frame); }
-.btn-sm:hover { box-shadow: 4px 4px 0 var(--frame); }
-.btn-lg { padding: 1rem 1.75rem; font-size: 1.25rem; }
-.btn-icon { width: 2.75rem; height: 2.75rem; padding: 0; }
+/* ---- primitives v2 (shared; A2 refines, nobody renames) ---- */
+/* buttons are pills: outlined by default, .btn-fill solid; on dark grounds the fill is sage with moss text */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .8125rem 1.5rem; border: var(--stroke) solid var(--line); border-radius: var(--radius-pill); background: transparent; color: var(--ink); font-family: var(--font-display); font-weight: 600; font-size: 1rem; line-height: 1; letter-spacing: 0; white-space: nowrap; transition: background var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out), border-color var(--dur-2), transform var(--dur-2) var(--ease-out); }
+.btn:hover { background: rgb(var(--ink-rgb) / .06); border-color: rgb(var(--ink-rgb) / .3); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn .icon { width: 1.125rem; height: 1.125rem; transition: translate var(--dur-2) var(--ease-out); }
+.btn:hover .icon-arrow { translate: 3px 0; }
+.btn-fill { background: var(--ink); color: var(--sage); border-color: var(--ink); }
+.btn-fill:hover { background: var(--moss-3); border-color: var(--moss-3); color: var(--sage); }
+.on-dark .btn { color: var(--sage); border-color: var(--line-dark); }
+.on-dark .btn:hover { background: rgb(var(--sage-rgb) / .08); border-color: rgb(var(--sage-rgb) / .3); }
+.on-dark .btn-fill { background: var(--sage); color: var(--moss); border-color: var(--sage); }
+.on-dark .btn-fill:hover { background: var(--sage-3); border-color: var(--sage-3); }
+.btn-glass { background: var(--glass-bg); border-color: var(--glass-border); color: var(--sage); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); }
+.btn-glass:hover { background: rgba(255, 255, 255, .26); }
+.btn-pine, .btn-lime { background: var(--ink); color: var(--sage); border-color: var(--ink); }   /* v1 names kept */
+.btn-sm { min-height: 2.5rem; padding: .5rem 1.0625rem; font-size: .9375rem; }
+.btn-lg { min-height: 3.5rem; padding: 1rem 1.875rem; font-size: 1.0625rem; }
+.btn-icon { width: 3rem; height: 3rem; padding: 0; }
 .btn[aria-disabled="true"], .btn:disabled { opacity: .5; pointer-events: none; }
-.on-dark .btn { border-color: var(--paper); box-shadow: 4px 4px 0 rgba(247, 243, 234, .9); }
-.on-dark .btn:hover { box-shadow: 6px 6px 0 rgba(247, 243, 234, .9); }
-.link-u { text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 2px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }
-.link-u:hover { text-decoration-color: var(--terracotta); }
-.card { background: var(--paper-2); border: var(--stroke) solid var(--frame); border-radius: var(--radius-lg); padding: var(--s-6); box-shadow: var(--shadow-hard-lg); }
-.card-flat { background: var(--paper-2); border: var(--stroke) solid var(--line); border-radius: var(--radius-lg); padding: var(--s-6); }
-.tag { display: inline-flex; align-items: center; gap: .375rem; padding: .3125rem .75rem; border: var(--stroke) solid var(--frame); border-radius: var(--radius); background: var(--paper-2); font-family: var(--font-display); font-weight: 600; font-size: .9375rem; line-height: 1.2; }
-.tag-sun { background: var(--sun); } .tag-leaf { background: var(--leaf-3); } .tag-terra { background: var(--terracotta-2); }
+/* the quiet text link with an arrow that slides (Moss "Explore the work") */
+.link-arrow { display: inline-flex; align-items: center; gap: .75rem; font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; color: inherit; }
+.link-arrow .icon { width: 1.25rem; height: 1.25rem; transition: translate var(--dur-2) var(--ease-out); }
+.link-arrow:hover .icon { translate: 6px 0; }
+.link-u { text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }
+.link-u:hover { text-decoration-color: currentColor; }
+/* glass panels (Plantio): light glass sits over photographs, dark glass over dark grounds; both degrade to a solid tint */
+.glass { background: var(--glass-bg); border: var(--stroke) solid var(--glass-border); border-radius: var(--radius-lg); box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, .35); -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.25); backdrop-filter: blur(var(--glass-blur)) saturate(1.25); color: var(--sage); }
+.glass-dark { background: var(--glass-dark-bg); border: var(--stroke) solid var(--glass-dark-border); border-radius: var(--radius-lg); box-shadow: var(--glass-shadow); -webkit-backdrop-filter: blur(22px) saturate(1.1); backdrop-filter: blur(22px) saturate(1.1); color: var(--sage); }
+.glass-light { background: rgba(250, 249, 243, .62); border: var(--stroke) solid rgba(255, 255, 255, .7); border-radius: var(--radius-lg); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); color: var(--ink); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .glass { background: rgba(20, 39, 31, .72); } .glass-dark { background: rgba(20, 39, 31, .9); } .glass-light { background: rgba(250, 249, 243, .95); } }
+.glass-pad { padding: clamp(1.25rem, 2.5vw, 2rem); }
+/* photographs: big rounded frames, the circle when the layout wants one; .photo-dim adds the legibility scrim for text on top */
+.photo { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: var(--moss-2); }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--dur-4) var(--ease-out); }
+.photo-circle { border-radius: 50%; aspect-ratio: 1; }
+.photo-dim::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 39, 31, 0) 35%, rgba(20, 39, 31, .72) 100%); pointer-events: none; }
+@media (hover: hover) { a.photo:hover img, .photo-hover:hover img { transform: scale(1.035); } }
+/* cards: flat, rounded, one tone step from the ground */
+.card { background: var(--paper-2); border: var(--stroke) solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2.5vw, 2rem); }
+.card-flat { background: var(--paper-2); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2.5vw, 2rem); }
+.card-dark { background: var(--moss-2); border: var(--stroke) solid var(--line-dark); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2.5vw, 2rem); color: var(--sage); }
+.tag { display: inline-flex; align-items: center; gap: .375rem; padding: .375rem .875rem; border: var(--stroke) solid var(--line); border-radius: var(--radius-pill); background: transparent; font-family: var(--font-text); font-weight: 500; font-size: var(--fs-sm); color: var(--ink-2); }
+.tag.is-active, .tag[aria-pressed="true"] { background: var(--ink); color: var(--sage); border-color: var(--ink); }
+.on-dark .tag { color: var(--sage-2); border-color: var(--line-dark); }
+.tag-sun, .tag-leaf, .tag-terra { background: var(--paper-3); }   /* v1 names kept, colours retired */
 .badge { display: inline-flex; align-items: center; gap: .375rem; padding: .25rem .625rem; border-radius: var(--radius-pill); font-size: var(--fs-xs); font-weight: 600; background: var(--paper-3); color: var(--ink-2); }
 .badge::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: currentColor; }
 .badge-ready { color: var(--ready); background: var(--ready-bg); } .badge-preorder { color: var(--amber); background: var(--amber-bg); } .badge-habis { color: var(--red); background: var(--red-bg); }
 .badge-plain::before { display: none; }
-.squiggle { position: relative; display: inline-block; }
-.squiggle::after { content: ""; position: absolute; left: -2%; right: -2%; bottom: -.15em; height: .35em; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M0 8 Q 12 0 25 8 T 50 8 T 75 8 T 100 8' fill='none' stroke='%23A6A43A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%; z-index: -1; }
-.squiggle-terra::after { filter: hue-rotate(-40deg) saturate(1.6); }
-.frame-olive { border: var(--stroke) solid var(--olive); box-shadow: var(--shadow-hard-olive); border-radius: var(--radius); }
-.input, .select, .textarea { width: 100%; padding: .75rem .9375rem; border: var(--stroke) solid var(--frame); border-radius: var(--radius); background: var(--paper-2); font-size: 1rem; transition: box-shadow var(--dur-1); }
-.input:focus-visible, .select:focus-visible, .textarea:focus-visible { outline: none; box-shadow: 3px 3px 0 var(--terracotta); }
+.squiggle::after, .squiggle-terra::after { display: none; }   /* v1 decoration retired */
+.frame-olive { border-radius: var(--radius-lg); }
+.input, .select, .textarea { width: 100%; min-height: 3rem; padding: .75rem 1.125rem; border: var(--stroke) solid var(--line); border-radius: var(--radius-pill); background: var(--paper-2); font-size: 1rem; transition: border-color var(--dur-1), box-shadow var(--dur-1); }
+.textarea { border-radius: var(--radius-lg); }
+.input:focus-visible, .select:focus-visible, .textarea:focus-visible { outline: none; border-color: var(--olive); box-shadow: 0 0 0 3px rgb(var(--olive-rgb) / .3); }
 .input::placeholder, .textarea::placeholder { color: var(--mute); }
 .textarea { min-height: 7rem; resize: vertical; }
-.field { display: grid; gap: .375rem; } .field label { font-family: var(--font-display); font-weight: 600; }
+.field { display: grid; gap: .375rem; } .field label { font-weight: 600; }
 .error-msg { font-size: var(--fs-xs); color: var(--red); }
+/* the moving band (Moss): one row of words that drifts left; pause button toggles .is-paused */
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; gap: 3rem; width: max-content; animation: marquee 40s linear infinite; }
+.marquee.is-paused .marquee-track, .marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+html.reduced .marquee-track { animation: none; }
 
 /* ---- motion hooks (A implements in js/main.js; markup authors just add the attributes) ---- */
-[data-reveal] { opacity: 0; transform: translateY(18px); }
-[data-reveal].is-in { opacity: 1; transform: none; transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-settle); }
+[data-reveal] { opacity: 0; transform: translateY(24px); }
+[data-reveal].is-in { opacity: 1; transform: none; transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); }
 [data-reveal][data-delay="1"].is-in { transition-delay: 80ms; } [data-reveal][data-delay="2"].is-in { transition-delay: 160ms; } [data-reveal][data-delay="3"].is-in { transition-delay: 240ms; }
 html.no-js [data-reveal], html.reduced [data-reveal] { opacity: 1; transform: none; }
 .sway { transform-origin: 50% 100%; animation: sway 6s ease-in-out infinite alternate; }
@@ -199,6 +232,5 @@ html.no-js [data-reveal], html.reduced [data-reveal] { opacity: 1; transform: no
 @keyframes wiggle { 0% { transform: rotate(0); } 30% { transform: rotate(-3deg); } 60% { transform: rotate(2.5deg); } 100% { transform: rotate(0); } }
 
 /* ---- shell placeholders: reserve the banner + header height until js/layout.js injects them (no layout shift) ---- */
-[data-layout="header"]:empty { min-height: 6.6rem; }
-@media (max-width: 767px) { [data-layout="header"]:empty { min-height: 7.25rem; } }
+[data-layout="header"]:empty { min-height: 0; }   /* the v2 header floats over the hero */
 [data-layout="footer"]:empty { min-height: 20rem; }

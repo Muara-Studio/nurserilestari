@@ -1,5 +1,5 @@
-/* Toko Lestari — js/catalog.js (C). The catalog: shelf tiles (the landing's tiles, one shared component) filtered from TL.products.
-   Pure parts (filter, sort, URL state) and the tile renderer are exported: landing.js imports tileHTML, product-detail.js the rest. */
+/* Toko Lestari — js/catalog.js (C3, v2). The catalog: flat product tiles (the landing's tiles, one shared component) filtered from
+   TL.products. Pure parts (filter, sort, URL state) and the tile renderer are exported: landing.js imports tileHTML, product-detail.js the rest. */
 import { fmtPrice, esc, waLink, reduced } from './util.js';
 
 // gsap only animates and never holds the shelves back: it loads in the background (no top-level await, so the tiles and the
@@ -56,7 +56,7 @@ export const paramsFromState = (s) => {
    ready. `reveal` adds the landing's data-reveal hooks (main.js runs that CSS reveal); the catalog settles its tiles with gsap ---- */
 export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, eager = false, first = false } = {}) => `
 <li class="rak-item" data-id="${esc(p.id)}"${reveal ? ` data-reveal data-delay="${delay}"` : ''}>
-  <a class="rak-card" href="produk-detail.html?id=${encodeURIComponent(p.id)}" data-cat="${esc(p.category)}">
+  <a class="rak-card photo-hover" href="produk-detail.html?id=${encodeURIComponent(p.id)}" data-cat="${esc(p.category)}">
     <span class="rak-mat"><img src="${esc(p.image)}" alt="${esc(p.name)}" width="1024" height="1024" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${first ? ' fetchpriority="high"' : ''}></span>
     <strong class="rak-name">${esc(p.name)}</strong>
     <span class="rak-cat">${esc(catName(p.category, cats))}</span>
@@ -64,8 +64,8 @@ export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, ea
   </a>
 </li>`;
 
-/* ---- arrival: the li fades in while the card rises 22 px and settles on its plank (the landing's reveal, driven by gsap here so
-   the FLIP moves below never fight a CSS transition), batched as the tiles scroll into view ---- */
+/* ---- arrival: the li fades in while the card rises 24 px (the v2 [data-reveal] move, driven by gsap here so the FLIP moves below
+   never fight a CSS transition; ease-out, no overshoot), batched as the tiles scroll into view ---- */
 let io;
 export function settle(items) {
   if (!gsap || reduced() || !items.length || !('IntersectionObserver' in window)) return;
@@ -73,12 +73,12 @@ export function settle(items) {
     const batch = entries.filter((e) => e.isIntersecting).map((e) => e.target);
     batch.forEach((el) => io.unobserve(el));
     if (!batch.length) return;
-    gsap.to(batch, { opacity: 1, duration: .64, ease: 'power2.out', stagger: .06, overwrite: 'auto' });
-    // clearProps at the end: gsap leaves `translate: none` inline, which would override the tile's CSS hover lift and press
-    gsap.to(batch.map((el) => el.firstElementChild), { y: 0, duration: .64, ease: 'back.out(1.4)', stagger: .06, overwrite: 'auto', clearProps: 'transform,translate,rotate,scale' });
+    gsap.to(batch, { opacity: 1, duration: .7, ease: 'power2.out', stagger: .06, overwrite: 'auto' });
+    // clearProps at the end: gsap would otherwise leave an inline transform on the card for good
+    gsap.to(batch.map((el) => el.firstElementChild), { y: 0, duration: .7, ease: 'power3.out', stagger: .06, overwrite: 'auto', clearProps: 'transform,translate,rotate,scale' });
   }, { rootMargin: '0px 0px -8% 0px' });
   // opacity, never visibility: a tile waiting below the fold must stay focusable, and focusing it scrolls it into view, which reveals it
-  items.forEach((el) => { gsap.set(el, { opacity: 0 }); gsap.set(el.firstElementChild, { y: 22 }); io.observe(el); });
+  items.forEach((el) => { gsap.set(el, { opacity: 0 }); gsap.set(el.firstElementChild, { y: 24 }); io.observe(el); });
 }
 
 /* ---- the catalog page ---- */
@@ -89,7 +89,7 @@ function boot() {
   if (!grid) return;
   const form = document.querySelector('[data-filters]');
   const q = form.querySelector('#q'), urut = form.querySelector('#urut');
-  const cats = form.querySelector('[data-cats]'), count = form.querySelector('[data-count]'), clear = form.querySelector('[data-clear]');
+  const cats = form.querySelector('[data-cats]'), count = document.querySelector('[data-count]'), clear = document.querySelector('[data-clear]');   // the counter line sits under the form (v2)
   const empty = document.querySelector('[data-empty]'), emptyWa = document.querySelector('[data-empty-wa]');
   const all = products();
   let state = stateFromParams(new URLSearchParams(location.search));
@@ -102,7 +102,10 @@ function boot() {
   const filtered = () => !!(state.q || state.kategori || state.status);
   const syncControls = () => {
     q.value = state.q; urut.value = state.urut;
-    cats.querySelectorAll('[data-cat]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.cat === state.kategori)));
+    cats.querySelectorAll('[data-cat]').forEach((b) => { const on = b.dataset.cat === state.kategori; b.setAttribute('aria-pressed', String(on)); b.classList.toggle('is-active', on); });
+    // phones: the chip strip scrolls sideways, so a category chosen by URL is brought into view (left of the strip, behind the gutter)
+    const on = cats.querySelector('.is-active'), r = on && on.getBoundingClientRect(), c = cats.getBoundingClientRect();
+    if (on && cats.scrollWidth > cats.clientWidth + 1 && (r.right > c.right || r.left < c.left)) cats.scrollTo({ left: r.left - c.left + cats.scrollLeft - (parseFloat(getComputedStyle(cats).paddingLeft) || 0), behavior: 'auto' });
   };
   const syncUrl = () => { const qs = paramsFromState(state); history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); };
   // the counter talks like the shopkeeper
@@ -141,7 +144,7 @@ function boot() {
     if (animate) old.forEach((el, id) => { // FLIP: last, invert, play — staying tiles glide to their new slot
       if (!keep.has(id)) return;
       const a = before.get(el), b = el.getBoundingClientRect(), dx = a.left - b.left, dy = a.top - b.top;
-      if (dx || dy) gsap.fromTo(el, { x: dx, y: dy }, { x: 0, y: 0, duration: .64, ease: 'back.out(1.4)', overwrite: 'auto' });
+      if (dx || dy) gsap.fromTo(el, { x: dx, y: dy }, { x: 0, y: 0, duration: .7, ease: 'power3.out', overwrite: 'auto' });
     });
     settle(entering);
     first = false;

@@ -15,7 +15,7 @@ TL.site = {
   locations: [
     { id: "cipete", name: "Toko & Nursery Lestari — Cipete", shortName: "Cipete, Jakarta Selatan",
       address: "Jl. Gaharu I No. 7, RT 3/RW 11, Cilandak Barat, Kec. Cilandak, Jakarta Selatan 12430",
-      hours: "Buka setiap hari sampai pukul 17.00", hoursNote: "Konfirmasi jam buka via WhatsApp sebelum datang.",
+      hours: "Tutup pukul 17.00", hoursNote: "Konfirmasi jam buka via WhatsApp sebelum datang.",
       maps: "https://maps.app.goo.gl/hXxVJjxYTK2USExG7", mapsEmbed: "https://www.google.com/maps?q=-6.2795087,106.8042021&z=16&output=embed",
       rating: 4.8, ratingSource: "Google Maps", freeDelivery: "Gratis ongkir sekitar Jl. Gaharu: MPR, BDN, dan Cipete",
       tokopedia: "https://www.tokopedia.com/nurserilestari", shopee: "https://shopee.co.id/nurserilestari",

@@ -19,154 +19,194 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=4804384">
-<link rel="stylesheet" href="css/shell.css?v=4804384">
-<link rel="stylesheet" href="css/landing.css?v=4804384">
+<link rel="stylesheet" href="css/base.css?v=21d0d35">
+<link rel="stylesheet" href="css/shell.css?v=21d0d35">
+<link rel="stylesheet" href="css/landing.css?v=21d0d35">
 <script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
-<body>
+<body data-shell="dark">
 <div data-layout="header"></div>
 <main id="main">
 
-  <!-- ===== hero: the wordmark lives on three shelves among the stock ===== -->
-  <section class="hero" aria-labelledby="hero-h">
-        <h1 class="container shelves" id="hero-h">
-      <div class="shelf shelf-1"><div class="shelf-box"></div>
-        <div class="fill" data-m="book-stack" style="--x:.8cqw;--w:7cqw;--ar:220/150"></div>
-        <div class="fill" data-m="books-upright" style="--x:17.5cqw;--w:8cqw"></div>
-        <div class="fill fill-m" data-m="media-bag" style="--x:70cqw;--w:4.5cqw;--ar:160/200;--mx:36cqw;--mw:6cqw"></div>
-        <div class="bay">
-          <div class="prop plant h-l"><div class="prop-in wiggle"><img class="potted sway" src="assets/img/hmp/potted-alocasia.webp" alt="" width="605" height="760" decoding="async"></div></div>
-          <span class="shelf-letters">NURSERI</span>
-          <div class="prop plant h-m m-hide"><div class="prop-in wiggle"><img class="potted sway sway-2" src="assets/img/hmp/potted-pilea.webp" alt="" width="627" height="760" decoding="async"></div></div>
-          <div class="prop print m-hide" style="--w:6.5cqw"><div class="prop-in wiggle"><img src="assets/img/cut/print-begonia-rex.webp" alt="" decoding="async" loading="lazy"></div></div>
-          <div class="prop sil m-hide" data-m="vase-flowers" style="--w:5cqw;--ar:180/300"><div class="prop-in wiggle"></div></div>
+  <!-- ===== 1. hero: two meta lines, the two-line sentence, the lead, one arrow link, the circle photo cropped by the right edge ===== -->
+  <section class="hero band-moss on-dark" aria-labelledby="hero-h">
+    <div class="container hero-in">
+      <div class="hero-meta">
+        <p class="meta-line" data-reveal>Toko & nursery di Jl. Gaharu I, Cipete.</p>
+        <p class="meta-line hero-meta-r" data-reveal data-delay="1">Tanaman hias / Benih / Media tanam / Pupuk / Pot & alat</p>
+      </div>
+      <h1 class="display hero-h" id="hero-h" data-reveal data-delay="1">Tanaman yang betah <span class="alt">di rumahmu.</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-lead" data-reveal data-delay="2">Dari monstera buat sudut ruang tamu sampai benih tomat buat balkon, semuanya ada di rak kami di Jl. Gaharu I, Cipete. Media tanamnya kami racik sendiri, dan yang jawab WhatsApp ya orang yang tiap hari ngurus tanamannya.</p>
+        <a class="link-arrow" href="produk.html" data-reveal data-delay="3">Lihat semua produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+    <div class="photo photo-circle hero-photo" data-reveal data-delay="2">
+      <img src="assets/img/photos/hero-nursery.jpg" srcset="assets/img/photos/hero-nursery-480.jpg 480w, assets/img/photos/hero-nursery.jpg 733w" sizes="(max-width: 639px) 100vw, 62vw" alt="Meja-meja kayu penuh pot tanaman di sebuah nursery" width="733" height="1100" fetchpriority="high" decoding="async">
+    </div>
+    <p class="glass hero-chip" data-reveal data-delay="3"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"/></svg>Jl. Gaharu I No. 7 · tutup jam 5 sore</p>
+  </section>
+
+  <!-- ===== 2. the moving band: the racks and three facts, olive dots between, a pause button ===== -->
+  <section class="band-words band-moss on-dark" aria-labelledby="band-h">
+    <h2 class="visually-hidden" id="band-h">Yang ada di rak kami.</h2>
+    <div class="container band-row">
+      <div class="marquee" data-band>
+        <ul class="marquee-track" aria-label="Rak dan layanan">
+          <li class="band-item">Tanaman hias</li>
+          <li class="band-item">Benih & bibit</li>
+          <li class="band-item">Media tanam racikan sendiri</li>
+          <li class="band-item">Pupuk & nutrisi</li>
+          <li class="band-item">Pot & tatakan</li>
+          <li class="band-item">Alat berkebun</li>
+          <li class="band-item">Gratis ongkir sekitar Cipete</li>
+        </ul>
+      </div>
+      <button class="btn btn-icon band-pause" type="button" aria-pressed="false" aria-label="Jeda gerakan" data-band-pause><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-player-pause"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ===== 3. four real numbers on glass over a nursery photograph (docs/facts.md) ===== -->
+  <section class="facts" aria-labelledby="facts-h">
+    <h2 class="visually-hidden" id="facts-h">Angka dari etalase Tokopedia.</h2>
+    <div class="photo photo-dim facts-photo">
+      <img src="assets/img/photos/nursery-shelf.jpg" alt="Rak nursery dengan tanaman berdaun warna-warni dan label gantung" width="733" height="1100" loading="lazy" decoding="async">
+    </div>
+    <div class="container facts-in">
+      <dl class="glass glass-pad facts-strip on-dark" data-reveal>
+        <div class="fact"><dt>rating di Tokopedia</dt><dd class="num">5.0</dd></div>
+        <div class="fact"><dt>ulasan pembeli</dt><dd class="num">23,6 rb</dd></div>
+        <div class="fact"><dt>produk terjual</dt><dd class="num">205 rb+</dd></div>
+        <div class="fact"><dt>sekitar Cipete</dt><dd>Gratis ongkir</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== 4. three racks: big photo cards into the catalog, counts from TL.products ===== -->
+  <section class="section band-moss on-dark racks" aria-labelledby="racks-h">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="racks-h" data-reveal>Mulai dari rak yang mana?</h2>
+        <p class="sec-note" data-reveal data-delay="1">Pilih satu rak. Harganya sama kayak di Tokopedia, stoknya bisa kamu tanya lewat WhatsApp.</p>
+      </div>
+      <ul class="racks-grid">
+        <li data-reveal data-delay="1">
+          <a class="photo photo-dim rack-card" href="produk.html?kategori=tanaman-hias">
+            <img src="assets/img/photos/monstera-leaves.jpg" alt="Daun monstera di dekat jendela" width="733" height="1100" loading="lazy" decoding="async">
+            <span class="glass rack-cap"><span class="rack-cap-text"><span class="h4">Tanaman hias</span><span class="meta" data-count="tanaman-hias"></span></span><span class="rack-arrow"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></span></span>
+          </a>
+        </li>
+        <li data-reveal data-delay="2">
+          <a class="photo photo-dim rack-card" href="produk.html?kategori=benih">
+            <img src="assets/img/photos/nursery-table-labels.jpg" alt="Sukulen dan kaktus kecil berlabel di meja nursery" width="733" height="1100" loading="lazy" decoding="async">
+            <span class="glass rack-cap"><span class="rack-cap-text"><span class="h4">Benih & media tanam</span><span class="meta" data-count="benih media-tanam" data-labels="benih, media tanam"></span></span><span class="rack-arrow"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></span></span>
+          </a>
+        </li>
+        <li data-reveal data-delay="3">
+          <a class="photo photo-dim rack-card" href="produk.html?kategori=pot">
+            <img src="assets/img/photos/succulents-clay.jpg" alt="Sukulen dan kaktus di pot tanah liat" width="825" height="1100" loading="lazy" decoding="async">
+            <span class="glass rack-cap"><span class="rack-cap-text"><span class="h4">Pot & alat</span><span class="meta" data-count="pot alat" data-labels="pot, alat"></span></span><span class="rack-arrow"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 5. four featured tiles (tileHTML from js/catalog.js, restyled flat here) ===== -->
+  <section class="section band-paper featured" aria-labelledby="featured-h">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="featured-h" data-reveal>Yang paling sering ditanyain.</h2>
+        <a class="link-arrow" href="produk.html" data-reveal data-delay="1">Semua produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
+      </div>
+      <ul class="featured-rak" data-featured aria-label="Produk yang paling sering ditanyain"></ul>
+    </div>
+  </section>
+
+  <!-- ===== 6. three plain columns ===== -->
+  <section class="section band-moss on-dark daily" aria-labelledby="daily-h">
+    <div class="container">
+      <h2 id="daily-h" data-reveal>Yang kami kerjakan tiap hari.</h2>
+      <div class="daily-grid">
+        <div data-reveal data-delay="1">
+          <h3>Tanaman yang sudah beradaptasi di Jakarta</h3>
+          <p>Dirawat di Cipete, kena panas dan lembapnya Jakarta tiap hari, jadi nggak kaget waktu pindah ke rumahmu.</p>
         </div>
-      </div>
-      <div class="shelf shelf-2"><div class="shelf-box"></div>
-        <div class="fill" data-m="seed-packet" style="--x:9.5cqw;--w:4cqw;--ar:140/190"></div>
-        <div class="fill fill-m" data-m="books-upright" style="--x:21.5cqw;--w:8cqw;--mx:57cqw;--mw:13cqw"></div>
-        <div class="fill" data-m="pot-dots" style="--x:70.8cqw;--w:5cqw;--ar:200/170"></div>
-        <div class="fill" data-m="candle" style="--x:88.8cqw;--w:3cqw;--ar:110/200"></div>
-        <div class="bay">
-          <div class="prop sil m-hide" data-m="watering-can" style="--w:7cqw;--ar:240/180"><div class="prop-in wiggle"></div></div>
-          <div class="prop plant h-m m-hide" style="--sink:.055"><div class="prop-in wiggle"><img class="potted sway sway-3" src="assets/img/hmp/potted-spider.webp" alt="" width="705" height="760" decoding="async"></div></div>
-          <span class="shelf-letters">LESTARI</span>
-          <div class="prop plant h-l" style="--sink:.035"><div class="prop-in wiggle"><img class="potted sway" src="assets/img/hmp/potted-calathea.webp" alt="" width="522" height="760" decoding="async"></div></div>
-          <div class="prop sil m-hide" data-m="basket" style="--w:6cqw;--ar:220/180"><div class="prop-in wiggle"></div></div>
+        <div data-reveal data-delay="2">
+          <h3>Media tanam racikan sendiri untuk aroid, sukulen, anggrek</h3>
+          <p>Aroid mix, orchid mix, sekam, perlite, cocopeat. Kami aduk sendiri di toko, dan takarannya boleh kamu tanya.</p>
         </div>
-      </div>
-    </h1>
-    <div class="container hero-lead">
-      <div class="hero-copy">
-      <p class="hero-title">Nurseri Lestari, toko tanaman di Cipete.</p>
-      <p>Dari monstera buat sudut ruang tamu sampai benih tomat buat balkon, semuanya ada di rak kami di Jl. Gaharu I, Cipete. Media tanamnya kami racik sendiri, dan yang jawab WhatsApp ya orang yang tiap hari ngurus tanamannya.</p>
-      </div>
-      <div class="cluster">
-        <a class="btn btn-fill" href="produk.html">Lihat produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
-        <a class="btn" href="#" data-wa><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg>Chat WhatsApp</a>
+        <div data-reveal data-delay="3">
+          <h3>Saran lewat WhatsApp dari orang yang ngurus tanamannya</h3>
+          <p>Tanya stok, ongkir, atau kenapa daunnya menguning. Dibalas pas toko buka.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== facts strip ===== -->
-  <section class="facts" aria-label="Fakta toko" data-reveal="clip">
-    <ul class="container facts-list">
-      <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-star-filled"/></svg><span><b>5.0 di Tokopedia</b>23,6 rb ulasan</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-package"/></svg><span><b>205 rb+</b>terjual di Tokopedia</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-truck-delivery"/></svg><span><b>Gratis ongkir</b>sekitar Cipete</span></li>
-      <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-clock"/></svg><span><b>Tutup jam 5 sore</b>Jl. Gaharu I No. 7, Cipete</span></li>
-    </ul>
+  <!-- ===== 7. how to buy: three steps as a real list ===== -->
+  <section class="section band-paper steps" aria-labelledby="steps-h">
+    <div class="container split steps-split">
+      <h2 id="steps-h" data-reveal>Cara belanja.</h2>
+      <ol class="steps-list">
+        <li class="card-flat" data-reveal data-delay="1">
+          <h3>Pilih di rak atau di Tokopedia</h3>
+          <p>Lihat-lihat di halaman produk kami atau langsung di etalase Tokopedia. Harganya sama.</p>
+        </li>
+        <li class="card-flat" data-reveal data-delay="2">
+          <h3>Chat WhatsApp buat cek stok dan ongkir</h3>
+          <p>Kirim nama produknya, kami cek stoknya dan hitung ongkir ke alamatmu.</p>
+        </li>
+        <li class="card-flat" data-reveal data-delay="3">
+          <h3>Diantar sekitar Cipete, atau ambil di toko</h3>
+          <p>Sekitar Cipete gratis ongkir. Mau ambil sendiri juga boleh, toko tutup jam 5 sore.</p>
+        </li>
+      </ol>
+    </div>
   </section>
 
-  <!-- ===== four feature blocks ===== -->
-  <div class="container features">
-
-    <article class="feature">
-      <div class="split">
-        <div class="fig fig-collage" data-reveal="settle">
-          <img src="assets/img/hmp/collage-pots.webp" alt="Kolase pot keramik dan tanaman hias" width="1000" height="1280" decoding="async">
-        </div>
-        <div class="fig-card">
-          <h2 data-split>Kenalan dulu sama tanamanmu</h2>
-          <p>Ada 160-an produk di rak kami: tanaman hias, benih, media tanam, pupuk, pot, alat kebun. Harganya sama kayak di Tokopedia. Mau pesan lewat WhatsApp atau ambil langsung di toko juga boleh.</p>
-          <a class="btn btn-fill" href="produk.html">Lihat produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
-        </div>
+  <!-- ===== 8. three latest tips ===== -->
+  <section class="section band-moss on-dark notes" aria-labelledby="notes-h">
+    <div class="container">
+      <div class="sec-head">
+        <h2 id="notes-h" data-reveal>Catatan dari toko.</h2>
+        <a class="link-arrow" href="tips.html" data-reveal data-delay="1">Semua tips<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
       </div>
-    </article>
+      <ul class="notes-grid" data-tips aria-label="Tips terbaru"></ul>
+    </div>
+  </section>
 
-    <article class="feature">
-      <div class="split">
-        <div class="fig fig-hands" data-reveal="settle">
-          <img src="assets/img/hmp/hands-repotting.webp" alt="Dua tangan mengangkat tanaman dari pot, akarnya terlihat" width="1000" height="903" loading="lazy" decoding="async">
-        </div>
-        <div class="fig-card">
-          <h2 data-split>Soal rawat-merawat</h2>
-          <p>Dari ganti pot ke ukuran 60 cm sampai milih ajir buat tanaman rambat. Kami tulis dari pertanyaan yang paling sering mampir ke toko dan ke DM Instagram.</p>
-          <a class="btn" href="tips.html">Baca tips<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
-        </div>
-      </div>
-    </article>
-
-    <article class="feature">
-      <div class="split">
-        <div class="fig fig-room" data-reveal="settle">
-          <img src="assets/img/hmp/room-plants.webp" alt="Ilustrasi sudut ruang dengan tanaman hias, meja kecil, dan lampu" width="900" height="867" loading="lazy" decoding="async">
-        </div>
-        <div class="fig-card">
-          <h2 data-split>Toko kecil di Jl. Gaharu</h2>
-          <p>Dulu kami cuma jual media tanam, pupuk kandang, sama pot. Sekarang ada dua toko, Cipete dan Tangerang BSD, plus lapak di Tokopedia dan Shopee. Ulasannya sudah 23 ribu lebih, dan kami masih suka ngobrolin tanaman sama pembeli.</p>
-          <a class="btn" href="tentang.html">Cerita kami<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
-        </div>
-      </div>
-    </article>
-
-    <article class="feature">
-      <div class="split">
-        <div class="fig fig-forest" data-reveal="settle">
-          <img src="assets/illus/forest-frame.svg" alt="Bingkai Hutan Lestari: langit pinus, bukit, dan pepohonan" width="600" height="620" loading="lazy" decoding="async">
-          <img class="cil" src="assets/illus/tunas-idle.svg" alt="Si Tunas, maskot Hutan Lestari" width="240" height="300" loading="lazy" decoding="async">
-        </div>
-        <div class="fig-card">
-          <h2 data-split>Main sebentar, yuk</h2>
+  <!-- ===== 9. the game, one dark card ===== -->
+  <section class="section-tight band-moss on-dark play" aria-labelledby="play-h">
+    <div class="container">
+      <div class="card-dark play-card" data-reveal>
+        <img class="play-sprite" src="assets/illus/tunas-idle.svg" alt="Si Tunas, maskot Hutan Lestari, memegang bibit dan sekop" width="240" height="300" loading="lazy" decoding="async">
+        <div>
+          <h2 id="play-h">Main sebentar: Tunas & Hutan Lestari.</h2>
           <p>Bantu si Tunas manjat Hutan Lestari, kumpulin benih, terus tanam pohon. Rekormu kesimpan di browser ini.</p>
-          <a class="btn btn-pine" href="main.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-device-gamepad-2"/></svg>Main sekarang</a>
+          <a class="btn" href="main.html"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-device-gamepad-2"/></svg>Main sekarang</a>
         </div>
       </div>
-    </article>
-
-  </div>
-
-  <!-- ===== featured products: tiles standing on olive shelves (P1) ===== -->
-  <section class="featured" aria-labelledby="featured-h">
-    <div class="container">
-      <div class="sec-head">
-        <div><h2 id="featured-h" data-split>Yang sering dicari</h2><p class="rak-lead">Yang paling sering ditanyain orang, di toko maupun di chat. Harganya sama kayak di Tokopedia.</p></div>
-        <a class="btn" href="produk.html">Semua produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
-      </div>
-      <ul class="rak" data-featured aria-label="Produk yang sering dicari"></ul>
     </div>
   </section>
 
-  <!-- ===== Instagram (shown by landing.js once the first thumbnail loads) ===== -->
-  <section class="ig" aria-labelledby="ig-h" data-ig hidden>
-    <div class="container">
-      <div class="sec-head">
-        <h2 id="ig-h">Dari Instagram kami, @nurseri.lestari</h2>
-        <a class="btn" href="https://www.instagram.com/nurseri.lestari/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-instagram"/></svg>Ikuti kami</a>
-      </div>
-      <ul class="grid grid-3 keep-2 ig-grid" data-ig-grid></ul>
+  <!-- ===== 10. closing: one question, one action (the footer right below carries "Mau tanya tanaman apa?", so this asks something else) ===== -->
+  <section class="section band-moss on-dark closing" aria-labelledby="closing-h">
+    <div class="container closing-in">
+      <h2 class="display" id="closing-h" data-reveal>Bingung pilih yang mana?</h2>
+      <p data-reveal data-delay="1">Ceritain ruangannya, kami bantu cocokin tanamannya.</p>
+      <a class="btn btn-fill btn-lg" href="#" data-wa data-reveal data-delay="2"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg>Chat WhatsApp</a>
     </div>
   </section>
 
 </main>
 <div data-layout="footer"></div>
-<script src="data/site.js?v=4804384"></script>
-<script src="data/products.js?v=4804384"></script>
-<script src="data/tips.js?v=4804384"></script>
-<script src="js/layout.js?v=4804384"></script>
-<script type="module" src="js/main.js?v=4804384"></script>
-<script type="module" src="js/landing.js?v=4804384"></script>
+<script src="data/site.js?v=21d0d35"></script>
+<script src="data/products.js?v=21d0d35"></script>
+<script src="data/tips.js?v=21d0d35"></script>
+<script src="js/layout.js?v=21d0d35"></script>
+<script type="module" src="js/main.js?v=21d0d35"></script>
+<script type="module" src="js/landing.js?v=21d0d35"></script>
 </body>
 </html>

@@ -1,71 +1,90 @@
-/* Toko Lestari — js/landing.js (B). The hero's one driver (scroll velocity → leaf tilt), the props settling in on load,
-   the featured price tags from TL.products and the Instagram grid. Reveals and splits are A's (main.js rescans). */
-import { gsap } from 'gsap';
-import { onScroll } from './main.js';
-import { esc, icon, reduced, clamp } from './util.js';
-import { tileHTML } from './catalog.js';   // the shelf tile shared with the catalog and the detail page (C2, 22 Oct)
+/* Toko Lestari — js/landing.js v2 (L2, 31 Oct 2026). The landing's data and its one control: the moving band (items duplicated
+   once so the -50 % loop closes, a pause button), the three rack cards' product counts from TL.products, four featured tiles
+   through tileHTML from js/catalog.js, the three latest tips from TL.tips. Reveals are main.js's ([data-reveal] is rescanned
+   after every render). No gsap here: the hero has nothing to settle, and the page must read even if the CDN modules never come. */
+import { esc, reduced } from './util.js';
+import { tileHTML } from './catalog.js';
 
-const RM = reduced();
-const html = document.documentElement;
+const data = () => window.TL || {};
+const n = (x) => Number(x || 0).toLocaleString('id-ID');
 
-/* ---- featured: 8 tiles standing on shelves. One product per category first, in the shop's own category order
-   (plants first), then the next featured items, so the shelf shows the whole shop (P1, 22 Oct) ---- */
+/* ---- band: clone the items once (decorative, hidden from readers); the button toggles .is-paused and says what it does ---- */
+function initBand() {
+  const band = document.querySelector('[data-band]');
+  const track = band?.querySelector('.marquee-track');
+  const btn = document.querySelector('[data-band-pause]');
+  if (!band || !track) return;
+  for (const li of [...track.children]) {
+    const c = li.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    track.appendChild(c);
+  }
+  if (!btn) return;
+  if (reduced()) { btn.hidden = true; return; }   // base.css already stops the drift; nothing to pause
+  const use = btn.querySelector('use');
+  btn.addEventListener('click', () => {
+    const paused = band.classList.toggle('is-paused');
+    btn.setAttribute('aria-pressed', String(paused));
+    btn.setAttribute('aria-label', paused ? 'Jalankan lagi' : 'Jeda gerakan');
+    use?.setAttribute('href', `assets/icons/sprite.svg#i-player-${paused ? 'play' : 'pause'}`);
+  });
+}
+
+/* ---- rack counts: data-count="id [id]" from TL.products; a card that spans two categories names both numbers, so the
+   figure on the landing matches the count the filtered catalog will show (it can take one kategori at a time) ---- */
+function countRacks() {
+  const all = data().products || [];
+  document.querySelectorAll('[data-count]').forEach((el) => {
+    const ids = el.dataset.count.split(/\s+/).filter(Boolean);
+    const labels = (el.dataset.labels || '').split(',').map((s) => s.trim());
+    const counts = ids.map((id) => all.filter((p) => p.category === id).length);
+    el.textContent = ids.length === 1 ? `${n(counts[0])} produk` : counts.map((c, i) => `${n(c)} ${labels[i] || ids[i]}`).join(' · ');
+  });
+}
+
+/* ---- featured: one product per category in the shop's own order (plants first), four tiles ---- */
 function renderFeatured() {
-  const rak = document.querySelector('[data-featured]');
-  const all = (window.TL && TL.products) || [];
-  if (!rak || !all.length) return;
-  const catList = (window.TL && TL.categories) || [];
+  const ul = document.querySelector('[data-featured]');
+  const all = data().products || [];
+  const cats = data().categories || [];
+  if (!ul || !all.length) return;
   const feat = all.filter((p) => p.featured);
   const pick = [];
-  for (const c of catList) { const p = feat.find((x) => x.category === c.id); if (p) pick.push(p); }
-  for (const p of feat) if (pick.length < 8 && !pick.includes(p)) pick.push(p);
-  rak.innerHTML = pick.slice(0, 8).map((p, i) => tileHTML(p, { cats: catList, reveal: true, delay: i % 4 })).join('');
+  for (const c of cats) { const p = feat.find((x) => x.category === c.id && !pick.includes(x)); if (p) pick.push(p); }
+  for (const p of feat) if (pick.length < 4 && !pick.includes(p)) pick.push(p);
+  ul.innerHTML = pick.slice(0, 4).map((p, i) => tileHTML(p, { cats, reveal: true, delay: i })).join('');
 }
 
-/* ---- Instagram: six posts; the section only appears once the first thumbnail actually loads ---- */
-function renderInstagram() {
-  const sec = document.querySelector('[data-ig]');
-  const grid = document.querySelector('[data-ig-grid]');
-  const site = (window.TL && TL.site) || {};
-  const codes = (site.instagramPosts || []).slice(0, 6);
-  if (!sec || !grid || !codes.length) return;
-  grid.innerHTML = codes.map((c, i) => `
-<li><a class="ig-post" href="https://www.instagram.com/p/${esc(c)}/" target="_blank" rel="noopener" aria-label="Lihat unggahan Instagram @nurseri.lestari">
-  <img src="assets/img/ig/${esc(c)}.jpg" alt="" width="640" height="640" loading="lazy" decoding="async">${icon('brand-instagram')}</a></li>`).join('');
-  const first = new Image();
-  first.onload = () => { sec.hidden = false; TL.motion?.refresh(); };
-  first.onerror = () => sec.remove();
-  first.src = `assets/img/ig/${codes[0]}.jpg`;
-  grid.querySelectorAll('img').forEach((img) => img.addEventListener('error', () => img.closest('li').remove()));
+/* ---- tips: the three latest (TL.tips is newest first); the Instagram image, or the drawn illustration on a moss mat ---- */
+function renderTips() {
+  const ul = document.querySelector('[data-tips]');
+  const tips = (data().tips || []).slice(0, 3);
+  if (!ul || !tips.length) return;
+  ul.innerHTML = tips.map((t, i) => {
+    const src = t.image || t.illus;
+    return `
+<li data-reveal data-delay="${i + 1}">
+  <a class="note-card" href="tips-detail.html?id=${encodeURIComponent(t.id)}">
+    <span class="photo photo-hover note-photo${t.image ? '' : ' is-illus'}">${src ? `<img src="${esc(src)}" alt="" width="640" height="480" loading="lazy" decoding="async">` : ''}</span>
+    <h3>${esc(t.title)}</h3>
+    <span class="meta">${esc(t.topic)} · ${n(t.readTime)} menit baca</span>
+  </a>
+</li>`;
+  }).join('');
 }
 
-/* ---- hero intro: letters rise a touch, props settle onto the planks in reading order ---- */
-function heroIntro() {
-  const props = gsap.utils.toArray('.hero .prop');
-  if (RM || !props.length) { html.classList.add('hero-ready'); return; }
-  gsap.set(props, { y: -42, autoAlpha: 0, rotation: (i) => (i % 2 ? 5 : -5) });
-  html.classList.add('hero-ready');
-  gsap.timeline({ defaults: { ease: 'back.out(1.5)' } })
-    .from('.hero .shelf-letters', { y: 22, duration: .9, stagger: .11, ease: 'back.out(1.1)' }, 0)
-    .to(props, { y: 0, autoAlpha: 1, rotation: 0, duration: .85, stagger: { each: .055, from: 'start' }, clearProps: 'transform,opacity,visibility' }, .18);
+/* ---- the hero's entrance: its link and chip sit in the bottom 8 % of a 100svh hero, inside the reveal observer's margin,
+   so at some viewport heights they never faded in. The first screen is on screen by definition: reveal it after the
+   first paint (two frames, so the opacity transition still runs); the CSS delays keep the stagger ---- */
+function revealHero() {
+  requestAnimationFrame(() => requestAnimationFrame(() => document.querySelectorAll('.hero [data-reveal]').forEach((el) => el.classList.add('is-in'))));
 }
 
-/* ---- the single driver: scroll velocity tilts every plant through --tilt (±2°, per-plant --k) ---- */
-function heroTilt() {
-  const hero = document.querySelector('.hero');
-  if (RM || !hero) return;
-  let aim = 0, cur = 0;
-  onScroll(({ v }) => { aim = clamp(v / 48, -1, 1); });
-  const tick = () => {
-    const r = gsap.ticker.deltaRatio();
-    aim *= Math.pow(.9, r);                       // velocity fades back to rest
-    cur += (aim - cur) * (1 - Math.pow(.86, r));
-    hero.style.setProperty('--tilt', `${(cur * -2).toFixed(3)}deg`);
-  };
-  new IntersectionObserver(([en]) => (en.isIntersecting ? gsap.ticker.add(tick) : gsap.ticker.remove(tick))).observe(hero);
-}
-
+initBand();
+revealHero();
+countRacks();
 renderFeatured();
-renderInstagram();
-heroIntro();
-heroTilt();
+renderTips();
+
+/* if the motion engine never boots (the CDN modules unreachable), the reveals must not keep the page invisible */
+setTimeout(() => { if (!data().motion) document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in')); }, 2500);

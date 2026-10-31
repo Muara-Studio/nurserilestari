@@ -1,130 +1,127 @@
 /* ==========================================================================
-   Toko Lestari — css/catalog.css  (C: produk.html, produk-detail.html)
-   Tiles on shelves. The tile itself is the shared shelf-tile component (.rak* in css/components.css, markup from
-   js/catalog.js tileHTML); this file lays the two pages out around it. Tokens come from base.css; nothing is redefined here.
-   Phone first (390), then 640 / 900 / 1024 / 1200.
+   Toko Lestari — css/catalog.css (C3, v2 31 Oct 2026: produk.html, produk-detail.html)
+   The tile itself is the shared component (.rak* in css/components.css, markup from tileHTML() in js/catalog.js); this file lays
+   the two pages out around it. Tokens from base.css only; nothing is redefined here. Phone first (390), then 640 / 900 / 1024.
    ========================================================================== */
 
-/* ---- catalog head: the title stands alone on the top shelf, plants beside it on wide screens ---- */
-.catalog-head { display: grid; gap: var(--s-6); padding-block: clamp(2rem, 1rem + 4vw, 4.5rem) var(--s-2); }
-.catalog-head .display { margin-bottom: var(--s-5); }
-.catalog-head__shelf { position: relative; display: none; }
-@media (min-width: 900px) {
-  .catalog-head { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; }
-  .catalog-head__shelf { display: block; min-height: 14rem; }
-  .catalog-head__shelf::before { content: ""; position: absolute; left: 0; right: 0; bottom: 1.5rem; height: 7px; border-radius: 2px; background: var(--olive); }   /* the same plank the tiles stand on */
-  .catalog-head__shelf img { position: absolute; bottom: calc(1.5rem + 7px); height: auto; }
-  .catalog-head__pothos { left: 6%; width: clamp(8rem, 13vw, 12rem); }
-  .catalog-head__can { right: 18%; width: 7.5rem; }
-  .catalog-head__packet { right: 4%; width: 4rem; rotate: 4deg; }
-}
+/* ---- catalog head: the title and one sentence, clear of the floating header ---- */
+.catalog-head { padding-block: calc(var(--header-h) + 3.5rem) var(--s-8); }
+.catalog-head .lead { margin-top: var(--s-5); max-width: 38rem; }
 
-/* ---- filters: the search bar, one deliberate divider (client, 22 Oct), the category chips, then the counter line with the
-   quiet sort. Real form fields keep their sticker outline; nothing else is boxed ---- */
-.catalog { padding-bottom: var(--s-16); }
-.catalog-filters { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); margin-block: var(--s-5) var(--s-8); }
-.catalog-search { position: relative; max-width: 36rem; }
-.catalog-search__icon { position: absolute; left: .9375rem; top: 50%; translate: 0 -50%; color: var(--ink-2); pointer-events: none; }
-.catalog-search .input { height: 3rem; padding-left: 2.75rem; }
-.catalog-cats { min-width: 0; border-top: 1px solid var(--line); padding-top: var(--s-4); }   /* min-width: the chip row inside scrolls on narrow screens instead of widening the page */
-.catalog-tags { display: flex; gap: .5rem; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding: .25rem var(--gutter); scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); }   /* scroll-padding: the first chip snaps to the gutter, not the screen edge */
+/* ---- filters: the search pill and the category chips in one row (no divider lines); under it the counter line, in the
+   shopkeeper's voice, with the quiet sort at its end. Nine chips with their counts cannot share a line with both controls
+   below ~1400 px, so the sort lives on the counter line and the chips wrap in their column (every category stays in view) ---- */
+.catalog { padding-bottom: var(--section-y); }
+.catalog-filters__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); align-items: start; }
+.catalog-search { position: relative; }
+.catalog-search__icon { position: absolute; left: 1.0625rem; top: 50%; translate: 0 -50%; color: var(--mute); pointer-events: none; }
+.catalog-search .input { padding-left: 2.875rem; }
+.catalog-search .input::-webkit-search-cancel-button, .catalog-search .input::-webkit-search-decoration { -webkit-appearance: none; }
+.catalog-tags { display: flex; gap: .5rem; min-width: 0; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding: .25rem var(--gutter); scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); }   /* phones: one strip that scrolls sideways, the first chip snapping to the gutter */
 .catalog-tags::-webkit-scrollbar { display: none; }
-.catalog-tags .tag { flex: 0 0 auto; min-height: 2.75rem; padding: .5rem .875rem; scroll-snap-align: start; }
-.catalog-tags .tag .num { font-family: var(--font-text); font-weight: 500; font-size: var(--fs-xs); opacity: .72; }
-.catalog-bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }
-.catalog-count { flex: 1 1 auto; font-size: var(--fs-sm); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.catalog-tags .tag { flex: 0 0 auto; min-height: 2.75rem; padding: .5rem .9375rem; scroll-snap-align: start; white-space: nowrap; }
+.catalog-tags .tag .num { font-weight: 400; font-size: var(--fs-xs); color: var(--mute); }   /* a real tone, not opacity: 4.9:1 on paper (axe) */
+.catalog-tags .tag.is-active .num { color: var(--sage-2); }
+.catalog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3) var(--s-6); margin-block: var(--s-6) var(--s-8); }
+.catalog-bar__count { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); }
+.catalog-count { font-size: var(--fs-sm); color: var(--mute); font-variant-numeric: tabular-nums; }
 .catalog-clear { font-size: var(--fs-sm); color: var(--ink-2); }
 .catalog-clear[hidden] { display: none; }
-.catalog-sort { display: inline-flex; align-items: center; gap: .5rem; }
-.catalog-sort__label { font-family: var(--font-display); font-weight: 500; color: var(--ink-2); white-space: nowrap; }
+.catalog-sort { display: inline-flex; align-items: center; gap: .625rem; }
+.catalog-sort__label { font-size: var(--fs-sm); color: var(--mute); white-space: nowrap; }
 .catalog-sort__field { position: relative; display: inline-block; }
-.catalog-sort .select { width: auto; height: 2.75rem; padding: 0 2.25rem 0 .875rem; appearance: none; cursor: pointer; font-size: var(--fs-sm); }
-.catalog-sort__icon { position: absolute; right: .75rem; top: 50%; translate: 0 -50%; width: 1rem; height: 1rem; pointer-events: none; color: var(--ink); }
+.catalog-sort .select { width: auto; min-height: 2.75rem; padding: 0 2.5rem 0 1.125rem; appearance: none; cursor: pointer; font-size: var(--fs-sm); }
+.catalog-sort__icon { position: absolute; right: .9375rem; top: 50%; translate: 0 -50%; width: 1rem; height: 1rem; pointer-events: none; color: var(--ink-2); }
 @media (min-width: 900px) {
-  .catalog-tags { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding-inline: 0; }
+  .catalog-filters__row { grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr); gap: var(--s-6); }
+  .catalog-tags { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding: 0; }
+  .catalog-tags .tag { min-height: 3rem; }   /* as tall as the search pill beside them */
 }
 
-/* ---- the shelves: the shared tile grid (4 / 3 / 2 columns, a plank per row). Here gsap owns the tiles' transform (arrival and the
-   FLIP re-sort), so the card's transform transition is dropped; hover still lifts through translate ---- */
+/* ---- the grid: the shared tiles, 4 / 3 / 2 (components.css); gsap owns the arrival and the FLIP re-sort ---- */
 .catalog-rak { position: relative; }
 .catalog-rak[hidden] { display: none; }
-.catalog-rak:empty { min-height: 56rem; }   /* two shelves reserved until catalog.js renders them (CLS) */
-.catalog-rak .rak-card, .pd-related .rak-card { transition: translate var(--dur-2) var(--ease-settle), box-shadow var(--dur-2) var(--ease-settle); }
+.catalog-rak:empty { min-height: 52rem; }   /* two rows reserved until catalog.js renders them (CLS) */
 .catalog-rak .is-leaving { pointer-events: none; }
-.catalog-rak .is-leaving::after { display: none; }   /* a tile taken off the shelf takes no plank with it */
+@media (max-width: 639px) { .catalog-rak:empty { min-height: 40rem; } }
 
-/* ---- empty shelf ---- */
-.catalog-empty { display: grid; justify-items: center; align-content: center; text-align: center; gap: var(--s-4); min-height: 28rem; padding: var(--s-10) var(--s-4) var(--s-12); }
+/* ---- empty rack ---- */
+.catalog-empty { display: grid; justify-items: center; align-content: center; text-align: center; gap: var(--s-5); min-height: 24rem; padding: var(--s-10) var(--s-4) var(--s-12); }
 .catalog-empty[hidden] { display: none; }
-.catalog-empty__illus { width: 8rem; height: auto; }
 .catalog-empty__title { max-width: 22ch; }
+.catalog-empty__actions { justify-content: center; }
 
-/* ---- product detail: the product's own tile, big, standing on its plank; then name, category, price in the tile's order ---- */
-.pd-wrap { padding-block: var(--s-6) var(--s-10); }
-.crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .5rem; font-size: var(--fs-sm); color: var(--ink-2); }
-.crumbs li { display: inline-flex; align-items: center; gap: .5rem; min-width: 0; }
-.crumbs li + li::before { content: "/"; color: var(--olive); font-family: var(--font-display); font-weight: 600; }
-.crumbs a { text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 3px; transition: text-decoration-color var(--dur-1); }
-.crumbs a:hover, .crumbs a:focus-visible { text-decoration-color: var(--olive); }
-.crumbs [aria-current="page"] { color: var(--ink); font-weight: 500; max-width: 60vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* ---- product detail, hero: a dark band; the product's card graphic matted in a big .photo, the glass price panel over its edge ---- */
+.pd-hero { padding-block: calc(var(--header-h) + 3rem) clamp(3rem, 2rem + 4vw, 6rem); }
+.crumbs ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0 .625rem; font-size: var(--fs-sm); color: var(--sage-2); }
+.crumbs li { display: inline-flex; align-items: center; gap: .625rem; min-width: 0; }
+.crumbs li + li::before { content: "/"; color: var(--olive); }
+.crumbs a { display: inline-block; padding-block: .75rem; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1), color var(--dur-1); }   /* padding: a 44 px tap target without moving the line */
+.crumbs a:hover, .crumbs a:focus-visible { color: var(--sage); text-decoration-color: var(--olive); }
+.crumbs [aria-current="page"] { color: var(--sage); max-width: 60vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-.pd { display: grid; gap: var(--s-8); margin-top: var(--s-6); }
+.pd { display: grid; gap: var(--s-5); margin-top: var(--s-5); }
 .pd[hidden] { display: none; }
-.pd__media { --plank: 7px; position: relative; padding-bottom: var(--plank); }
-.pd__media::after { content: ""; position: absolute; z-index: 0; left: -.75rem; right: -.75rem; bottom: 0; height: var(--plank); border-radius: 2px; background: var(--olive); }
-.pd__tile { position: relative; z-index: 1; padding: .75rem; background: var(--paper-2); border: var(--stroke) solid var(--frame); border-radius: var(--radius); box-shadow: var(--shadow-hard); animation: pd-settle var(--dur-3) var(--ease-settle) both; }   /* set down on its plank at first paint, no JS */
+.pd__photo { display: grid; place-items: center; padding: 6%; background: var(--paper-3); animation: pd-settle var(--dur-3) var(--ease-out) both; }   /* .photo (base) gives the radius-40 frame; the mat is paper-3 like every tile */
+.pd__photo img { width: 100%; height: auto; aspect-ratio: 1 / .88; object-fit: cover; object-position: 50% 100%; border-radius: var(--radius-lg); mix-blend-mode: multiply; filter: saturate(.8) contrast(.95); }   /* the known-good crop: the repeated shop header on top is cut, the sides stay */
 @keyframes pd-settle { from { opacity: 0; transform: translateY(18px); } }
-.pd__mat { margin-bottom: 0; }
-.pd__info { display: grid; justify-items: start; align-content: start; }
-.pd__info > p, .pd__info > dl, .pd__info > ul, .pd__info > aside { justify-self: stretch; }
-.pd__title { font-size: var(--fs-h1); }
-/* the slots every product fills keep their height from the first paint (CLS): category line, price line, three spec rows */
-.pd__cat { margin-top: .5rem; min-height: 1.5rem; font-size: var(--fs-sm); color: var(--mute); }
-.pd__tags { margin-top: .75rem; gap: .375rem; }
-.pd__tags:empty { display: none; }
-.pd__tags .tag { font-size: .875rem; padding: .25rem .625rem; }
-.pd__price { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .875rem; margin-top: 1.25rem; min-height: clamp(2rem, 1.5rem + 1.6vw, 2.75rem); }
+html.reduced .pd__photo { animation: none; }
+.pd__panel { display: grid; justify-items: start; align-content: start; gap: .5rem; padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); }
+.pd__title { font-size: var(--fs-h2); line-height: 1.05; }
+.pd__cat { font-size: var(--fs-sm); color: var(--sage-2); min-height: 1.5rem; }
+.pd__price { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: var(--s-4); min-height: clamp(2rem, 1.5rem + 1.6vw, 2.75rem); }
 .pd__price .price { font-size: clamp(2rem, 1.5rem + 1.6vw, 2.75rem); line-height: 1; }
-.pd__price .badge:empty { display: none; }
-.pd__note { margin-top: .75rem; }
-.pd__cta { margin-top: 1.25rem; }
-.pd__desc { margin-top: 1.5rem; max-width: 40rem; color: var(--ink-2); }
-.pd__desc:empty { display: none; }
-.pd__specs { margin-top: 1.5rem; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .5rem 1.25rem; min-height: 5.5rem; font-size: var(--fs-sm); }
-.pd__specs dt { color: var(--mute); }
-.pd__specs a { padding-block: .75rem; text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 2px; text-underline-offset: 3px; }   /* inline padding: a 44 px tap target without moving the line */
-.pd__specs a:hover { text-decoration-color: var(--terracotta); }
-.pd__specs .icon { width: 1em; height: 1em; vertical-align: -.1em; color: var(--sun); fill: var(--sun); }
-.pd__care { margin-top: 1.5rem; padding: 1rem 1.125rem 1.125rem; background: var(--paper-3); border-left: 3px solid var(--olive); border-radius: 0 var(--radius) var(--radius) 0; }
-.pd__care[hidden] { display: none; }
-.pd__care-title { font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; color: var(--leaf-ink); margin-bottom: .25rem; }   /* leaf-ink: 5.35:1 on paper-3 (jury: leaf was 4.09:1) */
-.pd__care p { color: var(--ink-2); }
-.pd__perks { margin-top: 1.75rem; display: grid; gap: .625rem; }
-.pd__perks li { display: flex; align-items: flex-start; gap: .625rem; font-size: var(--fs-sm); color: var(--ink-2); }
-.pd__perks .icon { width: 1.25rem; height: 1.25rem; margin-top: .15rem; color: var(--leaf); }
-.pd-missing { display: grid; justify-items: center; text-align: center; gap: var(--s-4); min-height: 24rem; padding: var(--s-10) 0 var(--s-12); }
-.pd-missing[hidden] { display: none; }
-.pd-missing .lead { text-align: center; }
+.pd__price .badge[hidden] { display: none; }
+.pd__note { font-size: var(--fs-sm); color: var(--sage-2); }
+.pd__cta { margin-top: var(--s-5); gap: var(--s-3); }
 @media (min-width: 900px) {
-  .pd { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-top: var(--s-8); }
-  .pd__media { position: sticky; top: calc(var(--header-h) + var(--banner-h) + 1.5rem); }
-  .pd__tile { padding: 1rem; }
+  .pd { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; gap: 0; margin-top: var(--s-8); }
+  .pd__panel { --over: 4rem; position: relative; z-index: 1; margin-left: calc(-1 * var(--over)); padding-left: calc(var(--over) + 2rem); box-shadow: inset 0 1px 0 rgb(var(--paper-rgb) / .35); }   /* taste-skill-ignore: the glass inner highlight only; the glass sits over the photograph's edge (Plantio), the text starts past the strip, and no drop shadow smears the mat */
 }
+@media (min-width: 900px) and (max-width: 1199px) { .pd__panel { --over: 2.5rem; } }
 
-/* ---- related: one shelf of the same tiles (four; three on tablets, two by two on phones) ---- */
-.pd-related { background: var(--paper-3); }
+/* ---- below the band: what the shop says about it, the facts, then the related tiles ---- */
+.pd-body { padding-block: var(--section-y); }
+.pd-body[hidden] { display: none; }
+.pd-body__grid { display: grid; gap: var(--s-12); }
+.pd-body h2 { margin-bottom: var(--s-5); }
+.pd__desc { max-width: 40rem; font-size: var(--fs-lead); line-height: 1.5; color: var(--ink-2); }
+.pd__tags { margin-top: var(--s-6); gap: .5rem .75rem; align-items: center; }
+.pd__tags[hidden] { display: none; }
+.pd__tags-label { font-size: var(--fs-sm); color: var(--mute); }
+.pd__tags .cluster { gap: .5rem; }
+.pd__care { margin-top: var(--s-8); max-width: 40rem; background: var(--paper-3); }
+.pd__care[hidden] { display: none; }
+.pd__care-title { font-size: var(--fs-h4); margin-bottom: .5rem; }
+.pd__care p { color: var(--ink-2); }
+.pd__specs { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .75rem 1.5rem; }
+.pd__specs dt { color: var(--mute); }
+.pd__specs a { display: inline-block; padding-block: .625rem; margin-block: -.625rem; text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }   /* a 44 px hit area, the line unchanged */
+.pd__specs a:hover { text-decoration-color: var(--ink); }
+.pd__specs .icon { width: 1em; height: 1em; vertical-align: -.1em; color: var(--olive); fill: var(--olive); }
+.pd__perks { margin-top: var(--s-8); display: grid; gap: .75rem; }
+.pd__perks li { display: flex; align-items: flex-start; gap: .75rem; color: var(--ink-2); }
+.pd__perks .icon { width: 1.25rem; height: 1.25rem; margin-top: .25rem; color: var(--olive); }
+.pd-missing { display: grid; justify-items: start; gap: var(--s-5); max-width: 40rem; padding-block: var(--s-8) var(--s-4); }
+.pd-missing[hidden] { display: none; }
+@media (min-width: 900px) { .pd-body__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; } }
+
+/* ---- related: one row of the same tiles (four; three on tablets, two by two on phones) on the alternate light band ---- */
+.pd-related { background: var(--paper-3); padding-block: var(--section-y); }
 .pd-related[hidden] { display: none; }
 .pd-related__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem var(--s-4); margin-bottom: clamp(2rem, 4vw, 3rem); }
-.pd-related__hint { color: var(--mute); font-size: var(--fs-sm); }
+.pd-related__hint { color: var(--ink-2); }   /* ink-2, not mute: 6.8:1 on the paper-3 band (axe: mute was 4.37:1) */
 .pd-related__hint:empty { display: none; }
 @media (max-width: 1023px) { .pd-related .rak-item:nth-child(n + 4) { display: none; } }
-@media (max-width: 639px) { .pd-related .rak-item:nth-child(n + 4) { display: grid; } .catalog-rak:empty { min-height: 40rem; } }
+@media (max-width: 639px) { .pd-related .rak-item:nth-child(n + 4) { display: grid; } }
 
-/* ---- phone buy bar: price and the two actions follow you down the page ---- */
-.buy-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: .625rem; padding: .625rem var(--gutter) calc(.625rem + env(safe-area-inset-bottom, 0px)); background: var(--paper-2); border-top: var(--stroke) solid var(--frame); box-shadow: 0 -12px 30px -18px rgb(var(--ink-rgb) / .35); translate: 0 110%; visibility: hidden; transition: translate var(--dur-2) var(--ease-out), visibility 0s linear var(--dur-2); }
+/* ---- phone buy bar: a floating dark glass pill with the price and the two actions; it follows you once the panel's buttons
+   scroll away and hides over the footer. The moss tint is raised to .82 here because the bar floats over the light section,
+   where the base .38 would leave sage text at 2:1 ---- */
+.buy-bar { position: fixed; left: .75rem; right: .75rem; bottom: calc(.75rem + env(safe-area-inset-bottom, 0px)); z-index: 40; display: flex; align-items: center; gap: .5rem; padding: .625rem .625rem .625rem 1.125rem; background: rgb(var(--moss-rgb) / .82); translate: 0 calc(100% + 1.5rem); visibility: hidden; transition: translate var(--dur-2) var(--ease-out), visibility 0s linear var(--dur-2); }
 .buy-bar.is-on { translate: 0 0; visibility: visible; transition-delay: 0s; }
 .buy-bar__info { flex: 1 1 auto; min-width: 0; display: grid; line-height: 1.2; }
-.buy-bar__name { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.buy-bar__name { font-weight: 500; font-size: var(--fs-xs); color: var(--sage-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .buy-bar__price { font-size: 1.125rem; }
 .buy-bar .btn-sm { min-height: 2.75rem; }
 .buy-bar .btn-icon { width: 2.75rem; height: 2.75rem; }
