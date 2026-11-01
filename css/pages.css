@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Toko Lestari — css/pages.css v2 (D2: tips index, article, about, contact)
+   Nurseri Lestari — css/pages.css v2 (D2: tips index, article, about, contact)
    Tokens and primitives come from base.css only (.display, .glass*, .btn*, .link-arrow, .photo*, .card*, .band-*, .prose).
    tips opens light; the article, about and contact open on a dark band. The header floats as a glass pill,
    so every first section clears it with .page-top. The v1 notebook, taped photos and shelf corner are gone.
@@ -22,6 +22,22 @@
 .map-frame { margin-top: var(--s-10); aspect-ratio: 21 / 9; min-height: 18rem; overflow: hidden; border-radius: var(--radius-xl); background: var(--moss-2); }
 .map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
 @media (max-width: 767px) { .map-frame { aspect-ratio: 4 / 3; border-radius: var(--radius-lg); } }
+/* the map row (about + contact): a segmented pair of pills picks the shop, the arrow link opens that shop in Google Maps,
+   the frame below swaps its src (js/map-toggle.js); the note appears when the embed is a search, not a pin (BSD) */
+.map-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4) var(--s-8); margin-top: var(--s-16); }
+.map-head + .map-frame { margin-top: var(--s-6); }
+.map-toggle { display: inline-flex; flex-wrap: wrap; gap: var(--s-1); padding: var(--s-1); border: var(--stroke) solid var(--line); border-radius: var(--radius-pill); }
+.on-dark .map-toggle { border-color: var(--line-dark); }
+.map-toggle .tag { min-height: 2.5rem; padding-inline: 1.125rem; border-color: transparent; cursor: pointer; transition: background var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out); }
+.map-toggle .tag:focus-visible { border-radius: var(--radius-pill); outline-offset: 2px; }
+.on-dark .map-toggle .tag[aria-pressed="true"] { background: var(--sage); color: var(--moss); border-color: var(--sage); }   /* base paints the pressed tag ink on ink here */
+@media (hover: hover) {
+  .map-toggle .tag[aria-pressed="false"]:hover { background: rgb(var(--ink-rgb) / .06); }
+  .on-dark .map-toggle .tag[aria-pressed="false"]:hover { background: rgb(var(--sage-rgb) / .08); }
+}
+.map-note { margin-top: var(--s-4); max-width: 44rem; font-size: var(--fs-sm); color: var(--mute); }
+.on-dark .map-note { color: var(--sage-2); }
+.map-note[hidden] { display: none; }
 /* base.css squares every focus ring to 4px; the big frames keep their own radius */
 .tip-photo:focus-visible, .photo:focus-visible { border-radius: var(--radius-xl); }
 .tip-text:focus-visible, .article-nav__link:focus-visible { border-radius: var(--radius-lg); }
@@ -37,9 +53,12 @@
 .tip-photo.is-wide { grid-column: span 2; aspect-ratio: 16 / 9; }
 .tip-photo.is-wide + .tip-photo { aspect-ratio: auto; }
 .tip-photo img { position: absolute; inset: 0; object-position: 0 50%; }   /* the posts are set flush left: a crop takes the right side */
-/* the glass caption sits inside the frame; its 24 px radius nests in the 40 px one */
-.tip-cap { position: absolute; left: var(--s-4); right: var(--s-4); bottom: var(--s-4); z-index: 1; display: grid; gap: var(--s-2); padding: clamp(1rem, 1.5vw, 1.5rem); }
-.tip-cap h2 { font-size: var(--fs-h3); max-width: 24ch; }
+/* the caption sits inside the frame; its 24 px radius nests in the 40 px one. P2 (1 Nov 2026, client): the light glass left sage
+   type unreadable over the bright Instagram graphics, so the caption is dark glass (.glass-dark) with the moss tint raised to .8:
+   over pure white that still blurs to ~#435449, 4.6:1 for sage-2 and 9:1 for sage, and the .photo-dim scrim under it darkens the
+   ground further. The border and the inner highlight are sage at low alpha, not white */
+.tip-cap { position: absolute; left: var(--s-4); right: var(--s-4); bottom: var(--s-4); z-index: 1; display: grid; gap: var(--s-2); padding: clamp(1.125rem, 1rem + 1vw, 1.75rem); background: rgb(var(--moss-rgb) / .8); border-color: rgb(var(--sage-rgb) / .16); box-shadow: inset 0 1px 0 rgb(var(--sage-rgb) / .14); }   /* taste-skill-ignore: the glass inner highlight only */
+.tip-cap h2 { font-size: var(--fs-h3); line-height: 1.15; max-width: 24ch; color: var(--sage); }
 .is-wide .tip-cap { right: auto; max-width: min(100% - 2 * var(--s-4), 34rem); }
 .tip-meta { font-size: var(--fs-sm); color: var(--sage-2); }
 .tip-cap .link-arrow { margin-top: var(--s-2); }
@@ -100,7 +119,7 @@
 .related { padding-block: calc(var(--section-y) * .6); }
 
 /* ==========================================================================
-   About (tentang.html): dark hero with the circle, three plain columns on paper, two dark location cards + map
+   About (tentang.html): dark hero with the circle, three plain columns on paper, two dark shop cards + one map for both
    ========================================================================== */
 .about-hero { padding-bottom: var(--section-y); }
 .about-hero .split { align-items: center; }
@@ -109,56 +128,94 @@
 .about-story .link-arrow { margin-top: var(--s-8); }
 .about-photo { width: min(100%, 36rem); justify-self: end; }
 .photo-chip { position: absolute; left: 50%; bottom: 8%; z-index: 1; translate: -50% 0; padding: .625rem 1.125rem; border-radius: var(--radius-pill); font-size: var(--fs-sm); font-weight: 500; white-space: nowrap; }
-.about-values h2, .about-locs h2 { max-width: 20ch; margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
+.about-values h2 { max-width: 20ch; margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
 .about-values__grid { gap: var(--s-10) var(--s-8); }
 .about-values h3 { max-width: 18ch; }
 .about-values p { margin-top: var(--s-4); max-width: 36ch; color: var(--ink-2); }
+/* "Dua toko": the heading and one line, then two equal cards that share one set of rows (subgrid), so the name,
+   the pills, the cells, the button row and the marketplace row sit at the same height in both cards */
+.about-locs__head { display: grid; gap: var(--s-4); margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
+.about-locs__head h2 { max-width: 20ch; }
+.about-locs__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6); }
+.loc { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: var(--s-5); align-content: start; }
+.loc-head { display: grid; gap: var(--s-2); }
 .loc h3 { font-size: var(--fs-h3); }
-.loc-list { display: grid; gap: var(--s-3); margin-top: var(--s-5); }
-.loc-list li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: .75rem; align-items: start; color: var(--sage-2); }
-.loc-list .icon { width: 1.25rem; height: 1.25rem; margin-top: .2em; color: var(--olive-2); }
-.loc .cluster { margin-top: var(--s-6); }
+.loc-area { color: var(--sage-2); }
+.loc-meta { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.loc-meta .icon { width: 1.0625rem; height: 1.0625rem; color: var(--olive-2); }
+/* the cells: four tiles one tone back into the ground, the number on top and its caption under it (as the landing strip) */
+.loc-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .375rem; }
+.cell { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: var(--s-1); min-height: 5.25rem; padding: .875rem .75rem; border-radius: var(--radius); background: var(--moss); }
+.cell dd { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h3); line-height: 1.05; letter-spacing: -0.02em; color: var(--sage); }
+.cell dt { font-size: var(--fs-xs); color: var(--sage-2); }
+.cell dt .icon { display: inline-block; width: .875rem; height: .875rem; margin-left: .125rem; vertical-align: -.125em; transition: translate var(--dur-2) var(--ease-out); }
+.cell-link { position: relative; transition: background var(--dur-2) var(--ease-out); }
+/* the Shopee cell: the brand at number size and "lihat toko" under it, since Shopee publishes no figures we can read */
+.cell-link a { display: inline-flex; align-items: center; min-height: 2rem; color: var(--sage); }
+.cell-link a::after { content: ""; position: absolute; inset: 0; }   /* the whole cell is the target; the focus ring stays on the word */
+/* the same button row at the same height in both cards */
+.loc-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); }
+.loc-actions .btn { padding-inline: 1rem; }
+/* the small divider the client asked for, then the two marketplace pills of that shop */
+.loc-market { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); padding-top: var(--s-5); border-top: var(--stroke) solid var(--line-dark); }
+.loc-market-k { margin-right: var(--s-1); font-size: var(--fs-sm); color: var(--sage-2); }
+.loc-market .tag { min-height: 2.5rem; padding-inline: 1rem; color: var(--sage); transition: background var(--dur-2) var(--ease-out), border-color var(--dur-2); }
+.loc-market .tag .icon { width: 1rem; height: 1rem; transition: translate var(--dur-2) var(--ease-out); }
+.loc-market .tag:focus-visible { border-radius: var(--radius-pill); }
+@media (hover: hover) {
+  .cell-link:hover { background: var(--moss-3); }
+  .cell-link:hover dt .icon, .loc-market .tag:hover .icon { translate: 2px -2px; }
+  .loc-market .tag:hover { background: rgb(var(--sage-rgb) / .08); border-color: rgb(var(--sage-rgb) / .3); }
+}
 @media (max-width: 899px) {
   .about-hero .split { gap: var(--s-10); }
   .about-photo { width: min(100%, 26rem); justify-self: center; }
+  .about-locs__grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* four cells in a row only where a cell is at least ~7rem wide: two cards side by side above 1200 px, or one wide card between 640 and 899 px */
+@media (max-width: 1199px) { .loc-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 640px) and (max-width: 899px) { .loc-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 479px) {
+  .loc-actions { grid-template-columns: minmax(0, 1fr); }
+  .loc-market-k { flex-basis: 100%; margin: 0; }   /* the label takes its own line so both pills share the next */
 }
 
 /* ==========================================================================
-   Contact (kontak.html): the nursery path photo full-bleed under a glass card, then the form on paper and the map
+   Contact (kontak.html): a dark title band, then the shop information beside the question form on paper, then the map
    ========================================================================== */
-.contact-hero { position: relative; isolation: isolate; overflow: clip; display: grid; align-items: end; min-height: min(100svh, 60rem); padding-bottom: clamp(3rem, 2rem + 4vw, 6rem); }
-.contact-hero__photo { position: absolute; inset: 0; z-index: -1; background: var(--moss); }
-.contact-hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
-/* the scrim: moss over the photo, heavier at the bottom where the type and the glass sit */
-.contact-hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(var(--moss-rgb) / .5), rgb(var(--moss-rgb) / .85)); }
+.contact-hero { padding-bottom: clamp(3rem, 2rem + 4vw, 6rem); }
 .contact-hero__grid { align-items: end; }
-.contact-intro h1 { max-width: 14ch; }
-.contact-intro .lead { margin-top: var(--s-5); }
-.contact-card { width: 100%; max-width: 30rem; justify-self: end; color: var(--sage); }
-.contact-card h2 { font-size: var(--fs-h3); }
-.contact-card .cluster { margin-top: var(--s-5); }
-.contact-card .btn { flex: 1 1 auto; }
-.contact-list { display: grid; gap: var(--s-4); margin-top: var(--s-6); }
-.contact-list li { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: .75rem; align-items: start; }
-.contact-list .icon { width: 1.25rem; height: 1.25rem; margin-top: .2em; color: var(--olive-2); }
-.contact-list .label { display: block; font-weight: 600; }
-.contact-list span:not(.label) { display: block; }
-.contact-list a { display: block; width: fit-content; min-height: 1.75rem; text-decoration: underline; text-decoration-color: rgb(var(--sage-rgb) / .4); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }
-.contact-list a:hover { text-decoration-color: currentColor; }
-.contact-card .muted { color: var(--sage); }   /* sage-2 drops under 4.5:1 on the glass */
-.contact-form-sec .split { align-items: start; }
-.contact-form-sec .lead { margin-top: var(--s-5); }
-.contact-form { display: grid; gap: var(--s-5); width: 100%; max-width: 36rem; justify-self: end; }
+.contact-hero h1 { max-width: 14ch; }
+.contact-hero .lead { max-width: 30rem; justify-self: end; }   /* the Moss move: the paragraph sits right and low */
+.contact-split { align-items: start; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.contact-info h2 { max-width: 16ch; }
+.shop-list { display: grid; margin-top: var(--s-8); }
+.shop { display: grid; gap: var(--s-4); padding-block: var(--s-6); border-top: var(--stroke) solid var(--line); }
+.shop:last-child { padding-bottom: 0; }
+.shop h3 { font-size: var(--fs-h4); }
+.shop-area { color: var(--ink-2); }
+.shop-meta { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.shop-meta .icon { width: 1.0625rem; height: 1.0625rem; color: var(--ink-2); }
+.shop-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.shop-links { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .625rem; font-size: var(--fs-sm); color: var(--mute); }
+.shop .link-u { display: inline-flex; align-items: center; min-height: 2rem; color: var(--ink); }   /* 32 px tall targets for the number, marketplace and email links */
+.shop-note { font-size: var(--fs-sm); color: var(--mute); }
+.contact-form-card { padding: clamp(1.5rem, 3vw, 2.5rem); }
+.contact-form-card h2 { font-size: var(--fs-h3); max-width: 20ch; }
+.contact-form-card__lead { margin-top: var(--s-3); color: var(--ink-2); }
+.contact-form { display: grid; gap: var(--s-5); margin-top: var(--s-6); }
+.contact-form .input, .contact-form .select, .contact-form .textarea { background: var(--paper); }   /* one step back from the card */
 .contact-form .btn { justify-self: start; }
 .contact-form .field.is-invalid .input, .contact-form .field.is-invalid .textarea { border-color: var(--red); }
 .contact-form .error-msg[hidden] { display: none; }
 .form-status { min-height: 1.5em; font-weight: 600; color: var(--ink-2); }
 .hint { max-width: 32rem; color: var(--mute); font-size: var(--fs-sm); }
-.contact-map .map-frame { margin-top: 0; }
+.contact-map h2 { max-width: 20ch; margin-bottom: var(--s-6); }
+.contact-map .map-head { margin-top: 0; }
 @media (max-width: 899px) {
-  .contact-hero { min-height: 0; }
-  .contact-hero__grid { gap: var(--s-10); }
-  .contact-card, .contact-form { max-width: none; justify-self: stretch; }
+  .contact-hero__grid { gap: var(--s-6); }
+  .contact-hero .lead { justify-self: start; }
+  .contact-split { grid-template-columns: minmax(0, 1fr); gap: var(--s-12); }   /* pages.css loads after base, so the collapse is repeated here */
   .contact-form .btn { justify-self: stretch; }
 }
 
@@ -167,4 +224,4 @@
 [data-article-head]:empty { min-height: 14rem; }
 [data-article-body]:empty { min-height: 50svh; }
 [data-related-rail]:empty { min-height: 18rem; }
-[data-locations]:empty { min-height: 20rem; }
+[data-locations]:empty { min-height: 30rem; }

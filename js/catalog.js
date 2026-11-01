@@ -1,6 +1,6 @@
-/* Toko Lestari — js/catalog.js (C3, v2). The catalog: flat product tiles (the landing's tiles, one shared component) filtered from
+/* Nurseri Lestari — js/catalog.js (C3, v2). The catalog: flat product tiles (the landing's tiles, one shared component) filtered from
    TL.products. Pure parts (filter, sort, URL state) and the tile renderer are exported: landing.js imports tileHTML, product-detail.js the rest. */
-import { fmtPrice, esc, waLink, reduced } from './util.js';
+import { fmtPrice, esc, icon, waLink, reduced } from './util.js';
 
 // gsap only animates and never holds the shelves back: it loads in the background (no top-level await, so the tiles and the
 // detail page's photo do not wait for the CDN); tiles rendered before it arrives simply stand on the shelf
@@ -36,12 +36,19 @@ export const SORTS = {
   mahal: (a, b) => b.price - a.price || byName(a, b),
   nama: byName,
 };
-export const sortProducts = (list, key) => [...list].sort(SORTS[key] || SORTS.unggulan);
-export const DEFAULTS = { q: '', kategori: '', status: '', urut: 'unggulan' };
+export const sortProducts = (list, key) => [...list].sort(SORTS[key] || SORTS[DEFAULTS.urut]);
+// terlaris opens the rack (P2, 1 Nov 2026: the client wants the sold numbers up front); ?urut= still switches to any other order
+export const DEFAULTS = { q: '', kategori: '', status: '', urut: 'terlaris' };
 export const stateFromParams = (sp) => ({
   q: (sp.get('q') || '').trim(), kategori: sp.get('kategori') || '',
-  status: STATUS[sp.get('status')] ? sp.get('status') : '', urut: SORTS[sp.get('urut')] ? sp.get('urut') : 'unggulan',
+  status: STATUS[sp.get('status')] ? sp.get('status') : '', urut: SORTS[sp.get('urut')] ? sp.get('urut') : DEFAULTS.urut,
 });
+/* the category chips' icons (Tabler, in the sprite): the rack itself for "Semua produk", one glyph per category; a category
+   missing here falls back to the icon named in data/products.js */
+export const CHIP_ICONS = { '': 'layout-grid', 'tanaman-hias': 'plant', benih: 'seedling', 'media-tanam': 'shovel', pupuk: 'flask', obat: 'first-aid-kit', pot: 'cylinder', alat: 'tool', perlengkapan: 'box' };
+const fmtN = (n) => Number(n || 0).toLocaleString('id-ID');   // 1.234, Indonesian thousands
+// Tokopedia caps a listing's count at "30+" and tools/sync-tokopedia.py stores that cap as 30, so 30 is shown the way Tokopedia shows it
+export const fmtSold = (n) => (Number(n) === 30 ? '30+' : fmtN(n));
 export const paramsFromState = (s) => {
   const sp = new URLSearchParams();
   if (s.kategori) sp.set('kategori', s.kategori);
@@ -52,15 +59,19 @@ export const paramsFromState = (s) => {
 };
 
 /* ---- one shelf tile: the same markup wherever products stand on a shelf (landing, catalog, related; styles: .rak* in
-   css/components.css). The whole tile is the link; name, then category, then the price; the badge only when the product is not
-   ready. `reveal` adds the landing's data-reveal hooks (main.js runs that CSS reveal); the catalog settles its tiles with gsap ---- */
-export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, eager = false, first = false } = {}) => `
+   css/components.css). The whole tile is the link; the square card image fills the top edge to edge (P2, 1 Nov 2026: no mat,
+   no crop), then name, category, the price with "N terjual" beside it (Tokopedia's number from data/products.js, shown only when
+   it is above zero, as Tokopedia does: the page carries the "angka dari Tokopedia" note once), the badge only when the product is
+   not ready. `cta: true` adds a "Lihat produk" pill at the foot (a span: the tile is already the link). `reveal` adds the
+   landing's data-reveal hooks (main.js runs that CSS reveal); the catalog settles its tiles with gsap ---- */
+export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, eager = false, first = false, cta = false } = {}) => `
 <li class="rak-item" data-id="${esc(p.id)}"${reveal ? ` data-reveal data-delay="${delay}"` : ''}>
   <a class="rak-card photo-hover" href="produk-detail.html?id=${encodeURIComponent(p.id)}" data-cat="${esc(p.category)}">
     <span class="rak-mat"><img src="${esc(p.image)}" alt="${esc(p.name)}" width="1024" height="1024" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${first ? ' fetchpriority="high"' : ''}></span>
     <strong class="rak-name">${esc(p.name)}</strong>
     <span class="rak-cat">${esc(catName(p.category, cats))}</span>
-    <span class="rak-foot"><span class="price">${fmtPrice(p.price)}${p.priceBefore ? `<span class="price-before">${fmtPrice(p.priceBefore)}</span>` : ''}</span>${p.status && p.status !== 'ready' ? `<span class="badge badge-${esc(p.status)}">${esc(STATUS[p.status] || p.status)}</span>` : ''}</span>
+    <span class="rak-foot"><span class="price">${fmtPrice(p.price)}${p.priceBefore ? `<span class="price-before">${fmtPrice(p.priceBefore)}</span>` : ''}</span>${p.sold > 0 ? `<span class="rak-sold">${fmtSold(p.sold)} terjual</span>` : ''}${p.status && p.status !== 'ready' ? `<span class="badge badge-${esc(p.status)}">${esc(STATUS[p.status] || p.status)}</span>` : ''}</span>${cta ? `
+    <span class="btn btn-sm btn-fill rak-cta">Lihat produk${icon('arrow-right', 'icon-arrow')}</span>` : ''}
   </a>
 </li>`;
 
@@ -96,8 +107,9 @@ function boot() {
   if (state.kategori && !categories().some((c) => c.id === state.kategori)) state.kategori = '';
 
   const counts = all.reduce((m, p) => ((m[p.category] = (m[p.category] || 0) + 1), m), {});
-  cats.innerHTML = [{ id: '', name: 'Semua', n: all.length }, ...categories().map((c) => ({ id: c.id, name: c.name, n: counts[c.id] || 0 }))]
-    .map((c) => `<button type="button" class="tag" data-cat="${esc(c.id)}" aria-pressed="false">${esc(c.name)} <span class="num">${c.n}</span></button>`).join('');
+  // chips: "Semua produk" first, each with its Tabler glyph at the left, the count after the name
+  cats.innerHTML = [{ id: '', name: 'Semua produk', n: all.length }, ...categories().map((c) => ({ id: c.id, name: c.name, n: counts[c.id] || 0, icon: c.icon }))]
+    .map((c) => `<button type="button" class="tag tag-icon" data-cat="${esc(c.id)}" aria-pressed="false">${icon(CHIP_ICONS[c.id] || c.icon || 'tag')}<span>${esc(c.name)}</span> <span class="num">${c.n}</span></button>`).join('');
 
   const filtered = () => !!(state.q || state.kategori || state.status);
   const syncControls = () => {
@@ -137,7 +149,9 @@ function boot() {
     const frag = document.createDocumentFragment(), entering = [];
     next.forEach((p, i) => {
       let el = old.get(p.id);
-      if (!el) { el = tpl(tileHTML(p, { eager: first && i < 8, first: first && i === 0 })); entering.push(el); }
+      // only the first row loads eagerly (four tiles; two rows on a phone): the full-square JPEGs now are the LCP on phones, and
+      // eight of them at once shared a slow 4G line (jury: 7 s); the rest lazy-load as they near the viewport
+      if (!el) { el = tpl(tileHTML(p, { eager: first && i < 4, first: first && i === 0 })); entering.push(el); }
       frag.appendChild(el);
     });
     grid.appendChild(frag);

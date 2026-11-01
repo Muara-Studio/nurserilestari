@@ -201,5 +201,5 @@ export function drawStall(ctx, x, y, w) {
   ctx.drawImage(s, x, y - h, w, h);
   // the sign board is 36..284 × 18..60 of the 320×200 SVG; the display face is a page font, so the text is drawn here
   ctx.save(); ctx.font = `800 ${w * 0.078}px 'Bricolage Grotesque', 'DM Sans', sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = PAL.paper;
-  ctx.letterSpacing = `${w * 0.01}px`; ctx.fillText('TOKO LESTARI', x + w * 0.5, y - h + h * 0.195); ctx.restore();
+  ctx.letterSpacing = `${w * 0.01}px`; ctx.fillText('NURSERI LESTARI', x + w * 0.5, y - h + h * 0.195); ctx.restore();
 }

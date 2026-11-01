@@ -1,4 +1,4 @@
-/* Toko Lestari — js/util.js (lead-owned). Small shared helpers; import what you need. */
+/* Nurseri Lestari — js/util.js (lead-owned). Small shared helpers; import what you need. */
 const S = () => (window.TL && TL.site) || {};
 export const fmtPrice = (n) => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 export const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

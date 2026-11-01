@@ -1,4 +1,4 @@
-/* Toko Lestari — js/search.js (A). Product search overlay over TL.products: a native <dialog> with a GET form, so
+/* Nurseri Lestari — js/search.js (A). Product search overlay over TL.products: a native <dialog> with a GET form, so
    Enter opens produk.html?q= without JavaScript. searchProducts() is pure and tested in tests/search.test.mjs. */
 import { fmtPrice, esc, icon, waLink } from './util.js';
 

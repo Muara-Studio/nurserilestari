@@ -1,4 +1,4 @@
-/* Toko Lestari — js/main.js (A). The motion engine on one clock: Lenis driven by the GSAP ticker, ScrollTrigger in
+/* Nurseri Lestari — js/main.js (A). The motion engine on one clock: Lenis driven by the GSAP ticker, ScrollTrigger in
    sync, [data-reveal] through IntersectionObserver, [data-split] through SplitText, a header that steps aside,
    [data-wa] links, the WhatsApp FAB, the footer leaf, and the search overlay. Other modules may
    `import { onScroll, refresh } from './main.js'` or read `TL.motion`. */

@@ -1,20 +1,19 @@
-/* Toko Lestari — js/contact.js (D): the contact form composes a WhatsApp message and opens it. No backend, nothing stored. */
+/* Nurseri Lestari — js/contact.js (D): the contact form composes a WhatsApp message and opens it. No backend, nothing stored. */
 import { waLink } from './util.js';
+import { initMapToggle } from './map-toggle.js';
 
 export const TOKO = { cipete: 'Cipete', bsd: 'Tangerang BSD', luar: 'Luar Jabodetabek' };
 export const LINE = { cipete: 0, bsd: 1, luar: 0 }; // which WhatsApp number answers (util.js: line 0 Cipete, 1 Tangerang BSD)
 export const composeMessage = ({ nama, toko, kebutuhan, pesan }) =>
-  [`Halo Toko Lestari, saya ${String(nama).trim()}.`, `Toko terdekat: ${TOKO[toko] || toko}`, `Kebutuhan: ${kebutuhan}`, '', String(pesan).trim()].join('\n');
+  [`Halo Nurseri Lestari, saya ${String(nama).trim()}.`, `Toko terdekat: ${TOKO[toko] || toko}`, `Kebutuhan: ${kebutuhan}`, '', String(pesan).trim()].join('\n');
 export const validate = {
   nama: (v) => v.trim().length >= 2 || 'Tulis nama panggilanmu.',
   pesan: (v) => v.trim().length >= 10 || 'Ceritakan sedikit lebih detail, minimal 10 karakter.',
 };
 
 function boot() {
-  const site = window.TL && TL.site;
   document.querySelectorAll('[data-wa-line]').forEach((a) => { a.href = waLink('', +a.dataset.waLine); });
-  const map = document.querySelector('[data-map]');
-  if (map && site) map.src = site.locations[0].mapsEmbed;
+  initMapToggle(); // the map frame and its two shop pills (T2); a no-op without TL.site or a frame
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
   const status = form.querySelector('[data-form-status]'), submit = form.querySelector('button[type="submit"]'), label = submit.innerHTML;

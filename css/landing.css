@@ -1,8 +1,9 @@
-/* Toko Lestari — css/landing.css v2 (L2, 31 Oct 2026): "Rumah kaca malam". The landing's composition only: the Moss-style
-   hero (two meta lines, the two-line sentence, the circle photo cropped by the right edge), the moving band, four numbers on
-   glass over a photograph, three rack cards, four flat tiles, three plain columns, three steps, three tips, the game card and
-   the closing question. Every value is a base.css token; the primitives (.display, .glass*, .photo*, .card*, .btn*, .link-arrow,
-   .marquee) come from there untouched. No lines, no hard shadows, nothing italic or uppercase. */
+/* Nurseri Lestari — css/landing.css v2 (L2, 31 Oct 2026; L3, 1 Nov 2026): "Rumah kaca malam". The landing's composition only:
+   the Moss-style hero (two meta lines, the two-line sentence, the circle photo cropped by the right edge), the moving band,
+   four numbers on one raised card, three rack cards, four tiles, three plain columns, three steps, three tips, the game
+   invitation and the closing question on glass over a photograph. Every value is a base.css token; the primitives (.display,
+   .glass*, .photo*, .card*, .btn*, .link-arrow, .marquee) come from there untouched; the product tile (.rak*) is P2's in
+   components.css. No lines, no hard shadows, nothing italic or uppercase. */
 
 /* ---- section heads: the heading left, a short note or an arrow link right, baseline-ish ---- */
 .sec-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--s-4) var(--s-10); }
@@ -43,23 +44,28 @@
 .band-pause { flex: 0 0 auto; }
 html.reduced .band-pause { display: none; }
 
-/* ---- 3. facts: the photograph edge to edge, a glass strip of four numbers along its foot ---- */
-.facts { position: relative; isolation: isolate; min-height: clamp(30rem, 76svh, 46rem); display: flex; align-items: flex-end; }
-.facts-photo { position: absolute; inset: 0; border-radius: 0; }
-.facts-photo img { position: absolute; inset: 0; object-position: 50% 42%; }
-.facts-in { position: relative; z-index: 1; padding-bottom: var(--s-12); }
-.facts-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6) var(--s-8); margin: 0; }
-.fact { display: flex; flex-direction: column-reverse; gap: var(--s-1); }
+/* ---- 3. facts: one raised card on the moss ground (the photo behind it is gone at the client's request), four numbers from the
+   Tokopedia storefront and, as the fifth cell, the two Shopee storefronts as links (their numbers cannot be fetched) ---- */
+.facts { padding-block: var(--s-2) 0; }
+/* one wrapping row: every cell takes its own width and the leftover spreads between them, so a number set nowrap can never run
+   into its neighbour (equal columns did, at the card's width); below 700 px a two-column grid */
+.facts-strip { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--s-6) var(--s-10); margin: 0; padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3.5vw, 3rem); }
+.fact { display: flex; flex-direction: column-reverse; gap: var(--s-1); min-width: 0; }
 .fact dd { font-family: var(--font-display); font-weight: 600; font-size: calc(var(--fs-h2) * .9); line-height: 1.05; letter-spacing: -0.025em; white-space: nowrap; color: var(--sage); }
-@media (max-width: 1099px) { .facts-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .fact dt { font-size: var(--fs-sm); color: var(--sage-2); }
-@media (max-width: 899px) {
-  .facts { min-height: 0; padding-top: 18rem; }
-  .facts-in { padding-bottom: var(--s-6); }
-  .facts-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-6); }
+/* the Shopee cell reads label first, then the two shops as arrow links at the h4 size */
+.fact-also { flex-direction: column; gap: var(--s-2); }
+.fact-also dd { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); font-size: var(--fs-h4); line-height: 1.2; letter-spacing: -0.01em; white-space: normal; }
+.fact-also .link-arrow { gap: .35rem; font-size: inherit; }
+.fact-also .link-arrow .icon { width: 1.05em; height: 1.05em; }
+@media (max-width: 699px) {
+  .facts-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-5); }
+  .fact dd { font-size: clamp(1.5rem, 6.4vw, 1.75rem); }   /* "Gratis ongkir" stays on one line inside its half */
+  .fact-also { grid-column: 1 / -1; }
 }
 
 /* ---- 4. three rack cards (4:5), the caption on glass at the foot ---- */
+.racks { padding-top: calc(var(--section-y) * .75); }   /* the facts card above carries no padding of its own */
 .racks-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6); margin-top: var(--s-10); }
 .rack-card { display: block; aspect-ratio: 4 / 5; }
 .rack-card img { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -72,40 +78,37 @@ html.reduced .band-pause { display: none; }
 @media (hover: hover) { .rack-card:hover .rack-arrow { background: var(--sage-3); } .rack-card:hover .rack-arrow .icon { translate: 3px 0; } }
 @media (max-width: 699px) { .racks-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); } .rack-card { aspect-ratio: 4 / 4.6; } }
 
-/* ---- 5. four flat tiles (markup from tileHTML in js/catalog.js; the v1 plank and the sticker lift are gone here) ---- */
-.featured-rak { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6); margin-top: var(--s-10); }
+/* ---- 5. four tiles, the most sold first (markup from tileHTML in js/catalog.js with its CTA pill; the tile itself, image edge to
+   edge, "terjual", the pill, is P2's shared .rak* rule set in components.css, so the landing only places the four and keeps the
+   section short: the client found the old band of air above the heading too tall) ---- */
+.featured { padding-block: calc(var(--section-y) * .55); }
+.featured-rak { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6); margin-top: var(--s-8); }
 .featured-rak:empty { min-height: 26rem; }   /* reserved until landing.js fills it: nothing below jumps */
-.featured .rak-item { position: relative; display: grid; }
-.featured .rak-item::after { display: none; }
-.featured .rak-card { position: relative; display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-3) var(--s-3) var(--s-5); border: 0; border-radius: var(--radius-lg); background: var(--paper-2); box-shadow:none; translate: none; transition: background var(--dur-2) var(--ease-out); }
-.featured .rak-card:hover, .featured .rak-card:active { translate: none; box-shadow:none; background: var(--paper-2); }
-/* the shop's Tokopedia card graphics, matted on paper-3 with the repeated header cropped off the top (the known-good treatment) */
-.featured .rak-mat { position: relative; display: grid; place-items: center; aspect-ratio: 1 / .94; margin: 0; padding: 9%; border-radius: var(--radius); background: var(--paper-3); overflow: clip; }
-.featured .rak-mat img { width: 100%; height: auto; aspect-ratio: 1 / .88; object-fit: cover; object-position: 50% 100%; border-radius: 3px; mix-blend-mode: multiply; filter: saturate(.8) contrast(.95); transition: scale var(--dur-3) var(--ease-out); }
-@media (hover: hover) { .featured .rak-card:hover img { scale: 1.04; } }
-.featured .rak-name { margin-top: var(--s-2); padding-inline: var(--s-1); min-height: 2.5em; font-family: var(--font-display); font-weight: 600; font-size: 1.0625rem; line-height: 1.25; letter-spacing: -0.01em; color: var(--ink); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
-.featured .rak-cat { padding-inline: var(--s-1); font-size: var(--fs-xs); color: var(--mute); }
-.featured .rak-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-1) var(--s-2); padding: var(--s-1) var(--s-1) 0; }
-.featured .rak-foot .price { font-size: 1.125rem; }
 @media (max-width: 1023px) { .featured-rak { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 639px) { .featured-rak { gap: var(--s-3); } .featured .rak-card { padding: var(--s-2) var(--s-2) var(--s-4); } .featured .rak-name { font-size: 1rem; } .featured .rak-foot .price { font-size: 1.0625rem; } }
+@media (max-width: 639px) { .featured-rak { gap: var(--s-4) var(--s-3); margin-top: var(--s-6); } }
 
-/* ---- 6. three plain columns: an olive mark, a heading, one sentence; space does the separating ---- */
-.daily-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8) var(--s-10); margin-top: var(--s-12); }
-.daily-grid > div::before { content: ""; display: block; width: .5rem; height: .5rem; margin-bottom: var(--s-6); border-radius: 50%; background: var(--olive); }
-.daily-grid p { margin-top: var(--s-4); max-width: 32ch; }
-@media (max-width: 699px) { .daily-grid { grid-template-columns: minmax(0, 1fr); } .daily-grid h3, .daily-grid p { max-width: 30rem; } }
+/* ---- 6. three plain columns: an olive mark, a heading, one sentence; space does the separating (sections 6–8 sit on
+   .section-tight, .55 of the section space, since the client found the old gaps too tall) ---- */
+.daily-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8) var(--s-10); margin-top: var(--s-8); }
+.daily-grid > div::before { content: ""; display: block; width: .5rem; height: .5rem; margin-bottom: var(--s-4); border-radius: 50%; background: var(--olive); }
+.daily-grid p { margin-top: var(--s-3); max-width: 32ch; }
+@media (max-width: 699px) { .daily-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); } .daily-grid h3, .daily-grid p { max-width: 30rem; } }
 
-/* ---- 7. steps: the heading beside a stacked list, each step one tone up from the ground ---- */
-.steps-split { align-items: start; }
-.steps-list { display: grid; gap: var(--s-4); }
-.steps-list li { padding: var(--s-6) var(--s-8); }
-.steps-list h3 { max-width: 20ch; }
-.steps-list p { margin-top: var(--s-3); max-width: 40ch; color: var(--ink-2); }
+/* ---- 7. steps: the heading and one note beside a stacked list, each step one tone up from the ground; the list takes the
+   wider column so the heading's side no longer stands mostly empty ---- */
+.steps-split { align-items: start; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(2rem, 4vw, 4rem); }
+.steps-head { display: grid; gap: var(--s-4); }
+.steps-head .sec-note { color: var(--ink-2); }
+.steps-list { display: grid; gap: var(--s-3); }
+.steps-list li { padding: var(--s-5) var(--s-6); }
+.steps-list h3 { max-width: 24ch; }
+.steps-list p { margin-top: var(--s-2); max-width: 44ch; color: var(--ink-2); }
+@media (max-width: 899px) { .steps-split { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); } }
 @media (max-width: 639px) { .steps-list li { padding: var(--s-5) var(--s-5); } }
 
-/* ---- 8. three tips: photo, title, one meta line ---- */
-.notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6) var(--s-8); margin-top: var(--s-10); }
+/* ---- 8. three tips: photo, title, one meta line; the game card follows right after with a small gap ---- */
+.notes { padding-bottom: var(--s-8); }
+.notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6) var(--s-8); margin-top: var(--s-8); }
 .notes-grid:empty { min-height: 22rem; }
 .note-card { display: block; }
 .note-photo { display: block; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); }
@@ -116,16 +119,43 @@ html.reduced .band-pause { display: none; }
 .note-card .meta { display: block; margin-top: var(--s-2); }
 @media (max-width: 699px) { .notes-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-8); } }
 
-/* ---- 9. the game card ---- */
-.play-card { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: var(--s-10); padding-inline: clamp(1.5rem, 4vw, 3rem); }
-.play-sprite { width: clamp(7rem, 11vw, 9.5rem); height: auto; }
-.play-card h2 { font-size: var(--fs-h3); max-width: 24ch; }
-.play-card p { margin-top: var(--s-3); max-width: 46ch; }
+/* ---- 9. the game, an invitation: Tunas large on the left, the game's stage foliage (assets/illus/game-foliage.svg, the one
+   place its pine shows on a page) faint at both edges of the card, the headline, one line, one solid pill ---- */
+.play { padding-block: 0 calc(var(--section-y) * .55); }
+.play-card { position: relative; isolation: isolate; overflow: clip; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 4vw, 4rem); padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 4vw, 3.5rem); }
+.play-card::before, .play-card::after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; width: 16rem; background: url("../assets/illus/game-foliage.svg") left top / 240px 900px no-repeat; opacity: .3; pointer-events: none; }
+.play-card::before { left: 0; }
+.play-card::after { right: 0; scale: -1 1; }
+.play-sprite { width: clamp(9rem, 16vw, 14rem); height: auto; margin-inline: clamp(0rem, 1.5vw, 1.5rem); }
+.play-body { max-width: 40rem; }
+.play-card h2 { max-width: 20ch; }
+.play-card p { margin-top: var(--s-3); max-width: 44ch; font-size: var(--fs-lead); line-height: 1.5; }
+.play-card .play-record { margin-top: var(--s-2); font-size: var(--fs-sm); }
 .play-card .btn { margin-top: var(--s-6); }
-@media (max-width: 639px) { .play-card { grid-template-columns: minmax(0, 1fr); justify-items: start; gap: var(--s-6); } }
+@media (max-width: 639px) {
+  .play-card { grid-template-columns: minmax(0, 1fr); justify-items: start; gap: var(--s-5); }
+  .play-card::after { display: none; }
+  .play-sprite { width: 8.5rem; margin: 0; }
+  .play-card h2 { font-size: var(--fs-h3); }
+  .play-card p { font-size: var(--fs-body); }
+  .play-card .btn { width: 100%; }
+}
 
-/* ---- 10. closing ---- */
-.closing-in { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-6); }
-.closing-in .display { max-width: 14ch; }
-.closing-in p { max-width: 30rem; font-size: var(--fs-lead); }
-.closing-in .btn { margin-top: var(--s-2); }
+/* ---- 10. closing: the pots photograph edge to edge under a flat moss tint, one glass panel in the middle with the question,
+   one line and a WhatsApp pill per shop (Cipete solid, BSD glass) ---- */
+.closing { position: relative; isolation: isolate; display: flex; align-items: center; min-height: clamp(34rem, 82svh, 50rem); padding-block: var(--s-16); }
+.closing-photo { position: absolute; inset: 0; border-radius: 0; }
+.closing-photo img { position: absolute; inset: 0; object-position: 50% 50%; }
+.closing-photo::after { content: ""; position: absolute; inset: 0; background: rgb(var(--moss-rgb) / .48); pointer-events: none; }   /* a flat scrim: the glass and the sage type need a dark field, not a gradient */
+.closing-in { position: relative; z-index: 1; display: flex; justify-content: center; }
+.closing-panel { display: flex; flex-direction: column; align-items: center; gap: var(--s-4); width: min(100%, 42rem); padding: clamp(1.75rem, 4vw, 3.25rem); text-align: center; }
+.closing-panel h2 { font-size: var(--fs-h1); max-width: 12ch; }
+.closing-panel p { max-width: 30rem; font-size: var(--fs-lead); line-height: 1.5; color: var(--sage); }
+.closing-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); margin-top: var(--s-3); }
+@media (max-width: 639px) {
+  .closing { min-height: 0; padding-block: var(--s-12); }
+  .closing-panel { gap: var(--s-3); }
+  .closing-panel h2 { font-size: var(--fs-h2); }
+  .closing-panel p { font-size: var(--fs-body); }
+  .closing-actions { flex-direction: column; align-items: stretch; width: 100%; }
+}

@@ -1,8 +1,8 @@
-/* Toko Lestari — js/product-detail.js (C3, v2). One product by ?id=: the glass panel in the dark band, the light section
+/* Nurseri Lestari — js/product-detail.js (C3, v2). One product by ?id=: the glass panel in the dark band, the light section
    (notes, tag links, care, facts), four related tiles, the phone buy bar. The photo, name, category and price are already set by
    the inline LCP kick in produk-detail.html; this module fills the rest and never waits for the CDN (no gsap here). */
 import { fmtPrice, esc, icon, waLink, param } from './util.js';
-import { tileHTML, settle, waProduct, catName, STATUS, STORE, sortProducts } from './catalog.js';
+import { tileHTML, settle, waProduct, catName, STATUS, STORE, sortProducts, fmtSold } from './catalog.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const site = (window.TL || {}).site || {};
@@ -20,13 +20,13 @@ function missing() {
   h1.textContent = 'Yang ini nggak ada di rak.'; // keep the page's one h1 in the visible section
   box.prepend(h1);
   $('[data-missing-wa]').href = waLink();
-  document.title = 'Produk tidak ditemukan — Toko Lestari';
+  document.title = 'Produk tidak ditemukan — Nurseri Lestari';
 }
 
 function show(p) {
   const cat = catName(p.category);
-  document.title = `${p.name} — Toko Lestari`;
-  $('meta[name="description"]')?.setAttribute('content', p.desc || `${p.name} dari Toko Lestari, ${fmtPrice(p.price)}. Harga mengikuti etalase Tokopedia.`);
+  document.title = `${p.name} — Nurseri Lestari`;
+  $('meta[name="description"]')?.setAttribute('content', p.desc || `${p.name} dari Nurseri Lestari, ${fmtPrice(p.price)}. Harga mengikuti etalase Tokopedia.`);
   $('[data-crumbs]').insertAdjacentHTML('beforeend', `<li><a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a></li><li aria-current="page">${esc(p.name)}</li>`);
   const photo = $('[data-photo]');
   photo.src = p.image; photo.alt = `${p.name}, foto dari etalase Tokopedia`;
@@ -48,7 +48,8 @@ function show(p) {
     ['Status', esc(STATUS[p.status] || p.status)],
     ...Object.entries(p.specs || {}).map(([k, v]) => [esc(k), esc(v)]),
   ];
-  if (p.sold) specs.push(['Terjual', `${p.sold}${p.rating ? ` · ${icon('star-filled')} ${p.rating.toFixed(1)}` : ''}`]);
+  // Tokopedia's own number, so it says so (P2, 1 Nov 2026); Indonesian thousands, and the "30+" cap kept as Tokopedia shows it
+  if (p.sold) specs.push(['Terjual di Tokopedia', `${fmtSold(p.sold)}${p.rating ? ` · ${icon('star-filled')} ${p.rating.toFixed(1)}` : ''}`]);
   $('[data-specs]').innerHTML = specs.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
   if (p.care) { $('[data-care]').hidden = false; $('[data-care-text]').textContent = p.care; }
   $('[data-bar-name]').textContent = p.name; $('[data-bar-price]').textContent = fmtPrice(p.price);

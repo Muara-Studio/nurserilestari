@@ -1,4 +1,4 @@
-/* Toko Lestari — js/tips.js (D2): the tips index and the article page (?id=), rendered from TL.tips.
+/* Nurseri Lestari — js/tips.js (D2): the tips index and the article page (?id=), rendered from TL.tips.
    v2: a tip with one of the shop's Instagram images is a photo card with a glass caption, the rest are flat text cards;
    the article opens on a dark band and reads on paper; related products reuse the catalog's tile. */
 import { esc, icon, param } from './util.js';
@@ -16,7 +16,7 @@ const arrow = (label, dir = 'right') => dir === 'left'
 /* the Instagram graphic already carries the title, so the image is decorative and the caption does the talking */
 const photoCard = (t, i, wide) => `<a class="photo photo-dim photo-hover tip-photo${wide ? ' is-wide' : ''}" href="${href(t)}" data-reveal data-delay="${i % 3}">
   <img src="${esc(t.image)}" alt="" width="640" height="${wide ? 360 : 640}" ${i < 3 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">
-  <div class="glass tip-cap on-dark"><h2>${esc(t.title)}</h2><span class="tip-meta">${metaText(t)}</span>${arrow('Baca tips')}</div>
+  <div class="glass-dark tip-cap on-dark"><h2>${esc(t.title)}</h2><span class="tip-meta">${metaText(t)}</span>${arrow('Baca tips')}</div>
 </a>`;
 const textCard = (t, i) => `<a class="card-flat tip-text" href="${href(t)}" data-reveal data-delay="${i % 3}">
   <h2>${esc(t.title)}</h2><p class="tip-meta">${metaText(t)}</p><p class="tip-excerpt">${esc(t.excerpt)}</p>${arrow('Baca')}
@@ -48,13 +48,13 @@ function article(root) {
   const head = root.querySelector('[data-article-head]');
   const back = `<a class="article-back" href="tips.html">${icon('arrow-left')}Semua tips</a>`;
   if (!t) {
-    document.title = 'Tips nggak ketemu — Toko Lestari';
+    document.title = 'Tips nggak ketemu — Nurseri Lestari';
     head.innerHTML = `${back}<h1>Tips ini nggak ketemu.</h1><p class="lead">Mungkin tautannya salah ketik. Daftar lengkapnya ada di halaman tips.</p>`;
     root.querySelector('[data-article-body]').closest('.article-body').remove();
     document.querySelector('[data-related]')?.remove();
     return;
   }
-  document.title = `${t.title} — Toko Lestari`;
+  document.title = `${t.title} — Nurseri Lestari`;
   document.querySelector('meta[name="description"]')?.setAttribute('content', t.excerpt);
   head.innerHTML = `${back}<h1>${esc(t.title)}</h1><p class="meta-line">${metaText(t)}</p><p class="lead">${esc(t.excerpt)}</p>`;
   root.querySelector('[data-article-figure]').innerHTML = t.image

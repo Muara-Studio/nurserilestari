@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Toko Lestari — css/catalog.css (C3, v2 31 Oct 2026: produk.html, produk-detail.html)
+   Nurseri Lestari — css/catalog.css (C3, v2 31 Oct 2026: produk.html, produk-detail.html)
    The tile itself is the shared component (.rak* in css/components.css, markup from tileHTML() in js/catalog.js); this file lays
    the two pages out around it. Tokens from base.css only; nothing is redefined here. Phone first (390), then 640 / 900 / 1024.
    ========================================================================== */
@@ -8,34 +8,37 @@
 .catalog-head { padding-block: calc(var(--header-h) + 3.5rem) var(--s-8); }
 .catalog-head .lead { margin-top: var(--s-5); max-width: 38rem; }
 
-/* ---- filters: the search pill and the category chips in one row (no divider lines); under it the counter line, in the
-   shopkeeper's voice, with the quiet sort at its end. Nine chips with their counts cannot share a line with both controls
-   below ~1400 px, so the sort lives on the counter line and the chips wrap in their column (every category stays in view) ---- */
+/* ---- filters (P2, 1 Nov 2026, client): the search pill alone on the first row, the category chips on the row below, each with
+   its Tabler glyph, "Semua produk" first; no divider lines. Under them the counter line in the shopkeeper's voice, the one
+   "angka dari Tokopedia" note, and the quiet sort at the line's end ---- */
 .catalog { padding-bottom: var(--section-y); }
-.catalog-filters__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); align-items: start; }
+.catalog-filters__row { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); align-items: start; }
 .catalog-search { position: relative; }
 .catalog-search__icon { position: absolute; left: 1.0625rem; top: 50%; translate: 0 -50%; color: var(--mute); pointer-events: none; }
 .catalog-search .input { padding-left: 2.875rem; }
 .catalog-search .input::-webkit-search-cancel-button, .catalog-search .input::-webkit-search-decoration { -webkit-appearance: none; }
 .catalog-tags { display: flex; gap: .5rem; min-width: 0; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding: .25rem var(--gutter); scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); }   /* phones: one strip that scrolls sideways, the first chip snapping to the gutter */
 .catalog-tags::-webkit-scrollbar { display: none; }
-.catalog-tags .tag { flex: 0 0 auto; min-height: 2.75rem; padding: .5rem .9375rem; scroll-snap-align: start; white-space: nowrap; }
+.catalog-tags .tag { flex: 0 0 auto; gap: .5rem; min-height: 2.75rem; padding: .5rem 1rem .5rem .8125rem; scroll-snap-align: start; white-space: nowrap; }
+.catalog-tags .tag .icon { width: 1.125rem; height: 1.125rem; color: var(--mute); transition: color var(--dur-1); }   /* the glyph sits quiet until the chip is chosen */
 .catalog-tags .tag .num { font-weight: 400; font-size: var(--fs-xs); color: var(--mute); }   /* a real tone, not opacity: 4.9:1 on paper (axe) */
 .catalog-tags .tag.is-active .num { color: var(--sage-2); }
+.catalog-tags .tag.is-active .icon { color: var(--olive-2); }   /* the one accent, on the chosen chip only */
+@media (hover: hover) { .catalog-tags .tag:not(.is-active):hover .icon { color: var(--ink); } }
 .catalog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3) var(--s-6); margin-block: var(--s-6) var(--s-8); }
-.catalog-bar__count { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); }
+.catalog-bar__count { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-1) var(--s-4); }
 .catalog-count { font-size: var(--fs-sm); color: var(--mute); font-variant-numeric: tabular-nums; }
 .catalog-clear { font-size: var(--fs-sm); color: var(--ink-2); }
 .catalog-clear[hidden] { display: none; }
+.catalog-note { flex-basis: 100%; font-size: var(--fs-xs); color: var(--mute); }   /* the sold numbers on the tiles are Tokopedia's: said once, under the count */
 .catalog-sort { display: inline-flex; align-items: center; gap: .625rem; }
 .catalog-sort__label { font-size: var(--fs-sm); color: var(--mute); white-space: nowrap; }
 .catalog-sort__field { position: relative; display: inline-block; }
 .catalog-sort .select { width: auto; min-height: 2.75rem; padding: 0 2.5rem 0 1.125rem; appearance: none; cursor: pointer; font-size: var(--fs-sm); }
 .catalog-sort__icon { position: absolute; right: .9375rem; top: 50%; translate: 0 -50%; width: 1rem; height: 1rem; pointer-events: none; color: var(--ink-2); }
 @media (min-width: 900px) {
-  .catalog-filters__row { grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr); gap: var(--s-6); }
+  .catalog-search { max-width: 32rem; }   /* the pill does not stretch across the whole column */
   .catalog-tags { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding: 0; }
-  .catalog-tags .tag { min-height: 3rem; }   /* as tall as the search pill beside them */
 }
 
 /* ---- the grid: the shared tiles, 4 / 3 / 2 (components.css); gsap owns the arrival and the FLIP re-sort ---- */
@@ -62,8 +65,8 @@
 
 .pd { display: grid; gap: var(--s-5); margin-top: var(--s-5); }
 .pd[hidden] { display: none; }
-.pd__photo { display: grid; place-items: center; padding: 6%; background: var(--paper-3); animation: pd-settle var(--dur-3) var(--ease-out) both; }   /* .photo (base) gives the radius-40 frame; the mat is paper-3 like every tile */
-.pd__photo img { width: 100%; height: auto; aspect-ratio: 1 / .88; object-fit: cover; object-position: 50% 100%; border-radius: var(--radius-lg); mix-blend-mode: multiply; filter: saturate(.8) contrast(.95); }   /* the known-good crop: the repeated shop header on top is cut, the sides stay */
+.pd__photo { display: block; background: var(--paper-3); animation: pd-settle var(--dur-3) var(--ease-out) both; }   /* .photo (base) gives the radius-40 frame; paper-3 holds the square until the JPEG lands */
+.pd__photo img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 50%; }   /* P2 (1 Nov 2026): the whole square card, edge to edge, like the tiles; no mat, no crop, no multiply */
 @keyframes pd-settle { from { opacity: 0; transform: translateY(18px); } }
 html.reduced .pd__photo { animation: none; }
 .pd__panel { display: grid; justify-items: start; align-content: start; gap: .5rem; padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); }

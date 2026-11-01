@@ -1,7 +1,8 @@
-/* Toko Lestari — js/landing.js v2 (L2, 31 Oct 2026). The landing's data and its one control: the moving band (items duplicated
-   once so the -50 % loop closes, a pause button), the three rack cards' product counts from TL.products, four featured tiles
-   through tileHTML from js/catalog.js, the three latest tips from TL.tips. Reveals are main.js's ([data-reveal] is rescanned
-   after every render). No gsap here: the hero has nothing to settle, and the page must read even if the CDN modules never come. */
+/* Nurseri Lestari — js/landing.js v2 (L2, 31 Oct 2026; L3, 1 Nov 2026). The landing's data and its one control: the moving band
+   (items duplicated once so the -50 % loop closes, a pause button), the three rack cards' product counts from TL.products, four
+   featured tiles (the most sold first) through tileHTML from js/catalog.js, the three latest tips from TL.tips, the Shopee links
+   and admin labels from TL.site, this browser's game record. Reveals are main.js's ([data-reveal] is rescanned after every
+   render). No gsap here: the hero has nothing to settle, and the page must read even if the CDN modules never come. */
 import { esc, reduced } from './util.js';
 import { tileHTML } from './catalog.js';
 
@@ -42,17 +43,47 @@ function countRacks() {
   });
 }
 
-/* ---- featured: one product per category in the shop's own order (plants first), four tiles ---- */
+/* ---- featured: the shop's picks (`featured` in data/products.js), the most sold first (`sold` is the Tokopedia card count,
+   30 meaning "30+"), ties by rating then name; four tiles, each with the tile's CTA pill ---- */
+const bySold = (a, b) => (b.sold || 0) - (a.sold || 0) || (b.rating || 0) - (a.rating || 0) || String(a.name).localeCompare(String(b.name), 'id');
 function renderFeatured() {
   const ul = document.querySelector('[data-featured]');
   const all = data().products || [];
   const cats = data().categories || [];
   if (!ul || !all.length) return;
-  const feat = all.filter((p) => p.featured);
-  const pick = [];
-  for (const c of cats) { const p = feat.find((x) => x.category === c.id && !pick.includes(x)); if (p) pick.push(p); }
-  for (const p of feat) if (pick.length < 4 && !pick.includes(p)) pick.push(p);
-  ul.innerHTML = pick.slice(0, 4).map((p, i) => tileHTML(p, { cats, reveal: true, delay: i })).join('');
+  const pick = all.filter((p) => p.featured).sort(bySold).slice(0, 4);
+  ul.innerHTML = pick.map((p, i) => tileHTML(p, { cats, reveal: true, delay: i, cta: true })).join('');
+}
+
+/* ---- from the data file: the two Shopee storefronts behind the facts card's links, the admin labels on the closing pills ---- */
+function fillSite() {
+  const site = data().site || {};
+  document.querySelectorAll('[data-shopee]').forEach((a) => {
+    const loc = (site.locations || []).find((l) => l.id === a.dataset.shopee);
+    if (loc && loc.shopee) a.href = loc.shopee;
+  });
+  document.querySelectorAll('[data-wa-label]').forEach((el) => {
+    const w = (site.whatsapp || [])[Number(el.dataset.waLabel)];
+    if (w && w.label) el.textContent = w.label;
+  });
+}
+
+/* ---- the game card: this browser's own record when it has one (js/game/store.js keeps it under localStorage 'tl.game',
+   metres climbed and trees planted); nothing is shown otherwise, and private mode just stays quiet ---- */
+function playRecord() {
+  const el = document.querySelector('[data-play-record]');
+  if (!el) return;
+  try {
+    const s = JSON.parse(localStorage.getItem('tl.game') || 'null');
+    const trees = (s && Array.isArray(s.trees)) ? s.trees.length : 0;
+    const record = s ? Number(s.record) || 0 : 0;
+    if (!record && !trees) return;
+    const parts = [];
+    if (record) parts.push(`rekor ${n(record)} m`);
+    if (trees) parts.push(`${n(trees)} pohon ditanam`);
+    el.textContent = `Di browser ini: ${parts.join(' · ')}.`;
+    el.hidden = false;
+  } catch { /* no storage: no record to show */ }
 }
 
 /* ---- tips: the three latest (TL.tips is newest first); the Instagram image, or the drawn illustration on a moss mat ---- */
@@ -85,6 +116,8 @@ revealHero();
 countRacks();
 renderFeatured();
 renderTips();
+fillSite();
+playRecord();
 
 /* if the motion engine never boots (the CDN modules unreachable), the reveals must not keep the page invisible */
 setTimeout(() => { if (!data().motion) document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in')); }, 2500);
