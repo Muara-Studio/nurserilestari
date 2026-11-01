@@ -149,7 +149,9 @@ html.reduced .pd__photo { animation: none; }
 .pd__specs a { display: inline-block; padding-block: .625rem; margin-block: -.625rem; text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }   /* a 44 px hit area, the line unchanged */
 .pd__specs a:hover { text-decoration-color: var(--ink); }
 .pd__specs .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.1em; color: var(--olive); fill: var(--olive); }   /* inline: base makes every svg a block */
-.pd__perks { display: grid; gap: .75rem; padding-top: var(--s-6); border-top: var(--stroke) solid var(--line); }   /* the card's foot: the three ways we handle an order */
+.pd__how { margin-top: var(--s-8); max-width: 40rem; background: var(--paper-3); }
+.pd__how .pd__perks { margin-top: var(--s-3); }
+.pd__perks { display: grid; gap: .75rem; }   /* the card's foot: the three ways we handle an order */
 .pd__perks li { display: flex; align-items: flex-start; gap: .75rem; font-size: var(--fs-sm); color: var(--ink-2); }
 .pd__perks .icon { width: 1.25rem; height: 1.25rem; margin-top: .125rem; color: var(--olive); }
 .pd-missing { display: grid; justify-items: start; gap: var(--s-5); max-width: 40rem; padding-block: var(--s-8) var(--s-4); }
