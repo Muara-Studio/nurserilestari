@@ -14,7 +14,9 @@
 .hero { position: relative; isolation: isolate; overflow: clip; display: flex; flex-direction: column; min-height: 100svh; padding-top: var(--shell-clear, calc(var(--header-h) + 3rem)); padding-bottom: var(--s-16); }   /* the shell's own clearance token (A2 sets it on main > :first-child); the calc is only the fallback, never added on top */
 .hero-in { position: relative; z-index: 2; display: flex; flex-direction: column; flex: 1 0 auto; }
 .hero-meta { display: flex; justify-content: space-between; gap: var(--s-6); }
-.hero-meta-r { margin-left: auto; justify-content: flex-end; text-align: right; max-width: 20rem; }
+.hero-meta .meta-line { max-width: none; }
+.hero-meta-r { margin-left: auto; justify-content: flex-end; text-align: right; }
+@media (min-width: 1024px) { .hero-meta .meta-line { white-space: nowrap; } }   /* both captions on one line on desktop (client, 1 Nov); narrower screens may wrap */
 .hero-h { margin-top: var(--s-8); }
 .hero-bottom { margin-top: auto; padding-top: var(--s-8); max-width: 30rem; }   /* the lead at .86 of the lead size: five lines, so the whole hero fits a 1440 x 813 laptop viewport with the chip in view */
 .hero-lead { font-size: calc(var(--fs-lead) * .86); line-height: 1.5; }
