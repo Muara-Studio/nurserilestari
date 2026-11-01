@@ -1,6 +1,6 @@
 /* Nurseri Lestari — css/shell.css (A2, v2 "Rumah kaca malam"): Lenis classes, skip link, the floating glass header, the drawer
    sheet, the Moss-like footer, the WhatsApp FAB and the search overlay. Every colour is a token from base.css. */
-@import url("components.css?v=fca1a97"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=a4107ac"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
@@ -66,7 +66,7 @@ html.hdr-away:not(.menu-open) .site-header { translate: 0 calc(-100% - var(--s-5
 .drawer-brand { display: inline-flex; } .drawer-brand .site-logo-img { height: 2.5rem; }
 .drawer-close { color: var(--sage); }
 .drawer-nav li { overflow: clip; }
-.drawer-nav a { display: inline-flex; align-items: center; gap: .45em; padding: .12em 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(2.5rem, 10vw, 3.75rem); line-height: 1.05; letter-spacing: -0.025em; font-variation-settings: "opsz" 96; color: var(--sage); translate: 0 110%; }
+.drawer-nav a { display: inline-flex; align-items: center; gap: .45em; padding: .12em 0; font-family: var(--font-display); font-weight: 600; font-size: clamp(2.5rem, 10vw, 3.75rem); line-height: 1.05; letter-spacing: -0.025em; color: var(--sage); translate: 0 110%; }
 .nav-drawer[open] .drawer-nav a { animation: drawer-rise var(--dur-3) var(--ease-settle) calc(.18s + var(--i, 0) * .06s) both; }
 @keyframes drawer-rise { from { translate: 0 110%; } to { translate: 0 0; } }
 /* an olive dot settles in front of the page you are on */

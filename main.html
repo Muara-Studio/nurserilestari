@@ -10,10 +10,10 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
-<link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=fca1a97">
-<link rel="stylesheet" href="css/game.css?v=fca1a97">
+<link rel="preload" href="assets/fonts/HindMadurai-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Nunito-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css?v=a4107ac">
+<link rel="stylesheet" href="css/game.css?v=a4107ac">
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
 <!-- the game owns the whole viewport (like the reference): no banner, header or footer on this page; "Kembali ke toko" lives in the menu -->
@@ -175,11 +175,11 @@
     <symbol id="b-roket" viewBox="0 0 48 48"><path d="M14 6h20l-3 22H17Z" fill="#D4674A"/><path d="M12 4h24v5H12Z" fill="#B84E31"/><ellipse cx="24" cy="36" rx="6" ry="9" fill="#D8D68A"/><ellipse cx="24" cy="34" rx="3" ry="5" fill="#F2C14E"/><path d="M8 30v10M40 30v10" stroke="#FFFDF7" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="b-magnet" viewBox="0 0 48 48"><path d="M10 8v16a14 14 0 0 0 28 0V8h-9v16a5 5 0 0 1-10 0V8Z" fill="#D4674A"/><path d="M10 8h9v7h-9ZM29 8h9v7h-9Z" fill="#F7F3EA"/><path d="M24 30c-4 5-5 8-3.5 11a3.8 3.8 0 0 0 7 0C29 38 28 35 24 30Z" fill="#F2C14E"/></symbol>
     <symbol id="b-nyawa" viewBox="0 0 48 48"><path d="M24 42S6 30 6 17a9 9 0 0 1 18-2 9 9 0 0 1 18 2c0 13-18 25-18 25Z" fill="#D4674A"/><path d="M26 22c4-8 12-8 16-6-3 7-9 10-16 6Z" fill="#7FB069"/><path d="M27 21c3-3 7-5 12-5" fill="none" stroke="#CFE3C3" stroke-width="1.5" stroke-linecap="round"/></symbol>
-    <symbol id="b-ganda" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#F2C14E"/><text x="24" y="31" text-anchor="middle" font-family="Bricolage Grotesque, DM Sans, sans-serif" font-weight="800" font-size="20" fill="#1F2A22">×2</text></symbol>
+    <symbol id="b-ganda" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#F2C14E"/><text x="24" y="31" text-anchor="middle" font-family="Hind Madurai, Nunito, sans-serif" font-weight="700" font-size="20" fill="#1F2A22">×2</text></symbol>
   </svg>
 </main>
 <script>/* Kembali: back to where you came from when that was one of our pages, otherwise the href (index.html) */
 document.querySelectorAll('[data-back]').forEach(function (a) { a.addEventListener('click', function (e) { var ref = document.referrer; if (history.length > 1 && ref && new URL(ref).origin === location.origin) { e.preventDefault(); history.back(); } }); });</script>
-<script type="module" src="js/game/main.js?v=fca1a97"></script>
+<script type="module" src="js/game/main.js?v=a4107ac"></script>
 </body>
 </html>

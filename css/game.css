@@ -61,7 +61,7 @@ html.reduced body.is-falling .stage canvas { filter: none; scale: 1; }
 .scr-pre { justify-content: center; align-items: center; background: var(--pine); color: var(--paper); text-align: center; z-index: 10; }
 .pre-mid { display: grid; justify-items: center; gap: .875rem; }
 .pre-mid .wordmark { font-size: var(--fs-xs); color: var(--olive-2); }
-.pre-title { color: var(--paper); font-size: clamp(2rem, min(11cqw, 9cqh), 4.5rem); font-variation-settings: "opsz" 96; text-shadow: 3px 4px 0 var(--frame); max-width: 11ch; }
+.pre-title { color: var(--paper); font-size: clamp(2rem, min(11cqw, 9cqh), 4.5rem); text-shadow: 3px 4px 0 var(--frame); max-width: 11ch; }
 .pre-count { min-width: 4.75rem; }
 .pre-leaves { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .pre-leaves i { position: absolute; left: var(--x); bottom: -16%; width: 84px; height: 110px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 110'%3E%3Cpath d='M42 108C40 70 38 40 44 6' fill='none' stroke='%237FB069' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M43 26C30 6 12 10 6 22c14 12 28 14 37 4ZM43 50C30 30 12 34 6 46c14 12 28 14 37 4ZM42 74C29 54 11 58 5 70c14 12 28 14 37 4ZM44 36c8-20 28-20 36-10-10 16-26 20-36 10ZM43 62c8-20 28-20 36-10-10 16-26 20-36 10ZM42 88c8-20 28-20 36-10-10 16-26 20-36 10Z' fill='%237FB069'/%3E%3C/svg%3E") center / contain no-repeat; opacity: .85; animation: rise 9s linear infinite; animation-delay: var(--d); }
@@ -73,7 +73,7 @@ html.reduced .pre-leaves { display: none; }
 /* home: the lockup in the upper third (sized by the viewport), the scene in the middle, tagline + start in the lower third */
 .scr-home { justify-content: flex-start; }
 .lockup { text-align: center; margin-top: clamp(.25rem, 2.5cqh, 2rem); }
-.title-lockup { position: relative; display: grid; justify-items: center; margin-inline: auto; max-width: 8ch; color: var(--paper); font-size: clamp(2.5rem, min(13.5cqw, 10.5cqh), 6rem); line-height: .9; letter-spacing: -.03em; font-variation-settings: "opsz" 96; text-shadow: -1.5px -1.5px 0 var(--ink), 1.5px -1.5px 0 var(--ink), -1.5px 1.5px 0 var(--frame), 1.5px 1.5px 0 var(--frame), 4px 5px 0 var(--frame); }
+.title-lockup { position: relative; display: grid; justify-items: center; margin-inline: auto; max-width: 8ch; color: var(--paper); font-size: clamp(2.5rem, min(13.5cqw, 10.5cqh), 6rem); line-height: .9; letter-spacing: -.03em; text-shadow: -1.5px -1.5px 0 var(--ink), 1.5px -1.5px 0 var(--ink), -1.5px 1.5px 0 var(--frame), 1.5px 1.5px 0 var(--frame), 4px 5px 0 var(--frame); }
 .title-lockup .t1 { font-size: .42em; color: var(--sun); rotate: -2deg; }
 .title-lockup .t2 { font-size: 1em; }
 .title-lockup .deco { position: absolute; width: 1.15em; height: auto; pointer-events: none; filter: drop-shadow(2px 3px 0 var(--frame)); }
@@ -125,7 +125,7 @@ html.reduced .fall-hero { animation: none; rotate: 28deg; }
 #resRecord { display: inline-flex; align-items: center; gap: .5rem; flex-wrap: wrap; justify-content: center; }
 #resRecord .tag { font-size: .8125rem; padding: .2rem .5rem; }
 .flag { width: 1.25rem; height: 1.6rem; }
-.result-m { font-size: clamp(3rem, 9cqh, 4.75rem); color: var(--terracotta-ink); line-height: 1; font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 96; }
+.result-m { font-size: clamp(3rem, 9cqh, 4.75rem); color: var(--terracotta-ink); line-height: 1; font-variant-numeric: tabular-nums; }
 .result-seeds { display: flex; align-items: center; justify-content: center; gap: .75rem; color: var(--ink-2); font-weight: 500; }
 .result-seeds b { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--ink); }
 .result .field { width: 100%; text-align: left; margin-top: .25rem; }

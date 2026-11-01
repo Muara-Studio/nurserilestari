@@ -51,3 +51,5 @@ On 20 Oct 2026 the client supplied PNG exports of the plant and pot illustration
 - `assets/img/hmp/hands-repotting.webp` (illustration, feature "Soal rawat-merawat")
 - `assets/img/hmp/room-plants.webp` (illustration, feature "Toko kecil di Jl. Gaharu")
 - `assets/img/hmp/potted-alocasia.webp`, `potted-pilea.webp`, `potted-calathea.webp`, `potted-spider.webp` (ready-made potted plants, hero shelves)
+
+- **Fonts**: Hind Madurai (SIL OFL 1.1, static 400–700, self-hosted) for headings/titles/buttons/prices; Nunito (SIL OFL 1.1, variable 300–900) for text and captions. Client's pick 2 Nov 2026; Bricolage Grotesque + DM Sans retired to research/retired/fonts/.

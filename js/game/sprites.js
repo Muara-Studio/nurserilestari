@@ -200,6 +200,6 @@ export function drawStall(ctx, x, y, w) {
   const s = sheets.stall; if (!s) return; const h = w * (160 / 256);
   ctx.drawImage(s, x, y - h, w, h);
   // the sign board is 36..284 × 18..60 of the 320×200 SVG; the display face is a page font, so the text is drawn here
-  ctx.save(); ctx.font = `800 ${w * 0.078}px 'Bricolage Grotesque', 'DM Sans', sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = PAL.paper;
+  ctx.save(); ctx.font = `700 ${w * 0.078}px 'Hind Madurai', 'Nunito', sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = PAL.paper;
   ctx.letterSpacing = `${w * 0.01}px`; ctx.fillText('NURSERI LESTARI', x + w * 0.5, y - h + h * 0.195); ctx.restore();
 }

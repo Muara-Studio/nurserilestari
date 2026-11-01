@@ -331,7 +331,7 @@ function drawPlayer() {
     ctx.strokeStyle = SP.PAL.leaf3; ctx.beginPath(); ctx.moveTo(p.x - 40, top + 10); ctx.quadraticCurveTo(p.x, top - 8, p.x + 40, top + 10); ctx.stroke();
   }
   if (G.stunT > 0) {
-    ctx.save(); ctx.font = "800 20px 'Bricolage Grotesque', 'DM Sans', sans-serif"; ctx.textAlign = 'center'; ctx.lineJoin = 'round';
+    ctx.save(); ctx.font = "700 20px 'Hind Madurai', 'Nunito', sans-serif"; ctx.textAlign = 'center'; ctx.lineJoin = 'round';
     ctx.globalAlpha = Math.min(1, G.stunT * 3); ctx.lineWidth = 4; ctx.strokeStyle = SP.PAL.ink; ctx.fillStyle = SP.PAL.paper;
     const y = feet - 84 - (0.9 - G.stunT) * 22; ctx.strokeText('Aduh!', p.x, y); ctx.fillText('Aduh!', p.x, y); ctx.restore();
   }
@@ -500,7 +500,7 @@ async function boot() {
   await SP.loadAll(scale, (f) => { target = Math.round(f * 92); });
   homeHero = rasterHero(await heroImg);
   resize(true);                                      // SP.SS is final now: the canvas and every layer at the real sampling
-  try { await document.fonts.load("800 20px 'Bricolage Grotesque'"); } catch { /* system fallback */ }
+  try { await document.fonts.load("700 20px 'Hind Madurai'"); } catch { /* system fallback */ }
   target = 100; await minWait;
   clearInterval(ticker); count.textContent = '100%';
   const wit = ST.wither(store);

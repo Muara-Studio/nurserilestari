@@ -1,12 +1,20 @@
 /* ==========================================================================
    Nurseri Lestari — css/base.css v2 (lead-owned: tokens, fonts, reset, type, layout, primitives)
    v2 direction (31 Oct 2026): "Rumah kaca malam" — dark moss ground with sage type after Moss Index, glass panels over
-   nursery photographs after Plantio, Bricolage Grotesque sentence-case headlines, pill buttons, quiet arrow links.
+   nursery photographs after Plantio, Hind Madurai sentence-case headlines, pill buttons, quiet arrow links.
    Agents: use the tokens, never redefine them. Add component styles in your own file.
    ========================================================================== */
-@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Bricolage Grotesque'; src: url('../assets/fonts/BricolageGrotesque-Variable-latin-ext.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'DM Sans'; src: url('../assets/fonts/DMSans-Variable.woff2') format('woff2'); font-weight: 100 1000; font-style: normal; font-display: swap; }
+/* Hind Madurai (SIL OFL, Google Fonts static weights 400–700) for headings, titles, buttons and prices; Nunito (SIL OFL, variable 300–900) for text, captions and labels. Client's pick 2 Nov 2026; nothing italic. */
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-400-latin-ext.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-400-latin.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-500-latin-ext.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-500-latin.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-600-latin-ext.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-600-latin.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-700-latin-ext.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Hind Madurai'; src: url('../assets/fonts/HindMadurai-700-latin.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Nunito'; src: url('../assets/fonts/Nunito-Variable-latin-ext.woff2') format('woff2'); font-weight: 300 900; font-style: normal; font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Nunito'; src: url('../assets/fonts/Nunito-Variable-latin.woff2') format('woff2'); font-weight: 300 900; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
   /* ---- palette v2: moss ground, sage type, warm paper for light sections, olive as the one small accent ---- */
@@ -40,8 +48,8 @@
   --glass-shadow: 0 24px 60px -24px rgba(0, 0, 0, .45);
 
   /* ---- type ---- */
-  --font-display: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
-  --font-text:    'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Hind Madurai', 'Nunito', system-ui, sans-serif;
+  --font-text:    'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --fs-display: clamp(3rem, 1.6rem + 6.2vw, 7.75rem);     /* the hero sentence, two lines */
   --fs-h1: clamp(2.5rem, 1.5rem + 3.6vw, 5rem);
   --fs-h2: clamp(1.9rem, 1.25rem + 2.1vw, 3.1rem);
@@ -49,8 +57,8 @@
   --fs-h4: 1.25rem;
   --fs-lead: clamp(1.125rem, 1rem + .5vw, 1.375rem);
   --fs-body: 1.0625rem;  --fs-sm: .9375rem;  --fs-xs: .8125rem;
-  --lh-tight: .94; --lh-snug: 1.1; --lh-text: 1.6;
-  --track-display: -0.035em; --track-wide: .02em;
+  --lh-tight: 1.0; --lh-snug: 1.1; --lh-text: 1.6;
+  --track-display: -0.015em; --track-wide: .02em;
 
   /* ---- space, size, shape ---- */
   --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.25rem; --s-6: 1.5rem; --s-8: 2rem;
@@ -99,13 +107,13 @@ h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: anywhere; }
 @keyframes vt-in { from { opacity: 0; transform: translateY(12px); } }
 
 /* ---- type scale ---- */
-/* headings: Bricolage 700; the optical size is set by hand (opsz 96 = display drawing at display sizes, 32 at h2/h3) so it never drifts with the fluid scale */
-h1, h2, h3, h4, .display { font-family: var(--font-display); font-weight: 600; line-height: var(--lh-snug); letter-spacing: -0.025em; color: var(--ink); font-variation-settings: "opsz" 32; }
-.display { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 600; font-variation-settings: "opsz" 96; }
+/* headings: Hind Madurai 600/700 (no optical-size axis; tracking kept near zero because the face is already open) */
+h1, h2, h3, h4, .display { font-family: var(--font-display); font-weight: 600; line-height: var(--lh-snug); letter-spacing: -0.01em; color: var(--ink); }
+.display { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: var(--track-display); font-weight: 600; }
 /* the Moss move: a two-line sentence, the second line set in the muted sage and pushed right */
 .display .alt { display: block; color: var(--sage-2); padding-left: clamp(0px, 12vw, 11rem); }
 .band-paper .display .alt, .on-light .display .alt { color: var(--ink-2); }
-h1, .h1 { font-size: var(--fs-h1); line-height: 1.02; letter-spacing: -0.03em; font-variation-settings: "opsz" 96; }
+h1, .h1 { font-size: var(--fs-h1); line-height: 1.02; letter-spacing: -0.015em; }
 h2, .h2 { font-size: var(--fs-h2); line-height: 1.1; }
 h3, .h3 { font-size: var(--fs-h3); letter-spacing: -0.015em; }
 h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
@@ -113,9 +121,9 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .muted { color: var(--ink-2); } .meta { color: var(--mute); font-size: var(--fs-sm); }
 .text-sm { font-size: var(--fs-sm); } .text-xs { font-size: var(--fs-xs); }
 /* eyebrow: a small roman label in the display face (the reference's typewriter charm; nothing italic since the client's 22 Oct note) */
-/* meta line (Moss): a small sentence-case line of DM Sans, never a shouting label; two of them frame the hero */
+/* meta line (Moss): a small sentence-case line of Nunito, never a shouting label; two of them frame the hero */
 .eyebrow, .meta-line { font-family: var(--font-text); font-weight: 500; font-size: var(--fs-sm); color: var(--mute); letter-spacing: 0; display: inline-flex; align-items: center; gap: .5rem; max-width: 22rem; line-height: 1.4; }
-.wordmark { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; font-variation-settings: "opsz" 32; }
+.wordmark { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; }
 .num, .price { font-variant-numeric: tabular-nums; }
 .price { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
 .price-before { font-family: var(--font-text); font-weight: 400; color: var(--mute); text-decoration: line-through; margin-left: .5rem; font-size: .85em; }
