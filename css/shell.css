@@ -1,6 +1,6 @@
 /* Nurseri Lestari — css/shell.css (A2, v2 "Rumah kaca malam"): Lenis classes, skip link, the floating glass header, the drawer
    sheet, the Moss-like footer, the WhatsApp FAB and the search overlay. Every colour is a token from base.css. */
-@import url("components.css?v=5abcd8a"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=dfca5af"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
@@ -84,7 +84,9 @@ html.hdr-away:not(.menu-open) .site-header { translate: 0 calc(-100% - var(--s-5
 html.reduced .nav-drawer { transition: none; } html.reduced .drawer-nav a, html.reduced .drawer-actions, html.reduced .drawer-info { animation: none; translate: 0 0; opacity: 1; }
 
 /* ---- footer (S2): the dark corner — one sentence and the two admin pills, the two shops as quiet rows, one row of link pills, one legal line ---- */
-.site-footer { padding-block: var(--section-y) var(--s-8); }
+.site-footer { padding-block: calc(var(--section-y) * .6) var(--s-8); }   /* the page above already ends with its own section padding; the footer only needs a breath (client, 1 Nov) */
+/* when the page ends on a moss band (tentang, tips-detail, index closing), the two dark blocks would merge into one tall void: a hairline marks the seam and the footer pulls in further */
+main:has(> .band-moss:last-child, > .band-moss-grad:last-child, > .on-dark:last-child) + .site-footer { padding-top: calc(var(--section-y) * .4); border-top: var(--stroke) solid var(--line-dark); }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--s-12) var(--s-16); align-items: start; }
 .footer-title { font-size: var(--fs-h2); max-width: 26ch; margin-bottom: var(--s-8); }
 .footer-title .alt { display: block; color: var(--sage-2); }
@@ -101,7 +103,7 @@ html.reduced .nav-drawer { transition: none; } html.reduced .drawer-nav a, html.
 .footer-legal a { display: inline-flex; align-items: center; min-height: 2.75rem; padding-inline: .25rem; margin-inline: -.25rem; color: var(--sage); }   /* 44 px tap target for the credit link */
 @media (max-width: 899px) { .footer-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-10); } }
 @media (max-width: 639px) {
-  .site-footer { padding-top: var(--s-16); }
+  .site-footer { padding-top: var(--s-12); }
   .footer-wa { flex-direction: column; } .footer-wa .btn, .footer-shop .btn { width: 100%; }
   .footer-shop { grid-template-columns: minmax(0, 1fr); }
   .footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .footer-links .tag { justify-content: center; }

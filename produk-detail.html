@@ -21,10 +21,10 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=5abcd8a">
-<link rel="stylesheet" href="css/shell.css?v=5abcd8a">
-<link rel="stylesheet" href="css/components.css?v=5abcd8a">
-<link rel="stylesheet" href="css/catalog.css?v=5abcd8a">
+<link rel="stylesheet" href="css/base.css?v=dfca5af">
+<link rel="stylesheet" href="css/shell.css?v=dfca5af">
+<link rel="stylesheet" href="css/components.css?v=dfca5af">
+<link rel="stylesheet" href="css/catalog.css?v=dfca5af">
 <script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
@@ -79,36 +79,41 @@
     </div>
   </section>
 
+  <!-- D4 (1 Nov 2026, client): the body reads the same with or without notes. Left: what the shop says (or one honest line and
+       the WhatsApp pill of the chosen shop), the "Cari yang mirip" chips only when tags exist, the care note only when written.
+       Right: the "Rincian." card, always there, with the facts every product has; the three perks are its foot. Phones: the card first. -->
   <section class="band-paper pd-body" data-body>
     <div class="container pd-body__grid">
       <div class="pd-about">
         <h2>Tentang produk ini.</h2>
         <p class="pd__desc" data-desc></p>
+        <p class="pd__ask" data-ask hidden><a class="btn" data-ask-wa href="#" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg><span>Tanya admin <span data-shop-name>Toko Cipete</span></span></a></p>
         <p class="pd__tags cluster" data-tags-wrap hidden><span class="pd__tags-label">Cari yang mirip</span><span class="cluster" data-tags></span></p>
         <aside class="pd__care card-flat" data-care hidden>
           <h3 class="pd__care-title">Tips perawatan.</h3>
           <p data-care-text></p>
         </aside>
       </div>
-      <div class="pd-facts">
-        <h2>Rincian.</h2>
+      <aside class="pd-facts card" aria-labelledby="pd-facts-title">
+        <h2 id="pd-facts-title">Rincian.</h2>
         <dl class="pd__specs" data-specs></dl>
         <ul class="pd__perks" aria-label="Cara belanja">
           <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-truck-delivery"/></svg><span>Kirim se-Jabodetabek lewat marketplace, atau ambil di <span data-shop-name>Toko Cipete</span>.</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-package"/></svg><span>Tanaman kami bungkus rapat; kalau mau lebih aman, ada extra packing.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-package"/></svg><span>Dibungkus rapi; kalau mau lebih aman, ada extra packing.</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-message-circle"/></svg><span>Bingung cara rawatnya? Tanya lewat WhatsApp, gratis.</span></li>
         </ul>
-      </div>
+      </aside>
     </div>
   </section>
 
-  <section class="pd-related" data-related hidden>
+  <section class="band-paper-3 pd-related" data-related hidden>
     <div class="container">
       <div class="pd-related__head">
-        <h2 class="pd-related__title">Biasanya dibeli bareng.</h2>
+        <h2 class="pd-related__title">Yang mirip dari rak kami.</h2>
         <p class="pd-related__hint" data-related-hint></p>
+        <a class="link-arrow pd-related__more" href="produk.html">Semua produk<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
       </div>
-      <ul class="rak" data-rail aria-label="Produk lain dari rak ini"></ul>
+      <ul class="rak" data-rail aria-label="Produk lain dari rak kami"></ul>
     </div>
   </section>
 </main>
@@ -124,13 +129,13 @@
   <a class="btn btn-sm btn-icon" data-bar-wa href="#" target="_blank" rel="noopener" aria-label="Pesan lewat WhatsApp" title="Pesan lewat WhatsApp"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg></a>
 </div>
 
-<script src="data/site.js?v=5abcd8a"></script>
-<script src="data/products.js?v=5abcd8a"></script>
+<script src="data/site.js?v=dfca5af"></script>
+<script src="data/products.js?v=dfca5af"></script>
 <script>/* LCP kick: the photo, name, category and price are set here, synchronously, so the first paint does not wait for the modules; js/product-detail.js fills the rest */
 (function () { var id = new URLSearchParams(location.search).get('id'), p = (TL.products || []).find(function (x) { return x.id === id; }); if (!p) return; var c = (TL.categories || []).find(function (x) { return x.id === p.category; }), img = document.querySelector('[data-photo]'); img.src = p.image; img.alt = p.name + ', foto dari etalase Tokopedia'; document.querySelector('[data-title]').textContent = p.name; document.querySelector('[data-cat]').textContent = c ? c.name : 'Lainnya'; document.querySelector('[data-price]').textContent = 'Rp' + Number(p.price).toLocaleString('id-ID'); })();</script>
-<script src="data/tips.js?v=5abcd8a"></script>
-<script src="js/layout.js?v=5abcd8a"></script>
-<script type="module" src="js/main.js?v=5abcd8a"></script>
-<script type="module" src="js/product-detail.js?v=5abcd8a"></script>
+<script src="data/tips.js?v=dfca5af"></script>
+<script src="js/layout.js?v=dfca5af"></script>
+<script type="module" src="js/main.js?v=dfca5af"></script>
+<script type="module" src="js/product-detail.js?v=dfca5af"></script>
 </body>
 </html>

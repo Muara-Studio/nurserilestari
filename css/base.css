@@ -135,6 +135,7 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .container-narrow { width: 100%; max-width: var(--container-narrow); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--section-y); }
+main > .section:last-child, main > .section-tight:last-child { padding-bottom: calc(var(--section-y) * .5); }   /* the footer follows: half the breath (client, 1 Nov: gap above the footer too big) */
 .section-tight { padding-block: calc(var(--section-y) * .55); }
 .band-moss { background: var(--moss); color: var(--sage); }
 /* the hero and footer carry a soft vertical gradient (client: "sedikit lebih cerah atau gradient"); sage-2 stays ≥ 7.2:1 on the lightest stop */

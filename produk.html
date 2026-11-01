@@ -21,10 +21,10 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=5abcd8a">
-<link rel="stylesheet" href="css/shell.css?v=5abcd8a">
-<link rel="stylesheet" href="css/components.css?v=5abcd8a">
-<link rel="stylesheet" href="css/catalog.css?v=5abcd8a">
+<link rel="stylesheet" href="css/base.css?v=dfca5af">
+<link rel="stylesheet" href="css/shell.css?v=dfca5af">
+<link rel="stylesheet" href="css/components.css?v=dfca5af">
+<link rel="stylesheet" href="css/catalog.css?v=dfca5af">
 <script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
@@ -50,24 +50,9 @@
           <div class="catalog-tags" role="group" aria-label="Kategori" data-cats></div>
         </div>
         <div class="catalog-bar">
-          <div class="catalog-bar__count">
-            <p class="catalog-count" aria-live="polite" data-count>160 produk di rak ini</p>
-            <button type="button" class="catalog-clear link-u" data-reset data-clear hidden>Hapus filter</button>
-            <p class="catalog-note">Angka terjualnya dari etalase Tokopedia kami.</p>
-          </div>
-          <div class="catalog-bar__tools">
-            <div class="shop-choice catalog-shop" data-shop-choice>
-              <div class="shop-choice__row">
-                <span class="shop-choice__label" aria-hidden="true">Beli dari</span>
-                <div class="shop-choice__seg" role="group" aria-label="Beli dari">
-                  <button type="button" class="tag" data-shop="cipete" aria-pressed="false">Toko Cipete</button>
-                  <button type="button" class="tag" data-shop="bsd" aria-pressed="false">Toko BSD</button>
-                </div>
-                <button type="button" class="shop-locate" data-shop-locate><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"/></svg>Pakai lokasiku</button>
-              </div>
-              <p class="shop-choice__hint">Dipakai di tombol beli tiap produk.</p>
-              <p class="shop-choice__note" data-shop-note aria-live="polite" hidden></p>
-            </div>
+          <div class="catalog-bar__line">
+            <!-- one sentence: the live count, "· Hapus filter" while filtered (the wrapper is what catalog.js shows and hides), then the Tokopedia note; the no-break spaces keep each middle dot at the end of a line, never at the start -->
+            <p class="catalog-count"><span class="catalog-count__n" aria-live="polite" data-count>160 produk di rak ini</span><span class="catalog-count__clear" data-clear hidden>&nbsp;<span aria-hidden="true">·</span> <button type="button" class="catalog-clear link-u" data-reset>Hapus filter</button></span>&nbsp;<span class="catalog-count__note"><span aria-hidden="true">·</span> angka terjual dari etalase Tokopedia</span></p>
             <label class="catalog-sort">
               <span class="catalog-sort__label">Urutkan</span>
               <span class="catalog-sort__field">
@@ -81,6 +66,18 @@
                 <svg class="icon catalog-sort__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron-down"/></svg>
               </span>
             </label>
+          </div>
+          <div class="shop-choice catalog-bar__shop card-flat" data-shop-choice>
+            <div class="shop-choice__row">
+              <span class="shop-choice__label" aria-hidden="true">Beli dari</span>
+              <div class="shop-choice__seg" role="group" aria-label="Beli dari">
+                <button type="button" class="tag" data-shop="cipete" aria-pressed="false">Toko Cipete</button>
+                <button type="button" class="tag" data-shop="bsd" aria-pressed="false">Toko BSD</button>
+              </div>
+              <button type="button" class="shop-locate" data-shop-locate><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"/></svg>Pakai lokasiku</button>
+            </div>
+            <p class="shop-choice__note" data-shop-note aria-live="polite" hidden></p>
+            <p class="shop-choice__hint">Pilihanmu dipakai di tombol beli tiap produk.</p>
           </div>
         </div>
       </form>
@@ -100,11 +97,11 @@
   </section>
 </main>
 <div data-layout="footer"></div>
-<script src="data/site.js?v=5abcd8a"></script>
-<script src="data/products.js?v=5abcd8a"></script>
-<script src="data/tips.js?v=5abcd8a"></script>
-<script src="js/layout.js?v=5abcd8a"></script>
-<script type="module" src="js/main.js?v=5abcd8a"></script>
-<script type="module" src="js/catalog.js?v=5abcd8a"></script>
+<script src="data/site.js?v=dfca5af"></script>
+<script src="data/products.js?v=dfca5af"></script>
+<script src="data/tips.js?v=dfca5af"></script>
+<script src="js/layout.js?v=dfca5af"></script>
+<script type="module" src="js/main.js?v=dfca5af"></script>
+<script type="module" src="js/catalog.js?v=dfca5af"></script>
 </body>
 </html>

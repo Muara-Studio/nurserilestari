@@ -25,19 +25,25 @@
 .catalog-tags .tag.is-active .num { color: var(--sage-2); }
 .catalog-tags .tag.is-active .icon { color: var(--olive-2); }   /* the one accent, on the chosen chip only */
 @media (hover: hover) { .catalog-tags .tag:not(.is-active):hover .icon { color: var(--ink); } }
-.catalog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3) var(--s-6); margin-block: var(--s-6) var(--s-8); }
-.catalog-bar__count { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-1) var(--s-4); }
-.catalog-bar__tools { display: flex; flex: 1 1 auto; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: var(--s-3) var(--s-6); }   /* the "Beli dari" pair and the sort share the line's end (B2) */
-@media (min-width: 900px) { .catalog-bar__tools { justify-content: flex-end; } }
-.catalog-count { font-size: var(--fs-sm); color: var(--mute); font-variant-numeric: tabular-nums; }
+/* the counter line and the shop strip (F3, 1 Nov 2026, client: the tools row with its two stacked notes read odd). Two rows under
+   the chips, the gaps unchanged (s-6 above, s-8 down to the rack): the count as one sentence (the number in weight 500, "· Hapus
+   filter" while filtered, the Tokopedia note muted after a middle dot) with the sort at the line's end; then "Beli dari" on a quiet
+   paper-2 strip (.card-flat, no border) with "Pakai lokasiku" and the one-line hint: one line from 900 px, three short lines on a
+   phone (label + pills / locate / hint) */
+.catalog-bar { display: grid; gap: var(--s-5); margin-block: var(--s-6) var(--s-8); }
+.catalog-bar__line { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-3) var(--s-6); }
+.catalog-count { flex: 1 1 20rem; min-width: 0; font-size: var(--fs-sm); color: var(--mute); }   /* basis 20rem: the sort shares the line from tablets up and drops under the sentence on phones */
+.catalog-count__n { font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.catalog-count__clear[hidden] { display: none; }
 .catalog-clear { font-size: var(--fs-sm); color: var(--ink-2); }
-.catalog-clear[hidden] { display: none; }
-.catalog-note { flex-basis: 100%; font-size: var(--fs-xs); color: var(--mute); }   /* the sold numbers on the tiles are Tokopedia's: said once, under the count */
-.catalog-sort { display: inline-flex; align-items: center; gap: .625rem; }
+.catalog-sort { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .625rem; }
 .catalog-sort__label { font-size: var(--fs-sm); color: var(--mute); white-space: nowrap; }
 .catalog-sort__field { position: relative; display: inline-block; }
 .catalog-sort .select { width: auto; min-height: 2.75rem; padding: 0 2.5rem 0 1.125rem; appearance: none; cursor: pointer; font-size: var(--fs-sm); }
 .catalog-sort__icon { position: absolute; right: .9375rem; top: 50%; translate: 0 -50%; width: 1rem; height: 1rem; pointer-events: none; color: var(--ink-2); }
+.catalog-bar .catalog-bar__shop { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-4); padding: var(--s-4); }   /* two classes deep so it outranks .shop-choice's grid further down: the row, the note and the hint share the line while there is room; .card-flat gives the ground, the padding is the strip's own */
+.catalog-bar .catalog-bar__shop[hidden] { display: none; }
+@media (min-width: 900px) { .catalog-bar .catalog-bar__shop { padding: var(--s-4) var(--s-5); } .catalog-bar .catalog-bar__shop .shop-choice__hint { margin-left: var(--s-2); } }   /* on the one line the hint stands a step further from the controls than they stand from each other */
 @media (min-width: 900px) {
   .catalog-search { max-width: 32rem; }   /* the pill does not stretch across the whole column */
   .catalog-tags { flex-wrap: wrap; overflow: visible; margin-inline: 0; padding: 0; }
@@ -117,38 +123,53 @@ html.reduced .pd__photo { animation: none; }
 }
 @media (min-width: 900px) and (max-width: 1199px) { .pd__panel { --over: 2.5rem; } }
 
-/* ---- below the band: what the shop says about it, the facts, then the related tiles ---- */
-.pd-body { padding-block: var(--section-y); }
+/* ---- below the band (D4, 1 Nov 2026, client): the body reads the same whether the product has notes or not. Two columns from
+   900 px: the notes (1.4fr) and the "Rincian." card (1fr), both starting level (the notes column takes the card's own padding
+   as its top inset, so the two headings sit on one line); the card is there for every product, with the facts every product
+   has, so the notes never stand beside an empty column, and a product without notes carries one honest line and the WhatsApp
+   pill instead. Phones: one column, the card first. This band and the related band share one rhythm, section-y × .6 ---- */
+.pd-body { padding-block: calc(var(--section-y) * .6); }
 .pd-body[hidden] { display: none; }
-.pd-body__grid { display: grid; gap: var(--s-12); }
-.pd-body h2 { margin-bottom: var(--s-5); }
+.pd-body__grid { display: grid; gap: var(--s-8); align-items: start; }
+.pd-body h2 { font-size: var(--fs-h3); }   /* the product's name is the page's big line; these two heads and the related head share one size */
+.pd-about { display: grid; align-content: start; justify-items: start; gap: var(--s-6); }
+.pd-about > [hidden] { display: none; }   /* the pill, the chips and the care note only when there is something to show; no gap for a hidden one */
 .pd__desc { max-width: 40rem; font-size: var(--fs-lead); line-height: 1.5; color: var(--ink-2); }
-.pd__tags { margin-top: var(--s-6); gap: .5rem .75rem; align-items: center; }
-.pd__tags[hidden] { display: none; }
+.pd__tags { gap: .5rem .75rem; align-items: center; }
 .pd__tags-label { font-size: var(--fs-sm); color: var(--mute); }
 .pd__tags .cluster { gap: .5rem; }
-.pd__care { margin-top: var(--s-8); max-width: 40rem; background: var(--paper-3); }
-.pd__care[hidden] { display: none; }
+.pd__tags .tag { min-height: 2.75rem; padding-inline: 1rem; }   /* 44 px chips, as in the catalog */
+.pd__care { justify-self: stretch; max-width: 40rem; background: var(--paper-3); }
 .pd__care-title { font-size: var(--fs-h4); margin-bottom: .5rem; }
 .pd__care p { color: var(--ink-2); }
-.pd__specs { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .75rem 1.5rem; }
-.pd__specs dt { color: var(--mute); }
+.pd-facts { display: grid; align-content: start; gap: var(--s-6); }
+.pd__specs { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .75rem 1.25rem; align-items: baseline; }
+.pd__specs dt { font-size: var(--fs-sm); color: var(--mute); }
+.pd__specs dd { min-width: 0; overflow-wrap: anywhere; }
 .pd__specs a { display: inline-block; padding-block: .625rem; margin-block: -.625rem; text-decoration: underline; text-decoration-color: var(--olive); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color var(--dur-1); }   /* a 44 px hit area, the line unchanged */
 .pd__specs a:hover { text-decoration-color: var(--ink); }
-.pd__specs .icon { width: 1em; height: 1em; vertical-align: -.1em; color: var(--olive); fill: var(--olive); }
-.pd__perks { margin-top: var(--s-8); display: grid; gap: .75rem; }
-.pd__perks li { display: flex; align-items: flex-start; gap: .75rem; color: var(--ink-2); }
-.pd__perks .icon { width: 1.25rem; height: 1.25rem; margin-top: .25rem; color: var(--olive); }
+.pd__specs .icon { display: inline-block; width: 1em; height: 1em; vertical-align: -.1em; color: var(--olive); fill: var(--olive); }   /* inline: base makes every svg a block */
+.pd__perks { display: grid; gap: .75rem; padding-top: var(--s-6); border-top: var(--stroke) solid var(--line); }   /* the card's foot: the three ways we handle an order */
+.pd__perks li { display: flex; align-items: flex-start; gap: .75rem; font-size: var(--fs-sm); color: var(--ink-2); }
+.pd__perks .icon { width: 1.25rem; height: 1.25rem; margin-top: .125rem; color: var(--olive); }
 .pd-missing { display: grid; justify-items: start; gap: var(--s-5); max-width: 40rem; padding-block: var(--s-8) var(--s-4); }
 .pd-missing[hidden] { display: none; }
-@media (min-width: 900px) { .pd-body__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(3rem, 6vw, 6rem); align-items: start; } }
+@media (max-width: 899px) { .pd-facts { order: -1; } }   /* phones and tablets: the facts first, right under the price panel */
+@media (min-width: 900px) {
+  .pd-body__grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 5rem); }
+  .pd-about { padding-top: clamp(1.25rem, 2.5vw, 2rem); }   /* = the .card padding: "Tentang produk ini." and "Rincian." start on one line */
+}
 
-/* ---- related: one row of the same tiles (four; three on tablets, two by two on phones) on the alternate light band ---- */
-.pd-related { background: var(--paper-3); padding-block: var(--section-y); }
+/* ---- related (D4): one row of the same tiles (four; three on tablets, two by two on phones) on the alternate light band,
+   the band's rhythm shared with the body; the head is one line, heading + hint, with "Semua produk" at its end (on phones the
+   hint and the link take the second line) ---- */
+.pd-related { padding-block: calc(var(--section-y) * .6); }
 .pd-related[hidden] { display: none; }
-.pd-related__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem var(--s-4); margin-bottom: clamp(2rem, 4vw, 3rem); }
+.pd-related__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); margin-bottom: var(--s-8); }
+.pd-related__title { font-size: var(--fs-h3); }
 .pd-related__hint { color: var(--ink-2); }   /* ink-2, not mute: 6.8:1 on the paper-3 band (axe: mute was 4.37:1) */
 .pd-related__hint:empty { display: none; }
+.pd-related__more { margin-left: auto; }
 @media (max-width: 1023px) { .pd-related .rak-item:nth-child(n + 4) { display: none; } }
 @media (max-width: 639px) { .pd-related .rak-item:nth-child(n + 4) { display: grid; } }
 
@@ -160,6 +181,7 @@ html.reduced .pd__photo { animation: none; }
 .buy-bar__info { flex: 1 1 auto; min-width: 0; display: grid; line-height: 1.2; }
 .buy-bar__name { font-weight: 500; font-size: var(--fs-xs); color: var(--sage-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .buy-bar__price { font-size: 1.125rem; }
+.buy-bar .btn { flex: 0 0 auto; }   /* D4: a long product name shrank the icon pills to 22 px (flex shrinks by basis); the name truncates instead */
 .buy-bar .btn-sm { min-height: 2.75rem; }
 .buy-bar .btn-icon { width: 2.75rem; height: 2.75rem; }
 @media (max-width: 767px) { html.buy-bar-on .wa-fab { opacity: 0; pointer-events: none; } }

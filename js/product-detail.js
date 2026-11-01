@@ -2,11 +2,10 @@
    (notes, tag links, care, facts), four related tiles, the phone buy bar. The photo, name, category and price are already set by
    the inline LCP kick in produk-detail.html; this module fills the rest and never waits for the CDN (no gsap here). */
 import { fmtPrice, esc, icon, waLink, param } from './util.js';
-import { tileHTML, settle, catName, STATUS, STORE, sortProducts, fmtSold } from './catalog.js';
+import { tileHTML, settle, catName, STATUS, sortProducts, fmtSold } from './catalog.js';
 import { mountShopToggle, storeToShop, shopById, shopLabel, waShop, waOrderText } from './shop-choice.js';
 
 const $ = (s, r = document) => r.querySelector(s);
-const site = (window.TL || {}).site || {};
 const all = (window.TL || {}).products || [];
 const product = all.find((x) => x.id === param('id'));
 
@@ -38,20 +37,13 @@ function show(p) {
   const badge = $('[data-badge]');
   if (p.status && p.status !== 'ready') { badge.textContent = STATUS[p.status] || p.status; badge.classList.add(`badge-${p.status}`); badge.hidden = false; }
   // the buy buttons (panel and phone bar) follow the chosen shop: applyShop(), through the "Beli dari" pair below
-  // 32 products have no notes yet: say so and point to the shop, never invent one
-  $('[data-desc]').textContent = p.desc || 'Catatan untuk produk ini belum kami tulis. Tanya lewat WhatsApp, kami jelaskan langsung.';
+  // D4 (1 Nov 2026, client): 32 products have no notes yet. The left column then carries one honest line and the WhatsApp pill
+  // of the chosen shop (applyShop fills its href), never an invented note; the "Rincian." card on the right is the same for all
+  $('[data-desc]').textContent = p.desc || 'Belum ada catatan dari toko untuk produk ini. Tanya stok dan detailnya ke admin lewat WhatsApp.';
+  $('[data-ask]').hidden = !!p.desc;
   const tags = p.tags || [];
   if (tags.length) { $('[data-tags]').innerHTML = tags.map((t) => `<a class="tag" href="produk.html?q=${encodeURIComponent(t)}">${esc(t)}</a>`).join(''); $('[data-tags-wrap]').hidden = false; }
-  const loc = (site.locations || []).find((l) => l.id === (p.store === 'bsd' ? 'bsd' : 'cipete'));
-  const specs = [
-    ['Kategori', `<a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a>`],
-    ['Etalase Tokopedia', esc((loc && loc.shortName) || STORE[p.store] || '')],   // where the listing lives; the chosen shop is the pair above (B2)
-    ['Status', esc(STATUS[p.status] || p.status)],
-    ...Object.entries(p.specs || {}).map(([k, v]) => [esc(k), esc(v)]),
-  ];
-  // Tokopedia's own number, so it says so (P2, 1 Nov 2026); Indonesian thousands, and the "30+" cap kept as Tokopedia shows it
-  if (p.sold) specs.push(['Terjual di Tokopedia', `${fmtSold(p.sold)}${p.rating ? ` · ${icon('star-filled')} ${p.rating.toFixed(1)}` : ''}`]);
-  $('[data-specs]').innerHTML = specs.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
+  $('[data-specs]').innerHTML = factRows(p, cat).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
   if (p.care) { $('[data-care]').hidden = false; $('[data-care-text]').textContent = p.care; }
   $('[data-bar-name]').textContent = p.name; $('[data-bar-price]').textContent = fmtPrice(p.price);
   // "Beli dari" (B2, 1 Nov 2026, client): the saved choice, else this product's own shop; every buy button follows it
@@ -73,21 +65,49 @@ function applyShop(p, shop) {
   for (const sel of ['[data-tokopedia]', '[data-bar-tokopedia]']) { const a = $(sel); if (a) a.href = tokopedia; }
   for (const sel of ['[data-shopee]', '[data-bar-shopee]']) { const a = $(sel); if (a) { a.href = shopee; a.hidden = !shopee; } }
   for (const sel of ['[data-wa-product]', '[data-bar-wa]']) { const a = $(sel); if (a) a.href = wa; }
+  // the "Tanya admin" pill under the no-notes line asks, it does not order
+  const ask = $('[data-ask-wa]');
+  if (ask) ask.href = waShop(shop.id, `${((window.TL || {}).site || {}).waGreeting || ''}${p.name} (${fmtPrice(p.price)}) di ${shopLabel(shop)}, masih ada? Boleh minta detail produknya?`);
   const note = $('[data-stock-note]');
   if (note) { note.textContent = own ? '' : `Etalase Tokopedia-nya ada di ${shopLabel(home)}; stok di ${shopLabel(shop)}: tanya admin.`; note.hidden = own; }
   document.querySelectorAll('[data-shop-name]').forEach((el) => { el.textContent = shopLabel(shop); });
 }
 
-// one row of the same tiles: four on desktop, three on tablets (CSS hides the fourth), two by two on phones
+/* the "Rincian." rows every product has (category, which shop's Tokopedia listing, status, Tokopedia's sold count), then the
+   product's own specs when the data has them. The status is a badge only when the product is not ready (159 of 160 are);
+   the sold count keeps Tokopedia's "30+" cap and says "belum ada data" at zero rather than inventing a number; the rating is
+   Tokopedia's too, so it rides on the same row */
+function factRows(p, cat = catName(p.category)) {
+  const ready = !p.status || p.status === 'ready', status = STATUS[p.status] || p.status || STATUS.ready;
+  const sold = Number(p.sold) > 0 ? `${fmtSold(p.sold)} di Tokopedia${p.rating ? ` · ${icon('star-filled')} ${Number(p.rating).toLocaleString('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}` : ''}` : 'belum ada data';
+  return [
+    ['Kategori', `<a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a>`],
+    ['Etalase', esc(shopLabel(shopById(storeToShop(p.store))))],   // where the Tokopedia listing lives; the shop you buy from is the pair in the panel (B2)
+    ['Status', ready ? esc(status) : `<span class="badge badge-${esc(p.status)}">${esc(status)}</span>`],
+    ['Terjual', sold],
+    ...Object.entries(p.specs || {}).filter(([, v]) => v != null && String(v).trim()).map(([k, v]) => [esc(k), esc(v)]),
+  ];
+}
+
+/* four of the same tiles ("Yang mirip dari rak kami."): first the products that share a tag with this one (more shared tags
+   first, then Tokopedia's sold count), filled from the same rack by sold count when fewer than two share a tag, and from the
+   whole shop by sold count when the rack itself is short (the "lainnya" rack has three). Four on desktop, three on tablets
+   (CSS hides the fourth), two by two on phones */
+function relatedProducts(p, list = all, n = 4) {
+  const others = list.filter((x) => x.id !== p.id), tags = new Set(p.tags || []);
+  const shared = (x) => (x.tags || []).filter((t) => tags.has(t)).length;
+  let picks = sortProducts(others.filter((x) => shared(x) > 0), 'terlaris').sort((a, b) => shared(b) - shared(a));
+  if (picks.length < 2) picks = picks.concat(sortProducts(others.filter((x) => x.category === p.category && !picks.includes(x)), 'terlaris'));
+  if (picks.length < n) picks = picks.concat(sortProducts(others.filter((x) => !picks.includes(x)), 'terlaris'));
+  return picks.slice(0, n);
+}
+
 function related(p, cat) {
-  let list = sortProducts(all.filter((x) => x.id !== p.id && x.category === p.category), 'unggulan');
-  const fromShelf = list.length >= 3;
-  if (!fromShelf) list = list.concat(sortProducts(all.filter((x) => x.id !== p.id && x.category !== p.category && x.featured), 'unggulan'));
-  list = list.slice(0, 4);
+  const list = relatedProducts(p);
   if (!list.length) return;
   const rail = $('[data-rail]');
   rail.innerHTML = list.map((x) => tileHTML(x)).join('');
-  $('[data-related-hint]').textContent = fromShelf ? `Dari rak ${cat}` : 'Dari rak kami';
+  $('[data-related-hint]').textContent = list.every((x) => x.category === p.category) ? `Dari rak ${cat}` : 'Dari rak kami';
   $('[data-related]').hidden = false;
   settle([...rail.children]);
 }
