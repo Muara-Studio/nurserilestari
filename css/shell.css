@@ -1,6 +1,6 @@
 /* Nurseri Lestari — css/shell.css (A2, v2 "Rumah kaca malam"): Lenis classes, skip link, the floating glass header, the drawer
    sheet, the Moss-like footer, the WhatsApp FAB and the search overlay. Every colour is a token from base.css. */
-@import url("components.css?v=2236986"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=3bde153"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
