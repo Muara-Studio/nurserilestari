@@ -104,6 +104,61 @@ function renderTips() {
   }).join('');
 }
 
+/* ---- the hero slideshow (H3): the six photos stacked in the circle. Every --hero-hold (read from the circle's own custom
+   property, so CSS and JS share one number) the next photo is decoded first, then fades in over the one showing (CSS: .is-active
+   over .is-leaving, both drifting) and the old one is dropped once that fade is done; the photo after that is warmed during the
+   hold. The timer stops while the tab is hidden or the circle is scrolled out of view, and never starts under reduced motion,
+   where the CSS leaves only the first photo. The stack is aria-hidden: nothing is announced ---- */
+function initHeroSlides() {
+  const wrap = document.querySelector('[data-hero-slides]');
+  const slides = wrap ? [...wrap.querySelectorAll('.hero-slide')] : [];
+  if (!wrap || slides.length < 2 || reduced()) return;
+  const ms = (name, fallback) => {   // "5000ms" or "5s"
+    const v = getComputedStyle(wrap.parentElement).getPropertyValue(name).trim();
+    const x = parseFloat(v);
+    return x > 0 ? (v.endsWith('ms') ? x : x * 1000) : fallback;
+  };
+  const hold = ms('--hero-hold', 5000);
+  const fade = ms('--hero-fade', 1200);
+  let cur = slides.find((s) => s.classList.contains('is-active')) || slides[0];
+  let i = slides.indexOf(cur);
+  let timer = 0;
+  let inView = true;
+  const paused = () => document.hidden || !inView;
+  const ready = (img) => new Promise((res) => {   // loaded and decoded before it is ever shown, so the fade never reveals a blank
+    const done = () => img.decode().then(() => res(true), () => res(img.naturalWidth > 0));
+    if (img.complete && img.naturalWidth) { done(); return; }
+    img.loading = 'eager';   // a lazy photo the browser has not asked for yet
+    img.addEventListener('load', done, { once: true });
+    img.addEventListener('error', () => res(false), { once: true });
+  });
+  const schedule = () => {
+    if (timer || paused()) return;
+    timer = setTimeout(step, hold);
+    ready(slides[(i + 1) % slides.length]);   // warm the next photo during the hold
+  };
+  const stop = () => { clearTimeout(timer); timer = 0; };
+  async function step() {
+    timer = 0;
+    const ni = (i + 1) % slides.length;
+    const next = slides[ni];
+    const ok = await ready(next);
+    if (paused()) return;   // went hidden or out of view while decoding: sync() restarts the hold
+    i = ni;
+    if (!ok || next === cur) { schedule(); return; }   // a photo that will not load is skipped on the next tick
+    const old = cur;
+    cur = next;
+    old.classList.replace('is-active', 'is-leaving');
+    next.classList.add('is-active');
+    setTimeout(() => old.classList.remove('is-leaving'), fade + 80);
+    schedule();
+  }
+  const sync = () => (paused() ? stop() : schedule());
+  document.addEventListener('visibilitychange', sync);
+  if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { inView = e.isIntersecting; sync(); }).observe(wrap);
+  schedule();
+}
+
 /* ---- the hero's entrance: its link and chip sit in the bottom 8 % of a 100svh hero, inside the reveal observer's margin,
    so at some viewport heights they never faded in. The first screen is on screen by definition: reveal it after the
    first paint (two frames, so the opacity transition still runs); the CSS delays keep the stagger ---- */
@@ -112,6 +167,7 @@ function revealHero() {
 }
 
 initBand();
+initHeroSlides();
 revealHero();
 countRacks();
 renderFeatured();

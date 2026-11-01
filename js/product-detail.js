@@ -2,7 +2,8 @@
    (notes, tag links, care, facts), four related tiles, the phone buy bar. The photo, name, category and price are already set by
    the inline LCP kick in produk-detail.html; this module fills the rest and never waits for the CDN (no gsap here). */
 import { fmtPrice, esc, icon, waLink, param } from './util.js';
-import { tileHTML, settle, waProduct, catName, STATUS, STORE, sortProducts, fmtSold } from './catalog.js';
+import { tileHTML, settle, catName, STATUS, STORE, sortProducts, fmtSold } from './catalog.js';
+import { mountShopToggle, storeToShop, shopById, shopLabel, waShop, waOrderText } from './shop-choice.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const site = (window.TL || {}).site || {};
@@ -36,7 +37,7 @@ function show(p) {
   // the status badge only when the product is not ready (159 of 160 are)
   const badge = $('[data-badge]');
   if (p.status && p.status !== 'ready') { badge.textContent = STATUS[p.status] || p.status; badge.classList.add(`badge-${p.status}`); badge.hidden = false; }
-  $('[data-tokopedia]').href = p.tokopedia; $('[data-wa-product]').href = waProduct(p);
+  // the buy buttons (panel and phone bar) follow the chosen shop: applyShop(), through the "Beli dari" pair below
   // 32 products have no notes yet: say so and point to the shop, never invent one
   $('[data-desc]').textContent = p.desc || 'Catatan untuk produk ini belum kami tulis. Tanya lewat WhatsApp, kami jelaskan langsung.';
   const tags = p.tags || [];
@@ -44,7 +45,7 @@ function show(p) {
   const loc = (site.locations || []).find((l) => l.id === (p.store === 'bsd' ? 'bsd' : 'cipete'));
   const specs = [
     ['Kategori', `<a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a>`],
-    ['Toko', esc((loc && loc.shortName) || STORE[p.store] || '')],
+    ['Etalase Tokopedia', esc((loc && loc.shortName) || STORE[p.store] || '')],   // where the listing lives; the chosen shop is the pair above (B2)
     ['Status', esc(STATUS[p.status] || p.status)],
     ...Object.entries(p.specs || {}).map(([k, v]) => [esc(k), esc(v)]),
   ];
@@ -53,9 +54,28 @@ function show(p) {
   $('[data-specs]').innerHTML = specs.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
   if (p.care) { $('[data-care]').hidden = false; $('[data-care-text]').textContent = p.care; }
   $('[data-bar-name]').textContent = p.name; $('[data-bar-price]').textContent = fmtPrice(p.price);
-  $('[data-bar-tokopedia]').href = p.tokopedia; $('[data-bar-wa]').href = waProduct(p);
+  // "Beli dari" (B2, 1 Nov 2026, client): the saved choice, else this product's own shop; every buy button follows it
+  mountShopToggle($('[data-shop-choice]'), { product: p, onChange: (shop) => applyShop(p, shop) });
   related(p, cat);
   buyBar();
+}
+
+/* the three ways to buy, for the chosen shop. Tokopedia: the product's own listing when it belongs to that shop, else the
+   shop's Tokopedia front with a note (a listing exists in one shop only; the other shop's stock is the admin's to answer).
+   Shopee: the shop's front, there is no per-product Shopee link in the data, so the button says "Cari". WhatsApp: that shop's
+   admin with the product and price in the message. The phone bar mirrors the panel. */
+function applyShop(p, shop) {
+  if (!shop) return;
+  const home = shopById(storeToShop(p.store)), own = !home || home.id === shop.id;
+  const tokopedia = own ? p.tokopedia : shop.tokopedia || p.tokopedia;
+  const shopee = shop.shopee || '';
+  const wa = waShop(shop.id, waOrderText(p, shop));
+  for (const sel of ['[data-tokopedia]', '[data-bar-tokopedia]']) { const a = $(sel); if (a) a.href = tokopedia; }
+  for (const sel of ['[data-shopee]', '[data-bar-shopee]']) { const a = $(sel); if (a) { a.href = shopee; a.hidden = !shopee; } }
+  for (const sel of ['[data-wa-product]', '[data-bar-wa]']) { const a = $(sel); if (a) a.href = wa; }
+  const note = $('[data-stock-note]');
+  if (note) { note.textContent = own ? '' : `Etalase Tokopedia-nya ada di ${shopLabel(home)}; stok di ${shopLabel(shop)}: tanya admin.`; note.hidden = own; }
+  document.querySelectorAll('[data-shop-name]').forEach((el) => { el.textContent = shopLabel(shop); });
 }
 
 // one row of the same tiles: four on desktop, three on tablets (CSS hides the fourth), two by two on phones

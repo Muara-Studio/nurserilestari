@@ -1,6 +1,7 @@
 /* Nurseri Lestari — js/catalog.js (C3, v2). The catalog: flat product tiles (the landing's tiles, one shared component) filtered from
    TL.products. Pure parts (filter, sort, URL state) and the tile renderer are exported: landing.js imports tileHTML, product-detail.js the rest. */
 import { fmtPrice, esc, icon, waLink, reduced } from './util.js';
+import { mountShopToggle } from './shop-choice.js';
 
 // gsap only animates and never holds the shelves back: it loads in the background (no top-level await, so the tiles and the
 // detail page's photo do not wait for the CDN); tiles rendered before it arrives simply stand on the shelf
@@ -180,6 +181,9 @@ function boot() {
 
   syncControls();
   render();
+  // the "Beli dari" pair in the toolbar (B2, 1 Nov 2026): no product here, so it shows the saved shop (else the first); the
+  // detail page's buy buttons read the same choice. The tiles are untouched: the whole tile stays the link
+  mountShopToggle(document.querySelector('[data-shop-choice]'));
 }
 
 if (typeof document !== 'undefined') boot();

@@ -20,10 +20,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/BricolageGrotesque-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero/hero-01-window-shelf.jpg" imagesrcset="assets/img/hero/hero-01-window-shelf-600.jpg 600w, assets/img/hero/hero-01-window-shelf.jpg 1200w" imagesizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw">
 <link rel="preload" href="assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=3bde153">
-<link rel="stylesheet" href="css/shell.css?v=3bde153">
-<link rel="stylesheet" href="css/landing.css?v=3bde153">
+<link rel="stylesheet" href="css/base.css?v=5abcd8a">
+<link rel="stylesheet" href="css/shell.css?v=5abcd8a">
+<link rel="stylesheet" href="css/landing.css?v=5abcd8a">
 <script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
@@ -31,8 +32,8 @@
 <div data-layout="header"></div>
 <main id="main">
 
-  <!-- ===== 1. hero: two meta lines, the two-line sentence, the lead, one arrow link, the circle photo cropped by the right edge ===== -->
-  <section class="hero band-moss on-dark" aria-labelledby="hero-h">
+  <!-- ===== 1. hero: two meta lines, the two-line sentence, the lead, the circle slideshow cropped by the right edge with one glass CTA on it (the arrow link under the lead shows on phones only, where the circle sits below the first screen) ===== -->
+  <section class="hero band-moss-grad on-dark" aria-labelledby="hero-h">
     <div class="container hero-in">
       <div class="hero-meta">
         <p class="meta-line" data-reveal>Toko & nursery di Jl. Gaharu I, Cipete.</p>
@@ -45,9 +46,17 @@
       </div>
     </div>
     <div class="photo photo-circle hero-photo" data-reveal data-delay="2">
-      <img src="assets/img/photos/hero-nursery.jpg" srcset="assets/img/photos/hero-nursery-480.jpg 480w, assets/img/photos/hero-nursery.jpg 733w" sizes="(max-width: 639px) 100vw, 62vw" alt="Meja-meja kayu penuh pot tanaman di sebuah nursery" width="733" height="1100" fetchpriority="high" decoding="async">
+      <!-- six photos stacked; landing.js fades the next one in every 5 s (both drifting), nothing is announced, the first photo carries the alt; under reduced motion only the first shows -->
+      <div class="hero-slides" data-hero-slides aria-hidden="true">
+        <img class="hero-slide is-active" src="assets/img/hero/hero-01-window-shelf.jpg" srcset="assets/img/hero/hero-01-window-shelf-600.jpg 600w, assets/img/hero/hero-01-window-shelf.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="Rak dekat jendela penuh tanaman gantung, lidah mertua, dan pot tanah liat di sebuah nursery" width="1200" height="1600" fetchpriority="high" decoding="async">
+        <img class="hero-slide" src="assets/img/hero/hero-02-monstera-stool.jpg" srcset="assets/img/hero/hero-02-monstera-stool-600.jpg 600w, assets/img/hero/hero-02-monstera-stool.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+        <img class="hero-slide" src="assets/img/hero/hero-03-monstera-stand.jpg" srcset="assets/img/hero/hero-03-monstera-stand-600.jpg 600w, assets/img/hero/hero-03-monstera-stand.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+        <img class="hero-slide" src="assets/img/hero/hero-04-hanging-pots.jpg" srcset="assets/img/hero/hero-04-hanging-pots-600.jpg 600w, assets/img/hero/hero-04-hanging-pots.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+        <img class="hero-slide" src="assets/img/hero/hero-05-pot-corner.jpg" srcset="assets/img/hero/hero-05-pot-corner-600.jpg 600w, assets/img/hero/hero-05-pot-corner.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+        <img class="hero-slide" src="assets/img/hero/hero-06-pot-set.jpg" srcset="assets/img/hero/hero-06-pot-set-600.jpg 600w, assets/img/hero/hero-06-pot-set.jpg 1200w" sizes="(max-width: 639px) 50vw, (max-width: 899px) 100vw, 62vw" alt="" width="1200" height="1600" loading="lazy" decoding="async">
+      </div>
     </div>
-    <p class="glass hero-chip" data-reveal data-delay="3"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-map-pin"/></svg>Jl. Gaharu I No. 7 · buka 10.00–17.00</p>
+    <a class="btn btn-glass hero-chip" href="produk.html" data-reveal data-delay="3">Cek produk<svg class="icon icon-arrow" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-right"/></svg></a>
   </section>
 
   <!-- ===== 2. the moving band: the racks and three facts, olive dots between, a pause button ===== -->
@@ -214,11 +223,11 @@
 
 </main>
 <div data-layout="footer"></div>
-<script src="data/site.js?v=3bde153"></script>
-<script src="data/products.js?v=3bde153"></script>
-<script src="data/tips.js?v=3bde153"></script>
-<script src="js/layout.js?v=3bde153"></script>
-<script type="module" src="js/main.js?v=3bde153"></script>
-<script type="module" src="js/landing.js?v=3bde153"></script>
+<script src="data/site.js?v=5abcd8a"></script>
+<script src="data/products.js?v=5abcd8a"></script>
+<script src="data/tips.js?v=5abcd8a"></script>
+<script src="js/layout.js?v=5abcd8a"></script>
+<script type="module" src="js/main.js?v=5abcd8a"></script>
+<script type="module" src="js/landing.js?v=5abcd8a"></script>
 </body>
 </html>

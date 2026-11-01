@@ -31,10 +31,14 @@
   const glass = tone === 'light' ? 'glass-light' : 'glass-dark on-dark';
   /* the brand is the client's logo in the header lockup (971×169, the wordmark reads at ~20px when 3rem tall): colour emblem +
      dark-green wordmark on light bars, white emblem + sage wordmark on dark bars (the client wants the logogram white on
-     green/dark grounds); phones under 375px get the emblem alone so it fits beside search + WhatsApp + menu */
+     green/dark grounds); phones (≤ 639px) get the emblem alone, a 2.5rem square (shell.css). Both tones are in the DOM from the
+     start and the header's data-tone shows one of them (shell.css): swapping src at a tone flip aborted the image still in
+     flight (ERR_ABORTED on kontak, jury of 1 Nov). The off-tone picture is lazy, so it is only fetched once it is shown, and a
+     picture with display none is out of the accessibility tree, so the link is named by the one showing */
   const logoSrc = (t) => (t === 'light' ? 'assets/brand/logo-header.webp' : 'assets/brand/logo-header-white.webp');
   const markSrc = (t) => (t === 'light' ? 'assets/brand/logo-mark.webp' : 'assets/brand/logo-mark-white.webp');
-  const logo = (t) => `<picture><source class="site-logo-mark" media="(max-width: 374px)" srcset="${markSrc(t)}"><img class="site-logo-img" src="${logoSrc(t)}" alt="Nurseri Lestari" width="971" height="169" decoding="async"></picture>`;
+  const logoPic = (t, shown) => `<picture class="site-logo-pic logo-${t}"><source media="(max-width: 639px)" srcset="${markSrc(t)}"><img class="site-logo-img" src="${logoSrc(t)}" alt="Nurseri Lestari" width="971" height="169" decoding="async"${shown ? '' : ' loading="lazy"'}></picture>`;
+  const logo = (t) => logoPic('dark', t === 'dark') + logoPic('light', t === 'light');
 
   const header = `
 <a class="skip-link" href="#main">Langsung ke konten</a>
@@ -102,8 +106,6 @@
      enough to show the blur: the probe reads the band at the bar's resting mid-line on every scrolled frame (S2) */
   const hdr = document.querySelector('.site-header');
   const bar = hdr && hdr.querySelector('.hdr-bar');
-  const logoImg = hdr && hdr.querySelector('.site-logo-img');
-  const logoMark = hdr && hdr.querySelector('.site-logo-mark');
   const bands = Array.from(document.querySelectorAll('main > section, main > div, main > article'))
     .map((el) => ({ el, tone: el.matches('.band-paper, .band-paper-3, .on-light') ? 'light' : el.matches('.band-moss, .on-dark') ? 'dark' : '' }))
     .filter((b) => b.tone);
@@ -114,9 +116,7 @@
     hdr.dataset.tone = t;
     bar.classList.toggle('glass-light', t === 'light');
     bar.classList.toggle('glass-dark', t === 'dark');
-    bar.classList.toggle('on-dark', t === 'dark');
-    if (logoMark) logoMark.srcset = markSrc(t);
-    if (logoImg) logoImg.src = logoSrc(t);
+    bar.classList.toggle('on-dark', t === 'dark');   /* the logo follows data-tone in shell.css: nothing is re-requested */
   };
   const probe = () => {
     const y = parseFloat(getComputedStyle(hdr).top) + bar.offsetHeight / 2;   /* the resting mid-line, whatever the step-aside translate is doing */
@@ -130,7 +130,7 @@
     addEventListener('scroll', onScroll, { passive: true });
     addEventListener('resize', onScroll, { passive: true });
     probe();
-    setTimeout(() => { new Image().src = logoSrc(tone === 'light' ? 'dark' : 'light'); }, 2500);   /* warm the other wordmark so the first swap does not flash */
+    setTimeout(() => { const o = tone === 'light' ? 'dark' : 'light'; new Image().src = matchMedia('(max-width: 639px)').matches ? markSrc(o) : logoSrc(o); }, 2500);   /* warm the other tone's picture (lazy until shown) so the first flip does not flash */
   }
 
   /* drawer: native <dialog> (focus trap, Esc, inert page); main.js listens to tl:drawer to pause Lenis */

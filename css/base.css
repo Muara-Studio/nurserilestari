@@ -10,11 +10,12 @@
 
 :root {
   /* ---- palette v2: moss ground, sage type, warm paper for light sections, olive as the one small accent ---- */
-  --moss:       #14271F;   /* dark ground (hero, footer, dark bands) */
-  --moss-2:     #1B3027;   /* raised surfaces on dark */
-  --moss-3:     #24392C;   /* hover / lines on dark */
-  --sage:       #E5E8D8;   /* text on dark; 13.2:1 on moss */
-  --sage-2:     #BBC6AF;   /* muted text on dark, the second headline line; 8.4:1 on moss */
+  --moss:       #1E3A2E;   /* dark ground, lifted 1 Nov at the client's request (was #14271F); sage 9.9:1, sage-2 8.4:1 */
+  --moss-2:     #244538;   /* raised surfaces on dark */
+  --moss-3:     #2C5242;   /* hover / lines on dark */
+  --moss-deep:  #14271F;   /* the old ground: gradient bottoms, scrims */
+  --sage:       #E5E8D8;   /* text on dark */
+  --sage-2:     #D0D8C6;   /* muted text on dark (lifted with the ground: 8.4:1 on moss, 7.2:1 on moss-2) */
   --sage-3:     #CBD2C0;
   --paper:      #F2F1E7;   /* light section ground */
   --paper-2:    #FAF9F3;   /* cards on light */
@@ -27,7 +28,7 @@
   --olive:      #A6A43A;   /* the one accent: marks, focus, small rules */
   --olive-2:    #D8D68A;
   --leaf:       #3E7D4B;  --leaf-ink: #2F6A3C;  --leaf-2: #7FB069;  --leaf-3: #CFE3C3;
-  --moss-rgb: 20 39 31; --sage-rgb: 229 232 216; --paper-rgb: 242 241 231; --paper-2-rgb: 250 249 243; --paper-3-rgb: 233 232 219; --ink-rgb: 20 39 31; --ink-2-rgb: 63 82 71; --olive-rgb: 166 164 58; --olive-2-rgb: 216 214 138; --leaf-rgb: 62 125 75; --leaf-2-rgb: 127 176 105; --pine-rgb: 15 76 70; --pine-2-rgb: 23 107 98; --terracotta-rgb: 212 103 74; --sun-rgb: 242 193 78; --sky-rgb: 207 232 230; --red-rgb: 166 60 39;
+  --moss-rgb: 30 58 46; --moss-deep-rgb: 20 39 31; --sage-rgb: 229 232 216; --paper-rgb: 242 241 231; --paper-2-rgb: 250 249 243; --paper-3-rgb: 233 232 219; --ink-rgb: 20 39 31; --ink-2-rgb: 63 82 71; --olive-rgb: 166 164 58; --olive-2-rgb: 216 214 138; --leaf-rgb: 62 125 75; --leaf-2-rgb: 127 176 105; --pine-rgb: 15 76 70; --pine-2-rgb: 23 107 98; --terracotta-rgb: 212 103 74; --sun-rgb: 242 193 78; --sky-rgb: 207 232 230; --red-rgb: 166 60 39;
   /* game + illustration colours (not for page UI) */
   --pine: #0F4C46; --pine-2: #176B62; --terracotta: #D4674A; --terracotta-ink: #B84E31; --terracotta-2: #F2C4B4; --sun: #F2C14E; --sky: #CFE8E6;
   --wood: #8A5A20; --wood-2: #A8702F; --board: #0B3D38;
@@ -35,7 +36,7 @@
 
   /* ---- glass (Plantio): light glass over photos, dark glass over dark grounds ---- */
   --glass-bg: rgba(255, 255, 255, .18);  --glass-border: rgba(255, 255, 255, .34);  --glass-blur: 18px;
-  --glass-dark-bg: rgba(20, 39, 31, .38);  --glass-dark-border: rgba(255, 255, 255, .14);
+  --glass-dark-bg: rgba(30, 58, 46, .42);  --glass-dark-border: rgba(255, 255, 255, .14);
   --glass-shadow: 0 24px 60px -24px rgba(0, 0, 0, .45);
 
   /* ---- type ---- */
@@ -136,6 +137,8 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .section { padding-block: var(--section-y); }
 .section-tight { padding-block: calc(var(--section-y) * .55); }
 .band-moss { background: var(--moss); color: var(--sage); }
+/* the hero and footer carry a soft vertical gradient (client: "sedikit lebih cerah atau gradient"); sage-2 stays ≥ 7.2:1 on the lightest stop */
+.band-moss-grad { background: linear-gradient(180deg, var(--moss-2) 0%, var(--moss) 55%, var(--moss-deep) 100%); color: var(--sage); }
 .band-pine { background: var(--moss); color: var(--sage); }   /* v1 name kept */
 .band-paper { background: var(--paper); color: var(--ink); }
 .band-paper-3 { background: var(--paper-3); }

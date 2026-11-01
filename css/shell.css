@@ -1,6 +1,6 @@
 /* Nurseri Lestari — css/shell.css (A2, v2 "Rumah kaca malam"): Lenis classes, skip link, the floating glass header, the drawer
    sheet, the Moss-like footer, the WhatsApp FAB and the search overlay. Every colour is a token from base.css. */
-@import url("components.css?v=3bde153"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
+@import url("components.css?v=5abcd8a"); /* the template only links shell.css; lead: link components.css in the template and this line goes */
 
 /* ---- Lenis (smooth scroll classes) ---- */
 html.lenis, html.lenis body { height: auto; }
@@ -28,7 +28,10 @@ html.hdr-away:not(.menu-open) .site-header { translate: 0 calc(-100% - var(--s-5
 .hdr-bar.glass-light { background: rgb(var(--paper-2-rgb) / .62); }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .hdr-bar.glass-dark { background: rgb(var(--moss-rgb) / .96); } .hdr-bar.glass-light { background: rgb(var(--paper-2-rgb) / .97); } }
 .site-logo { justify-self: start; display: inline-flex; align-items: center; padding: .25rem 0; border-radius: var(--radius-pill); }
-.site-logo-img { display: block; height: 3rem; width: auto; }   /* the emblem carries the lockup; the wordmark inside it stays small by the logo's own proportions */
+.site-logo-img { display: block; height: 3rem; width: auto; }   /* a fixed height: the emblem carries the lockup, the wordmark inside it stays small by the logo's own proportions */
+/* both tones of the logo are in the bar from the start; the header's data-tone shows one (a swap of src aborted the in-flight image) */
+[data-tone="light"] .site-logo .logo-dark, [data-tone="dark"] .site-logo .logo-light { display: none; }
+@media (max-width: 899px) { .site-logo .site-logo-img { height: 2.6rem; } }   /* 640–899: the lockup a step smaller */
 .nav-primary ul { display: flex; gap: var(--s-1); }
 .nav-primary a { display: inline-block; padding: .5rem .75rem; font-size: var(--fs-sm); font-weight: 500; color: inherit; border-radius: var(--radius-pill); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .4em; text-decoration-color: transparent; transition: text-decoration-color var(--dur-2) var(--ease-out); }
 @media (hover: hover) { .nav-primary a:hover { text-decoration-color: var(--olive); } }
@@ -48,11 +51,10 @@ html.hdr-away:not(.menu-open) .site-header { translate: 0 calc(-100% - var(--s-5
 @media (max-width: 639px) {
   .site-header { inset: var(--s-3) 0 auto; }
   .hdr-bar { min-height: 3.75rem; padding: .375rem .375rem .375rem .75rem; gap: var(--s-2); }
-  .site-logo-img { height: 1.875rem; }   /* the 5.75:1 header lockup is ≈172px wide at this height: the room left beside search + WhatsApp + menu at 375px; under 375px the emblem alone shows at 2.4rem */
+  .site-logo .site-logo-img { height: 2.5rem; width: 2.5rem; }   /* ≤ 639: the emblem alone (the picture's phone source, 356×357) in a fixed square, so the bar never waits for the image to know its width: 12 + 40 + 8 + 140 px beside search + WhatsApp + menu fits 375px with room */
 
   .hdr-wa { width: 2.75rem; min-height: 2.75rem; padding: 0; margin: 0; } .hdr-wa-label { display: none; }
 }
-@media (max-width: 374px) { .site-logo-img { height: 2.4rem; } }   /* the emblem alone (picture source) at the phone bar height */
 
 /* ---- drawer: a full-height dark glass sheet (phones and tablets) ---- */
 .nav-drawer { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; /* taste-skill-ignore */ background: rgb(var(--moss-rgb) / .86); color: var(--sage); overflow: clip; display: none; clip-path: inset(0 0 100% 0); transition: clip-path var(--dur-3) var(--ease-io), display var(--dur-3) allow-discrete, overlay var(--dur-3) allow-discrete; }
