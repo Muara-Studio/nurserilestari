@@ -1,0 +1,1444 @@
+{
+ "_meta": {
+  "source": "Shopee Seller Centre export mass_update_sales_info_1211685004_20261102220109.xlsx (shop 1211685004 = Toko Cipete)",
+  "exportDate": "2026-11-02",
+  "shop": "cipete",
+  "shopId": "1211685004",
+  "generated": "2026-11-02",
+  "priced": 159,
+  "ask": 1
+ },
+ "items": {
+  "103595317956": {
+   "itemid": "50614129538",
+   "url": "https://shopee.co.id/product/1211685004/50614129538",
+   "shopeeName": "Tanaman Hias Aglonema Red Lipstick Decorative Plants Indoor Outdoor",
+   "price": 27000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103549902468": {
+   "itemid": "28673560210",
+   "url": "https://shopee.co.id/product/1211685004/28673560210",
+   "shopeeName": "Nurseri Lestari - Akar Kadaka (Moss Hitam) Media Tanam Tanaman Hias Anggrek Platycerium / Campuran Media Tanam Aroid",
+   "price": 15500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103053743393": {
+   "itemid": "46817964604",
+   "url": "https://shopee.co.id/product/1211685004/46817964604",
+   "shopeeName": "Nurseri Lestari - Alat Potong Dahan Bahan Baja Kuat Tajam Cutting Pohon - Alat Kebun Garden Tools",
+   "price": 52000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.81
+  },
+  "103603581845": {
+   "itemid": "56564338290",
+   "url": "https://shopee.co.id/product/1211685004/56564338290",
+   "shopeeName": "Tanaman Hias Anthurium Clavigerum Hias Eksotis Daun Unik Mudah Dirawat Indoor Outdoor Plants",
+   "price": 150000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.61
+  },
+  "103595559691": {
+   "itemid": "26067716632",
+   "url": "https://shopee.co.id/product/1211685004/26067716632",
+   "shopeeName": "Anthurium Corong - Tanaman Hias Rare Bisa Indoor",
+   "price": 75000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103522059971": {
+   "itemid": "45263506677",
+   "url": "https://shopee.co.id/product/1211685004/45263506677",
+   "shopeeName": "Pot Keramik Exclusive Dan Tanaman Hias Anthurium Pentaphyllum / Anthurium Walisongo",
+   "price": 135000,
+   "priceFrom": true,
+   "how": "variation Pot Plastik Hitam",
+   "score": 0.91
+  },
+  "103060874892": {
+   "itemid": "24422413563",
+   "url": "https://shopee.co.id/product/1211685004/24422413563",
+   "shopeeName": "Nurseri Lestari - METAN AROID MIX (20 Liter) Media Tanam Premium Untuk Tanaman AROID Untuk AROID PHILODENDRON MONSTERA ANTHURIUM AGLONEMA",
+   "price": 115000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.86
+  },
+  "103060659152": {
+   "itemid": "24969741010",
+   "url": "https://shopee.co.id/product/1211685004/24969741010",
+   "shopeeName": "Nurseri Lestari - METAN AROID MIX (3 Liter) Media Tanam Premium Untuk Tanaman AROID Untuk AROID PHILODENDRON MONSTERA ANTHURIUM AGLONEMA",
+   "price": 31500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.86
+  },
+  "103715680217": {
+   "itemid": "54465744447",
+   "url": "https://shopee.co.id/product/1211685004/54465744447",
+   "shopeeName": "Benih Biji Bibit Unggulan Bawang Merah Besar Premium MIX GARDEN SEED MGS Garansi Tumbuh",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103715680689": {
+   "itemid": "42683433295",
+   "url": "https://shopee.co.id/product/1211685004/42683433295",
+   "shopeeName": "Benih Biji Bibit Unggulan Brokoli Hijau -+150 Benih MIX GARDEN SEED MGS Garansi Tumbuh",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103715680506": {
+   "itemid": "28445522287",
+   "url": "https://shopee.co.id/product/1211685004/28445522287",
+   "shopeeName": "Benih Biji Bibit Unggulan Bunga Bachelors Mixed Colour Premium MIX GARDEN SEED MGS Garansi Tumbuh",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.84
+  },
+  "103715678807": {
+   "itemid": "48815791534",
+   "url": "https://shopee.co.id/product/1211685004/48815791534",
+   "shopeeName": "Benih Biji Bibit Sunflower Red Velvet Bunga Matahari HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 50 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715679361": {
+   "itemid": "47015778185",
+   "url": "https://shopee.co.id/product/1211685004/47015778185",
+   "shopeeName": "Benih Biji Bibit Sunflower Teddy Bear HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 30-60 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103715677513": {
+   "itemid": "51615775809",
+   "url": "https://shopee.co.id/product/1211685004/51615775809",
+   "shopeeName": "Benih Biji Bibit Kale Scarlet Kale Merah HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 250 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715677738": {
+   "itemid": "52665771906",
+   "url": "https://shopee.co.id/product/1211685004/52665771906",
+   "shopeeName": "Benih Biji Bibit Kemangi Lemon Basil HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 1400 Benih Garansi Tumbuh",
+   "price": 29000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715677730": {
+   "itemid": "55215776512",
+   "url": "https://shopee.co.id/product/1211685004/55215776512",
+   "shopeeName": "Benih Biji Bibit BUNGA MARIGOLD CRACKER JACK HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 300 Benih Garansi Tumbuh",
+   "price": 29000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715680970": {
+   "itemid": "26295522357",
+   "url": "https://shopee.co.id/product/1211685004/26295522357",
+   "shopeeName": "Benih Biji Bibit Melon Early Silver Line HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 30-35 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715679385": {
+   "itemid": "55615749359",
+   "url": "https://shopee.co.id/product/1211685004/55615749359",
+   "shopeeName": "Benih Biji Bibit Melon Prancis MIX GARDEN SEED MGS Garansi Tumbuh",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103715676960": {
+   "itemid": "51815763655",
+   "url": "https://shopee.co.id/product/1211685004/51815763655",
+   "shopeeName": "Benih Biji Bibit Selada Butterhead Lettuce Kagraner HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 2200 Benih Garansi Tumbuh",
+   "price": 29000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715676656": {
+   "itemid": "42433440826",
+   "url": "https://shopee.co.id/product/1211685004/42433440826",
+   "shopeeName": "Benih Biji Bibit Selada Paris White Cos HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 1600 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715678554": {
+   "itemid": "55515748702",
+   "url": "https://shopee.co.id/product/1211685004/55515748702",
+   "shopeeName": "Benih Biji Bibit Selada Royal Oakleaf HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 1800 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103715680710": {
+   "itemid": "52415744653",
+   "url": "https://shopee.co.id/product/1211685004/52415744653",
+   "shopeeName": "Benih Biji Bibit Tomat Small Cherry HEIRLOOM SEED ISI LEBIH BANYAK, HARGA LEBIH HEMAT Isi 150-200 Benih Garansi Tumbuh",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103584332185": {
+   "itemid": "50063940244",
+   "url": "https://shopee.co.id/product/1211685004/50063940244",
+   "shopeeName": "Bio Fungisida Pestisida Jamur Alami Organik Fungicide Tricho Plus AP 100 Gr Pencegah busuk akar pada tanaman akibat jamur patogen pengendali hayati dan pupuk biologis",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103701695691": {
+   "itemid": "58114322535",
+   "url": "https://shopee.co.id/product/1211685004/58114322535",
+   "shopeeName": "Tanaman Bromelia Tricolor Hias Daun Tricolor Mudah Dirawat Indoor Outdoor",
+   "price": 40000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103701690602": {
+   "itemid": "54617779496",
+   "url": "https://shopee.co.id/product/1211685004/54617779496",
+   "shopeeName": "Nurseri Lestari - Compost Bag Easy Grow Original Bahan Kuat Export Quality Penyimpanan Dan Pembuatan Media Kompos  ( 50 L , 80 L , 200L)",
+   "price": 80000,
+   "priceFrom": true,
+   "how": "override price",
+   "score": 0.96
+  },
+  "103174242141": {
+   "itemid": "50313967010",
+   "url": "https://shopee.co.id/product/1211685004/50313967010",
+   "shopeeName": "Insektisida Curacron 500 EC 100 Ml Kemasan Pabrik Original Pembasmi Thrips Kutu Putih",
+   "price": 61000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.46
+  },
+  "103595417486": {
+   "itemid": "24819716523",
+   "url": "https://shopee.co.id/product/1211685004/24819716523",
+   "shopeeName": "Tanaman Hias Dracaena Florida Beauty Decorative Plants Outdoor Indoor",
+   "price": 17500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.8
+  },
+  "103599658957": {
+   "itemid": "28295328993",
+   "url": "https://shopee.co.id/product/1211685004/28295328993",
+   "shopeeName": "Tanaman Hias Dracaena Golden 100cm, Dekorasi Indoor Outdoor, Mudah Dirawat",
+   "price": 68000,
+   "priceFrom": true,
+   "how": "lowest of [68000, 180000, 470000]",
+   "score": 0.85
+  },
+  "103701690415": {
+   "itemid": "25069740545",
+   "url": "https://shopee.co.id/product/1211685004/25069740545",
+   "shopeeName": "Extra Packing Tambahan Bubble Wrap Dan Kardus Lebih Aman - EXTRA PACKING FOR PRODUCT SAFETY ON THE WAY TO DESTINATION",
+   "price": 5000,
+   "priceFrom": true,
+   "how": "lowest of [5000, 9500]",
+   "score": 0.94
+  },
+  "103982354777": {
+   "itemid": "25069740545",
+   "url": "https://shopee.co.id/product/1211685004/25069740545",
+   "shopeeName": "Extra Packing Tambahan Bubble Wrap Dan Kardus Lebih Aman - EXTRA PACKING FOR PRODUCT SAFETY ON THE WAY TO DESTINATION",
+   "price": 5000,
+   "priceFrom": true,
+   "how": "lowest of [5000, 9500]",
+   "score": 0.92
+  },
+  "104066474633": {
+   "itemid": "55518959347",
+   "url": "https://shopee.co.id/product/1211685004/55518959347",
+   "shopeeName": "NURSERI LESTARI - FARMJET SPRAYER TANGKI 16 LITER ELEKTRIK (501) - GARDEN SPRAYER TOOLS",
+   "price": 750000,
+   "priceFrom": false,
+   "how": "variation FULL SET (BIRU)",
+   "score": 0.9
+  },
+  "103060659016": {
+   "itemid": "24669745883",
+   "url": "https://shopee.co.id/product/1211685004/24669745883",
+   "shopeeName": "Nurseri Lestari - Fruit Plant Mix (20 Liter) Media Tanam Untuk Segala Jenis Tanaman Buah Siap Pakai",
+   "price": 34000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103060659086": {
+   "itemid": "24524960264",
+   "url": "https://shopee.co.id/product/1211685004/24524960264",
+   "shopeeName": "Nurseri Lestari - Fruit Plant Mix (3 Liter) Media Tanam Untuk Segala Jenis Tanaman Buah Siap Pakai",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103273004595": {
+   "itemid": "23964139039",
+   "url": "https://shopee.co.id/product/1211685004/23964139039",
+   "shopeeName": "Pupuk Daun Gandasil B (Buah) 100 Gram Nutrisi Pelebat Buah Fase Generatif Kemasan Original Asli Pabrik",
+   "price": 24000,
+   "priceFrom": false,
+   "how": "variation 100 GR",
+   "score": 0.92
+  },
+  "103272918583": {
+   "itemid": "25119593716",
+   "url": "https://shopee.co.id/product/1211685004/25119593716",
+   "shopeeName": "Pupuk Daun Gandasil D 100 Gram Perimbun Daun Fase Vegetatif Kemasan Asli Original Pabrik",
+   "price": 22000,
+   "priceFrom": false,
+   "how": "variation 100 GR",
+   "score": 0.91
+  },
+  "103054002351": {
+   "itemid": "22664138034",
+   "url": "https://shopee.co.id/product/1211685004/22664138034",
+   "shopeeName": "Garden Tools Kit Mini Set 3 In 1 Sekop Dan Garpu Taman Mini",
+   "price": 13000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103054001003": {
+   "itemid": "24769737185",
+   "url": "https://shopee.co.id/product/1211685004/24769737185",
+   "shopeeName": "Nurseri Lestari - Paket 3 Item Garden Tools Set Sekop Besi dan Garpu Taman Besi",
+   "price": 37000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103053993610": {
+   "itemid": "24019720409",
+   "url": "https://shopee.co.id/product/1211685004/24019720409",
+   "shopeeName": "Garpu Garukan Besi Besar Rubber Grip - Alat Kebun Garden Tools",
+   "price": 35000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103053992566": {
+   "itemid": "24319731450",
+   "url": "https://shopee.co.id/product/1211685004/24319731450",
+   "shopeeName": "Portable Saw Gergaji Dahan Lipat Portabel Potong Batang Ranting Kayu Alat Potong Stek Tanaman - Alat Kebun Garden Tools",
+   "price": 40000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103584451827": {
+   "itemid": "48913943365",
+   "url": "https://shopee.co.id/product/1211685004/48913943365",
+   "shopeeName": "Herbisida Gramoxone 1 Liter Pembasmi Cepat Kontak Langsung Gulma Rumput Liar",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103588306185": {
+   "itemid": "25169737478",
+   "url": "https://shopee.co.id/product/1211685004/25169737478",
+   "shopeeName": "Nurseri Lestari - Gunting Dahan (BENGKOK) Tanaman JUMBO YAP Full Besi",
+   "price": 40000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.56
+  },
+  "103743227972": {
+   "itemid": "42683527052",
+   "url": "https://shopee.co.id/product/1211685004/42683527052",
+   "shopeeName": "Tanaman Hias Pohon Hanjuang Andong Besi Corn Plants Dracaena Fragrans Tinggi 100cm - Decorative Plants - Cocok Dengan Pot Gerabah Keramik",
+   "price": 120000,
+   "priceFrom": false,
+   "how": "variation Tanaman saja",
+   "score": 0.66
+  },
+  "103741707457": {
+   "itemid": "42683527052",
+   "url": "https://shopee.co.id/product/1211685004/42683527052",
+   "shopeeName": "Tanaman Hias Pohon Hanjuang Andong Besi Corn Plants Dracaena Fragrans Tinggi 100cm - Decorative Plants - Cocok Dengan Pot Gerabah Keramik",
+   "price": 120000,
+   "priceFrom": false,
+   "how": "variation Tanaman saja",
+   "score": 0.64
+  },
+  "103060659169": {
+   "itemid": "24419731028",
+   "url": "https://shopee.co.id/product/1211685004/24419731028",
+   "shopeeName": "Nurseri Lestari - Indoor Soil Mix (20 Liter) Media Tanam Indoor Dalam Ruang Siap Pakai",
+   "price": 120000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103060659168": {
+   "itemid": "27566269173",
+   "url": "https://shopee.co.id/product/1211685004/27566269173",
+   "shopeeName": "Nurseri Lestari - Indoor Soil Mix (3 Liter) Media Tanam Indoor Dalam Ruang Siap Pakai",
+   "price": 33000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103054009302": {
+   "itemid": "23664139045",
+   "url": "https://shopee.co.id/product/1211685004/23664139045",
+   "shopeeName": "Pupuk KCL (Kalium Clorida) Super Jerman 1KG Penyubur Mempercepat Pertumbuhan Buah / Umbi Fase Generatif",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103586552764": {
+   "itemid": "25119593901",
+   "url": "https://shopee.co.id/product/1211685004/25119593901",
+   "shopeeName": "Nurseri Lestari - Pupuk KCL (Kalium Clorida) Super Jerman Botol Repack 100 GR Penyubur Mempercepat Pertumbuhan Buah / Umbi Fase Generatif",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.77
+  },
+  "103884332089": {
+   "itemid": "45667372484",
+   "url": "https://shopee.co.id/product/1211685004/45667372484",
+   "shopeeName": "Pupuk KNO3 Putih PRILL CPN Pak Tani Botol Repack 100 Gr Diformulasikan Khusus Untuk Fase Generatif Awal (saat tanaman memasuki Fase pembungaan hingga pengisian dan pembesaran buah)",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103086657288": {
+   "itemid": "56956764910",
+   "url": "https://shopee.co.id/product/1211685004/56956764910",
+   "shopeeName": "Kaki Tatak Besi Pot Tanaman Model Pagar Keliling 60 cm Hitam Bahan Super Tebal",
+   "price": 245000,
+   "priceFrom": true,
+   "how": "lowest of [245000, 435000]",
+   "score": 0.93
+  },
+  "103091033469": {
+   "itemid": "27641321987",
+   "url": "https://shopee.co.id/product/1211685004/27641321987",
+   "shopeeName": "Kaki Kayu Model Ceper Tatak Pot Keramik Diameter Variant Size 10 cm - 30cm",
+   "price": 150000,
+   "priceFrom": true,
+   "how": "override price",
+   "score": 0.92
+  },
+  "103090714610": {
+   "itemid": "29702435860",
+   "url": "https://shopee.co.id/product/1211685004/29702435860",
+   "shopeeName": "Kaki Kayu Diameter 10Cm Untuk Vase / Pot Keramik Kayu Mahoni Kuat Elegan Tahan Lama",
+   "price": 37000,
+   "priceFrom": true,
+   "how": "single price",
+   "score": 0.48
+  },
+  "103090865885": {
+   "itemid": "24619727564",
+   "url": "https://shopee.co.id/product/1211685004/24619727564",
+   "shopeeName": "Kaki kayu 24cm pot keramik dia.19-20inch / 48-50cm Kayu Mahoni Kuat Elegan Tahan Lama",
+   "price": 300000,
+   "priceFrom": true,
+   "how": "variation STANDARD",
+   "score": 0.53
+  },
+  "103059035323": {
+   "itemid": "28688659149",
+   "url": "https://shopee.co.id/product/1211685004/28688659149",
+   "shopeeName": "Tanaman Hias Pohon Karet Kebo / Ficus elastica - Indoor Decorative Plants - Perawatan Mudah - Varian Pot Plastik / Pot Gerabah",
+   "price": 75000,
+   "priceFrom": true,
+   "how": "variation Tanaman saja",
+   "score": 0.49
+  },
+  "103875735070": {
+   "itemid": "25169737419",
+   "url": "https://shopee.co.id/product/1211685004/25169737419",
+   "shopeeName": "Kawat Bonsai Alumunium Silver/Putih (Tebal 1 - 3,5 MM) Per Meter - 1 MM",
+   "price": 2500,
+   "priceFrom": true,
+   "how": "lowest of [2500, 3000, 3500, 4500, 5000, 6000, 6500]",
+   "score": 0.54
+  },
+  "103701693868": {
+   "itemid": "41333357841",
+   "url": "https://shopee.co.id/product/1211685004/41333357841",
+   "shopeeName": "Nurseri Lestari - Label Tag Tanaman Model Tali Ikat Gantung Anti Air  Tahan Air Anti UV Pilihan Warna",
+   "price": 1250,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103701690606": {
+   "itemid": "43483344786",
+   "url": "https://shopee.co.id/product/1211685004/43483344786",
+   "shopeeName": "Nurseri Lestari - Label Tag Tanaman Anti Air 11 cm Tahan Air Anti UV Pilihan Warna",
+   "price": 1250,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.87
+  },
+  "103771535226": {
+   "itemid": "51216264794",
+   "url": "https://shopee.co.id/product/1211685004/51216264794",
+   "shopeeName": "Tanaman Hias Ornamental Lidah Mertua Sanseviera Superball - Decorative Plants",
+   "price": 25000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.6
+  },
+  "103595485474": {
+   "itemid": "48564048666",
+   "url": "https://shopee.co.id/product/1211685004/48564048666",
+   "shopeeName": "Pupuk MKP Pak Tani Untuk Pelebat Buah Hasil Panen Fase Generatif Kemasan 100 GR - Mono Kalium Phospat Fertilizer usage For Better Fruit Growth",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.98
+  },
+  "103584332169": {
+   "itemid": "47063944758",
+   "url": "https://shopee.co.id/product/1211685004/47063944758",
+   "shopeeName": "Pupuk Magnesium Sulfat (MgSO4) Meroke Botol Repack100 GR menyuburkan tanaman dan mencegah daun menguning Pembentukan Klorofil Magnesium (16%) Sulfur (13%)",
+   "price": 13000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.85
+  },
+  "103081045030": {
+   "itemid": "28623471024",
+   "url": "https://shopee.co.id/product/1211685004/28623471024",
+   "shopeeName": "Nurseri Lestari - Molase Tetes Tebu Murni (700ml) Pengurai Kompos Organik Bahan Untuk Fermentasi Menyuburkan Tanah Media Tanam",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103596070543": {
+   "itemid": "28671434008",
+   "url": "https://shopee.co.id/product/1211685004/28671434008",
+   "shopeeName": "Tanaman Hias Monstera Pertusa |  Decorative Indoor Plants",
+   "price": 25000,
+   "priceFrom": true,
+   "how": "lowest of [25000, 45000, 90000]",
+   "score": 0.95
+  },
+  "103053706400": {
+   "itemid": "25219593456",
+   "url": "https://shopee.co.id/product/1211685004/25219593456",
+   "shopeeName": "Pupuk Khusus Aneka Buah NPK 15-20-35 + (S-P) 500gr Mempercepat Pembuahan Fase Generatif",
+   "price": 17000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.87
+  },
+  "103053709164": {
+   "itemid": "24069598970",
+   "url": "https://shopee.co.id/product/1211685004/24069598970",
+   "shopeeName": "Pupuk Khusus Bunga NPK 15-18-15+(S-P) 500gr Fase Tumbuh Bunga Generatif",
+   "price": 18000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.84
+  },
+  "103054006935": {
+   "itemid": "51805183533",
+   "url": "https://shopee.co.id/product/1211685004/51805183533",
+   "shopeeName": "Nurseri Lestari - Neem Oil Pestisida Nabati Alami Organik 60 Ml",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.83
+  },
+  "103054007222": {
+   "itemid": "24719716918",
+   "url": "https://shopee.co.id/product/1211685004/24719716918",
+   "shopeeName": "Nurseri Lestari - Orchid Bloom Booster Serum Tanaman Bunga Anggrek 60 ML Mengoptimalkan Pertumbuhan Anggrek 100% Organik",
+   "price": 60000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103060659010": {
+   "itemid": "24239878374",
+   "url": "https://shopee.co.id/product/1211685004/24239878374",
+   "shopeeName": "Nurseri Lestari - Orchid Soil Mix Media Tanam Anggrek Poros (20 Liter) Siap Pakai Ready To Use Anti Busuk Akar Untuk Semua Jenis Tanaman Hias Anggrek",
+   "price": 123000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103060659008": {
+   "itemid": "23664151520",
+   "url": "https://shopee.co.id/product/1211685004/23664151520",
+   "shopeeName": "Nurseri Lestari - Orchid Soil Mix Media Tanam Anggrek Poros (3 Liter) Siap Pakai Ready To Use Anti Busuk Akar Untuk Semua Jenis Tanaman Hias Anggrek",
+   "price": 33500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103053594772": {
+   "itemid": "25119593890",
+   "url": "https://shopee.co.id/product/1211685004/25119593890",
+   "shopeeName": "POT BUNGA RODA TANAMAN PLASTIK LOVENIA 40 MODEL KERAMIK POLOS BAHAN TEBAL + RODA BAWAH PC 8050 PUTIH / HITAM",
+   "price": 100000,
+   "priceFrom": true,
+   "how": "lowest of [100000, 125000]",
+   "score": 0.92
+  },
+  "104070282766": {
+   "itemid": "40334349041",
+   "url": "https://shopee.co.id/product/1211685004/40334349041",
+   "shopeeName": "POT BUNGA TANAMAN CITRA JAYA PLASTIK NORDIC TABUNG 20 LENTUR ELASTIS TIDAK MUDAH PECAH - CJP 20 NORDIC",
+   "price": 20000,
+   "priceFrom": true,
+   "how": "lowest of [20000, 25000]",
+   "score": 0.92
+  },
+  "103701694813": {
+   "itemid": "48214359642",
+   "url": "https://shopee.co.id/product/1211685004/48214359642",
+   "shopeeName": "Nurseri Lestari - Paket Bundling All in One Perawatan Dan Tanaman Anggrek Orchid Plant",
+   "price": 105000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103601872880": {
+   "itemid": "50761212417",
+   "url": "https://shopee.co.id/product/1211685004/50761212417",
+   "shopeeName": "Paket Tanaman Hias Indoor Plants Media Air + Vase Kaca + Hidrogel Dekorasi Ruangan dan Mudah Dirawat",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103757813013": {
+   "itemid": "28395574633",
+   "url": "https://shopee.co.id/product/1211685004/28395574633",
+   "shopeeName": "Nurseri Lestari - Pakis Dadu Campuran Media Tanam Untuk Tanaman Hias Anggrek Aroid 500 Gr",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103595478420": {
+   "itemid": "46014200548",
+   "url": "https://shopee.co.id/product/1211685004/46014200548",
+   "shopeeName": "Bibit Tanaman Hias Pohon Palem Kol Decorative Plants Outdoor Indoor Plants",
+   "price": 35000,
+   "priceFrom": true,
+   "how": "lowest of [35000, 100000]",
+   "score": 0.84
+  },
+  "103586946517": {
+   "itemid": "54413664499",
+   "url": "https://shopee.co.id/product/1211685004/54413664499",
+   "shopeeName": "Paranet Jaring Shading Net 75 % | 85% | 95% Eceran | 1 Meter | Lebar 3 M Satuan",
+   "price": 16000,
+   "priceFrom": true,
+   "how": "lowest of [16000, 18000, 20000]",
+   "score": 0.89
+  },
+  "103586989272": {
+   "itemid": "56163674071",
+   "url": "https://shopee.co.id/product/1211685004/56163674071",
+   "shopeeName": "Nurseri Lestari - Paranet Jaring Shading Net 75 % | 85% | 95% 1 Roll 100 Meter | Lebar 3 M Satuan",
+   "price": 1200000,
+   "priceFrom": true,
+   "how": "lowest of [1200000, 1400000, 1700000]",
+   "score": 0.91
+  },
+  "103935145200": {
+   "itemid": "25269737205",
+   "url": "https://shopee.co.id/product/1211685004/25269737205",
+   "shopeeName": "Pasir Malang Merah Kasar karung kecil berat +/-4kg",
+   "price": 17000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.78
+  },
+  "103595352325": {
+   "itemid": "25219593468",
+   "url": "https://shopee.co.id/product/1211685004/25219593468",
+   "shopeeName": "Tanaman Hias Peace Lily / Spathiphyllum Hijau Decorative Indoor Outdoor Plants",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103511174851": {
+   "itemid": "24669745898",
+   "url": "https://shopee.co.id/product/1211685004/24669745898",
+   "shopeeName": "Nurseri Lestari - Perlite (2-4MM) 2 Liter Untuk Campuran Media Tanam",
+   "price": 15500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.55
+  },
+  "103074405077": {
+   "itemid": "48605404593",
+   "url": "https://shopee.co.id/product/1211685004/48605404593",
+   "shopeeName": "Nurseri Lestari - Petrogenol Perangkap Lalat Buah Tanaman Sayuran Buah 5 Ml Solusi Ampuh Basmi Lalat Dan Serangga",
+   "price": 12000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.97
+  },
+  "103597738610": {
+   "itemid": "25219593666",
+   "url": "https://shopee.co.id/product/1211685004/25219593666",
+   "shopeeName": "Tanaman Hias Brekele Burle Marx Decorative Indoor Outdoor Plants Tanaman Vertical Garden Bisa Dengan Media Air Mudah Tumbuh",
+   "price": 8000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103595210489": {
+   "itemid": "49514060863",
+   "url": "https://shopee.co.id/product/1211685004/49514060863",
+   "shopeeName": "Tanaman Hias Rare (Bisa Indoor) - Philodendron Tortum",
+   "price": 125000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103054007223": {
+   "itemid": "56055129278",
+   "url": "https://shopee.co.id/product/1211685004/56055129278",
+   "shopeeName": "Nurseri Lestari - Plant Growth Booster Serum Tanaman 60 ML Mengoptimalkan Pertumbuhan Tanaman 100% Organik",
+   "price": 80000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103054003832": {
+   "itemid": "55505921732",
+   "url": "https://shopee.co.id/product/1211685004/55505921732",
+   "shopeeName": "Nurseri Lestari - Plant Nutrients Pupuk Spray Pelebat Buah Dan Bunga Tanaman Siap Pakai 500 ml Ready To use",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.71
+  },
+  "103054005314": {
+   "itemid": "24769740516",
+   "url": "https://shopee.co.id/product/1211685004/24769740516",
+   "shopeeName": "Nurseri Lestari - Plant Nutrients Pupuk Pelebat Daun Spray Nutrisi Tanaman Siap Pakai Ready To use 500 Ml",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.78
+  },
+  "103074413392": {
+   "itemid": "25119715724",
+   "url": "https://shopee.co.id/product/1211685004/25119715724",
+   "shopeeName": "Planter Bag PlanterBag Tanaman Warna Hitam Bahan Tebal Cocok Untuk Tanaman Buah Ukuran 25 35 50 75 100 150 200 Liter",
+   "price": 18000,
+   "priceFrom": true,
+   "how": "override price",
+   "score": 0.93
+  },
+  "104076426794": {
+   "itemid": "45619132471",
+   "url": "https://shopee.co.id/product/1211685004/45619132471",
+   "shopeeName": "Pot Bunga Tanaman Grace 30 Hitam Berkuping",
+   "price": 17000,
+   "priceFrom": true,
+   "how": "lowest of [17000, 26000]",
+   "score": 0.86
+  },
+  "104076428130": {
+   "itemid": "45119128909",
+   "url": "https://shopee.co.id/product/1211685004/45119128909",
+   "shopeeName": "Pot Bunga Tanaman Grace 35 Merah Bata Berkuping",
+   "price": 32000,
+   "priceFrom": true,
+   "how": "lowest of [32000, 46000]",
+   "score": 0.86
+  },
+  "103596321565": {
+   "itemid": "24319731467",
+   "url": "https://shopee.co.id/product/1211685004/24319731467",
+   "shopeeName": "Pot Dinding Vertikal Vertical Garden NKT Pelangi S Hitam Bahan Plastik Tebal",
+   "price": 6000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103783701057": {
+   "itemid": "52716460533",
+   "url": "https://shopee.co.id/product/1211685004/52716460533",
+   "shopeeName": "Pot Dinding Tempel Tralis Vertikal Vertical Garden Argo 01 HITAM/PUTIH",
+   "price": 9000,
+   "priceFrom": true,
+   "how": "lowest of [9000, 14000]",
+   "score": 0.94
+  },
+  "103386280974": {
+   "itemid": "52513467577",
+   "url": "https://shopee.co.id/product/1211685004/52513467577",
+   "shopeeName": "Pot Gentong Tinggi Keramik Glazur Hijau D.30cm",
+   "price": 850000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.67
+  },
+  "103569166596": {
+   "itemid": "24819716635",
+   "url": "https://shopee.co.id/product/1211685004/24819716635",
+   "shopeeName": "Pot Bunga Shallom Glory 30 MERAH/PUTIH",
+   "price": 20000,
+   "priceFrom": true,
+   "how": "lowest of [20000, 28000, 29000, 38000]",
+   "score": 0.9
+  },
+  "103701696434": {
+   "itemid": "56365599568",
+   "url": "https://shopee.co.id/product/1211685004/56365599568",
+   "shopeeName": "Pot Plastik Tanaman Mado Glossy Cerah 18,22,27,32 Putih High Grade Plastic Include Tatak",
+   "price": 10000,
+   "priceFrom": true,
+   "how": "lowest of [10000, 15000, 19000, 24000, 27000, 28000, 36000]",
+   "score": 0.84
+  },
+  "103884399399": {
+   "itemid": "24019714979",
+   "url": "https://shopee.co.id/product/1211685004/24019714979",
+   "shopeeName": "Pot Plastik 12 Hitam Cap Grace Bahan Tebal Kuat Plus Tatak",
+   "price": 2500,
+   "priceFrom": true,
+   "how": "lowest of [2500, 3200, 5000]",
+   "score": 0.91
+  },
+  "103884399849": {
+   "itemid": "24619727627",
+   "url": "https://shopee.co.id/product/1211685004/24619727627",
+   "shopeeName": "Pot Plastik 17 Hitam Cap Grace Bahan Tebal Kuat Tahan Hujan Plus Tatak",
+   "price": 3500,
+   "priceFrom": true,
+   "how": "lowest of [3500, 4500, 7000]",
+   "score": 0.92
+  },
+  "103875747149": {
+   "itemid": "25038189036",
+   "url": "https://shopee.co.id/product/1211685004/25038189036",
+   "shopeeName": "Pot Plastik Tanaman No. 25 Hitam Polos Bahan Kuat Tebal Tahan Hujan",
+   "price": 5000,
+   "priceFrom": true,
+   "how": "lowest of [5000, 7500, 11500]",
+   "score": 0.87
+  },
+  "103875756162": {
+   "itemid": "54958801095",
+   "url": "https://shopee.co.id/product/1211685004/54958801095",
+   "shopeeName": "Pot Tinggi Srondol Polos 10 Plastik Tebal Hitam/Merah/Putih - Plus Tatak",
+   "price": 1750,
+   "priceFrom": true,
+   "how": "lowest of [1750, 2000, 2500, 3200, 3500, 4000]",
+   "score": 0.93
+  },
+  "103659419904": {
+   "itemid": "41930041865",
+   "url": "https://shopee.co.id/product/1211685004/41930041865",
+   "shopeeName": "Pot Tinggi Srondol Polos 15 Plastik Tebal Hitam/Merah/Putih - Plus Tatak",
+   "price": 3000,
+   "priceFrom": true,
+   "how": "lowest of [3000, 4000, 5000, 6000]",
+   "score": 0.93
+  },
+  "103875765852": {
+   "itemid": "54958806063",
+   "url": "https://shopee.co.id/product/1211685004/54958806063",
+   "shopeeName": "Pot Tinggi Srondol Polos 17 Plastik Tebal Hitam/Merah/Putih - Plus Tatak",
+   "price": 4500,
+   "priceFrom": true,
+   "how": "lowest of [4500, 5500, 6000, 7000, 8000]",
+   "score": 0.87
+  },
+  "104110875729": {
+   "itemid": "54419393691",
+   "url": "https://shopee.co.id/product/1211685004/54419393691",
+   "shopeeName": "Pot Vase Keramik Glazur D.38",
+   "price": 400000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.63
+  },
+  "104110958901": {
+   "itemid": "54419393691",
+   "url": "https://shopee.co.id/product/1211685004/54419393691",
+   "shopeeName": "Pot Vase Keramik Glazur D.38",
+   "price": 400000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.63
+  },
+  "103053992747": {
+   "itemid": "24669745825",
+   "url": "https://shopee.co.id/product/1211685004/24669745825",
+   "shopeeName": "Pruning Saw Gergaji Dahan  Untuk Potong Batang Pohon - Alat Kebun Garden Tools",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103619162791": {
+   "itemid": "44564656745",
+   "url": "https://shopee.co.id/product/1211685004/44564656745",
+   "shopeeName": "Tanaman Hias Pucuk Merah Syzygium myrtifolium Outdoor Decorative Plants Tinggi 30cm",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103626236673": {
+   "itemid": "46764780833",
+   "url": "https://shopee.co.id/product/1211685004/46764780833",
+   "shopeeName": "Tanaman Hias Pucuk Merah Daun Rimbun Tinggi 80cm Syzygium myrtifolium Outdoor Decorative Plants",
+   "price": 45000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103586629921": {
+   "itemid": "24669745824",
+   "url": "https://shopee.co.id/product/1211685004/24669745824",
+   "shopeeName": "Nurseri Lestari - Pumice Batu Apung 1KG Untuk Campuran Media Tanam",
+   "price": 18000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103053678497": {
+   "itemid": "25969595536",
+   "url": "https://shopee.co.id/product/1211685004/25969595536",
+   "shopeeName": "Pupuk Cair Organik EM4 (bakteri fermentasi/ bakteri penyubur tanah)",
+   "price": 52000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103053705620": {
+   "itemid": "25119593892",
+   "url": "https://shopee.co.id/product/1211685004/25119593892",
+   "shopeeName": "Pupuk Aneka Khusus Tanaman Daun 300 Gram Mempercepat Pertumbuhan Tanaman Daun Fase Vegetatif",
+   "price": 17000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103612350111": {
+   "itemid": "52164477737",
+   "url": "https://shopee.co.id/product/1211685004/52164477737",
+   "shopeeName": "Nurseri Lestari - Pupuk Kohe Kambing Kasar Butiran Organik Fermentasi Campuran Media Tanam 1 KG",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103613425944": {
+   "itemid": "52864505839",
+   "url": "https://shopee.co.id/product/1211685004/52864505839",
+   "shopeeName": "Nurseri Lestari - Pupuk Kohe Kambing Kasar Butiran Organik Fermentasi  Karungan Campuran Media Tanam 4-5 KG",
+   "price": 27000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103612373959": {
+   "itemid": "50264482751",
+   "url": "https://shopee.co.id/product/1211685004/50264482751",
+   "shopeeName": "Nurseri Lestari - Pupuk Kohe Kambing Kasar Butiran Organik Fermentasi Campuran Media Tanam 500 GR",
+   "price": 10000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103803399216": {
+   "itemid": "54616735115",
+   "url": "https://shopee.co.id/product/1211685004/54616735115",
+   "shopeeName": "Pupuk Manohara Mesh 2500 - Pupuk Kalsium Boron - Mencegah Hama dan Juga Anti Rontok Busuk Jamur dan Layu - 1Kg",
+   "price": 35000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103304558722": {
+   "itemid": "55865831201",
+   "url": "https://shopee.co.id/product/1211685004/55865831201",
+   "shopeeName": "Nurseri Lestari - Pupuk Organik Guano (1 KG) Pengganti NPK Alami Pupuk Penyubur Tanah Ramah Lingkugan Organik Pupuk Alami Penyubur Tanaman",
+   "price": 28000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.82
+  },
+  "103304559925": {
+   "itemid": "43728373836",
+   "url": "https://shopee.co.id/product/1211685004/43728373836",
+   "shopeeName": "Nurseri Lestari - Pupuk Organik Guano (100GR) Pengganti NPK Alami 100 GR Pupuk Penyubur Tanah Ramah Lingkugan Organik Pupuk Alami Penyubur Tanah Kaya Unsur Hara NPK Organik",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103304560752": {
+   "itemid": "52912670322",
+   "url": "https://shopee.co.id/product/1211685004/52912670322",
+   "shopeeName": "Nurseri Lestari - Pupuk Organik Guano 500 GR Pengganti NPK Alami Pupuk Penyubur Tanah Ramah Lingkugan Organik Pupuk Alami Penyubur Tanah Kaya Unsur Hara NPK Organik",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103054010370": {
+   "itemid": "25969595545",
+   "url": "https://shopee.co.id/product/1211685004/25969595545",
+   "shopeeName": "Nurseri Lestari - Root Booster Nutrisi Akar Tanaman Hormon Perangsang Akar",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.81
+  },
+  "103054008905": {
+   "itemid": "25219593787",
+   "url": "https://shopee.co.id/product/1211685004/25219593787",
+   "shopeeName": "Herbisida Roundup Round up Pembasmi Rumput Liar Gulma 200 ML",
+   "price": 38500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.59
+  },
+  "104066463691": {
+   "itemid": "25969595543",
+   "url": "https://shopee.co.id/product/1211685004/25969595543",
+   "shopeeName": "Nurseri Lestari - Sarung Tangan Berkebun Nilon Nylon Anti Slip Cutting Nyaman Digunakan - Garden Gloves",
+   "price": 32000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103054005939": {
+   "itemid": "50355197704",
+   "url": "https://shopee.co.id/product/1211685004/50355197704",
+   "shopeeName": "Nurseri Lestari - Seed Booster Fliptop 30 ml Pupuk Booster Benih Biji Tumbuh Hormon Giberelin Tunas Perangsang Bibit Cepat Berkecambah Sprout Benih",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.86
+  },
+  "103054005728": {
+   "itemid": "52405197450",
+   "url": "https://shopee.co.id/product/1211685004/52405197450",
+   "shopeeName": "Nurseri Lestari - Seed Booster Spray 30 ml Pupuk Hormon Booster Giberelin Benih Biji Tumbuh Tunas Perangsang Bibit Cepat Berkecambah Sprout Benih",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.87
+  },
+  "103572108179": {
+   "itemid": "25169737352",
+   "url": "https://shopee.co.id/product/1211685004/25169737352",
+   "shopeeName": "Sekam bakar Karungan Besar Isi Banyak (SPX Instan)",
+   "price": 37000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.57
+  },
+  "103884217508": {
+   "itemid": "49967367585",
+   "url": "https://shopee.co.id/product/1211685004/49967367585",
+   "shopeeName": "Nurseri Lestari - Sekop Besar Garden Shovel (Kotak/Lancip) Wooden Grip Tanah Pasir Kualitas Bagus Gagang Nyaman Alat Berkebun Garden Tools",
+   "price": 135000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103094985368": {
+   "itemid": "25069740521",
+   "url": "https://shopee.co.id/product/1211685004/25069740521",
+   "shopeeName": "Sekop Besi Besar Premium Lebih Kuat dan Tahan Lama Alat Berkebun Garden Tools",
+   "price": 40000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.69
+  },
+  "103054000339": {
+   "itemid": "24319731370",
+   "url": "https://shopee.co.id/product/1211685004/24319731370",
+   "shopeeName": "Sekop Taman Besi Warna Alat Berkebun Garden Tools",
+   "price": 22000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.94
+  },
+  "103060659112": {
+   "itemid": "24669745809",
+   "url": "https://shopee.co.id/product/1211685004/24669745809",
+   "shopeeName": "Nurseri Lestari - Simple Mix (20 Liter) Media Tanam Untuk Tanaman Hias Siap Pakai",
+   "price": 36000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103060659065": {
+   "itemid": "25269737137",
+   "url": "https://shopee.co.id/product/1211685004/25269737137",
+   "shopeeName": "Nurseri Lestari - Simple Mix (3 Liter) Media Tanam Untuk Tanaman Hias Siap Pakai",
+   "price": 13000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103595733807": {
+   "itemid": "24669745902",
+   "url": "https://shopee.co.id/product/1211685004/24669745902",
+   "shopeeName": "Tanaman Hias Sirih Badak Karstenium Decorative Plants Outdoor Indoor Plants",
+   "price": 15000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103054005782": {
+   "itemid": "26673067594",
+   "url": "https://shopee.co.id/product/1211685004/26673067594",
+   "shopeeName": "Nurseri Lestari - SOIL BOOSTER Humid Acid Bubuk Pembenah Media Tanah Penyubur Tanah Pupuk Penggembur Tanah",
+   "price": 35000,
+   "priceFrom": false,
+   "how": "variation 300 GR",
+   "score": 0.76
+  },
+  "103060658842": {
+   "itemid": "24619727772",
+   "url": "https://shopee.co.id/product/1211685004/24619727772",
+   "shopeeName": "Nurseri Lestari - Succulent Cactus Soil Mix (1,5 Liter) Media Tanam Khusus Sukulen Kaktus Sansevieria Siap Pakai",
+   "price": 35000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.87
+  },
+  "103060659174": {
+   "itemid": "54606086651",
+   "url": "https://shopee.co.id/product/1211685004/54606086651",
+   "shopeeName": "Nurseri Lestari - Succulent Cactus Soil Mix (3 Liter) Media Tanam Khusus Sukulen Kaktus Sansevieria Siap Pakai",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.85
+  },
+  "103930924149": {
+   "itemid": "46564195657",
+   "url": "https://shopee.co.id/product/1211685004/46564195657",
+   "shopeeName": "Nurseri Lestari - Pot Gerabah Tanah Liat Plus Tanaman Hias | Syngonium Plants With White Clay Pottery | Decorative Indoor Plants",
+   "price": 30000,
+   "priceFrom": true,
+   "how": "variation Kapsul kecil putih",
+   "score": 0.87
+  },
+  "103054009350": {
+   "itemid": "25969595424",
+   "url": "https://shopee.co.id/product/1211685004/25969595424",
+   "shopeeName": "Pupuk SUPER PHOSPAT TSP-36 Untuk Nutrisi Akar 1 KG Penyubur Dan Pembenah Tanah",
+   "price": 25000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.97
+  },
+  "104066466781": {
+   "itemid": "42159691921",
+   "url": "https://shopee.co.id/product/1211685004/42159691921",
+   "shopeeName": "Tanaman Hias Alocasia Alokasia Black Velvet - Exotic Decorative Plants",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103701695935": {
+   "itemid": "57614352370",
+   "url": "https://shopee.co.id/product/1211685004/57614352370",
+   "shopeeName": "Tanaman Hias Aloevera Lidah Buaya Asli - Aloe Vera Plant",
+   "price": 30000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "104066470188": {
+   "itemid": "50969064591",
+   "url": "https://shopee.co.id/product/1211685004/50969064591",
+   "shopeeName": "Tanaman Hias Bromelia Giant Ukuran Sudah Besar Taman Outdoor - Decorative Plants",
+   "price": 125000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.9
+  },
+  "103595358247": {
+   "itemid": "54114141814",
+   "url": "https://shopee.co.id/product/1211685004/54114141814",
+   "shopeeName": "Tanaman Hias Diffenbachia Lukisan Cinta Decorative Indoor Outdoor Plants",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "104066456201": {
+   "itemid": "54768965125",
+   "url": "https://shopee.co.id/product/1211685004/54768965125",
+   "shopeeName": "Tanaman Hias Dracaena Milky Way Corak Putih",
+   "price": 20000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.86
+  },
+  "104012709207": {
+   "itemid": "56868855534",
+   "url": "https://shopee.co.id/product/1211685004/56868855534",
+   "shopeeName": "Tanaman Hias Epipremnum Shangrila Exotic Nurseri Lestari untuk Indoor Outdoor Tinggi 40-50cm",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103994029586": {
+   "itemid": "24579227057",
+   "url": "https://shopee.co.id/product/1211685004/24579227057",
+   "shopeeName": "Tanaman Hias Lidah Mertua Kuning - Sanseveria Laurentii",
+   "price": 18000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103595251999": {
+   "itemid": "24981724791",
+   "url": "https://shopee.co.id/product/1211685004/24981724791",
+   "shopeeName": "Tanaman Hias Lidah Mertua Tiger Decorative Plants Indoor Outdoor Plants Pembersih Udara",
+   "price": 15000,
+   "priceFrom": true,
+   "how": "lowest of [15000, 23000, 35000]",
+   "score": 0.9
+  },
+  "103595118155": {
+   "itemid": "25119595320",
+   "url": "https://shopee.co.id/product/1211685004/25119595320",
+   "shopeeName": "Tanaman Hias Lily Paris Spider Plant Decorative Plants Indoor Outdoor Plants",
+   "price": 10000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  },
+  "103595124681": {
+   "itemid": "24719716685",
+   "url": "https://shopee.co.id/product/1211685004/24719716685",
+   "shopeeName": "Tanaman Hias Philodendron Atabapoense Exotic Plants Indoor Outdoor Decorative Plants",
+   "price": 35000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.91
+  },
+  "103994057226": {
+   "itemid": "42683527052",
+   "url": "https://shopee.co.id/product/1211685004/42683527052",
+   "shopeeName": "Tanaman Hias Pohon Hanjuang Andong Besi Corn Plants Dracaena Fragrans Tinggi 100cm - Decorative Plants - Cocok Dengan Pot Gerabah Keramik",
+   "price": 120000,
+   "priceFrom": false,
+   "how": "variation Tanaman saja",
+   "score": 0.69
+  },
+  "104066468077": {
+   "itemid": "28688659149",
+   "url": "https://shopee.co.id/product/1211685004/28688659149",
+   "shopeeName": "Tanaman Hias Pohon Karet Kebo / Ficus elastica - Indoor Decorative Plants - Perawatan Mudah - Varian Pot Plastik / Pot Gerabah",
+   "price": 75000,
+   "priceFrom": true,
+   "how": "variation Tanaman saja",
+   "score": 0.73
+  },
+  "104012708097": {
+   "itemid": "40134931506",
+   "url": "https://shopee.co.id/product/1211685004/40134931506",
+   "shopeeName": "Tanaman Hias Scindapsus Rubimin Marble Varigata Exotic Plants",
+   "price": 100000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "103595440543": {
+   "itemid": "25219715637",
+   "url": "https://shopee.co.id/product/1211685004/25219715637",
+   "shopeeName": "Tanaman Hias Sirih Gading Centong - Philodendron Srigading Centong Decorative Outdoor Indoor Vertical Garden Plants",
+   "price": 9900,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "103595290162": {
+   "itemid": "24769740584",
+   "url": "https://shopee.co.id/product/1211685004/24769740584",
+   "shopeeName": "Tanaman Hias Sirih Gading Sri Gading Tanaman All Varian - Bisa Untuk Tanaman Dinding Vertical Garden Taman Kebun Air Vase",
+   "price": 10000,
+   "priceFrom": true,
+   "how": "lowest of [10000, 12000, 15000, 17500]",
+   "score": 0.92
+  },
+  "104066472619": {
+   "itemid": "29564126087",
+   "url": "https://shopee.co.id/product/1211685004/29564126087",
+   "shopeeName": "Tanaman Hias Syngonium - Macam Macam Type Syngonium All Varian - Decorative Plants",
+   "price": 25000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.95
+  },
+  "104012708123": {
+   "itemid": "52868739790",
+   "url": "https://shopee.co.id/product/1211685004/52868739790",
+   "shopeeName": "Tanaman Hias Walisongo Hijau Eksotis Daun Varigata untuk Indoor Rumah",
+   "price": 40000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.88
+  },
+  "104066469681": {
+   "itemid": "22664150500",
+   "url": "https://shopee.co.id/product/1211685004/22664150500",
+   "shopeeName": "Tanaman Sereh Tanaman Serai Herbal Bumbu Dapur Citronella",
+   "price": 15000,
+   "priceFrom": true,
+   "how": "lowest of [15000, 25000, 35000]",
+   "score": 0.87
+  },
+  "103053662876": {
+   "itemid": "24588566470",
+   "url": "https://shopee.co.id/product/1211685004/24588566470",
+   "shopeeName": "Tatak Pot NKT 15 Untuk Pot Diameter 15 cm - HITAM/MERAH/PUTIH",
+   "price": 2500,
+   "priceFrom": true,
+   "how": "lowest of [2500, 3500]",
+   "score": 0.94
+  },
+  "103053628968": {
+   "itemid": "25219715544",
+   "url": "https://shopee.co.id/product/1211685004/25219715544",
+   "shopeeName": "Tatak Tatakan Alas Pot Global Lion 10 Untuk Pot Diameter 24-25cm",
+   "price": 5500,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.77
+  },
+  "103053629081": {
+   "itemid": "24719716819",
+   "url": "https://shopee.co.id/product/1211685004/24719716819",
+   "shopeeName": "Tatak Tatakan Alas Pot Global Lion 12 Untuk Pot Diameter 26-30cm",
+   "price": 8000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.81
+  },
+  "103053629746": {
+   "itemid": "24719716828",
+   "url": "https://shopee.co.id/product/1211685004/24719716828",
+   "shopeeName": "Tatak Tatakan Alas Pot Global Lion 14 Untuk Pot Diameter 30-35cm",
+   "price": 10000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.81
+  },
+  "103174240973": {
+   "itemid": "24769737284",
+   "url": "https://shopee.co.id/product/1211685004/24769737284",
+   "shopeeName": "Tiang Penyangga Tanaman Rambat - Flower Support 45cm / 60cm / 90 Cm",
+   "price": 45000,
+   "priceFrom": true,
+   "how": "lowest of [45000, 60000, 90000]",
+   "score": 0.67
+  },
+  "103602248502": {
+   "itemid": "47863955709",
+   "url": "https://shopee.co.id/product/1211685004/47863955709",
+   "shopeeName": "Toxiput 250 GR KEMASAN PABRIK ORIGINAL Pestisida Moluskisida Ampuh Pembasmi Keong dan Siput",
+   "price": 50000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.92
+  },
+  "103584331734": {
+   "itemid": "54713922383",
+   "url": "https://shopee.co.id/product/1211685004/54713922383",
+   "shopeeName": "Pupuk Ultradap Pak Tani 1 KG ORIGINAL KEMASAN PABRIK Merangsang Pertumbuhan Akar, Batang, Dan tunas",
+   "price": 83000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.96
+  },
+  "103586553400": {
+   "itemid": "24819595342",
+   "url": "https://shopee.co.id/product/1211685004/24819595342",
+   "shopeeName": "Pupuk Urea Nitrogen Tinggi 46% Repacking 1 KG Untuk Rumput Tanaman Buah Pertumbuhan Vegetatif",
+   "price": 10000,
+   "priceFrom": false,
+   "how": "variation 100 GR",
+   "score": 0.74
+  },
+  "103228868528": {
+   "itemid": "42258235451",
+   "url": "https://shopee.co.id/product/1211685004/42258235451",
+   "shopeeName": "Pupuk Vitamin B1 Liquinox 100 Ml Anti Stress Tanaman USA Import",
+   "price": 32000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.93
+  },
+  "103074413556": {
+   "itemid": "23164140538",
+   "url": "https://shopee.co.id/product/1211685004/23164140538",
+   "shopeeName": "Insektisida Ulat belalang Yasithrin 100ml",
+   "price": 22000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.76
+  },
+  "103586552761": {
+   "itemid": "56764013394",
+   "url": "https://shopee.co.id/product/1211685004/56764013394",
+   "shopeeName": "Pupuk ZA Ammunium Sulfat 100 Gram Botol 21% Nitrogen 24% Sulpur Ideal Pertumbuhan Vegetatif Tanaman",
+   "price": 9000,
+   "priceFrom": false,
+   "how": "single price",
+   "score": 0.89
+  }
+ }
+}

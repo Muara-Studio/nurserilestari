@@ -5,13 +5,13 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Produk — Nurseri Lestari</title>
-<meta name="description" content="Detail produk, harga Tokopedia, link Shopee, dan cara pesan lewat WhatsApp dari Nurseri Lestari Cipete atau Tangerang BSD.">
+<meta name="description" content="Detail produk, harga Shopee, link Tokopedia, dan cara pesan lewat WhatsApp dari Nurseri Lestari Cipete atau Tangerang BSD.">
 
 <link rel="canonical" href="https://tokolestari.id/produk-detail.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nurseri Lestari">
 <meta property="og:title" content="Produk — Nurseri Lestari">
-<meta property="og:description" content="Detail produk, harga Tokopedia, link Shopee, dan cara pesan lewat WhatsApp dari Nurseri Lestari Cipete atau Tangerang BSD.">
+<meta property="og:description" content="Detail produk, harga Shopee, link Tokopedia, dan cara pesan lewat WhatsApp dari Nurseri Lestari Cipete atau Tangerang BSD.">
 <meta property="og:url" content="https://tokolestari.id/produk-detail.html">
 <meta property="og:image" content="https://tokolestari.id/assets/img/og.jpg">
 <meta property="og:locale" content="id_ID">
@@ -21,10 +21,10 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/HindMadurai-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Nunito-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=782617f">
-<link rel="stylesheet" href="css/shell.css?v=782617f">
-<link rel="stylesheet" href="css/components.css?v=782617f">
-<link rel="stylesheet" href="css/catalog.css?v=782617f">
+<link rel="stylesheet" href="css/base.css?v=64bb181">
+<link rel="stylesheet" href="css/shell.css?v=64bb181">
+<link rel="stylesheet" href="css/components.css?v=64bb181">
+<link rel="stylesheet" href="css/catalog.css?v=64bb181">
 <script type="importmap">{"imports":{"gsap":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js","gsap/":"https://cdn.jsdelivr.net/npm/gsap@3.15.0/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs"}}</script>
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
@@ -48,7 +48,7 @@
           <h1 class="pd__title" data-title>Produk</h1>
           <p class="pd__cat" data-cat></p>
           <p class="pd__price"><span class="price" data-price></span><span class="badge" data-badge hidden></span></p>
-          <p class="pd__note">Harga ngikut etalase Tokopedia, bisa berubah sewaktu-waktu.</p>
+          <p class="pd__note" data-price-note>Harga ngikut etalase Shopee kami, bisa berubah sewaktu-waktu.</p>
           <div class="shop-choice pd__shop" data-shop-choice>
             <div class="shop-choice__row">
               <span class="shop-choice__label" aria-hidden="true">Beli dari</span>
@@ -62,7 +62,7 @@
           </div>
           <div class="cluster pd__cta" data-cta>
             <a class="btn btn-fill btn-lg" data-tokopedia href="#" target="_blank" rel="noopener">Beli di Tokopedia<svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow-up-right"/></svg></a>
-            <a class="btn btn-lg" data-shopee href="#" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-shopee"/></svg>Cari di Shopee</a>
+            <a class="btn btn-lg" data-shopee href="#" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-shopee"/></svg><span data-shopee-label>Cari di Shopee</span></a>
             <a class="btn btn-lg" data-wa-product href="#" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg>Pesan lewat WhatsApp</a>
           </div>
           <p class="pd__stock-note" data-stock-note hidden></p>
@@ -132,13 +132,13 @@
   <a class="btn btn-sm btn-icon" data-bar-wa href="#" target="_blank" rel="noopener" aria-label="Pesan lewat WhatsApp" title="Pesan lewat WhatsApp"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-brand-whatsapp"/></svg></a>
 </div>
 
-<script src="data/site.js?v=782617f"></script>
-<script src="data/products.js?v=782617f"></script>
+<script src="data/site.js?v=64bb181"></script>
+<script src="data/products.js?v=64bb181"></script>
 <script>/* LCP kick: the photo, name, category and price are set here, synchronously, so the first paint does not wait for the modules; js/product-detail.js fills the rest */
-(function () { var id = new URLSearchParams(location.search).get('id'), p = (TL.products || []).find(function (x) { return x.id === id; }); if (!p) return; var c = (TL.categories || []).find(function (x) { return x.id === p.category; }), img = document.querySelector('[data-photo]'); img.src = p.image; img.alt = p.name + ', foto dari etalase Tokopedia'; document.querySelector('[data-title]').textContent = p.name; document.querySelector('[data-cat]').textContent = c ? c.name : 'Lainnya'; document.querySelector('[data-price]').textContent = 'Rp' + Number(p.price).toLocaleString('id-ID'); })();</script>
-<script src="data/tips.js?v=782617f"></script>
-<script src="js/layout.js?v=782617f"></script>
-<script type="module" src="js/main.js?v=782617f"></script>
-<script type="module" src="js/product-detail.js?v=782617f"></script>
+(function () { var id = new URLSearchParams(location.search).get('id'), p = (TL.products || []).find(function (x) { return x.id === id; }); if (!p) return; var c = (TL.categories || []).find(function (x) { return x.id === p.category; }), img = document.querySelector('[data-photo]'); img.src = p.image; img.alt = p.name + ', foto dari etalase Tokopedia'; document.querySelector('[data-title]').textContent = p.name; document.querySelector('[data-cat]').textContent = c ? c.name : 'Lainnya'; document.querySelector('[data-price]').innerHTML = p.price == null ? '<span class="price-ask">Tanya harga di WhatsApp</span>' : (p.priceFrom ? '<span class="price-from">Mulai</span> ' : '') + 'Rp' + Number(p.price).toLocaleString('id-ID'); })();</script>
+<script src="data/tips.js?v=64bb181"></script>
+<script src="js/layout.js?v=64bb181"></script>
+<script type="module" src="js/main.js?v=64bb181"></script>
+<script type="module" src="js/product-detail.js?v=64bb181"></script>
 </body>
 </html>

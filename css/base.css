@@ -128,6 +128,11 @@ h4, .h4 { font-size: var(--fs-h4); letter-spacing: -0.01em; }
 .price { font-family: var(--font-display); font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
 .price-before { font-family: var(--font-text); font-weight: 400; color: var(--mute); text-decoration: line-through; margin-left: .5rem; font-size: .85em; }
 .on-dark, .on-dark h1, .on-dark h2, .on-dark h3, .on-dark h4, .on-dark .display, .on-dark .price { color: var(--sage); }
+/* prices follow the Shopee etalase (2 Nov 2026): "Mulai" before the lowest of several variation prices, "Tanya harga" where the
+   product is not on Shopee yet; both in the quiet colour (mute 5.0:1 on paper-2, sage-2 8.4:1 on moss) and never broken over lines */
+.price .price-from { font-weight: 500; font-size: .72em; color: var(--mute); letter-spacing: 0; }
+.price .price-ask { font-family: var(--font-text); font-weight: 700; font-size: .78em; letter-spacing: 0; color: var(--mute); white-space: nowrap; }
+.on-dark .price .price-from, .on-dark .price .price-ask { color: var(--sage-2); }
 .on-dark .lead, .on-dark .muted, .on-dark p { color: var(--sage-2); }
 .on-dark .eyebrow, .on-dark .meta-line, .on-dark .meta { color: var(--sage-2); }
 .on-dark .prose a:not(.btn) { color: var(--sage); text-decoration-color: var(--olive); }

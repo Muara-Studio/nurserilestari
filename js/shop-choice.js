@@ -4,7 +4,7 @@
    distance to TL.site.locations[*].coords, read at runtime; a shop without coords is skipped). A shop picked by hand wins over
    the automatic suggestion; the button always applies it. The pure half (distance, nearest, wording) is exported for
    tests/shop.test.mjs: nothing here touches the DOM at import time, so Node can import it. */
-import { esc, icon, fmtPrice } from './util.js';
+import { esc, icon, hasPrice, priceInText } from './util.js';
 
 export const KEY = 'tl.shop';      // the chosen shop id
 const KEY_BY = 'tl.shop-by';       // how it was chosen: 'manual' (a pill) or 'lokasi' (the position suggestion)
@@ -22,8 +22,8 @@ export const shopLabel = (l) => {
 };
 export const adminFor = (id) => { const w = site().whatsapp || []; return w.find((x) => x.shop === id) || w[0] || null; };
 export const waShop = (id, text) => { const a = adminFor(id); return a ? `https://wa.me/${a.number}?text=${encodeURIComponent(text)}` : '#'; };
-// the order message names the product, its price and the shop
-export const waOrderText = (p, l) => `${site().waGreeting || ''}${p.name} (${fmtPrice(p.price)}) di ${shopLabel(l)}, masih ada? Kalau ada, saya mau pesan.`;
+// the order message names the product, its price (or asks for it: a product not on Shopee yet has none) and the shop
+export const waOrderText = (p, l) => `${site().waGreeting || ''}${p.name}${priceInText(p)} di ${shopLabel(l)}, masih ada?${hasPrice(p) ? '' : ' Berapa harganya?'} Kalau ada, saya mau pesan.`;
 
 /* ---- pure: distance, nearest shop, wording ---- */
 const R_KM = 6371, rad = (d) => (d * Math.PI) / 180;

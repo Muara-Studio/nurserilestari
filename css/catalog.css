@@ -110,6 +110,7 @@ html.reduced .pd__photo { animation: none; }
 .pd__cat { font-size: var(--fs-sm); color: var(--sage-2); min-height: 1.5rem; }
 .pd__price { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: var(--s-4); min-height: clamp(2rem, 1.5rem + 1.6vw, 2.75rem); }
 .pd__price .price { font-size: clamp(2rem, 1.5rem + 1.6vw, 2.75rem); line-height: 1; }
+.pd__price .price-ask { display: inline-block; white-space: normal; line-height: 1.15; font-size: .74em; }   /* "Tanya harga di WhatsApp" (2 Nov 2026): one line on a 390 px phone, two lines on narrower ones rather than running out of the glass */
 .pd__price .badge[hidden] { display: none; }
 .pd__note { font-size: var(--fs-sm); color: var(--sage-2); }
 .pd__shop { margin-top: var(--s-5); }   /* "Beli dari" sits right above the buttons it steers (B2) */
@@ -182,7 +183,8 @@ html.reduced .pd__photo { animation: none; }
 .buy-bar.is-on { translate: 0 0; visibility: visible; transition-delay: 0s; }
 .buy-bar__info { flex: 1 1 auto; min-width: 0; display: grid; line-height: 1.2; }
 .buy-bar__name { font-weight: 500; font-size: var(--fs-xs); color: var(--sage-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.buy-bar__price { font-size: 1.125rem; }
+.buy-bar__price { font-size: 1.125rem; white-space: nowrap; }   /* one line: "Tanya harga" is the short ask here (js/util.js priceHTML) */
+.buy-bar__price .price-from { display: block; font-size: .7em; line-height: 1.1; }   /* "Mulai" on its own small line above the amount: the column is 90-120 px wide, "Mulai Rp25.000" does not fit beside the buttons */
 .buy-bar .btn { flex: 0 0 auto; }   /* D4: a long product name shrank the icon pills to 22 px (flex shrinks by basis); the name truncates instead */
 .buy-bar .btn-sm { min-height: 2.75rem; }
 .buy-bar .btn-icon { width: 2.75rem; height: 2.75rem; }

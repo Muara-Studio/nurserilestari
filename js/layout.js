@@ -92,7 +92,7 @@
       <ul class="footer-shops" aria-label="Dua toko kami">${shops}</ul>
     </div>
     <ul class="footer-links" aria-label="Etalase dan media sosial">${links}</ul>
-    <p class="footer-legal"><span>© ${year} Nurseri Lestari</span><span class="footer-sep" aria-hidden="true">·</span><span>Harga mengikuti etalase Tokopedia dan Shopee</span><span class="footer-sep" aria-hidden="true">·</span><a class="link-u" href="NOTICES.md">Kredit foto</a></p>
+    <p class="footer-legal"><span>© ${year} Nurseri Lestari</span><span class="footer-sep" aria-hidden="true">·</span><span>Harga mengikuti etalase Shopee</span><span class="footer-sep" aria-hidden="true">·</span><a class="link-u" href="NOTICES.md">Kredit foto</a></p>
   </div>
 </footer>
 <a class="wa-fab glass-dark" href="${wa()}" ${ext} data-wa aria-label="Chat WhatsApp">${icon('brand-whatsapp', 'icon-xl')}</a>`;

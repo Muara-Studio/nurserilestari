@@ -1,6 +1,6 @@
 /* Nurseri Lestari — js/catalog.js (C3, v2). The catalog: flat product tiles (the landing's tiles, one shared component) filtered from
    TL.products. Pure parts (filter, sort, URL state) and the tile renderer are exported: landing.js imports tileHTML, product-detail.js the rest. */
-import { fmtPrice, esc, icon, waLink, reduced } from './util.js';
+import { fmtPrice, hasPrice, priceHTML, priceInText, esc, icon, waLink, reduced } from './util.js';
 import { mountShopToggle } from './shop-choice.js';
 
 // gsap only animates and never holds the shelves back: it loads in the background (no top-level await, so the tiles and the
@@ -14,8 +14,8 @@ const categories = () => TL().categories || [];
 export const STATUS = { ready: 'Ready', preorder: 'Pre-order', habis: 'Stok habis' };
 export const STORE = { jakarta: 'Cipete', bsd: 'Tangerang BSD' };
 export const catName = (id, cats = categories()) => (cats.find((c) => c.id === id) || {}).name || 'Lainnya';
-// line 1 is the Tangerang BSD number; the message names the product and its price
-export const waProduct = (p) => waLink(`${(TL().site || {}).waGreeting || ''}${p.name} (${fmtPrice(p.price)}), apakah masih tersedia?`, p.store === 'bsd' ? 1 : 0);
+// line 1 is the Tangerang BSD number; the message names the product and its price, and asks for one when the product has none yet
+export const waProduct = (p) => waLink(`${(TL().site || {}).waGreeting || ''}${p.name}${priceInText(p)}, apakah masih tersedia?${hasPrice(p) ? '' : ' Boleh tahu harganya?'}`, p.store === 'bsd' ? 1 : 0);
 
 /* ---- pure: search, filter, sort, URL state ---- */
 const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -30,11 +30,12 @@ export function filterProducts(list, { q = '', kategori = '', status = '' } = {}
   return list.filter((p) => (!kategori || p.category === kategori) && (!status || p.status === status) && words.every((w) => haystack(p, cats).includes(w)));
 }
 const byName = (a, b) => a.name.localeCompare(b.name, 'id');
+const priceOf = (p) => (hasPrice(p) ? Number(p.price) : null);   // null: not on Shopee yet, so no price; those sort last in both price orders
 export const SORTS = {
   unggulan: (a, b) => (b.featured === true) - (a.featured === true) || (b.sold || 0) - (a.sold || 0) || byName(a, b),
   terlaris: (a, b) => (b.sold || 0) - (a.sold || 0) || (b.rating || 0) - (a.rating || 0) || byName(a, b),
-  murah: (a, b) => a.price - b.price || byName(a, b),
-  mahal: (a, b) => b.price - a.price || byName(a, b),
+  murah: (a, b) => (priceOf(a) == null) - (priceOf(b) == null) || (priceOf(a) ?? 0) - (priceOf(b) ?? 0) || byName(a, b),
+  mahal: (a, b) => (priceOf(a) == null) - (priceOf(b) == null) || (priceOf(b) ?? 0) - (priceOf(a) ?? 0) || byName(a, b),
   nama: byName,
 };
 export const sortProducts = (list, key) => [...list].sort(SORTS[key] || SORTS[DEFAULTS.urut]);
@@ -61,9 +62,10 @@ export const paramsFromState = (s) => {
 
 /* ---- one shelf tile: the same markup wherever products stand on a shelf (landing, catalog, related; styles: .rak* in
    css/components.css). The whole tile is the link; the square card image fills the top edge to edge (P2, 1 Nov 2026: no mat,
-   no crop), then name, category, the price with "N terjual" beside it (Tokopedia's number from data/products.js, shown only when
-   it is above zero, as Tokopedia does: the page carries the "angka dari Tokopedia" note once), the badge only when the product is
-   not ready. `cta: true` adds a "Lihat produk" pill at the foot (a span: the tile is already the link). `reveal` adds the
+   no crop), then name, category, the price (it follows the Shopee etalase since 2 Nov 2026: "Mulai Rp…" when the listing has
+   several variations, "Tanya harga" where the product is not on Shopee yet) with "N terjual" beside it (still Tokopedia's number
+   from data/products.js, shown only when it is above zero, as Tokopedia does: the page carries the "angka dari Tokopedia" note
+   once), the badge only when the product is not ready. `cta: true` adds a "Lihat produk" pill at the foot (a span: the tile is already the link). `reveal` adds the
    landing's data-reveal hooks (main.js runs that CSS reveal); the catalog settles its tiles with gsap ---- */
 export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, eager = false, first = false, cta = false } = {}) => `
 <li class="rak-item" data-id="${esc(p.id)}"${reveal ? ` data-reveal data-delay="${delay}"` : ''}>
@@ -71,7 +73,7 @@ export const tileHTML = (p, { cats = categories(), reveal = false, delay = 0, ea
     <span class="rak-mat"><img src="${esc(p.image)}" alt="${esc(p.name)}" width="1024" height="1024" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${first ? ' fetchpriority="high"' : ''}></span>
     <strong class="rak-name">${esc(p.name)}</strong>
     <span class="rak-cat">${esc(catName(p.category, cats))}</span>
-    <span class="rak-foot"><span class="price">${fmtPrice(p.price)}${p.priceBefore ? `<span class="price-before">${fmtPrice(p.priceBefore)}</span>` : ''}</span>${p.sold > 0 ? `<span class="rak-sold">${fmtSold(p.sold)} terjual</span>` : ''}${p.status && p.status !== 'ready' ? `<span class="badge badge-${esc(p.status)}">${esc(STATUS[p.status] || p.status)}</span>` : ''}</span>${cta ? `
+    <span class="rak-foot"><span class="price">${priceHTML(p)}${p.priceBefore ? `<span class="price-before">${fmtPrice(p.priceBefore)}</span>` : ''}</span>${p.sold > 0 ? `<span class="rak-sold">${fmtSold(p.sold)} terjual</span>` : ''}${p.status && p.status !== 'ready' ? `<span class="badge badge-${esc(p.status)}">${esc(STATUS[p.status] || p.status)}</span>` : ''}</span>${cta ? `
     <span class="btn btn-sm btn-fill rak-cta">Lihat produk${icon('arrow-right', 'icon-arrow')}</span>` : ''}
   </a>
 </li>`;
