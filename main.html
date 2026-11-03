@@ -12,8 +12,8 @@
 <link rel="apple-touch-icon" href="assets/brand/favicon-180.png">
 <link rel="preload" href="assets/fonts/HindMadurai-600-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Nunito-Variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/base.css?v=64bb181">
-<link rel="stylesheet" href="css/game.css?v=64bb181">
+<link rel="stylesheet" href="css/base.css?v=189fbf5">
+<link rel="stylesheet" href="css/game.css?v=189fbf5">
 <script>document.documentElement.classList.remove('no-js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('reduced')</script>
 </head>
 <!-- the game owns the whole viewport (like the reference): no banner, header or footer on this page; "Kembali ke toko" lives in the menu -->
@@ -37,7 +37,7 @@
       <div class="hud-top">
         <div class="hud-brand">
           <a class="btn-back" href="index.html" data-back aria-label="Kembali"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron-left"/></svg><span class="btn-back-label">Kembali</span></a>
-          <span class="brand"><img class="brand-mark" src="assets/brand/logo-mark-white.webp" alt="" width="355" height="356" decoding="async"><span class="wordmark">Nurseri Lestari</span></span>
+          <span class="brand"><img class="brand-mark" src="assets/brand/logo-mark.webp" alt="" width="355" height="356" decoding="async"><span class="wordmark">Nurseri Lestari</span></span>
         </div>
         <span class="pill seedbox" aria-label="Benih terkumpul"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-leaf"/></svg><b class="num" id="homeSeeds">0</b></span>
         <button class="btn btn-menu" id="btnMenu" type="button" aria-label="Menu" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-menu-2"/></svg></button>
@@ -180,6 +180,6 @@
 </main>
 <script>/* Kembali: back to where you came from when that was one of our pages, otherwise the href (index.html) */
 document.querySelectorAll('[data-back]').forEach(function (a) { a.addEventListener('click', function (e) { var ref = document.referrer; if (history.length > 1 && ref && new URL(ref).origin === location.origin) { e.preventDefault(); history.back(); } }); });</script>
-<script type="module" src="js/game/main.js?v=64bb181"></script>
+<script type="module" src="js/game/main.js?v=189fbf5"></script>
 </body>
 </html>

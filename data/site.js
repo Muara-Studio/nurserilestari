@@ -8,8 +8,8 @@ TL.site = {
   shortDesc: "Toko perkebunan di Cilandak, Jakarta Selatan. Tanaman hias, benih, media tanam racikan sendiri, pupuk, pot, dan alat kebun. Ada juga di Tokopedia dan Shopee.",
   email: "nurserilestari@gmail.com",
   whatsapp: [
-    { label: "Admin Toko Cipete", number: "6287889115475", display: "0878-8911-5475", shop: "cipete" },   /* the number on the Cipete Google Maps listing (facts.md) */
-    { label: "Admin Toko BSD", number: "6287777600374", display: "0877-7760-0374", shop: "bsd" }          /* assumed the other line serves BSD: confirm with the client */
+    { label: "Admin Toko Cipete", number: "6287777600374", display: "0877-7760-0374", shop: "cipete" },   /* client, 3 Nov 2026: the lines were reversed before; Cipete = 0877 */
+    { label: "Admin Toko BSD", number: "6287889115475", display: "0878-8911-5475", shop: "bsd" }          /* client, 3 Nov 2026: BSD = 0878 (the number both Maps listings show) */
   ],
   waGreeting: "Halo Nurseri Lestari, saya mau tanya ",
   locations: [
@@ -17,7 +17,7 @@ TL.site = {
       address: "Jl. Gaharu I No. 7, RT 3/RW 11, Cilandak Barat, Kec. Cilandak, Jakarta Selatan 12430",
       hours: "setiap hari, 08.00–17.00 WIB", hoursNote: "",
       coords: { lat: -6.2795087, lng: 106.8042021 },
-      maps: "https://maps.app.goo.gl/hXxVJjxYTK2USExG7", mapsEmbed: "https://www.google.com/maps?q=-6.2795087,106.8042021&z=16&output=embed",
+      maps: "https://maps.google.com/?cid=15045628716608648008", mapsEmbed: "https://www.google.com/maps?q=-6.2795087,106.8042021&z=16&output=embed",
       rating: 4.8, ratingSource: "Google Maps", freeDelivery: "Gratis ongkir sekitar Jl. Gaharu: MPR, BDN, dan Cipete",
       tokopedia: "https://www.tokopedia.com/nurserilestari", shopee: "https://shopee.co.id/nurserilestari",
       tokopediaStats: { rating: "5.0", reviews: "23,6 rb", sold: "205 rb" } },
@@ -31,6 +31,7 @@ TL.site = {
   social: {
     instagram: { handle: "@nurseri.lestari", url: "https://www.instagram.com/nurseri.lestari/" },
     tiktok: { handle: "@nurserilestari", url: "https://www.tiktok.com/@nurserilestari" },
+    threads: { handle: "@nurseri.lestari", url: "https://www.threads.com/@nurseri.lestari" },
     linktree: { url: "https://linktr.ee/nurserilestari" }
   },
   marketplaces: [

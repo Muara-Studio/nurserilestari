@@ -35,8 +35,9 @@
      start and the header's data-tone shows one of them (shell.css): swapping src at a tone flip aborted the image still in
      flight (ERR_ABORTED on kontak, jury of 1 Nov). The off-tone picture is lazy, so it is only fetched once it is shown, and a
      picture with display none is out of the accessibility tree, so the link is named by the one showing */
-  const logoSrc = (t) => (t === 'light' ? 'assets/brand/logo-header.webp' : 'assets/brand/logo-header-white.webp');
-  const markSrc = (t) => (t === 'light' ? 'assets/brand/logo-mark.webp' : 'assets/brand/logo-mark-white.webp');
+  // client (3 Nov 2026): the emblem stays the original colour one on every tone; only the wordmark flips (logo-header-dark = colour emblem + sage wordmark)
+  const logoSrc = (t) => (t === 'light' ? 'assets/brand/logo-header.webp' : 'assets/brand/logo-header-dark.webp');
+  const markSrc = () => 'assets/brand/logo-mark.webp';
   const logoPic = (t, shown) => `<picture class="site-logo-pic logo-${t}"><source media="(max-width: 639px)" srcset="${markSrc(t)}"><img class="site-logo-img" src="${logoSrc(t)}" alt="Nurseri Lestari" width="971" height="169" decoding="async"${shown ? '' : ' loading="lazy"'}></picture>`;
   const logo = (t) => logoPic('dark', t === 'dark') + logoPic('light', t === 'light');
 
@@ -57,7 +58,7 @@
 </header>
 <dialog class="nav-drawer glass-dark on-dark" id="nav-drawer" aria-label="Menu" data-lenis-prevent>
   <div class="drawer-scroll">
-    <div class="drawer-top"><span class="drawer-brand"><img class="site-logo-img" src="assets/brand/logo-full-white.webp" alt="Nurseri Lestari" width="1171" height="357" decoding="async" loading="lazy"></span><button class="hdr-btn drawer-close" type="button" aria-label="Tutup menu">${icon('x', 'icon-lg')}</button></div>
+    <div class="drawer-top"><span class="drawer-brand"><img class="site-logo-img" src="assets/brand/logo-full-dark.webp" alt="Nurseri Lestari" width="1170" height="356" decoding="async" loading="lazy"></span><button class="hdr-btn drawer-close" type="button" aria-label="Tutup menu">${icon('x', 'icon-lg')}</button></div>
     <nav class="drawer-nav" aria-label="Navigasi menu"><ul>${navList()}</ul></nav>
     <div class="drawer-actions">
       <a class="btn btn-fill" href="${wa()}" ${ext} data-wa>${icon('brand-whatsapp')}Chat WhatsApp</a>
@@ -79,6 +80,7 @@
     ...(site.marketplaces || []).map((m) => [m.url, m.name]),
     [social.instagram && social.instagram.url, 'Instagram'],
     [social.tiktok && social.tiktok.url, 'TikTok'],
+    [social.threads && social.threads.url, 'Threads'],
   ].filter((r) => r[0]).map((r) => `<li><a class="tag" href="${esc(r[0])}" ${ext}>${esc(r[1])}</a></li>`).join('');
 
   const footer = `
