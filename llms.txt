@@ -1,0 +1,57 @@
+# Nurseri Lestari
+
+> Nurseri Lestari (di Google Maps: Toko & Nursery Lestari) adalah toko perkebunan dengan dua lokasi: Cipete, Jakarta Selatan dan Tangerang BSD. Menjual tanaman hias, benih, media tanam racikan sendiri, pupuk, obat tanaman, pot, dan alat berkebun; 160 produk ada di katalog situs dengan harga mengikuti etalase Shopee. Buka setiap hari, 08.00–17.00 WIB. Pesan lewat WhatsApp admin toko, Tokopedia, atau Shopee.
+
+Situs resmi: https://nurserilestari.com/ (bahasa Indonesia). Email nurserilestari@gmail.com. Tagline: "Your Gardening Needs Solution". Harga di situs mengikuti etalase Shopee; produk tanpa harga ditanyakan lewat WhatsApp. Gratis ongkir di sekitar tiap toko (sekitar Jl. Gaharu: MPR, BDN, dan Cipete; sekitar BSD).
+
+## Halaman utama
+
+- [Beranda](https://nurserilestari.com/): Rak depan: kategori, produk unggulan, dua toko, dan cara pesan.
+- [Belanja (katalog produk)](https://nurserilestari.com/produk.html): 160 produk dengan harga mengikuti etalase Shopee; filter per kategori, cari dengan ?q=.
+- [Tips rawat](https://nurserilestari.com/tips.html): Catatan singkat soal media tanam, ganti pot, alat, dan cara mulai berkebun.
+- [Cerita toko](https://nurserilestari.com/tentang.html): Sejarah singkat toko di Jl. Gaharu I, Cipete, dan cabang Tangerang BSD.
+- [Hubungi](https://nurserilestari.com/kontak.html): Nomor WhatsApp admin tiap toko, alamat, jam buka, peta.
+- [Main game](https://nurserilestari.com/main.html): Tunas & Hutan Lestari, permainan kecil di peramban.
+
+## Produk
+
+- [Semua produk](https://nurserilestari.com/produk.html): 160 produk, 8 kategori. Halaman tiap produk: https://nurserilestari.com/produk-<slug>.html.
+- [Tanaman Hias (39 produk)](https://nurserilestari.com/produk.html?kategori=tanaman-hias): Indoor dan outdoor: aroid, dracaena, anggrek, pucuk merah, herbal.
+- [Benih & Bibit (14 produk)](https://nurserilestari.com/produk.html?kategori=benih): Benih sayur, buah, dan bunga bergaransi tumbuh.
+- [Media Tanam (18 produk)](https://nurserilestari.com/produk.html?kategori=media-tanam): Racikan siap pakai: aroid mix, orchid mix, sekam, perlite, cocopeat.
+- [Pupuk & Nutrisi (32 produk)](https://nurserilestari.com/produk.html?kategori=pupuk): Organik, NPK, booster, dan vitamin tanaman.
+- [Obat Tanaman (8 produk)](https://nurserilestari.com/produk.html?kategori=obat): Insektisida, fungisida, herbisida, dan pestisida nabati.
+- [Pot & Tatakan (27 produk)](https://nurserilestari.com/produk.html?kategori=pot): Pot plastik, keramik glazur, gerabah, planter bag, tatakan, kaki pot.
+- [Alat Berkebun (11 produk)](https://nurserilestari.com/produk.html?kategori=alat): Sekop, gunting dahan, gergaji, garpu, golok.
+- [Perlengkapan (8 produk)](https://nurserilestari.com/produk.html?kategori=perlengkapan): Paranet, tali, label tanaman, kawat bonsai, packing.
+- Lainnya (3 produk): ada di katalog lengkap.
+
+## Toko
+
+- [Nurseri Lestari Cipete](https://maps.google.com/?cid=15045628716608648008): Jl. Gaharu I No. 7, RT 3/RW 11, Cilandak Barat, Kec. Cilandak, Jakarta Selatan 12430. Buka setiap hari, 08.00–17.00 WIB. WhatsApp Admin Toko Cipete 0877-7760-0374 (https://wa.me/6287777600374). Gratis ongkir sekitar Jl. Gaharu: MPR, BDN, dan Cipete. Google Maps: https://maps.google.com/?cid=15045628716608648008.
+- [Nurseri Lestari BSD](https://maps.google.com/?cid=3229749008144282684): Jl. Statistika Blok H–I EE No. 6, RT 1/RW 1, Pagedangan, Kab. Tangerang, Banten 15339. Buka setiap hari, 08.00–17.00 WIB. WhatsApp Admin Toko BSD 0878-8911-5475 (https://wa.me/6287889115475). Gratis ongkir sekitar BSD. Google Maps: https://maps.google.com/?cid=3229749008144282684 (plus code PJ2J+FM Pagedangan).
+
+## Belanja online
+
+- [Tokopedia Cipete](https://www.tokopedia.com/nurserilestari)
+- [Tokopedia BSD](https://www.tokopedia.com/nurserilestaritangerang)
+- [Shopee Cipete](https://shopee.co.id/nurserilestari)
+- [Shopee BSD](https://shopee.co.id/nurserilestaritangerang)
+
+## Media sosial
+
+- [Instagram @nurseri.lestari](https://www.instagram.com/nurseri.lestari/)
+- [Tiktok @nurserilestari](https://www.tiktok.com/@nurserilestari)
+- [Threads @nurseri.lestari](https://www.threads.com/@nurseri.lestari)
+- [Linktree](https://linktr.ee/nurserilestari)
+
+## Tips
+
+- [Tanamanmu sudah mulai merambat? Pilih ajir yang sesuai](https://nurserilestari.com/tips-detail.html?id=ajir-tanaman-rambat): Sirih gading, monstera, sampai markisa butuh penyangga yang berbeda. Salah ajir, batang mudah patah dan tanaman tumbuh tidak rapi.
+- [Sphagnum moss: media ringan untuk menjaga kelembapan](https://nurserilestari.com/tips-detail.html?id=sphagnum-moss): Media favorit untuk propagasi stek, anggrek, dan aroid. Menyimpan air sampai belasan kali beratnya, tetapi tetap berongga.
+- [Kenalan dengan Adenium: cantik, tangguh, dan berbunga menawan](https://nurserilestari.com/tips-detail.html?id=mengenal-adenium): Si kamboja jepang tahan panas dan jarang minta disiram. Kuncinya ada di media yang porous dan matahari penuh.
+- [Kalau tanamanmu bisa ngomong: kenali alat pangkas sebelum memotong](https://nurserilestari.com/tips-detail.html?id=kenali-alat-pangkas): Gunting dahan, gunting rumput, dan gergaji punya tugas masing-masing. Alat yang salah membuat luka potong robek dan lama sembuh.
+- [Tanamanmu sudah besar? Saatnya naik ke pot 60 cm](https://nurserilestari.com/tips-detail.html?id=naik-pot-60-cm): Akar keluar dari lubang pot, media cepat kering, tanaman mudah rebah: tiga tanda pot sudah kesempitan.
+- [Benarkah abu vulkanik bisa menyuburkan tanah?](https://nurserilestari.com/tips-detail.html?id=abu-vulkanik): Abu gunung berapi kaya mineral, tetapi tidak langsung jadi pupuk. Begini cara memanfaatkannya dengan aman.
+- [Cuma 5 menit melihat tanaman? Ternyata bisa bantu tubuh lebih rileks](https://nurserilestari.com/tips-detail.html?id=lima-menit-melihat-tanaman): Beberapa penelitian menunjukkan interaksi singkat dengan tanaman menurunkan stres. Mulai dari satu pot di meja kerja.
+- [Mulai berkebun tidak harus jago: paket awal untuk pemula](https://nurserilestari.com/tips-detail.html?id=mulai-berkebun): Media siap pakai, benih bergaransi tumbuh, pot dengan tatakan, dan satu pupuk serbaguna. Itu saja sudah cukup untuk panen pertama.

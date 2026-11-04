@@ -1,6 +1,7 @@
 /* Nurseri Lestari — js/search.js (A). Product search overlay over TL.products: a native <dialog> with a GET form, so
    Enter opens produk.html?q= without JavaScript. searchProducts() is pure and tested in tests/search.test.mjs. */
 import { priceHTML, esc, icon, waLink } from './util.js';
+import { productUrl, srcsetAttrs } from './catalog.js';   // hits open the static produk-<slug>.html pages (v3.0); safe in Node: catalog.js guards its DOM boot
 
 const fold = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const STATUS = { ready: 'Ready', preorder: 'Pre-order', habis: 'Stok habis' };
@@ -56,8 +57,8 @@ export function initSearch({ onOpen, onClose } = {}) {
   const input = dlg.querySelector('.search-input'), hint = dlg.querySelector('.search-hint'), list = dlg.querySelector('.search-results');
   const count = dlg.querySelector('.search-count'), all = dlg.querySelector('.search-all');
 
-  const hit = (p, q) => `<li><a class="search-hit" href="produk-detail.html?id=${esc(p.id)}">
-    <img src="${esc(p.image)}" alt="" width="52" height="52" loading="lazy" decoding="async" onerror="this.hidden=true">
+  const hit = (p, q) => `<li><a class="search-hit" href="${esc(productUrl(p))}">
+    <img src="${esc(p.image)}"${srcsetAttrs(p, '52px')} alt="" width="52" height="52" loading="lazy" decoding="async" onerror="this.hidden=true">
     <span class="search-hit-body"><span class="search-hit-name">${highlight(p.name, q)}</span>
     <span class="meta">${esc(catName(p.category))}${p.status && p.status !== 'ready' ? ` <span class="badge badge-${esc(p.status)}">${STATUS[p.status] || esc(p.status)}</span>` : ''}</span></span>
     <span class="price">${priceHTML(p)}</span></a></li>`;

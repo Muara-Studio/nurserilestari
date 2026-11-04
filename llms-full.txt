@@ -1,0 +1,604 @@
+# Nurseri Lestari
+
+> Nurseri Lestari (di Google Maps: Toko & Nursery Lestari) adalah toko perkebunan dengan dua lokasi: Cipete, Jakarta Selatan dan Tangerang BSD. Menjual tanaman hias, benih, media tanam racikan sendiri, pupuk, obat tanaman, pot, dan alat berkebun; 160 produk ada di katalog situs dengan harga mengikuti etalase Shopee. Buka setiap hari, 08.00–17.00 WIB. Pesan lewat WhatsApp admin toko, Tokopedia, atau Shopee.
+
+Situs resmi: https://nurserilestari.com/ (bahasa Indonesia). Email nurserilestari@gmail.com. Tagline: "Your Gardening Needs Solution". Harga di situs mengikuti etalase Shopee; produk tanpa harga ditanyakan lewat WhatsApp. Gratis ongkir di sekitar tiap toko (sekitar Jl. Gaharu: MPR, BDN, dan Cipete; sekitar BSD).
+
+## Halaman utama
+
+- [Beranda](https://nurserilestari.com/): Rak depan: kategori, produk unggulan, dua toko, dan cara pesan.
+- [Belanja (katalog produk)](https://nurserilestari.com/produk.html): 160 produk dengan harga mengikuti etalase Shopee; filter per kategori, cari dengan ?q=.
+- [Tips rawat](https://nurserilestari.com/tips.html): Catatan singkat soal media tanam, ganti pot, alat, dan cara mulai berkebun.
+- [Cerita toko](https://nurserilestari.com/tentang.html): Sejarah singkat toko di Jl. Gaharu I, Cipete, dan cabang Tangerang BSD.
+- [Hubungi](https://nurserilestari.com/kontak.html): Nomor WhatsApp admin tiap toko, alamat, jam buka, peta.
+- [Main game](https://nurserilestari.com/main.html): Tunas & Hutan Lestari, permainan kecil di peramban.
+
+## Produk
+
+- [Semua produk](https://nurserilestari.com/produk.html): 160 produk, 8 kategori. Halaman tiap produk: https://nurserilestari.com/produk-<slug>.html.
+- [Tanaman Hias (39 produk)](https://nurserilestari.com/produk.html?kategori=tanaman-hias): Indoor dan outdoor: aroid, dracaena, anggrek, pucuk merah, herbal.
+- [Benih & Bibit (14 produk)](https://nurserilestari.com/produk.html?kategori=benih): Benih sayur, buah, dan bunga bergaransi tumbuh.
+- [Media Tanam (18 produk)](https://nurserilestari.com/produk.html?kategori=media-tanam): Racikan siap pakai: aroid mix, orchid mix, sekam, perlite, cocopeat.
+- [Pupuk & Nutrisi (32 produk)](https://nurserilestari.com/produk.html?kategori=pupuk): Organik, NPK, booster, dan vitamin tanaman.
+- [Obat Tanaman (8 produk)](https://nurserilestari.com/produk.html?kategori=obat): Insektisida, fungisida, herbisida, dan pestisida nabati.
+- [Pot & Tatakan (27 produk)](https://nurserilestari.com/produk.html?kategori=pot): Pot plastik, keramik glazur, gerabah, planter bag, tatakan, kaki pot.
+- [Alat Berkebun (11 produk)](https://nurserilestari.com/produk.html?kategori=alat): Sekop, gunting dahan, gergaji, garpu, golok.
+- [Perlengkapan (8 produk)](https://nurserilestari.com/produk.html?kategori=perlengkapan): Paranet, tali, label tanaman, kawat bonsai, packing.
+- Lainnya (3 produk): ada di katalog lengkap.
+
+## Toko
+
+- [Nurseri Lestari Cipete](https://maps.google.com/?cid=15045628716608648008): Jl. Gaharu I No. 7, RT 3/RW 11, Cilandak Barat, Kec. Cilandak, Jakarta Selatan 12430. Buka setiap hari, 08.00–17.00 WIB. WhatsApp Admin Toko Cipete 0877-7760-0374 (https://wa.me/6287777600374). Gratis ongkir sekitar Jl. Gaharu: MPR, BDN, dan Cipete. Google Maps: https://maps.google.com/?cid=15045628716608648008.
+- [Nurseri Lestari BSD](https://maps.google.com/?cid=3229749008144282684): Jl. Statistika Blok H–I EE No. 6, RT 1/RW 1, Pagedangan, Kab. Tangerang, Banten 15339. Buka setiap hari, 08.00–17.00 WIB. WhatsApp Admin Toko BSD 0878-8911-5475 (https://wa.me/6287889115475). Gratis ongkir sekitar BSD. Google Maps: https://maps.google.com/?cid=3229749008144282684 (plus code PJ2J+FM Pagedangan).
+
+## Belanja online
+
+- [Tokopedia Cipete](https://www.tokopedia.com/nurserilestari)
+- [Tokopedia BSD](https://www.tokopedia.com/nurserilestaritangerang)
+- [Shopee Cipete](https://shopee.co.id/nurserilestari)
+- [Shopee BSD](https://shopee.co.id/nurserilestaritangerang)
+
+## Media sosial
+
+- [Instagram @nurseri.lestari](https://www.instagram.com/nurseri.lestari/)
+- [Tiktok @nurserilestari](https://www.tiktok.com/@nurserilestari)
+- [Threads @nurseri.lestari](https://www.threads.com/@nurseri.lestari)
+- [Linktree](https://linktr.ee/nurserilestari)
+
+## Tips
+
+- [Tanamanmu sudah mulai merambat? Pilih ajir yang sesuai](https://nurserilestari.com/tips-detail.html?id=ajir-tanaman-rambat): Sirih gading, monstera, sampai markisa butuh penyangga yang berbeda. Salah ajir, batang mudah patah dan tanaman tumbuh tidak rapi.
+- [Sphagnum moss: media ringan untuk menjaga kelembapan](https://nurserilestari.com/tips-detail.html?id=sphagnum-moss): Media favorit untuk propagasi stek, anggrek, dan aroid. Menyimpan air sampai belasan kali beratnya, tetapi tetap berongga.
+- [Kenalan dengan Adenium: cantik, tangguh, dan berbunga menawan](https://nurserilestari.com/tips-detail.html?id=mengenal-adenium): Si kamboja jepang tahan panas dan jarang minta disiram. Kuncinya ada di media yang porous dan matahari penuh.
+- [Kalau tanamanmu bisa ngomong: kenali alat pangkas sebelum memotong](https://nurserilestari.com/tips-detail.html?id=kenali-alat-pangkas): Gunting dahan, gunting rumput, dan gergaji punya tugas masing-masing. Alat yang salah membuat luka potong robek dan lama sembuh.
+- [Tanamanmu sudah besar? Saatnya naik ke pot 60 cm](https://nurserilestari.com/tips-detail.html?id=naik-pot-60-cm): Akar keluar dari lubang pot, media cepat kering, tanaman mudah rebah: tiga tanda pot sudah kesempitan.
+- [Benarkah abu vulkanik bisa menyuburkan tanah?](https://nurserilestari.com/tips-detail.html?id=abu-vulkanik): Abu gunung berapi kaya mineral, tetapi tidak langsung jadi pupuk. Begini cara memanfaatkannya dengan aman.
+- [Cuma 5 menit melihat tanaman? Ternyata bisa bantu tubuh lebih rileks](https://nurserilestari.com/tips-detail.html?id=lima-menit-melihat-tanaman): Beberapa penelitian menunjukkan interaksi singkat dengan tanaman menurunkan stres. Mulai dari satu pot di meja kerja.
+- [Mulai berkebun tidak harus jago: paket awal untuk pemula](https://nurserilestari.com/tips-detail.html?id=mulai-berkebun): Media siap pakai, benih bergaransi tumbuh, pot dengan tatakan, dan satu pupuk serbaguna. Itu saja sudah cukup untuk panen pertama.
+
+## Semua produk
+
+Harga per 2026-11-04, mengikuti etalase Shopee; "Mulai" berarti harga variasi termurah. Satu produk yang dijual di dua toko tampil sekali.
+
+### Tanaman Hias
+
+- [Monstera Pertusa](https://nurserilestari.com/produk-monstera-pertusa.html): Tanaman Hias · Mulai Rp25.000 · Shopee: https://shopee.co.id/product/1211685004/28671434008 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-monstera-pertusa-decorative-indoor-plants-1736579524123788821-1736579524212131349
+  Monstera berdaun berlubang khas untuk sudut ruangan terang tanpa matahari langsung. Dikirim dalam pot plastik dengan media aroid mix.
+- [Peace Lily (Spathiphyllum)](https://nurserilestari.com/produk-peace-lily-spathiphyllum.html): Tanaman Hias · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/25219593468 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-peace-lily-spathiphyllum-hijau-decorative-indoor-outdoor-plants-1736579679528388117
+  Tanaman indoor berbunga putih. Daun yang layu menjadi penanda waktu siram, jadi sulit salah rawat.
+- [Aglonema Red Lipstick](https://nurserilestari.com/produk-aglonema-red-lipstick.html): Tanaman Hias · Rp27.000 · Shopee: https://shopee.co.id/product/1211685004/50614129538 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-aglonema-red-lipstick-decorative-plants-indoor-outdoor-1736579876487333397
+  Daun hijau dengan tepi merah muda. Toleran cahaya rendah dan ruangan ber-AC, salah satu aglonema paling tahan banting.
+- [Tanaman Hias Lily Paris Spider Plant Decorative Plants](https://nurserilestari.com/produk-tanaman-hias-lily-paris-spider-plant-decorative-plants.html): Tanaman Hias · Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/25119595320 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-lily-paris-spider-plant-decorative-plants-indoor-outdoor-plants-1736579524124313109
+  Lily paris alias spider plant, daun panjang bergaris putih dengan anakan yang menjuntai. Gampang dirawat, bisa di dalam ruangan terang atau digantung di teras.
+- [Dracaena Florida Beauty](https://nurserilestari.com/produk-dracaena-florida-beauty.html): Tanaman Hias · Rp17.500 · Shopee: https://shopee.co.id/product/1211685004/24819716523 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-dracaena-florida-beauty-indoor-outdoor-plants-1736579268820436501
+  Dracaena surculosa bertotol kuning, tumbuh baik di tempat teduh dan ruangan terang.
+- [Philodendron Burle Marx (Brekele)](https://nurserilestari.com/produk-philodendron-burle-marx-brekele.html): Tanaman Hias · Rp8.000 · Shopee: https://shopee.co.id/product/1211685004/25219593666 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-brekele-burle-marx-decorative-indoor-outdoor-plants-tanaman-vertical-garden-bisa-dengan-media-air-mudah-tumbuh-1736579524137092629
+  Philodendron rimbun berdaun panjang, tumbuh cepat, cocok untuk pot maupun bedengan taman.
+- [Sirih Badak Karstenium](https://nurserilestari.com/produk-sirih-badak-karstenium.html): Tanaman Hias · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/24669745902 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-sirih-badak-karstenium-decorative-plants-outdoor-indoor-plants-1736579085048776213
+  Tanaman rambat berdaun tebal mengilap yang tahan teduh, untuk pot gantung atau pagar.
+- [Hanjuang Andong Besi 100 cm](https://nurserilestari.com/produk-hanjuang-andong-besi-100-cm.html): Tanaman Hias · Rp120.000 · Shopee: https://shopee.co.id/product/1211685004/42683527052 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-pohon-hanjuang-andong-besi-dracaena-fragrans-corn-plants-tinggi-100cm-decorative-plants-1737048532414137877-1737048657921541653
+  Dracaena fragrans berdaun hijau tua, tinggi sekitar 100 cm. Tanaman lanskap untuk teras, pembatas taman, atau sudut ruangan terang.
+- [Tanaman Hias Lidah Mertua Kuning](https://nurserilestari.com/produk-tanaman-hias-lidah-mertua-kuning.html): Tanaman Hias · Rp18.000 · Shopee: https://shopee.co.id/product/1211685004/24579227057 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tanaman-hias-lidah-mertua-kuning-sanseveria-laurentii-1737779044645111626
+  Sansevieria laurentii, lidah mertua dengan tepi daun kuning. Tahan di dalam ruangan dan jarang disiram, cocok buat yang sering lupa menyiram.
+- [Tanaman Hias Lidah Mertua Tiger Decorative Plants Indoor](https://nurserilestari.com/produk-tanaman-hias-lidah-mertua-tiger-decorative-plants-indoor.html): Tanaman Hias · Mulai Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/24981724791 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-lidah-mertua-tiger-decorative-plants-indoor-outdoor-plants-pembersih-udara-1736579425293600277-1736579421579544085
+  Sansevieria tiger, lidah mertua dengan corak belang. Tahan di dalam ruangan dan jarang disiram; termasuk tanaman yang sering dipakai buat penyegar udara di rumah.
+- [Paket Tanaman Media Air + Vas Kaca + Hidrogel](https://nurserilestari.com/produk-paket-tanaman-media-air-vas-kaca-hidrogel.html): Tanaman Hias · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/50761212417 · Tokopedia: https://www.tokopedia.com/nurserilestari/paket-tanaman-hias-indoor-plants-media-air-vase-kaca-hidrogel-dekorasi-ruangan-dan-mudah-dirawat-1736609718388819477-1736609898389210645
+  Tanaman indoor dalam vas kaca dengan hidrogel. Dekorasi meja tanpa tanah, mudah dirawat.
+- [Tanaman Hias Diffenbachia Lukisan Cinta Decorative Indoor](https://nurserilestari.com/produk-tanaman-hias-diffenbachia-lukisan-cinta-decorative-indoor.html): Tanaman Hias · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/54114141814 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-diffenbachia-lukisan-cinta-decorative-indoor-outdoor-plants-1736579424423151125
+  Dieffenbachia lukisan cinta, daun lebar dengan corak putih di tengahnya. Suka cahaya terang tidak langsung; getahnya bikin gatal, jadi jauhkan dari anak kecil dan hewan.
+- [Anthurium Corong](https://nurserilestari.com/produk-anthurium-corong.html): Tanaman Hias · Rp75.000 · Shopee: https://shopee.co.id/product/1211685004/26067716632 · Tokopedia: https://www.tokopedia.com/nurserilestari/anthurium-corong-tanaman-hias-rare-bisa-indoor-1736579742393599509
+  Anthurium corong, daun lebar bergelombang seperti corong. Bisa di ruangan yang terang atau teduhan di luar; jauhkan dari matahari langsung.
+- [Dracaena Golden 100 cm](https://nurserilestari.com/produk-dracaena-golden-100-cm.html): Tanaman Hias · Mulai Rp68.000 · Shopee: https://shopee.co.id/product/1211685004/28295328993 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-dracaena-golden-varian-pot-gerabah-pot-keramik-exclusive-indoor-outdoor-plants-environtment-1736598255587001877-1736598635842209301
+  Dracaena golden ukuran dewasa, tinggi sekitar 100 cm, siap jadi titik pandang di lobi atau teras.
+- [Lidah Mertua Sansevieria Superba](https://nurserilestari.com/produk-lidah-mertua-sansevieria-superba.html): Tanaman Hias · Rp25.000 · Shopee: https://shopee.co.id/product/1211685004/51216264794 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-ornamental-lidah-mertua-sanseviera-superba-1737118327706125845
+  Tahan kering dan cahaya rendah. Cukup disiram 1–2 minggu sekali, cocok untuk kamar dan meja kerja.
+- [Tanaman Hias Sirih Gading Sri Gading Tanaman All Varian](https://nurserilestari.com/produk-tanaman-hias-sirih-gading-sri-gading-tanaman-all-varian.html): Tanaman Hias · Mulai Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/24769740584 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-sirih-gading-sri-gading-tanaman-all-varian-bisa-untuk-tanaman-dinding-vertical-garden-taman-kebun-air-vase-1736579680351585813-1736579266391344661
+  Sirih gading (sri gading) dalam beberapa varian, tanaman rambat yang paling tahan banting. Bisa dirambatkan ke dinding, dijadikan vertical garden, atau digantung.
+- [Paket Anggrek + Perawatan All-in-One](https://nurserilestari.com/produk-paket-anggrek-perawatan-all-in-one.html): Tanaman Hias · Rp105.000 · Shopee: https://shopee.co.id/product/1211685004/48214359642 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-paket-bundling-all-in-one-perawatan-dan-tanaman-anggrek-orchid-plant-1736947550664623637
+  Tanaman anggrek lengkap dengan media, pupuk, dan booster dalam satu paket untuk pemula.
+- [Pucuk Merah (bibit)](https://nurserilestari.com/produk-pucuk-merah-bibit.html): Tanaman Hias · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/44564656745 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-pucuk-merah-syzygium-myrtifolium-outdoor-decorative-plants-tinggi-30cm-1736666299285210645
+  Bibit pucuk merah untuk pagar hidup. Tanam rapat 30–40 cm agar cepat merapat.
+- [Pucuk Merah 80 cm](https://nurserilestari.com/produk-pucuk-merah-80-cm.html): Tanaman Hias · Rp45.000 · Shopee: https://shopee.co.id/product/1211685004/46764780833 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-pucuk-merah-daun-rimbun-tinggi-80cm-syzygium-myrtifolium-outdoor-decorative-plants-1736687451879278101
+  Syzygium myrtifolium dengan tunas merah cerah, tinggi sekitar 80 cm. Tanaman pagar dan pembatas favorit.
+- [Syngonium dalam Pot Gerabah](https://nurserilestari.com/produk-syngonium-dalam-pot-gerabah.html): Tanaman Hias · Mulai Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/46564195657 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pot-gerabah-liat-plus-tanaman-hias-syngonium-plants-with-white-clay-pottery-decorative-indoor-plants-1736579678706238997-1737519908433462805
+  Syngonium siap pajang dalam pot tanah liat. Cocok untuk hadiah atau meja kerja.
+- [Tanaman Hias Sirih Gading Centong](https://nurserilestari.com/produk-tanaman-hias-sirih-gading-centong.html): Tanaman Hias · Rp9.900 · Shopee: https://shopee.co.id/product/1211685004/25219715637 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-sirih-gading-centong-philodendron-srigading-centong-decorative-outdoor-indoor-vertical-garden-plants-1736579423034443285
+  Philodendron centong, daun lebar dan mengilap. Tumbuh rapi di dalam ruangan maupun teras yang teduh.
+- [Anthurium Clavigerum](https://nurserilestari.com/produk-anthurium-clavigerum.html): Tanaman Hias · Rp150.000 · Shopee: https://shopee.co.id/product/1211685004/56564338290 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-anthurium-clavigerum-indoor-outdoor-plants-1736613360775824917
+  Anthurium berdaun menjari besar untuk koleksi teras teduh atau ruangan terang.
+- [Anthurium Pentaphyllum + Pot Keramik Exclusive](https://nurserilestari.com/produk-anthurium-pentaphyllum-pot-keramik-exclusive.html): Tanaman Hias · Mulai Rp135.000 · Pre-order · Shopee: https://shopee.co.id/product/1211685004/45263506677 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tanaman-hias-anthurium-pentaphyllum-anthurium-walisongo-1736225012389742410-1736225088540411722
+  Anthurium berdaun menjari dalam pot keramik glazur. Disiapkan khusus, status pre-order.
+- [Bromelia Tricolor](https://nurserilestari.com/produk-bromelia-tricolor.html): Tanaman Hias · Rp40.000 · Shopee: https://shopee.co.id/product/1211685004/58114322535 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-bromelia-tricolor-hias-daun-tricolor-mudah-dirawat-indoor-outdoor-1736947528513062421
+  Daun bergaris hijau, krem, dan merah muda. Suka teras terang; siram lewat corong daun.
+- [Hanjuang Andong Besi 100 cm (BSD)](https://nurserilestari.com/produk-hanjuang-andong-besi-100-cm-bsd.html): Tanaman Hias · Rp120.000 · Shopee: https://shopee.co.id/product/1211685004/42683527052 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tanaman-hias-pohon-hanjuang-andong-besi-dracaena-fragrans-corn-plants-tinggi-100cm-decorative-plants-1737045994864609098-1737046196079527754
+  Dracaena fragrans tinggi sekitar 100 cm, dikirim dari toko Tangerang BSD.
+- [Karet Kebo (Ficus elastica)](https://nurserilestari.com/produk-karet-kebo-ficus-elastica.html): Tanaman Hias · Mulai Rp75.000 · Shopee: https://shopee.co.id/product/1211685004/28688659149 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tanaman-hias-karet-kebo-ficus-elastica-indoor-plant-1734428553460352842
+  Daun tebal mengilap, toleran ruangan terang. Tumbuh tegak, cocok sudut ruang tamu.
+- [Palem Kol (Licuala grandis)](https://nurserilestari.com/produk-palem-kol-licuala-grandis.html): Tanaman Hias · Mulai Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/46014200548 · Tokopedia: https://www.tokopedia.com/nurserilestari/bibit-tanaman-hias-pohon-palem-kol-decorative-plants-outdoor-indoor-plants-1736579086726432277
+  Palem berdaun bulat lebar seperti kipas. Elegan untuk teras teduh dan pot besar.
+- [Philodendron Tortum](https://nurserilestari.com/produk-philodendron-tortum.html): Tanaman Hias · Rp125.000 · Shopee: https://shopee.co.id/product/1211685004/49514060863 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-rare-bisa-indoor-philodendron-tortum-1736579521922303509
+  Philodendron berdaun menjari tipis seperti palem. Koleksi langka yang tetap bisa hidup di ruangan terang.
+- [Tanaman Hias Alocasia Alokasia Black Velvet](https://nurserilestari.com/produk-tanaman-hias-alocasia-alokasia-black-velvet.html): Tanaman Hias · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/42159691921 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-alocasia-alokasia-black-velvet-exotic-decorative-plants-1737934803405932053
+  Alocasia black velvet, daun beludru gelap dengan urat putih. Suka lembap dan cahaya terang tidak langsung; siram kalau medianya mulai kering.
+- [Tanaman Hias Aloevera Lidah Buaya Asli](https://nurserilestari.com/produk-tanaman-hias-aloevera-lidah-buaya-asli.html): Tanaman Hias · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/57614352370 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-aloevera-lidah-buaya-asli-aloe-vera-plant-1736947527939687957
+  Lidah buaya asli, aloe vera. Taruh di tempat terang, siram kalau medianya benar-benar kering; gelnya biasa dipakai buat kulit.
+- [Tanaman Hias Bromelia Giant Ukuran Sudah Besar Taman](https://nurserilestari.com/produk-tanaman-hias-bromelia-giant-ukuran-sudah-besar-taman.html): Tanaman Hias · Rp125.000 · Shopee: https://shopee.co.id/product/1211685004/50969064591 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-bromelia-giant-ukuran-sudah-besar-taman-outdoor-decorative-plants-1737934803445253653
+  Bromelia ukuran besar buat taman outdoor. Daunnya kaku dan berwarna cerah, tahan panas, cocok jadi titik perhatian di taman.
+- [Tanaman Hias Dracaena Milky Way Corak Putih](https://nurserilestari.com/produk-tanaman-hias-dracaena-milky-way-corak-putih.html): Tanaman Hias · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/54768965125 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-dracaena-milky-way-corak-putih-1737934705586308629
+  Dracaena milky way, daun hijau dengan garis putih di tengah. Tahan di ruangan ber-AC dan cahaya sedang, tumbuhnya pelan jadi rapi lama.
+- [Tanaman Hias Epipremnum Shangrila Exotic Nurseri Lestari](https://nurserilestari.com/produk-tanaman-hias-epipremnum-shangrila-exotic-nurseri-lestari.html): Tanaman Hias · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/56868855534 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-epipremnum-shangrila-exotic-nurseri-lestari-untuk-indoor-outdoor-tinggi-40-50cm-1737859488744965653
+  Epipremnum shangrila, daunnya menggulung unik, tinggi tanaman sekitar 40–50 cm. Bisa di dalam ruangan atau di teras yang teduh.
+- [Tanaman Hias Philodendron Atabapoense Exotic Plants](https://nurserilestari.com/produk-tanaman-hias-philodendron-atabapoense-exotic-plants.html): Tanaman Hias · Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/24719716685 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-philodendron-atabapoense-exotic-plants-indoor-outdoor-decorative-plants-1736579718308857365
+  Philodendron atabapoense, daun memanjang dengan bagian bawah kemerahan. Tanaman rambat; kasih ajir atau moss pole supaya daunnya makin besar.
+- [Tanaman Hias Pohon Hanjuang Andong Besi Dracaena Fragrans](https://nurserilestari.com/produk-tanaman-hias-pohon-hanjuang-andong-besi-dracaena-fragrans.html): Tanaman Hias · Rp120.000 · Shopee: https://shopee.co.id/product/1211685004/42683527052 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tanaman-hias-pohon-hanjuang-andong-besi-dracaena-fragrans-corn-plants-tinggi-100cm-decorative-plants-1737779163044415306-1737779145383774026
+  Dracaena fragrans, pohon hanjuang andong besi setinggi sekitar 100 cm. Tahan di ruangan ber-AC dan cahaya sedang; pas buat sudut ruang tamu.
+- [Tanaman Hias Pohon Karet Kebo / Ficus elastica](https://nurserilestari.com/produk-tanaman-hias-pohon-karet-kebo-ficus-elastica.html): Tanaman Hias · Mulai Rp75.000 · Shopee: https://shopee.co.id/product/1211685004/28688659149 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-pohon-karet-kebo-ficus-elastica-indoor-decorative-plants-perawatan-mudah-1737934752337724949-1737934803163055637
+  Karet kebo, Ficus elastica, daun tebal mengilap. Perawatannya gampang: cahaya terang, siram kalau media kering, lap daunnya sesekali biar tetap kinclong.
+- [Tanaman Hias Scindapsus Rubimin Marble Varigata Exotic](https://nurserilestari.com/produk-tanaman-hias-scindapsus-rubimin-marble-varigata-exotic.html): Tanaman Hias · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/40134931506 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-scindapsus-rubimin-marble-varigata-exotic-plants-1737859488639190549
+  Scindapsus rubimin marble, daun variegata putih-hijau. Tanaman rambat yang bisa digantung atau dirambatkan ke ajir; cahaya terang tidak langsung.
+- [Tanaman Hias Syngonium](https://nurserilestari.com/produk-tanaman-hias-syngonium.html): Tanaman Hias · Rp25.000 · Shopee: https://shopee.co.id/product/1211685004/29564126087 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-syngonium-macam-macam-type-syngonium-all-varian-decorative-plants-1737934721957856789-1737934721187546645
+  Syngonium dalam berbagai tipe, daunnya berbentuk panah dengan corak yang beda-beda tiap varian. Cocok di meja atau digantung; cahaya terang tidak langsung.
+- [Tanaman Hias Walisongo Hijau Eksotis Daun Varigata](https://nurserilestari.com/produk-tanaman-hias-walisongo-hijau-eksotis-daun-varigata.html): Tanaman Hias · Rp40.000 · Shopee: https://shopee.co.id/product/1211685004/52868739790 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-hias-walisongo-hijau-eksotis-daun-varigata-untuk-indoor-rumah-1737859529371387413
+  Walisongo hijau dengan daun variegata. Kuat di dalam rumah dengan cahaya cukup; pangkas pucuknya kalau mau lebih rimbun.
+
+### Benih & Bibit
+
+- [Benih Tomat Small Cherry](https://nurserilestari.com/produk-benih-tomat-small-cherry.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/52415744653 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-tomat-small-cherry-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-150-200-benih-garansi-tumbuh-1736980517639718421
+  Tomat ceri heirloom, isi 150–200 benih. Cocok pot dan planter bag. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Kemangi Lemon Basil](https://nurserilestari.com/produk-benih-kemangi-lemon-basil.html): Benih & Bibit · Rp29.000 · Shopee: https://shopee.co.id/product/1211685004/52665771906 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-kemangi-lemon-basil-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-1400-benih-garansi-tumbuh-1736980589848462869
+  Kemangi beraroma lemon, isi 1.400 benih. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Bunga Matahari Red Velvet](https://nurserilestari.com/produk-benih-bunga-matahari-red-velvet.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/48815791534 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-sunflower-red-velvet-bunga-matahari-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-50-benih-garansi-tumbuh-1736980588631721493
+  Bunga matahari merah marun untuk taman dan bunga potong. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Brokoli Hijau (± 150 benih)](https://nurserilestari.com/produk-benih-brokoli-hijau-150-benih.html): Benih & Bibit · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/42683433295 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-unggulan-brokoli-hijau-150-benih-mix-garden-seed-mgs-garansi-tumbuh-1736980546796160533
+  Brokoli untuk dataran sejuk maupun pot besar di teras. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Bunga Bachelor's Button Mix](https://nurserilestari.com/produk-benih-bunga-bachelor-s-button-mix.html): Benih & Bibit · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/28445522287 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-unggulan-bunga-bachelors-mixed-colour-premium-mix-garden-seed-mgs-garansi-tumbuh-1736980313404704277
+  Bunga jagung warna campuran, tumbuh cepat, disukai lebah. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Kale Merah Scarlet](https://nurserilestari.com/produk-benih-kale-merah-scarlet.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/51615775809 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-kale-scarlet-kale-merah-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-250-benih-garansi-tumbuh-1736980421167580693
+  Kale merah keriting, isi 250 benih, panen daun berulang. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Melon Early Silver Line](https://nurserilestari.com/produk-benih-melon-early-silver-line.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/26295522357 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-melon-early-silver-line-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-30-35-benih-garansi-tumbuh-1736980422058870293
+  Melon heirloom berdaging renyah, isi 30–35 benih. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Melon Prancis](https://nurserilestari.com/produk-benih-melon-prancis.html): Benih & Bibit · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/55615749359 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-melon-prancis-mix-garden-seed-mgs-garansi-tumbuh-1736980312178394645
+  Melon aromatik berdaging oranye. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Selada Paris White Cos](https://nurserilestari.com/produk-benih-selada-paris-white-cos.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/42433440826 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-selada-paris-white-cos-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-1600-benih-garansi-tumbuh-1736980588719080981
+  Selada romaine renyah, isi 1.600 benih. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Bawang Merah Besar Premium](https://nurserilestari.com/produk-benih-bawang-merah-besar-premium.html): Benih & Bibit · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/54465744447 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-unggulan-bawang-merah-besar-premium-mix-garden-seed-mgs-garansi-tumbuh-1736980517089871381
+  Bawang merah dari biji, hemat dibanding umbi bibit. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Bunga Matahari Teddy Bear](https://nurserilestari.com/produk-benih-bunga-matahari-teddy-bear.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/47015778185 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-sunflower-teddy-bear-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-30-60-benih-garansi-tumbuh-1736980571455391253
+  Bunga matahari kerdil berbunga penuh seperti pompom, isi 30–60 benih. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Marigold Cracker Jack](https://nurserilestari.com/produk-benih-marigold-cracker-jack.html): Benih & Bibit · Rp29.000 · Shopee: https://shopee.co.id/product/1211685004/55215776512 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-bunga-marigold-cracker-jack-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-300-benih-garansi-tumbuh-1736980312304420373
+  Marigold oranye besar, pengusir hama alami di kebun sayur. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Selada Butterhead Kagraner](https://nurserilestari.com/produk-benih-selada-butterhead-kagraner.html): Benih & Bibit · Rp29.000 · Shopee: https://shopee.co.id/product/1211685004/51815763655 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-selada-butterhead-lettuce-kagraner-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-2200-benih-garansi-tumbuh-1736980545628440085
+  Selada mentega berdaun lembut. Garansi tumbuh, isi lebih banyak per kemasan.
+- [Benih Selada Royal Oakleaf](https://nurserilestari.com/produk-benih-selada-royal-oakleaf.html): Benih & Bibit · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/55515748702 · Tokopedia: https://www.tokopedia.com/nurserilestari/benih-biji-bibit-selada-royal-oakleaf-heirloom-seed-isi-lebih-banyak-harga-lebih-hemat-isi-1800-benih-garansi-tumbuh-1736980517878466069
+  Selada daun oak, isi 1.800 benih, cocok hidroponik dan pot. Garansi tumbuh, isi lebih banyak per kemasan.
+
+### Media Tanam
+
+- [Aroid Mix 3 L](https://nurserilestari.com/produk-aroid-mix-3-l.html): Media Tanam · Rp31.500 · Shopee: https://shopee.co.id/product/1211685004/24969741010 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-metan-aroid-mix-media-tanam-premium-untuk-tanaman-aroid-3-liter-1kg-untuk-aroid-philodendron-monstera-anthurium-aglonema-1734426721757071178
+  Media premium chunky untuk aroid (monstera, philodendron, anthurium): porous, mendorong akar sehat.
+- [Simple Mix 20 L](https://nurserilestari.com/produk-simple-mix-20-l.html): Media Tanam · Rp36.000 · Shopee: https://shopee.co.id/product/1211685004/24669745809 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-simple-mix-media-tanam-untuk-tanaman-hias-siap-pakai-20-liter-1734426692025091914
+  Media tanam siap pakai untuk semua tanaman hias: organik, porous, minim patogen, sudah difermentasi.
+- [Orchid Soil Mix 3 L](https://nurserilestari.com/produk-orchid-soil-mix-3-l.html): Media Tanam · Rp33.500 · Shopee: https://shopee.co.id/product/1211685004/23664151520 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-orchid-soil-mix-media-tanam-anggrek-poros-siap-pakai-ready-to-use-anti-busuk-akar-untuk-semua-jenis-tanaman-hias-anggrek-3-liter-1734426691622897482
+  Racikan khusus anggrek: porous dan chunky, anti busuk akar, steril.
+- [Succulent & Cactus Mix 3 L](https://nurserilestari.com/produk-succulent-cactus-mix-3-l.html): Media Tanam · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/54606086651 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-succulent-cactus-soil-mix-media-tanam-khusus-sukulen-kaktus-sansevieria-siap-pakai-3-l-1734426691953067850
+  Media khusus sukulen, kaktus, dan sansevieria: sangat porous, cepat kering.
+- [Akar Kadaka (Moss Hitam)](https://nurserilestari.com/produk-akar-kadaka-moss-hitam.html): Media Tanam · Rp15.500 · Shopee: https://shopee.co.id/product/1211685004/28673560210 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-akar-kadaka-moss-hitam-media-tanam-tanaman-hias-anggrek-platycerium-campuran-media-tanam-aroid-1736374342201214794
+  Media anggrek dan platycerium; juga campuran aroid mix agar media lebih lembap.
+- [Pumice Batu Apung 1KG](https://nurserilestari.com/produk-pumice-batu-apung-1kg.html): Media Tanam · Rp18.000 · Shopee: https://shopee.co.id/product/1211685004/24669745824 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-pumice-batu-apung-1kg-untuk-campuran-media-tanam-1736541344325470026-1736541351118407498
+  Batu apung 1 kg buat campuran media tanam. Bikin media lebih porous dan ringan, cocok dicampur ke aroid mix atau media sukulen.
+- [Indoor Soil Mix 3 L](https://nurserilestari.com/produk-indoor-soil-mix-3-l.html): Media Tanam · Rp33.000 · Shopee: https://shopee.co.id/product/1211685004/27566269173 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-indoor-soil-mix-media-tanam-indoor-dalam-ruang-siap-pakai-3-liter-1734426727196034890
+  Media untuk tanaman dalam ruangan: steril, aerasi baik, anti busuk akar, bebas lonyot.
+- [Aroid Mix 20 L](https://nurserilestari.com/produk-aroid-mix-20-l.html): Media Tanam · Rp115.000 · Shopee: https://shopee.co.id/product/1211685004/24422413563 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-metan-aroid-mix-media-tanam-premium-untuk-tanaman-aroid-20-liter-5kg-untuk-aroid-philodendron-monstera-anthurium-aglonema-1734431722565437258
+  Media premium chunky untuk aroid (monstera, philodendron, anthurium): porous, mendorong akar sehat.
+- [Indoor Soil Mix 20 L](https://nurserilestari.com/produk-indoor-soil-mix-20-l.html): Media Tanam · Rp120.000 · Shopee: https://shopee.co.id/product/1211685004/24419731028 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-indoor-soil-mix-media-tanam-indoor-dalam-ruang-siap-pakai-20-liter-1734426712595662666
+  Media untuk tanaman dalam ruangan: steril, aerasi baik, anti busuk akar, bebas lonyot.
+- [Pakis Dadu 500 g](https://nurserilestari.com/produk-pakis-dadu-500-g.html): Media Tanam · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/28395574633 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pakis-dadu-campuran-media-tanam-untuk-tanaman-hias-anggrek-aroid-500-gr-1737079954665735701
+  Campuran pakis cacah untuk media anggrek dan aroid; menjaga rongga udara di akar.
+- [Succulent & Cactus Mix 1,5 L](https://nurserilestari.com/produk-succulent-cactus-mix-1-5-l.html): Media Tanam · Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/24619727772 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-succulent-cactus-soil-mix-media-tanam-khusus-sukulen-kaktus-sansevieria-siap-pakai-1-5-liter-1734426713472599882
+  Media khusus sukulen, kaktus, dan sansevieria: sangat porous, cepat kering.
+- [Fruit Plant Mix 20 L](https://nurserilestari.com/produk-fruit-plant-mix-20-l.html): Media Tanam · Rp34.000 · Shopee: https://shopee.co.id/product/1211685004/24669745883 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-fruit-plant-mix-media-tanam-untuk-segala-jenis-tanaman-buah-siap-pakai-20-liter-1734426686335518538
+  Media siap pakai untuk segala tanaman buah dalam pot: organik dan sudah difermentasi.
+- [Perlite 2 L (halus / kasar)](https://nurserilestari.com/produk-perlite-2-l-halus-kasar.html): Media Tanam · Rp15.500 · Shopee: https://shopee.co.id/product/1211685004/24669745898 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/perlite-2-4mm-2-liter-untuk-campuran-media-tanam-halus-2-4-mm-kasar-3-7mm-1736178234930464586-1736178246697781066
+  Butiran perlite untuk aerasi media; pilih halus 2–4 mm atau kasar 3–7 mm.
+- [Orchid Soil Mix 20 L](https://nurserilestari.com/produk-orchid-soil-mix-20-l.html): Media Tanam · Rp123.000 · Shopee: https://shopee.co.id/product/1211685004/24239878374 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-orchid-soil-mix-media-tanam-anggrek-poros-siap-pakai-ready-to-use-anti-busuk-akar-untuk-semua-jenis-tanaman-hias-anggrek-20-liter-1734426711881975626
+  Racikan khusus anggrek: porous dan chunky, anti busuk akar, steril.
+- [Simple Mix 3 L](https://nurserilestari.com/produk-simple-mix-3-l.html): Media Tanam · Rp13.000 · Shopee: https://shopee.co.id/product/1211685004/25269737137 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-simple-mix-media-tanam-untuk-tanaman-hias-siap-pakai-3-liter-1734426686475700042
+  Media tanam siap pakai untuk semua tanaman hias: organik, porous, minim patogen, sudah difermentasi.
+- [Fruit Plant Mix 3 L](https://nurserilestari.com/produk-fruit-plant-mix-3-l.html): Media Tanam · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/24524960264 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-fruit-plant-mix-media-tanam-untuk-segala-jenis-tanaman-buah-siap-pakai-3-liter-1734426706205837130
+  Media siap pakai untuk segala tanaman buah dalam pot: organik dan sudah difermentasi.
+- [Sekam Bakar Karungan 25 kg](https://nurserilestari.com/produk-sekam-bakar-karungan-25-kg.html): Media Tanam · Rp37.000 · Shopee: https://shopee.co.id/product/1211685004/25169737352 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/sekam-bakar-karungan-besar-isi-banyak-media-tanam-1736476855043131210
+  Sekam bakar karung besar untuk campuran media, menggemburkan dan menahan air secukupnya.
+- [Pasir Malang Merah Kasar ± 4 kg](https://nurserilestari.com/produk-pasir-malang-merah-kasar-4-kg.html): Media Tanam · Rp17.000 · Shopee: https://shopee.co.id/product/1211685004/25269737205 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pasir-malang-merah-kasar-karung-kecil-berat-4kg-1737536611397175114
+  Material vulkanik porous untuk memperbaiki drainase media sukulen, adenium, dan bonsai.
+
+### Pupuk & Nutrisi
+
+- [Orchid Bloom Booster 60 ml](https://nurserilestari.com/produk-orchid-bloom-booster-60-ml.html): Pupuk & Nutrisi · Rp60.000 · Shopee: https://shopee.co.id/product/1211685004/24719716918 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-orchid-bloom-booster-serum-tanaman-bunga-anggrek-60-ml-mengoptimalkan-pertumbuhan-anggrek-100-organik-1734422441672279882
+  Serum organik untuk anggrek: bunga lebat, minim rontok, mekar sempurna.
+- [Pupuk Organik Guano 500 g](https://nurserilestari.com/produk-pupuk-organik-guano-500-g.html): Pupuk & Nutrisi · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/52912670322 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-pupuk-organik-guano-500-gr-pengganti-npk-alami-pupuk-penyubur-tanah-ramah-lingkugan-organik-pupuk-alami-penyubur-tanah-kaya-unsur-hara-npk-organik-1735293267903022922
+  Pengganti NPK alami dari kotoran kelelawar. Tinggi fosfor, cukup pakai sedikit.
+- [NPK Khusus Bunga 15-18-15 500 g](https://nurserilestari.com/produk-npk-khusus-bunga-15-18-15-500-g.html): Pupuk & Nutrisi · Rp18.000 · Shopee: https://shopee.co.id/product/1211685004/24069598970 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-khusus-bunga-npk-15-18-15-s-p-500gr-fase-tumbuh-bunga-generatif-1734422250537125706
+  Fase generatif: merangsang pembungaan.
+- [Pupuk Kohe Kambing Fermentasi 4–5 kg](https://nurserilestari.com/produk-pupuk-kohe-kambing-fermentasi-4-5-kg.html): Pupuk & Nutrisi · Rp27.000 · Shopee: https://shopee.co.id/product/1211685004/52864505839 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pupuk-kohe-kambing-kasar-butiran-organik-fermentasi-karungan-campuran-media-tanam-5-kg-1736645625271715349
+  Kotoran kambing kasar butiran yang sudah difermentasi. Campuran media dan pupuk dasar.
+- [TSP-36 1 kg](https://nurserilestari.com/produk-tsp-36-1-kg.html): Pupuk & Nutrisi · Rp25.000 · Shopee: https://shopee.co.id/product/1211685004/25969595424 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-super-phospat-tsp-36-untuk-nutrisi-akar-1-kg-penyubur-dan-pembenah-tanah-1734422447917008714
+  Super fosfat untuk nutrisi akar dan pembentukan bunga.
+- [Pupuk Kohe Kambing Fermentasi 500 g](https://nurserilestari.com/produk-pupuk-kohe-kambing-fermentasi-500-g.html): Pupuk & Nutrisi · Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/50264482751 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pupuk-kohe-kambing-kasar-butiran-organik-fermentasi-campuran-media-tanam-500-gr-1736640462253884949
+  Kemasan kecil untuk beberapa pot.
+- [Vitamin B1 Liquinox 100 ml](https://nurserilestari.com/produk-vitamin-b1-liquinox-100-ml.html): Pupuk & Nutrisi · Rp32.000 · Shopee: https://shopee.co.id/product/1211685004/42258235451 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-vitamin-b1-liquinox-100-ml-anti-stress-tanaman-usa-import-1735055909045634890
+  Anti stres tanaman saat pindah pot atau setelah pengiriman. Produk impor USA.
+- [MKP Pak Tani](https://nurserilestari.com/produk-mkp-pak-tani.html): Pupuk & Nutrisi · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/48564048666 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-mkp-pak-tani-untuk-pelebat-buah-hasil-panen-fase-generatif-kemasan-100-gr-mono-kalium-phospat-fertilizer-usage-for-better-fruit-growth-1736579742397859349
+  Mono kalium fosfat untuk pelebat buah dan hasil panen.
+- [Gandasil B (Buah) 100 g](https://nurserilestari.com/produk-gandasil-b-buah-100-g.html): Pupuk & Nutrisi · Rp24.000 · Shopee: https://shopee.co.id/product/1211685004/23964139039 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-daun-gandasil-b-buah-100-gram-nutrisi-pelebat-buah-fase-generatif-kemasan-original-asli-pabrik-1735170577376446282
+  Pupuk daun fase generatif, kemasan asli.
+- [KCL Super Jerman 1 kg](https://nurserilestari.com/produk-kcl-super-jerman-1-kg.html): Pupuk & Nutrisi · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/23664139045 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-kcl-kalium-clorida-super-jerman-1kg-penyubur-mempercepat-pertumbuhan-buah-umbi-fase-generatif-1734422438605850442
+  Kalium klorida penyubur, mempercepat pertumbuhan dan kualitas buah.
+- [Pupuk Organik Guano 1 kg](https://nurserilestari.com/produk-pupuk-organik-guano-1-kg.html): Pupuk & Nutrisi · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/55865831201 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-pupuk-organik-guano-1-kg-pengganti-npk-alami-pupuk-penyubur-tanah-ramah-lingkugan-organik-pupuk-alami-penyubur-tanah-kaya-unsur-hara-npk-organik-1735293263819081546
+  Kemasan hemat untuk kebun sayur dan tanaman buah.
+- [Root Booster 100 ml](https://nurserilestari.com/produk-root-booster-100-ml.html): Pupuk & Nutrisi · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/25969595545 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-root-booster-nutrisi-akar-tanaman-hormon-perangsang-akar-1734422446316488522
+  Hormon perangsang akar untuk stek dan pindah tanam: akar lebih cepat dan kuat.
+- [Seed Booster Spray 30 ml](https://nurserilestari.com/produk-seed-booster-spray-30-ml.html): Pupuk & Nutrisi · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/52405197450 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-seed-booster-spray-30-ml-pupuk-booster-benih-biji-tumbuh-tunas-perangsang-bibit-cepat-berkecambah-sprout-benih-1734422441671886666
+  Semprot benih dan semaian untuk perkecambahan lebih cepat.
+- [Pupuk Kohe Kambing Fermentasi 1 kg](https://nurserilestari.com/produk-pupuk-kohe-kambing-fermentasi-1-kg.html): Pupuk & Nutrisi · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/52164477737 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pupuk-kohe-kambing-kasar-butiran-organik-fermentasi-campuran-media-tanam-1-kg-1736640446361929237
+  Untuk campuran media tanam dan pupuk dasar bedengan.
+- [Gandasil D (Daun) 100 g](https://nurserilestari.com/produk-gandasil-d-daun-100-g.html): Pupuk & Nutrisi · Rp22.000 · Shopee: https://shopee.co.id/product/1211685004/25119593716 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-daun-gandasil-d-100-gram-perimbun-daun-fase-vegetatif-kemasan-asli-original-pabrik-1735170421678769994
+  Pupuk daun fase vegetatif untuk perimbun daun, kemasan asli.
+- [Molase Tetes Tebu 700 ml](https://nurserilestari.com/produk-molase-tetes-tebu-700-ml.html): Pupuk & Nutrisi · Rp28.000 · Shopee: https://shopee.co.id/product/1211685004/28623471024 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-molase-tetes-tebu-murni-700ml-pengurai-kompos-organik-bahan-untuk-fermentasi-menyuburkan-tanah-media-tanam-1734507808176834378
+  Pengurai kompos organik dan makanan mikroba tanah.
+- [Plant Nutrients Pelebat Daun 500 ml](https://nurserilestari.com/produk-plant-nutrients-pelebat-daun-500-ml.html): Pupuk & Nutrisi · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/24769740516 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-plant-nutrients-pupuk-pelebat-daun-spray-nutrisi-tanaman-siap-pakai-500-ml-1734422443655661386
+  Nutrisi spray siap pakai untuk daun lebih subur dan batang kuat.
+- [Pupuk Khusus Tanaman Daun 300 g](https://nurserilestari.com/produk-pupuk-khusus-tanaman-daun-300-g.html): Pupuk & Nutrisi · Rp17.000 · Shopee: https://shopee.co.id/product/1211685004/25119593892 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-aneka-khusus-tanaman-daun-300-gram-mempercepat-pertumbuhan-tanaman-daun-fase-vegetatif-1734422251095557962
+  Untuk tanaman hias daun agar cepat rimbun.
+- [KCL Super Jerman 100 g](https://nurserilestari.com/produk-kcl-super-jerman-100-g.html): Pupuk & Nutrisi · Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/25119593901 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-pupuk-kcl-kalium-clorida-super-jerman-100-gr-penyubur-mempercepat-pertumbuhan-buah-umbi-fase-generatif-1736536914826266133
+  Kemasan repack 100 g.
+- [Plant Growth Booster 60 ml](https://nurserilestari.com/produk-plant-growth-booster-60-ml.html): Pupuk & Nutrisi · Rp80.000 · Shopee: https://shopee.co.id/product/1211685004/56055129278 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-plant-growth-booster-serum-tanaman-60-ml-mengoptimalkan-pertumbuhan-tanaman-100-organik-1734422131117098826
+  Serum organik dengan ekstrak rumput laut untuk mengoptimalkan pertumbuhan.
+- [Pupuk Organik Guano 100 g](https://nurserilestari.com/produk-pupuk-organik-guano-100-g.html): Pupuk & Nutrisi · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/43728373836 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-pupuk-organik-guano-100-gr-pengganti-npk-alami-pupuk-penyubur-tanah-ramah-lingkugan-organik-pupuk-alami-penyubur-tanah-kaya-unsur-hara-npk-organik-1735293265321756490
+  Kemasan kecil untuk mencoba; taburkan 1 sendok per pot sebulan sekali.
+- [Urea 46% 100 g](https://nurserilestari.com/produk-urea-46-100-g.html): Pupuk & Nutrisi · Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/24819595342 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-urea-nitrogen-tinggi-46-repacking-100-gr-botol-untuk-rumput-tanaman-buah-pertumbuhan-vegetatif-1736534800400811541
+  Nitrogen tinggi untuk rumput dan tanaman daun, repack botol.
+- [ZA (Amonium Sulfat) 100 g](https://nurserilestari.com/produk-za-amonium-sulfat-100-g.html): Pupuk & Nutrisi · Rp9.000 · Shopee: https://shopee.co.id/product/1211685004/56764013394 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-za-ammunium-sulfat-100-gram-botol-21-nitrogen-24-sulpur-ideal-pertumbuhan-vegetatif-tanaman-1736537353841116693
+  Nitrogen 21% dan sulfur 24%, repack botol.
+- [NPK Khusus Buah 15-20-35 500 g](https://nurserilestari.com/produk-npk-khusus-buah-15-20-35-500-g.html): Pupuk & Nutrisi · Rp17.000 · Shopee: https://shopee.co.id/product/1211685004/25219593456 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-khusus-aneka-buah-npk-15-20-35-s-p-500gr-mempercepat-pembuahan-fase-generatif-1734422242907752266
+  Mempercepat pembuahan dan pembesaran buah.
+- [Soil Booster Humic Acid 300 g](https://nurserilestari.com/produk-soil-booster-humic-acid-300-g.html): Pupuk & Nutrisi · Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/26673067594 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-soil-booster-humid-acid-bubuk-pembenah-tanah-penyubur-tanah-pupuk-penggembur-tanah-1734422445593823050
+  Bubuk asam humat pembenah tanah: tanah keras jadi gembur, akar lebih aktif.
+- [KNO3 Putih Pak Tani 100 g](https://nurserilestari.com/produk-kno3-putih-pak-tani-100-g.html): Pupuk & Nutrisi · Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/45667372484 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-kno3-putih-prill-cpn-pak-tani-botol-repack-100-gr-diformulasikan-khusus-untuk-fase-generatif-awal-saat-tanaman-memasuki-fase-pembungaan-hingga-pengisian-dan-pembesaran-buah-1737381521228924437
+  Kalium nitrat untuk fase generatif awal: pembungaan sampai pembesaran buah.
+- [Magnesium Sulfat Meroke 100 g](https://nurserilestari.com/produk-magnesium-sulfat-meroke-100-g.html): Pupuk & Nutrisi · Rp13.000 · Shopee: https://shopee.co.id/product/1211685004/47063944758 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-magnesium-sulfat-mgso4-meroke-botol-repack100-gr-menyuburkan-tanaman-dan-mencegah-daun-menguning-pembentukan-klorofil-magnesium-16-sulfur-13-1736529959443531285
+  Mengatasi daun menguning karena kekurangan magnesium.
+- [Plant Nutrients Pelebat Bunga & Buah 500 ml](https://nurserilestari.com/produk-plant-nutrients-pelebat-bunga-buah-500-ml.html): Pupuk & Nutrisi · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/55505921732 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-plant-nutrients-pupuk-pelebat-buah-dan-bunga-tanaman-siap-pakai-500-ml-1734422436076226378
+  Nutrisi siap semprot untuk tanaman berbunga dan berbuah.
+- [Pupuk Cair Organik EM4 (bakteri fermentasi/ bakteri](https://nurserilestari.com/produk-pupuk-cair-organik-em4-bakteri-fermentasi-bakteri.html): Pupuk & Nutrisi · Rp52.000 · Shopee: https://shopee.co.id/product/1211685004/25969595536 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pupuk-cair-organik-em4-bakteri-fermentasi-bakteri-penyubur-tanah-1734422238535649098
+  EM4, pupuk cair organik berisi bakteri fermentasi penyubur tanah. Dicampur air buat menyiram media atau mempercepat kompos; takarannya ikuti petunjuk di botol.
+- [Pupuk Manohara Mesh 2500 1 kg](https://nurserilestari.com/produk-pupuk-manohara-mesh-2500-1-kg.html): Pupuk & Nutrisi · Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/54616735115 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-manohara-mesh-2500-pupuk-kalsium-boron-mencegah-hama-dan-juga-anti-rontok-busuk-jamur-dan-layu-1kg-1737217755212318229
+  Kalsium boron: mencegah hama, rontok, busuk jamur, dan layu.
+- [Seed Booster Fliptop 30 ml](https://nurserilestari.com/produk-seed-booster-fliptop-30-ml.html): Pupuk & Nutrisi · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/50355197704 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-seed-booster-fliptop-30-ml-pupuk-booster-benih-biji-tumbuh-tunas-perangsang-bibit-cepat-berkecambah-sprout-benih-1734422438492079946
+  Perendam benih agar berkecambah 2x lebih cepat.
+- [Ultradap Pak Tani 1 kg](https://nurserilestari.com/produk-ultradap-pak-tani-1-kg.html): Pupuk & Nutrisi · Rp83.000 · Shopee: https://shopee.co.id/product/1211685004/54713922383 · Tokopedia: https://www.tokopedia.com/nurserilestari/pupuk-ultradap-pak-tani-1-kg-original-kemasan-pabrik-merangsang-pertumbuhan-akar-batang-dan-tunas-1736529750002140693
+  Merangsang pertumbuhan akar dan tunas, kemasan pabrik.
+
+### Obat Tanaman
+
+- [Neem Oil 60 ml](https://nurserilestari.com/produk-neem-oil-60-ml.html): Obat Tanaman · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/51805183533 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-neem-oil-pestisida-nabati-alami-60-ml-1734422438579832650
+  Pestisida nabati dari minyak mimba, usir kutu dan jamur. Untuk 5 L larutan.
+- [Bio Fungisida Pestisida Jamur Alami Organik Fungicide](https://nurserilestari.com/produk-bio-fungisida-pestisida-jamur-alami-organik-fungicide.html): Obat Tanaman · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/50063940244 · Tokopedia: https://www.tokopedia.com/nurserilestari/bio-fungisida-pestisida-jamur-alami-organik-fungicide-tricho-plus-ap-100-gr-pencegah-busuk-akar-pada-tanaman-akibat-jamur-patogen-pengendali-hayati-dan-pupuk-biologis-1736530101600421397
+  Fungisida hayati berbahan Trichoderma, kemasan 100 gram. Dipakai buat mencegah busuk akar dan jamur di media tanam; dosis di kemasannya sekitar 2–5 gram per tanaman.
+- [Toxiput 250 g](https://nurserilestari.com/produk-toxiput-250-g.html): Obat Tanaman · Rp50.000 · Shopee: https://shopee.co.id/product/1211685004/47863955709 · Tokopedia: https://www.tokopedia.com/nurserilestari/toxiput-250-gr-kemasan-pabrik-original-pestisida-moluskisida-ampuh-pembasmi-keong-dan-siput-1736529797104043541
+  Moluskisida pembasmi siput dan bekicot, kemasan pabrik.
+- [Curacron 500 EC 100 ml (BSD)](https://nurserilestari.com/produk-curacron-500-ec-100-ml-bsd.html): Obat Tanaman · Rp61.000 · Shopee: https://shopee.co.id/product/1211685004/50313967010 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/insektisida-curacron-500ec-100ml-pembasmi-hama-1734904763421460298
+  Stok toko Tangerang BSD.
+- [Gramoxone 1 L](https://nurserilestari.com/produk-gramoxone-1-l.html): Obat Tanaman · Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/48913943365 · Tokopedia: https://www.tokopedia.com/nurserilestari/herbisida-gramoxone-1-liter-pembasmi-cepat-kontak-langsung-gulma-rumput-liar-1736529850681886229
+  Herbisida kontak pembasmi gulma cepat.
+- [Petrogenol 5 ml](https://nurserilestari.com/produk-petrogenol-5-ml.html): Obat Tanaman · Rp12.000 · Shopee: https://shopee.co.id/product/1211685004/48605404593 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-petrogenol-perangkap-lalat-buah-tanaman-sayuran-buah-5-ml-solusi-ampuh-basmi-lalat-dan-serangga-1734473214578624330
+  Perangkap lalat buah untuk tanaman sayur dan buah.
+- [Roundup](https://nurserilestari.com/produk-roundup.html): Obat Tanaman · Rp38.500 · Shopee: https://shopee.co.id/product/1211685004/25219593787 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/roundup-herbisida-pembasmi-rumput-liar-1734422445477300042
+  Herbisida sistemik pembasmi rumput liar.
+- [Yasithrin 100 ml](https://nurserilestari.com/produk-yasithrin-100-ml.html): Obat Tanaman · Rp22.000 · Shopee: https://shopee.co.id/product/1211685004/23164140538 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/insektisida-ulat-belalang-yasithrin-100ml-1734473306133006154
+  Insektisida untuk ulat dan belalang.
+
+### Pot & Tatakan
+
+- [Pot Plastik Besar Gloria 50 + Tatak](https://nurserilestari.com/produk-pot-plastik-besar-gloria-50-tatak.html): Pot & Tatakan · Tanya harga di WhatsApp · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-plastik-besar-tanaman-gloria-50-hitam-plus-tatak-1736476998345721674-1736477037042960202
+  Pot hitam berkuping diameter 50 cm dengan tatakan. Untuk tanaman setinggi 1 meter lebih.
+- [Kaki Kayu Pot Ø10–22 cm](https://nurserilestari.com/produk-kaki-kayu-pot-10-22-cm.html): Pot & Tatakan · Mulai Rp37.000 · Shopee: https://shopee.co.id/product/1211685004/29702435860 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/kaki-kayu-diameter-10-sd-22-cm-untuk-pot-gentong-guci-keramik-diameter-10-sd-22-cm-1734571113155037002
+  Kaki kayu mahoni untuk pot keramik kecil.
+- [Pot Plastik 25 Hitam + Tatak](https://nurserilestari.com/produk-pot-plastik-25-hitam-tatak.html): Pot & Tatakan · Mulai Rp5.000 · Shopee: https://shopee.co.id/product/1211685004/25038189036 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-plastik-tanaman-no-25-hitam-polos-bahan-kuat-tebal-tahan-hujan-p-1737358252291098442-1737358253915604810
+  Pot polos tebal diameter 25 cm untuk sayuran dan tanaman hias sedang.
+- [Tatakan Global Lion 12 (pot 26–30 cm)](https://nurserilestari.com/produk-tatakan-global-lion-12-pot-26-30-cm.html): Pot & Tatakan · Rp8.000 · Shopee: https://shopee.co.id/product/1211685004/24719716819 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tatak-tatakan-alas-pot-global-lion-12-untuk-pot-diameter-26-30cm-1734421913890162506
+  Tatakan alas pot agar air siraman tidak mengotori lantai.
+- [Tatakan Global Lion 14 (pot 30–35 cm)](https://nurserilestari.com/produk-tatakan-global-lion-14-pot-30-35-cm.html): Pot & Tatakan · Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/24719716828 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tatak-tatakan-alas-pot-global-lion-14-untuk-pot-diameter-30-35cm-1734422219348870986
+  Tatakan alas pot agar air siraman tidak mengotori lantai.
+- [Tatakan Global Lion 10 (pot 24–25 cm)](https://nurserilestari.com/produk-tatakan-global-lion-10-pot-24-25-cm.html): Pot & Tatakan · Rp5.500 · Shopee: https://shopee.co.id/product/1211685004/25219715544 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tatakan-alas-pot-global-lion-10-untuk-pot-diameter-24-25cm-1734421853540353866
+  Tatakan alas pot agar air siraman tidak mengotori lantai.
+- [Tatak Pot NKT 15](https://nurserilestari.com/produk-tatak-pot-nkt-15.html): Pot & Tatakan · Mulai Rp2.500 · Shopee: https://shopee.co.id/product/1211685004/24588566470 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tatak-pot-nkt-15-untuk-pot-diameter-15-cm-hitam-merah-putih-1734422237166208842
+  Tatakan alas pot agar air siraman tidak mengotori lantai.
+- [Pot Tinggi Srondol 10 + Tatak](https://nurserilestari.com/produk-pot-tinggi-srondol-10-tatak.html): Pot & Tatakan · Mulai Rp1.750 · Shopee: https://shopee.co.id/product/1211685004/54958801095 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-tinggi-srondol-polos-10-plastik-tebal-hitam-merah-putih-plus-tatak-1737358351613986634-1737358360017274698
+  Pot bibit ukuran 10 cm dengan tatakan.
+- [Pot Mado Glossy (18–32 cm)](https://nurserilestari.com/produk-pot-mado-glossy-18-32-cm.html): Pot & Tatakan · Mulai Rp10.000 · Shopee: https://shopee.co.id/product/1211685004/56365599568 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-plastik-tanaman-mado-glossy-cerah-18-22-27-32-putih-high-grade-plastic-include-tatak-1736947518730634773-1736947535375468053
+  Pot plastik mengilap warna cerah, pilihan 18, 22, 27, dan 32 cm.
+- [Pot Dinding NKT Pelangi S](https://nurserilestari.com/produk-pot-dinding-nkt-pelangi-s.html): Pot & Tatakan · Rp6.000 · Shopee: https://shopee.co.id/product/1211685004/24319731467 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-dinding-vertikal-vertical-garden-nkt-pelangi-s-hitam-bahan-plastik-tebal-1736585125614552597
+  Pot vertikal plastik ukuran S untuk dinding taman.
+- [Planter Bag Hitam (25–200 L)](https://nurserilestari.com/produk-planter-bag-hitam-25-200-l.html): Pot & Tatakan · Mulai Rp18.000 · Shopee: https://shopee.co.id/product/1211685004/25119715724 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/planter-bag-planterbag-tanaman-warna-hitam-bahan-tebal-cocok-untuk-tanaman-buah-ukuran-25-35-50-75-100-150-200-liter-1734473428790642506
+  Kantong tanam tebal untuk tanaman buah; pilihan 25 sampai 200 liter.
+- [Pot Dinding Tralis Argo 01](https://nurserilestari.com/produk-pot-dinding-tralis-argo-01.html): Pot & Tatakan · Mulai Rp9.000 · Shopee: https://shopee.co.id/product/1211685004/52716460533 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-dinding-tempel-tralis-vertikal-vertical-garden-argo-01-hitam-putih-1737163173242897941-1737163118341752341
+  Pot tempel untuk vertical garden, hitam atau putih.
+- [Pot Bunga Tanaman Grace 30 Hitam Berkuping](https://nurserilestari.com/produk-pot-bunga-tanaman-grace-30-hitam-berkuping.html): Pot & Tatakan · Mulai Rp17.000 · Shopee: https://shopee.co.id/product/1211685004/45619132471 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-bunga-tanaman-grace-30-hitam-berkuping-1737963850971973141-1737963851203511829
+  Pot plastik Grace ukuran 30 warna hitam, ada kupingnya biar gampang diangkat. Cocok buat tanaman sedang seperti aglonema atau sansevieria.
+- [POT BUNGA RODA TANAMAN PLASTIK LOVENIA 40 MODEL KERAMIK](https://nurserilestari.com/produk-pot-bunga-roda-tanaman-plastik-lovenia-40-model-keramik.html): Pot & Tatakan · Mulai Rp100.000 · Shopee: https://shopee.co.id/product/1211685004/25119593890 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-bunga-roda-tanaman-plastik-lovenia-40-model-keramik-polos-bahan-tebal-roda-bawah-pc-8050-putih-hitam-1734421911016605514
+  Pot plastik Lovenia 40 model keramik polos, bahan tebal, dengan roda di bawahnya biar gampang digeser. Buat tanaman besar di teras atau dalam rumah.
+- [Pot Plastik 12 Cap Grace + Tatak](https://nurserilestari.com/produk-pot-plastik-12-cap-grace-tatak.html): Pot & Tatakan · Mulai Rp2.500 · Shopee: https://shopee.co.id/product/1211685004/24019714979 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-plastik-12-hitam-cap-grace-bahan-tebal-kuat-plus-tatak-1737380926510827029-1737380926065772053
+  Pot bibit diameter 12 cm dengan tatakan.
+- [POT BUNGA TANAMAN CITRA JAYA PLASTIK NORDIC TABUNG 20](https://nurserilestari.com/produk-pot-bunga-tanaman-citra-jaya-plastik-nordic-tabung-20.html): Pot & Tatakan · Mulai Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/40334349041 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-bunga-tanaman-citra-jaya-plastik-nordic-tabung-20-lentur-elastis-tidak-mudah-pecah-cjp-20-nordic-1737943603751192085-1737943682220394005
+  Pot plastik Citra Jaya model nordic tabung ukuran 20, bahannya lentur jadi nggak mudah pecah. Buat tanaman kecil di meja atau rak.
+- [Kaki Besi Pot Model Pagar 60 cm](https://nurserilestari.com/produk-kaki-besi-pot-model-pagar-60-cm.html): Pot & Tatakan · Mulai Rp245.000 · Shopee: https://shopee.co.id/product/1211685004/56956764910 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/kaki-tatak-besi-pot-tanaman-model-pagar-keliling-60-cm-hitam-bahan-super-tebal-1734543641174640458
+  Dudukan besi tebal model pagar keliling, diameter 60 cm.
+- [Kaki Kayu Ceper Tatak Pot Keramik](https://nurserilestari.com/produk-kaki-kayu-ceper-tatak-pot-keramik.html): Pot & Tatakan · Mulai Rp150.000 · Shopee: https://shopee.co.id/product/1211685004/27641321987 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/kaki-kayu-model-ceper-tatak-pot-keramik-diameter-variant-size-10-cm-30cm-1734573020508686154-1734573268654196554
+  Alas kayu mahoni model ceper, ukuran 10–30 cm.
+- [Kaki Kayu Pot Ø24–40 cm](https://nurserilestari.com/produk-kaki-kayu-pot-24-40-cm.html): Pot & Tatakan · Mulai Rp300.000 · Shopee: https://shopee.co.id/product/1211685004/24619727564 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/kaki-kayu-diameter-24-sd-40cm-untuk-pot-gentong-guci-keramik-1734571668179355466-1734572023144744778
+  Kaki kayu mahoni untuk gentong dan guci keramik besar.
+- [Pot Bunga Tanaman Grace 35 Merah Bata Berkuping](https://nurserilestari.com/produk-pot-bunga-tanaman-grace-35-merah-bata-berkuping.html): Pot & Tatakan · Mulai Rp32.000 · Shopee: https://shopee.co.id/product/1211685004/45119128909 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-bunga-tanaman-grace-35-merah-bata-berkuping-1737963850640098837-1737963831393814037
+  Pot plastik Grace ukuran 35 warna merah bata, ada kupingnya biar gampang diangkat. Buat tanaman sedang sampai agak besar.
+- [Pot Gentong Keramik Glazur Ø30 cm](https://nurserilestari.com/produk-pot-gentong-keramik-glazur-30-cm.html): Pot & Tatakan · Rp850.000 · Shopee: https://shopee.co.id/product/1211685004/52513467577 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-gentong-tinggi-keramik-glazur-d-30cm-1735618054908905290-1735618100502169418
+  Gentong keramik glazur diameter 30 cm.
+- [Pot Glory 30 (merah / putih)](https://nurserilestari.com/produk-pot-glory-30-merah-putih.html): Pot & Tatakan · Mulai Rp20.000 · Shopee: https://shopee.co.id/product/1211685004/24819716635 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-bunga-shallom-glory-30-merah-putih-1736467730137646922-1736467867929642826
+  Pot bunga bermotif diameter 30 cm, pilihan warna merah atau putih.
+- [Pot Plastik 17 Cap Grace + Tatak](https://nurserilestari.com/produk-pot-plastik-17-cap-grace-tatak.html): Pot & Tatakan · Mulai Rp3.500 · Shopee: https://shopee.co.id/product/1211685004/24619727627 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-plastik-17-hitam-cap-grace-bahan-tebal-kuat-tahan-hujan-plus-tatak-1737381903152219669-1737381906614814229
+  Pot hitam tebal tahan hujan, diameter 17 cm, sudah dengan tatakan.
+- [Pot Tinggi Srondol 15 + Tatak](https://nurserilestari.com/produk-pot-tinggi-srondol-15-tatak.html): Pot & Tatakan · Mulai Rp3.000 · Shopee: https://shopee.co.id/product/1211685004/41930041865 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-tinggi-srondol-polos-15-plastik-tebal-hitam-merah-putih-plus-tatak-1736786226873009994-1736786203483539274
+  Pot tinggi 15 cm dengan tatakan.
+- [Pot Tinggi Srondol 17](https://nurserilestari.com/produk-pot-tinggi-srondol-17.html): Pot & Tatakan · Mulai Rp4.500 · Shopee: https://shopee.co.id/product/1211685004/54958806063 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pot-tinggi-srondol-polos-17-plastik-tebal-hitam-merah-putih-1737358361756141386-1737358479841068874
+  Pot tinggi polos, pilihan hitam, merah, atau putih.
+- [Pot Vase Keramik Glazur D.38 Hijau Glosy](https://nurserilestari.com/produk-detail.html?id=104110875729): Pot & Tatakan · Rp400.000 · Shopee: https://shopee.co.id/product/1211685004/54419393691 · Tokopedia: https://www.tokopedia.com/nurserilestari/pot-vase-keramik-glazur-d-38-1738049364378617365
+  Pot vas keramik glazur diameter 38 cm, hijau mengilap. Buat tanaman besar di teras atau ruang tamu; berat, jadi sebaiknya ambil di toko atau tanya ongkirnya dulu.
+
+### Alat Berkebun
+
+- [Garden Tools Kit Mini 3 in 1](https://nurserilestari.com/produk-garden-tools-kit-mini-3-in-1.html): Alat Berkebun · Rp13.000 · Shopee: https://shopee.co.id/product/1211685004/22664138034 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/garden-tools-kit-mini-set-3-in-1-sekop-dan-garpu-taman-mini-1734422442613507914
+  Sekop, garpu, dan garukan mini untuk pot dan bedengan kecil.
+- [Garden Tools Set 3 Item (besi)](https://nurserilestari.com/produk-garden-tools-set-3-item-besi.html): Alat Berkebun · Rp37.000 · Shopee: https://shopee.co.id/product/1211685004/24769737185 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/paket-3-item-garden-tools-set-sekop-besi-dan-garpu-taman-besi-1734422445595985738
+  Sekop dan garpu taman besi, gagang nyaman.
+- [Sekop Taman Besi](https://nurserilestari.com/produk-sekop-taman-besi.html): Alat Berkebun · Rp22.000 · Shopee: https://shopee.co.id/product/1211685004/24319731370 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/sekop-taman-besi-warna-alat-berkebun-garden-tools-1734422433241270090
+  Sekop tangan besi berwarna untuk pot dan bedengan.
+- [Tiang Penyangga Tanaman Rambat](https://nurserilestari.com/produk-tiang-penyangga-tanaman-rambat.html): Alat Berkebun · Mulai Rp45.000 · Shopee: https://shopee.co.id/product/1211685004/24769737284 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/tiang-penyangga-tanaman-rambat-flower-support-45-60-90-120-cm-1734905945354176330-1734905967559149386
+  Tiang penyangga buat tanaman rambat dan berbunga, pilihan tinggi 45, 60, 90, atau 120 cm. Ditancapkan di pot supaya batang nggak rebah.
+- [Sekop Besi Premium 30 cm](https://nurserilestari.com/produk-sekop-besi-premium-30-cm.html): Alat Berkebun · Rp40.000 · Shopee: https://shopee.co.id/product/1211685004/25069740521 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-sekop-besi-besar-premium-30-cm-lebih-kuat-tahan-lama-alat-berkebun-garden-tools-dengan-gagang-karet-dan-kayu-1734422130929403722
+  Sekop besi tebal 30 cm, lebih kuat dan tahan lama.
+- [Garpu Garukan Besi Besar](https://nurserilestari.com/produk-garpu-garukan-besi-besar.html): Alat Berkebun · Rp35.000 · Shopee: https://shopee.co.id/product/1211685004/24019720409 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/garpu-garukan-besi-besar-rubber-grip-alat-kebun-garden-tools-1734422130105222986
+  Garukan besi rubber grip untuk menggemburkan tanah.
+- [Gergaji Dahan Lipat Portabel](https://nurserilestari.com/produk-gergaji-dahan-lipat-portabel.html): Alat Berkebun · Rp40.000 · Shopee: https://shopee.co.id/product/1211685004/24319731450 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/portable-saw-gergaji-dahan-lipat-portabel-potong-batang-ranting-kayu-alat-potong-stek-tanaman-alat-kebun-garden-tools-1734422435748153162
+  Gergaji lipat anti karat, praktis dibawa.
+- [Sekop Besar Wooden Grip](https://nurserilestari.com/produk-sekop-besar-wooden-grip.html): Alat Berkebun · Rp135.000 · Shopee: https://shopee.co.id/product/1211685004/49967367585 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-sekop-besar-garden-shovel-kotak-lancip-wooden-grip-tanah-pasir-kualitas-bagus-gagang-nyaman-alat-berkebun-garden-tools-1737381075293996565-1737380883476809237
+  Sekop kotak atau lancip dengan gagang kayu untuk tanah dan pasir.
+- [Alat Potong Dahan Baja](https://nurserilestari.com/produk-alat-potong-dahan-baja.html): Alat Berkebun · Rp52.000 · Shopee: https://shopee.co.id/product/1211685004/46817964604 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/alat-potong-dahan-bahan-baja-kuat-tajam-alat-kebun-garden-tools-1734422065222354762
+  Pemotong dahan bahan baja kuat dan tajam.
+- [Gunting Dahan Jumbo](https://nurserilestari.com/produk-gunting-dahan-jumbo.html): Alat Berkebun · Rp40.000 · Shopee: https://shopee.co.id/product/1211685004/25169737478 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/gunting-dahan-tanaman-jumbo-1736541503733860170
+  Gunting dahan bilah besar untuk ranting 2–4 cm.
+- [Pruning Saw Gergaji Dahan](https://nurserilestari.com/produk-pruning-saw-gergaji-dahan.html): Alat Berkebun · Rp30.000 · Shopee: https://shopee.co.id/product/1211685004/24669745825 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/pruning-saw-gergaji-dahan-untuk-potong-batang-pohon-alat-kebun-garden-tools-1734422130277910346
+  Gergaji dahan untuk batang di atas 4 cm.
+
+### Perlengkapan
+
+- [Label Tag Tanaman Gantung](https://nurserilestari.com/produk-label-tag-tanaman-gantung.html): Perlengkapan · Rp1.250 · Shopee: https://shopee.co.id/product/1211685004/41333357841 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-label-tag-tanaman-model-tali-ikat-gantung-anti-air-tahan-air-anti-uv-pilihan-warna-1736947527955613205-1736947535799813653
+  Label tali ikat anti air dan anti UV, pilihan warna.
+- [Compost Bag Easy Grow](https://nurserilestari.com/produk-compost-bag-easy-grow.html): Perlengkapan · Mulai Rp80.000 · Shopee: https://shopee.co.id/product/1211685004/54617779496 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-compost-bag-easy-grow-original-bahan-kuat-export-quality-penyimpanan-dan-pembuatan-media-kompos-50-l-80-l-200l-1736947536378758677-1736947536163735061
+  Kantong kompos bahan kuat kualitas ekspor untuk membuat kompos di rumah.
+- [Kawat Bonsai Aluminium (per meter)](https://nurserilestari.com/produk-kawat-bonsai-aluminium-per-meter.html): Perlengkapan · Mulai Rp2.500 · Shopee: https://shopee.co.id/product/1211685004/25169737419 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/kawat-bonsai-alumunium-silver-putih-tebal-1-3-5-mm-per-meter-1-mm-1737358157995214666-1737358170480478026
+  Kawat 1–3,5 mm anti karat untuk membentuk bonsai.
+- [Extra Packing Tambahan Bubble Wrap Dan Kardus Lebih Aman](https://nurserilestari.com/produk-extra-packing-tambahan-bubble-wrap-dan-kardus-lebih-aman.html): Perlengkapan · Mulai Rp5.000 · Shopee: https://shopee.co.id/product/1211685004/25069740545 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/extra-packing-tambahan-bubble-wrap-dan-kardus-lebih-aman-extra-packing-for-product-safety-on-the-way-to-destination-1737726498648000330-1737726444376328010
+  Tambahan bubble wrap dan kardus supaya kiriman lebih aman di jalan. Pesan bareng produk yang mau dikirim jauh atau gampang pecah.
+- [Extra Packing (bubble wrap + kardus)](https://nurserilestari.com/produk-extra-packing-bubble-wrap-kardus.html): Perlengkapan · Mulai Rp5.000 · Shopee: https://shopee.co.id/product/1211685004/25069740545 · Tokopedia: https://www.tokopedia.com/nurserilestari/extra-packing-tambahan-bubble-wrap-dan-kardus-lebih-aman-extra-packing-for-product-safety-on-the-way-to-destination-1736947522777744917-1736947531648960021
+  Tambahan pengaman untuk pengiriman jauh atau tanaman berdaun lebar.
+- [Label Tag Tanaman Tancap 11 cm](https://nurserilestari.com/produk-label-tag-tanaman-tancap-11-cm.html): Perlengkapan · Rp1.250 · Shopee: https://shopee.co.id/product/1211685004/43483344786 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-label-tag-tanaman-anti-air-11-cm-tahan-air-anti-uv-pilihan-warna-1736947550795105813-1736947518980458005
+  Label tancap anti air dan anti UV, pilihan warna.
+- [Paranet 75/85/95% eceran (BSD)](https://nurserilestari.com/produk-paranet-75-85-95-eceran-bsd.html): Perlengkapan · Mulai Rp16.000 · Shopee: https://shopee.co.id/product/1211685004/54413664499 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-paranet-jaring-shading-net-75-85-95-eceran-1-meter-lebar-3-m-satuan-1736542193303717706-1736542293427062602
+  Stok toko Tangerang BSD, dijual per meter.
+- [Paranet roll 100 m (BSD)](https://nurserilestari.com/produk-paranet-roll-100-m-bsd.html): Perlengkapan · Mulai Rp1.200.000 · Shopee: https://shopee.co.id/product/1211685004/56163674071 · Tokopedia: https://www.tokopedia.com/nurserilestaritangerang/nurseri-lestari-paranet-jaring-shading-net-75-85-95-1-roll-100-meter-lebar-3-m-satuan-1736542338973665098-1736542458805913418
+  Stok toko Tangerang BSD.
+
+### Lainnya
+
+- [Tanaman Sereh Tanaman Serai Herbal Bumbu Dapur Citronella](https://nurserilestari.com/produk-tanaman-sereh-tanaman-serai-herbal-bumbu-dapur-citronella.html): Lainnya · Mulai Rp15.000 · Shopee: https://shopee.co.id/product/1211685004/22664150500 · Tokopedia: https://www.tokopedia.com/nurserilestari/tanaman-sereh-tanaman-serai-herbal-bumbu-dapur-citronella-1737934802984011285-1737934680241833493
+  Tanaman sereh (serai) buat bumbu dapur, aromanya citronella yang nggak disukai nyamuk. Tanam di pot yang kena matahari penuh dan siram rutin.
+- [FARMJET SPRAYER TANGKI 16 LITER ELEKTRIK (501)](https://nurserilestari.com/produk-farmjet-sprayer-tangki-16-liter-elektrik-501.html): Lainnya · Rp750.000 · Shopee: https://shopee.co.id/product/1211685004/55518959347 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-farmjet-sprayer-tangki-16-liter-elektrik-501-garden-sprayer-tools-1737934754177386005-1737934737294657045
+  Sprayer elektrik Farmjet tangki 16 liter tipe 501, buat menyemprot pupuk cair atau pestisida di kebun. Pakai baterai isi ulang, jadi nggak perlu dipompa manual.
+- [Sarung Tangan Berkebun Nilon Nylon Anti Slip Cutting](https://nurserilestari.com/produk-sarung-tangan-berkebun-nilon-nylon-anti-slip-cutting.html): Lainnya · Rp32.000 · Shopee: https://shopee.co.id/product/1211685004/25969595543 · Tokopedia: https://www.tokopedia.com/nurserilestari/nurseri-lestari-sarung-tangan-berkebun-nilon-nylon-anti-slip-cutting-nyaman-digunakan-garden-gloves-1737934718020453909-1737934718258742805
+  Sarung tangan berkebun berbahan nilon dengan lapisan anti slip di telapak. Nyaman dipakai lama buat ganti pot, memangkas, atau beres-beres kebun.
+
+## Isi tips
+
+### Tanamanmu sudah mulai merambat? Pilih ajir yang sesuai
+
+Perawatan · 3 menit baca · https://nurserilestari.com/tips-detail.html?id=ajir-tanaman-rambat
+
+Sirih gading, monstera, sampai markisa butuh penyangga yang berbeda. Salah ajir, batang mudah patah dan tanaman tumbuh tidak rapi.
+
+Tanaman rambat punya cara memanjat yang berbeda-beda. Ada yang memakai akar udara (monstera, philodendron, sirih gading), ada yang melilit dengan batangnya (markisa, kacang panjang), dan ada yang hanya bersandar (mawar rambat). Cara memanjat inilah yang menentukan ajir apa yang cocok.
+
+### Tiga jenis ajir yang paling sering dipakai
+
+- Ajir tunggal (bambu atau tiang besi). Untuk tanaman muda dan tanaman berbatang tunggal. Ikat batang dengan tali ijuk atau tali sabut kelapa, jangan terlalu kencang agar batang masih bisa membesar.
+
+- Moss pole atau tiang sabut. Untuk aroid seperti monstera dan philodendron. Akar udara akan menempel pada permukaan lembap, sehingga daun tumbuh lebih besar.
+
+- Tralis atau tiang penyangga bulat. Untuk tanaman melilit dan berbunga: markisa, bunga telang, tomat. Pilih tinggi 60 sampai 120 cm sesuai ukuran dewasa tanaman.
+
+### Kapan memasangnya?
+
+Pasang ajir sejak tanaman masih pendek, saat memindahkan ke pot baru. Menancapkan ajir pada tanaman yang sudah besar berisiko melukai akar. Arahkan sulur baru ke ajir setiap beberapa hari sampai tanaman terbiasa.
+Kami menyediakan tiang penyangga 45 sampai 120 cm, tali ijuk, dan tali sabut kelapa meteran di toko Cipete dan Tokopedia.
+
+### Sphagnum moss: media ringan untuk menjaga kelembapan
+
+Media tanam · 3 menit baca · https://nurserilestari.com/tips-detail.html?id=sphagnum-moss
+
+Media favorit untuk propagasi stek, anggrek, dan aroid. Menyimpan air sampai belasan kali beratnya, tetapi tetap berongga.
+
+Sphagnum moss adalah lumut yang dikeringkan. Seratnya menyerap air dalam jumlah besar namun tetap menyisakan rongga udara, sehingga akar tetap lembap tanpa tergenang. Itu sebabnya media ini banyak dipakai pekebun anggrek dan kolektor aroid.
+
+### Cara pakai
+
+- Rendam moss kering dalam air bersih 10 sampai 15 menit, lalu peras sampai lembap saja, tidak menetes.
+
+- Untuk stek atau propagasi, bungkus pangkal batang dengan moss lembap dan masukkan ke pot kecil atau wadah plastik bening.
+
+- Untuk anggrek, campur moss dengan pakis cacah atau arang agar tidak terlalu basah.
+
+- Untuk aroid, tambahkan 20 sampai 30 persen moss ke campuran aroid mix agar media lebih lama lembap saat cuaca panas.
+
+### Yang perlu diperhatikan
+
+Moss yang terus-menerus basah bisa memicu busuk akar. Biarkan lapisan atas mulai mengering sebelum menyiram lagi. Ganti moss setiap 6 sampai 12 bulan karena seratnya akan memadat dan kehilangan rongga udara.
+Kami menyediakan sphagnum moss lokal kemasan 50 gram, juga moss hitam (akar kadaka), pakis dadu, dan arang sebagai pelengkap media anggrek.
+
+### Kenalan dengan Adenium: cantik, tangguh, dan berbunga menawan
+
+Tanaman · 4 menit baca · https://nurserilestari.com/tips-detail.html?id=mengenal-adenium
+
+Si kamboja jepang tahan panas dan jarang minta disiram. Kuncinya ada di media yang porous dan matahari penuh.
+
+Adenium berasal dari daerah kering di Afrika dan Semenanjung Arab. Batang bawahnya (caudex) menggembung untuk menyimpan air, sehingga tanaman ini lebih sering mati karena kebanyakan disiram daripada kekurangan air.
+
+### Tiga syarat agar rajin berbunga
+
+- Matahari penuh. Minimal 6 jam sinar langsung. Di teras yang teduh, daun tetap tumbuh tapi bunga jarang muncul.
+
+- Media porous. Gunakan succulent and cactus soil mix, atau campuran sekam bakar, pasir malang, dan sedikit kompos. Air harus langsung mengalir keluar dari lubang pot.
+
+- Siram saat media kering. Di musim kemarau cukup 2 sampai 3 hari sekali, di musim hujan lindungi dari hujan terus-menerus.
+
+### Pemupukan
+
+Berikan pupuk dengan fosfor dan kalium lebih tinggi (misalnya NPK khusus bunga atau pupuk bloom booster) setiap 2 minggu pada masa pertumbuhan. Kurangi pupuk nitrogen agar tanaman tidak hanya rimbun daun.
+
+### Masalah umum
+
+Daun menguning dan caudex lembek berarti akar busuk: kurangi penyiraman dan ganti media. Kutu putih di ketiak daun bisa dibersihkan dengan neem oil atau insektisida kontak.
+
+### Kalau tanamanmu bisa ngomong: kenali alat pangkas sebelum memotong
+
+Alat kebun · 3 menit baca · https://nurserilestari.com/tips-detail.html?id=kenali-alat-pangkas
+
+Gunting dahan, gunting rumput, dan gergaji punya tugas masing-masing. Alat yang salah membuat luka potong robek dan lama sembuh.
+
+Luka potong yang bersih akan menutup dalam beberapa hari. Luka yang robek karena alat tumpul atau tidak sesuai menjadi pintu masuk jamur dan bakteri. Jadi sebelum memangkas, kenali dulu alatnya.
+
+### Alat dan tugasnya
+
+- Gunting dahan (pruning shear). Untuk ranting berdiameter sampai kira-kira 2 cm. Model bypass (dua bilah melewati satu sama lain) menghasilkan potongan paling bersih untuk batang hidup.
+
+- Gunting dahan jumbo. Bilah lebih besar dan gagang panjang untuk dahan 2 sampai 4 cm.
+
+- Gergaji dahan. Untuk dahan di atas 4 cm. Potong dari bawah dulu sepertiga tebal dahan, lalu dari atas, supaya kulit tidak terkelupas saat dahan jatuh.
+
+- Gunting rumput. Bilah panjang dan lurus untuk merapikan rumput tepi dan semak kecil, bukan untuk ranting keras.
+
+- Golok. Untuk membersihkan semak, membelah bambu ajir, dan pekerjaan kasar di kebun.
+
+### Rawat alatnya
+
+Lap bilah setelah dipakai, oleskan sedikit minyak agar tidak berkarat, dan asah rutin. Bilah yang tajam justru lebih aman karena tidak perlu ditekan keras.
+
+### Tanamanmu sudah besar? Saatnya naik ke pot 60 cm
+
+Pot & repotting · 3 menit baca · https://nurserilestari.com/tips-detail.html?id=naik-pot-60-cm
+
+Akar keluar dari lubang pot, media cepat kering, tanaman mudah rebah: tiga tanda pot sudah kesempitan.
+
+Pot yang terlalu kecil membuat akar melingkar dan media cepat habis nutrisinya. Tanaman hias besar seperti hanjuang, karet kebo, palem, atau pucuk merah yang sudah setinggi 1 meter lebih umumnya butuh pot berdiameter 50 sampai 60 cm.
+
+### Tanda-tanda perlu repotting
+
+- Akar keluar dari lubang drainase atau muncul di permukaan media.
+
+- Media kering hanya dalam sehari walau sudah disiram.
+
+- Pertumbuhan daun baru melambat meski sudah dipupuk.
+
+- Pot mudah rebah saat tertiup angin karena tajuk lebih besar dari pot.
+
+### Langkah aman pindah pot
+
+- Siram tanaman sehari sebelumnya agar bola akar padat dan mudah dikeluarkan.
+
+- Pilih pot baru 1 sampai 2 ukuran lebih besar, pastikan ada lubang drainase. Pot plastik tebal ukuran 50 sampai 60 cm sudah dilengkapi tatakan.
+
+- Isi dasar pot dengan media baru, letakkan tanaman, lalu isi sisi-sisinya sambil ditekan ringan.
+
+- Siram sampai air keluar dari lubang bawah, lalu letakkan di tempat teduh 3 sampai 5 hari sebelum kembali ke posisi semula.
+
+Untuk pot keramik dan gentong besar, gunakan kaki pot kayu atau besi agar lubang drainase tidak tertutup lantai.
+
+### Benarkah abu vulkanik bisa menyuburkan tanah?
+
+Media tanam · 3 menit baca · https://nurserilestari.com/tips-detail.html?id=abu-vulkanik
+
+Abu gunung berapi kaya mineral, tetapi tidak langsung jadi pupuk. Begini cara memanfaatkannya dengan aman.
+
+Lereng gunung berapi terkenal subur, dan itu bukan kebetulan. Abu vulkanik mengandung mineral seperti kalium, magnesium, kalsium, fosfor, dan unsur mikro yang perlahan tersedia bagi tanaman seiring pelapukan.
+
+### Yang perlu dipahami
+
+- Abu segar tidak langsung menyuburkan. Mineralnya masih terikat dalam butiran kaca vulkanik dan butuh waktu untuk terurai. Abu segar juga bisa bersifat asam dan mengandung belerang yang justru mengganggu tanaman.
+
+- Manfaatnya muncul setelah pelapukan. Pasir malang yang kita pakai sebagai campuran media tanam sebenarnya adalah material vulkanik yang sudah lapuk: ringan, porous, dan mengandung mineral.
+
+### Cara memanfaatkannya di kebun rumah
+
+- Jangan pakai abu segar lebih dari 10 persen dari volume media.
+
+- Campurkan dengan kompos atau pupuk kandang yang sudah matang, lalu diamkan 2 sampai 4 minggu.
+
+- Gunakan pasir malang atau perlite untuk memperbaiki drainase, dan pupuk organik seperti guano atau kohe kambing untuk menambah hara.
+
+Intinya, abu vulkanik adalah bahan pembenah jangka panjang, bukan pupuk instan.
+
+### Cuma 5 menit melihat tanaman? Ternyata bisa bantu tubuh lebih rileks
+
+Gaya hidup · 2 menit baca · https://nurserilestari.com/tips-detail.html?id=lima-menit-melihat-tanaman
+
+Beberapa penelitian menunjukkan interaksi singkat dengan tanaman menurunkan stres. Mulai dari satu pot di meja kerja.
+
+Merawat tanaman ada efeknya juga buat yang merawat. Sejumlah studi tentang lingkungan kerja menemukan bahwa berinteraksi dengan tanaman selama beberapa menit dapat menurunkan detak jantung dan perasaan tegang dibanding menatap layar terus-menerus. Alasannya sederhana: mata beristirahat, napas melambat, dan perhatian teralih ke sesuatu yang hidup.
+
+### Tanaman yang cocok untuk pemula
+
+- Peace lily (spathiphyllum). Tahan cahaya rendah, dan daunnya layu sebagai tanda minta disiram.
+
+- Lidah mertua (sansevieria). Nyaris tak bisa mati asal tidak kebanyakan air.
+
+- Sirih gading. Bisa ditanam di media air dalam vas kaca, cocok untuk meja kerja.
+
+- Aglonema. Warna daun beragam dan toleran ruangan ber-AC.
+
+### Kebiasaan kecil yang bisa dicoba
+
+Letakkan satu tanaman dalam jangkauan pandang. Setiap jeda kerja, periksa medianya, lap daunnya, atau putar potnya agar cahaya merata. Lima menit itu cukup untuk memulai.
+
+### Mulai berkebun tidak harus jago: paket awal untuk pemula
+
+Pemula · 4 menit baca · https://nurserilestari.com/tips-detail.html?id=mulai-berkebun
+
+Media siap pakai, benih bergaransi tumbuh, pot dengan tatakan, dan satu pupuk serbaguna. Itu saja sudah cukup untuk panen pertama.
+
+Banyak orang menunda berkebun karena merasa harus paham semuanya dulu. Padahal panen sayuran daun pertama bisa didapat dalam 4 sampai 6 minggu dengan perlengkapan sederhana.
+
+### Perlengkapan awal
+
+- Media tanam siap pakai. Simple Mix atau Indoor Soil Mix sudah difermentasi dan dicampur, tinggal tuang ke pot.
+
+- Benih yang mudah. Kangkung, sawi hijau, selada, kemangi, dan cabai rawit termasuk yang paling toleran. Pilih benih bergaransi tumbuh agar tidak kecewa di awal.
+
+- Pot plastik dengan tatakan. Ukuran 17 sampai 25 cm cukup untuk sayuran daun; planter bag 25 liter untuk cabai atau tomat.
+
+- Satu pupuk serbaguna. NPK seimbang 16-16-16 atau pupuk organik guano, diberikan tipis setiap 2 minggu.
+
+### Tiga aturan yang menyelamatkan pemula
+
+- Siram pagi hari, dan hanya saat permukaan media mulai kering.
+
+- Beri sinar matahari minimal 4 jam untuk sayuran daun, 6 jam untuk tanaman buah.
+
+- Tanam sedikit dulu. Dua pot yang terawat lebih baik daripada sepuluh pot yang terlupakan.
+
+Kalau ragu memilih, kirim foto lokasi tanam Anda ke WhatsApp kami. Kami bantu susun paketnya.

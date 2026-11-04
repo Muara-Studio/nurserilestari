@@ -1,13 +1,18 @@
-/* Nurseri Lestari — js/product-detail.js (C3, v2). One product by ?id=: the glass panel in the dark band, the light section
+/* Nurseri Lestari — js/product-detail.js (C3, v2). One product: the glass panel in the dark band, the light section
    (notes, tag links, care, facts), four related tiles, the phone buy bar. The photo, name, category and price are already set by
-   the inline LCP kick in produk-detail.html; this module fills the rest and never waits for the CDN (no gsap here). */
+   the inline LCP kick in produk-detail.html; this module fills the rest and never waits for the CDN (no gsap here).
+   v3.0 (SEO): the product comes from ?id= (produk-detail.html, the JS fallback route) or from <body data-product="<id>"> on a
+   static produk-<slug>.html page that tools/prerender.mjs wrote from this very render. On a static page everything below is
+   already in the HTML, so show() re-applies it in place (same markup, no duplicates); on the fallback route it also points the
+   canonical at the static page. */
 import { fmtPrice, hasPrice, priceText, priceHTML, priceInText, esc, icon, waLink, param } from './util.js';
-import { tileHTML, settle, catName, STATUS, sortProducts, fmtSold } from './catalog.js';
+import { tileHTML, settle, catName, STATUS, sortProducts, fmtSold, productUrl, SITE_URL, webpBase, PHOTO_SIZES } from './catalog.js';
 import { mountShopToggle, storeToShop, shopById, shopLabel, waShop, waOrderText } from './shop-choice.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const all = (window.TL || {}).products || [];
-const product = all.find((x) => x.id === param('id'));
+const wanted = param('id') || document.body.dataset.product || '';
+const product = all.find((x) => x.id === wanted);
 
 if (product) show(product); else missing();
 
@@ -27,8 +32,13 @@ function show(p) {
   const cat = catName(p.category);
   document.title = `${p.name} — Nurseri Lestari`;
   $('meta[name="description"]')?.setAttribute('content', p.desc || (hasPrice(p) ? `${p.name} dari Nurseri Lestari, ${priceText(p)}. Harga mengikuti etalase Shopee.` : `${p.name} dari Nurseri Lestari. Harganya tanya lewat WhatsApp.`));
-  $('[data-crumbs]').insertAdjacentHTML('beforeend', `<li><a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a></li><li aria-current="page">${esc(p.name)}</li>`);
+  // the fallback route (?id=) is a duplicate of the static page: say so to search engines. The static page's own head has it already
+  if (document.body.dataset.product !== p.id) setCanonical(SITE_URL + productUrl(p));
+  const crumbs = $('[data-crumbs]');
+  if (!crumbs.querySelector('[aria-current="page"]')) crumbs.insertAdjacentHTML('beforeend', `<li><a href="produk.html?kategori=${encodeURIComponent(p.category)}">${esc(cat)}</a></li><li aria-current="page">${esc(p.name)}</li>`);
   const photo = $('[data-photo]');
+  const wb = webpBase(p);
+  if (wb) { photo.sizes = PHOTO_SIZES; photo.srcset = `${wb}-400.webp 400w, ${wb}-800.webp 800w`; }
   photo.src = p.image; photo.alt = `${p.name}, foto dari etalase Tokopedia`;
   $('[data-title]').textContent = p.name;
   $('[data-cat]').textContent = cat;
@@ -57,6 +67,14 @@ function show(p) {
   mountShopToggle($('[data-shop-choice]'), { product: p, onChange: (shop) => applyShop(p, shop) });
   related(p, cat);
   buyBar();
+}
+
+// <link rel="canonical"> and og:url for this product, created when the head has none
+function setCanonical(url) {
+  let link = $('link[rel="canonical"]');
+  if (!link) { link = document.createElement('link'); link.rel = 'canonical'; document.head.append(link); }
+  link.href = url;
+  $('meta[property="og:url"]')?.setAttribute('content', url);
 }
 
 /* the three ways to buy, for the chosen shop. Tokopedia: the product's own listing when it belongs to that shop, else the

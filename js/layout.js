@@ -18,7 +18,8 @@
     return `https://wa.me/${w.number}?text=${encodeURIComponent(text || (site.waGreeting || '') + 'produk dan ketersediaannya.')}`;
   };
   const ext = 'target="_blank" rel="noopener"';
-  const file = (location.pathname.split('/').pop() || 'index.html').replace('-detail', '');
+  // produk-detail.html and the static produk-<slug>.html pages (tools/prerender.mjs) both belong to "Belanja"
+  const file = (location.pathname.split('/').pop() || 'index.html').replace('-detail', '').replace(/^produk-.+\.html$/, 'produk.html');
   const cur = (href) => (href === file ? ' aria-current="page"' : '');
   const nav = site.nav || [];
   const navList = () => nav.map((n, i) => `<li style="--i:${i}"><a href="${esc(n.href)}"${cur(n.href)}>${esc(n.label)}</a></li>`).join('');
