@@ -9,6 +9,13 @@ export const priceText = (p, { long = false } = {}) => (!hasPrice(p) ? (long ? A
 export const priceHTML = (p, { long = false } = {}) => (!hasPrice(p) ? `<span class="price-ask">${long ? ASK_LONG : ASK_SHORT}</span>` : `${p.priceFrom ? '<span class="price-from">Mulai</span> ' : ''}${fmtPrice(p.price)}`);
 // the price inside a WhatsApp message: " (Rp10.000)", " (mulai Rp10.000)", or nothing when there is no price yet
 export const priceInText = (p) => (hasPrice(p) ? ` (${p.priceFrom ? 'mulai ' : ''}${fmtPrice(p.price)})` : '');
+/* the sentence under the price on the detail page. When the Shopee listing's range is known (`priceHigh`, `offerCount` from
+   tools/sync-shopee.py) the sentence states it, and tools/prerender.mjs puts the same two numbers in the page's structured data */
+export const hasRange = (p) => hasPrice(p) && !!p.priceFrom && Number(p.priceHigh) > Number(p.price) && Number(p.offerCount) > 1;
+export const priceNoteText = (p) => (!hasPrice(p) ? 'Belum ada di etalase Shopee kami. Tanya harganya ke admin lewat WhatsApp, dibalas di jam buka toko.'
+  : hasRange(p) ? `Ada ${p.offerCount} pilihan di etalase Shopee kami, dari ${fmtPrice(p.price)} sampai ${fmtPrice(p.priceHigh)}.`
+  : p.priceFrom ? 'Harga termurah dari pilihan di etalase Shopee kami. Ukuran atau warna lain bisa beda harganya.'
+  : 'Harga ngikut etalase Shopee kami, bisa berubah sewaktu-waktu.');
 export const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const icon = (name, cls = '') => `<svg class="icon ${cls}" aria-hidden="true"><use href="assets/icons/sprite.svg#i-${name}"/></svg>`;
 /* WhatsApp deep link with the greeting; line 0 = Cipete, 1 = Tangerang BSD */

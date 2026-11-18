@@ -4,7 +4,7 @@
   "exportDate": "2026-11-02",
   "shop": "cipete",
   "shopId": "1211685004",
-  "generated": "2026-11-02",
+  "generated": "2026-11-18",
   "priced": 159,
   "ask": 1
  },
@@ -61,7 +61,9 @@
    "price": 135000,
    "priceFrom": true,
    "how": "variation Pot Plastik Hitam",
-   "score": 0.91
+   "score": 0.91,
+   "priceHigh": 350000,
+   "offerCount": 8
   },
   "103060874892": {
    "itemid": "24422413563",
@@ -232,7 +234,9 @@
    "price": 80000,
    "priceFrom": true,
    "how": "override price",
-   "score": 0.96
+   "score": 0.96,
+   "priceHigh": 120000,
+   "offerCount": 3
   },
   "103174242141": {
    "itemid": "50313967010",
@@ -259,7 +263,9 @@
    "price": 68000,
    "priceFrom": true,
    "how": "lowest of [68000, 180000, 470000]",
-   "score": 0.85
+   "score": 0.85,
+   "priceHigh": 470000,
+   "offerCount": 3
   },
   "103701690415": {
    "itemid": "25069740545",
@@ -268,7 +274,9 @@
    "price": 5000,
    "priceFrom": true,
    "how": "lowest of [5000, 9500]",
-   "score": 0.94
+   "score": 0.94,
+   "priceHigh": 9500,
+   "offerCount": 3
   },
   "103982354777": {
    "itemid": "25069740545",
@@ -277,7 +285,9 @@
    "price": 5000,
    "priceFrom": true,
    "how": "lowest of [5000, 9500]",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 9500,
+   "offerCount": 3
   },
   "104066474633": {
    "itemid": "55518959347",
@@ -448,7 +458,9 @@
    "price": 245000,
    "priceFrom": true,
    "how": "lowest of [245000, 435000]",
-   "score": 0.93
+   "score": 0.93,
+   "priceHigh": 435000,
+   "offerCount": 2
   },
   "103091033469": {
    "itemid": "27641321987",
@@ -457,7 +469,9 @@
    "price": 150000,
    "priceFrom": true,
    "how": "override price",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 350000,
+   "offerCount": 10
   },
   "103090714610": {
    "itemid": "29702435860",
@@ -484,7 +498,9 @@
    "price": 75000,
    "priceFrom": true,
    "how": "variation Tanaman saja",
-   "score": 0.49
+   "score": 0.49,
+   "priceHigh": 165000,
+   "offerCount": 7
   },
   "103875735070": {
    "itemid": "25169737419",
@@ -493,7 +509,9 @@
    "price": 2500,
    "priceFrom": true,
    "how": "lowest of [2500, 3000, 3500, 4500, 5000, 6000, 6500]",
-   "score": 0.54
+   "score": 0.54,
+   "priceHigh": 6500,
+   "offerCount": 10
   },
   "103701693868": {
    "itemid": "41333357841",
@@ -556,7 +574,9 @@
    "price": 25000,
    "priceFrom": true,
    "how": "lowest of [25000, 45000, 90000]",
-   "score": 0.95
+   "score": 0.95,
+   "priceHigh": 90000,
+   "offerCount": 3
   },
   "103053706400": {
    "itemid": "25219593456",
@@ -619,7 +639,9 @@
    "price": 100000,
    "priceFrom": true,
    "how": "lowest of [100000, 125000]",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 125000,
+   "offerCount": 4
   },
   "104070282766": {
    "itemid": "40334349041",
@@ -628,7 +650,9 @@
    "price": 20000,
    "priceFrom": true,
    "how": "lowest of [20000, 25000]",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 25000,
+   "offerCount": 4
   },
   "103701694813": {
    "itemid": "48214359642",
@@ -664,7 +688,9 @@
    "price": 35000,
    "priceFrom": true,
    "how": "lowest of [35000, 100000]",
-   "score": 0.84
+   "score": 0.84,
+   "priceHigh": 100000,
+   "offerCount": 2
   },
   "103586946517": {
    "itemid": "54413664499",
@@ -673,7 +699,9 @@
    "price": 16000,
    "priceFrom": true,
    "how": "lowest of [16000, 18000, 20000]",
-   "score": 0.89
+   "score": 0.89,
+   "priceHigh": 20000,
+   "offerCount": 3
   },
   "103586989272": {
    "itemid": "56163674071",
@@ -682,7 +710,9 @@
    "price": 1200000,
    "priceFrom": true,
    "how": "lowest of [1200000, 1400000, 1700000]",
-   "score": 0.91
+   "score": 0.91,
+   "priceHigh": 1700000,
+   "offerCount": 3
   },
   "103935145200": {
    "itemid": "25269737205",
@@ -772,7 +802,9 @@
    "price": 18000,
    "priceFrom": true,
    "how": "override price",
-   "score": 0.93
+   "score": 0.93,
+   "priceHigh": 60000,
+   "offerCount": 8
   },
   "104076426794": {
    "itemid": "45619132471",
@@ -781,7 +813,9 @@
    "price": 17000,
    "priceFrom": true,
    "how": "lowest of [17000, 26000]",
-   "score": 0.86
+   "score": 0.86,
+   "priceHigh": 26000,
+   "offerCount": 2
   },
   "104076428130": {
    "itemid": "45119128909",
@@ -790,7 +824,9 @@
    "price": 32000,
    "priceFrom": true,
    "how": "lowest of [32000, 46000]",
-   "score": 0.86
+   "score": 0.86,
+   "priceHigh": 46000,
+   "offerCount": 2
   },
   "103596321565": {
    "itemid": "24319731467",
@@ -808,7 +844,9 @@
    "price": 9000,
    "priceFrom": true,
    "how": "lowest of [9000, 14000]",
-   "score": 0.94
+   "score": 0.94,
+   "priceHigh": 14000,
+   "offerCount": 2
   },
   "103386280974": {
    "itemid": "52513467577",
@@ -826,7 +864,9 @@
    "price": 20000,
    "priceFrom": true,
    "how": "lowest of [20000, 28000, 29000, 38000]",
-   "score": 0.9
+   "score": 0.9,
+   "priceHigh": 38000,
+   "offerCount": 4
   },
   "103701696434": {
    "itemid": "56365599568",
@@ -835,7 +875,9 @@
    "price": 10000,
    "priceFrom": true,
    "how": "lowest of [10000, 15000, 19000, 24000, 27000, 28000, 36000]",
-   "score": 0.84
+   "score": 0.84,
+   "priceHigh": 36000,
+   "offerCount": 8
   },
   "103884399399": {
    "itemid": "24019714979",
@@ -844,7 +886,9 @@
    "price": 2500,
    "priceFrom": true,
    "how": "lowest of [2500, 3200, 5000]",
-   "score": 0.91
+   "score": 0.91,
+   "priceHigh": 5000,
+   "offerCount": 3
   },
   "103884399849": {
    "itemid": "24619727627",
@@ -853,7 +897,9 @@
    "price": 3500,
    "priceFrom": true,
    "how": "lowest of [3500, 4500, 7000]",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 7000,
+   "offerCount": 3
   },
   "103875747149": {
    "itemid": "25038189036",
@@ -862,7 +908,9 @@
    "price": 5000,
    "priceFrom": true,
    "how": "lowest of [5000, 7500, 11500]",
-   "score": 0.87
+   "score": 0.87,
+   "priceHigh": 11500,
+   "offerCount": 3
   },
   "103875756162": {
    "itemid": "54958801095",
@@ -871,7 +919,9 @@
    "price": 1750,
    "priceFrom": true,
    "how": "lowest of [1750, 2000, 2500, 3200, 3500, 4000]",
-   "score": 0.93
+   "score": 0.93,
+   "priceHigh": 4000,
+   "offerCount": 6
   },
   "103659419904": {
    "itemid": "41930041865",
@@ -880,7 +930,9 @@
    "price": 3000,
    "priceFrom": true,
    "how": "lowest of [3000, 4000, 5000, 6000]",
-   "score": 0.93
+   "score": 0.93,
+   "priceHigh": 6000,
+   "offerCount": 6
   },
   "103875765852": {
    "itemid": "54958806063",
@@ -889,7 +941,9 @@
    "price": 4500,
    "priceFrom": true,
    "how": "lowest of [4500, 5500, 6000, 7000, 8000]",
-   "score": 0.87
+   "score": 0.87,
+   "priceHigh": 8000,
+   "offerCount": 6
   },
   "104110875729": {
    "itemid": "54419393691",
@@ -1168,7 +1222,9 @@
    "price": 30000,
    "priceFrom": true,
    "how": "variation Kapsul kecil putih",
-   "score": 0.87
+   "score": 0.87,
+   "priceHigh": 50000,
+   "offerCount": 7
   },
   "103054009350": {
    "itemid": "25969595424",
@@ -1249,7 +1305,9 @@
    "price": 15000,
    "priceFrom": true,
    "how": "lowest of [15000, 23000, 35000]",
-   "score": 0.9
+   "score": 0.9,
+   "priceHigh": 35000,
+   "offerCount": 3
   },
   "103595118155": {
    "itemid": "25119595320",
@@ -1285,7 +1343,9 @@
    "price": 75000,
    "priceFrom": true,
    "how": "variation Tanaman saja",
-   "score": 0.73
+   "score": 0.73,
+   "priceHigh": 165000,
+   "offerCount": 7
   },
   "104012708097": {
    "itemid": "40134931506",
@@ -1312,7 +1372,9 @@
    "price": 10000,
    "priceFrom": true,
    "how": "lowest of [10000, 12000, 15000, 17500]",
-   "score": 0.92
+   "score": 0.92,
+   "priceHigh": 17500,
+   "offerCount": 8
   },
   "104066472619": {
    "itemid": "29564126087",
@@ -1339,7 +1401,9 @@
    "price": 15000,
    "priceFrom": true,
    "how": "lowest of [15000, 25000, 35000]",
-   "score": 0.87
+   "score": 0.87,
+   "priceHigh": 35000,
+   "offerCount": 3
   },
   "103053662876": {
    "itemid": "24588566470",
@@ -1348,7 +1412,9 @@
    "price": 2500,
    "priceFrom": true,
    "how": "lowest of [2500, 3500]",
-   "score": 0.94
+   "score": 0.94,
+   "priceHigh": 3500,
+   "offerCount": 3
   },
   "103053628968": {
    "itemid": "25219715544",

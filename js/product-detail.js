@@ -5,7 +5,7 @@
    static produk-<slug>.html page that tools/prerender.mjs wrote from this very render. On a static page everything below is
    already in the HTML, so show() re-applies it in place (same markup, no duplicates); on the fallback route it also points the
    canonical at the static page. */
-import { fmtPrice, hasPrice, priceText, priceHTML, priceInText, esc, icon, waLink, param } from './util.js';
+import { fmtPrice, hasPrice, priceText, priceHTML, priceInText, priceNoteText, esc, icon, waLink, param } from './util.js';
 import { tileHTML, settle, catName, STATUS, sortProducts, fmtSold, productUrl, SITE_URL, webpBase, PHOTO_SIZES } from './catalog.js';
 import { mountShopToggle, storeToShop, shopById, shopLabel, waShop, waOrderText } from './shop-choice.js';
 
@@ -46,9 +46,7 @@ function show(p) {
   // the note under the price (2 Nov 2026, client: prices follow the Shopee etalase): a plain price, the lowest of several
   // variations ("Mulai"), or no Shopee listing yet, when the price is asked on WhatsApp
   const priceNote = $('[data-price-note]');
-  if (priceNote) priceNote.textContent = !hasPrice(p) ? 'Belum ada di etalase Shopee kami. Tanya harganya ke admin lewat WhatsApp, dibalas di jam buka toko.'
-    : p.priceFrom ? 'Harga termurah dari pilihan di etalase Shopee kami. Ukuran atau warna lain bisa beda harganya.'
-    : 'Harga ngikut etalase Shopee kami, bisa berubah sewaktu-waktu.';
+  if (priceNote) priceNote.textContent = priceNoteText(p);
   // the status badge only when the product is not ready (159 of 160 are)
   const badge = $('[data-badge]');
   if (p.status && p.status !== 'ready') { badge.textContent = STATUS[p.status] || p.status; badge.classList.add(`badge-${p.status}`); badge.hidden = false; }
